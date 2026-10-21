@@ -4,8 +4,8 @@
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 08 — Get Involved, Volunteer, Donate and Partner (Completed)**
-- **Next Stage**: **Stage 09 — Blog, Stories and Three Complete Launch Posts**
+- **Current Stage**: **Stage 09 — Blog, Stories and Three Complete Launch Posts (Completed)**
+- **Next Stage**: **Stage 10 — FAQ, Contact and Search**
 - **Last Updated**: 2026-10-21
 
 ---
@@ -34,7 +34,7 @@
 | **06** | **About Page** | **Completed** | Story, purpose, focus areas, governance |
 | **07** | **Programme Index and Detail Template** | **Completed** | 4 active programmes + dynamic detail template |
 | **08** | **Get Involved, Volunteer, Donate and Partner** | **Completed** | Engagement routes with safe enquiry/payment decision gates & forms |
-| 09 | Blog, Stories and Three Complete Launch Posts | Pending | 3 complete launch articles, MDX/content data |
+| **09** | **Blog, Stories and Three Complete Launch Posts** | **Completed** | 3 complete launch articles (2,700+ words), dynamic reader, stories & consent charter |
 | 10 | FAQ, Contact and Search | Pending | Accordions, verified phone/contact, client search |
 | 11 | Legal Pages and System States | Pending | Privacy Policy, Terms, 404, Error boundaries |
 | 12 | SEO, Metadata, Structured Data, Sitemap and Robots | Pending | JSON-LD NGO/WebSite/BlogPosting, sitemap.ts, robots.ts |
@@ -60,12 +60,12 @@
 | `/donate` | Support Our Work (Version A enquiry fallback) | 069 | Live / Verified |
 | `/partner-with-us` | Institutional collaboration & enquiry form | 070 | Live / Verified |
 | `/impact` | Impact definitions & qualitative evidence | 071 | Baseline Planned |
-| `/stories` & `[slug]` | Community stories & consent framework | 072 | Baseline Planned |
+| `/stories` & `[slug]` | Community stories & consent framework | 072 | Live / Verified |
 | `/gallery` | Photo gallery & accessible lightbox | 073 | Baseline Planned |
-| `/blog` | Blog index & category tags | 074 | Baseline Planned |
-| `/blog/sustainable-agriculture-resilient-communities-kenya` | Launch Article 1 (888 words) | 076 | Baseline Planned |
-| `/blog/youth-empowerment-creativity-skills-community-action` | Launch Article 2 (941 words) | 077 | Baseline Planned |
-| `/blog/ethical-community-volunteering-in-kenya` | Launch Article 3 (872 words) | 078 | Baseline Planned |
+| `/blog` | Blog index & category tags | 074 | Live / Verified |
+| `/blog/sustainable-agriculture-resilient-communities-kenya` | Launch Article 1 (888 words) | 076 | Live / Verified |
+| `/blog/youth-empowerment-creativity-skills-community-action` | Launch Article 2 (941 words) | 077 | Live / Verified |
+| `/blog/ethical-community-volunteering-in-kenya` | Launch Article 3 (872 words) | 078 | Live / Verified |
 | `/faq` | Frequently Asked Questions (12 questions) | 079 | Baseline Planned |
 | `/contact` | Contact information & general form | 081ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“082 | Baseline Planned |
 | `/privacy` | Privacy Policy (no photo hero) | 083 | Baseline Planned |

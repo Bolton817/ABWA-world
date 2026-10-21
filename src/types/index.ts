@@ -34,6 +34,16 @@ export interface Programme {
   relatedPostSlug?: string;
 }
 
+export interface BlogSection {
+  heading?: string;
+  paragraphs: string[];
+  listItems?: string[];
+  callout?: {
+    title?: string;
+    text: string;
+  };
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -46,6 +56,31 @@ export interface BlogPost {
   wordCount: number;
   heroImage: string;
   heroImageAlt: string;
+  metaTitle: string;
+  metaDescription: string;
+  sections: BlogSection[];
+  primaryCta?: {
+    label: string;
+    href: string;
+  };
+  secondaryCta?: {
+    label: string;
+    href: string;
+  };
+}
+
+export interface CommunityStory {
+  slug: string;
+  title: string;
+  subtitle: string;
+  excerpt: string;
+  programmeTag: string;
+  location: string;
+  publishedDate: string;
+  heroImage: string;
+  heroImageAlt: string;
+  consentVerified: boolean;
+  content: string[];
 }
 
 export interface FAQItem {
