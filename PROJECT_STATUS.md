@@ -4,8 +4,8 @@
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 01 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â Framework Foundation and Design Tokens (Completed)**
-- **Next Stage**: **Stage 02 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â Fonts, Image Inventory and Shared UI Primitives**
+- **Current Stage**: **Stage 07 — Programme Index and Detail Template (Completed)**
+- **Next Stage**: **Stage 08 — Get Involved, Volunteer, Donate and Partner**
 - **Last Updated**: 2026-10-21
 
 ---
@@ -25,14 +25,14 @@
 
 | Stage | Name | Status | Notes |
 | :--- | :--- | :--- | :--- |
-| **00** | **Repository Audit and Baseline** | **In Progress (Active)** | Environment verified, Git repo initialized, baseline documentation created |
+| **00** | **Repository Audit and Baseline** | **Completed** | Environment verified, Git repo initialized, baseline documentation created |
 | **01** | **Framework Foundation and Design Tokens** | **Completed** | Next.js App Router, Tailwind, colour/typography tokens |
 | **02** | **Fonts, Image Inventory and Shared UI Primitives** | **Completed** | Brand assets, PageHero, Container, Button variants |
 | **03** | **Header, Footer and Floating Controls** | **Completed** | Two-tier desktop header, mobile drawer, 4-col footer, action hub |
 | **04** | **GSAP Integration and Motion System** | **Completed** | `useGSAP`, ScrollTrigger setup, reduced motion handling |
-| **05** | **Homepage Structure and Responsive Layout** | **Completed** | 11 homepage sections per Copy Deck |
+| **05** | **Homepage Structure and Responsive Layout** | **Completed** | 10 homepage sections per Copy Deck |
 | **06** | **About Page** | **Completed** | Story, purpose, focus areas, governance |
-| 07 | Programme Index and Detail Template | Pending | 4 active/planned programmes + dynamic detail template |
+| **07** | **Programme Index and Detail Template** | **Completed** | 4 active programmes + dynamic detail template |
 | 08 | Get Involved, Volunteer, Donate and Partner | Pending | Engagement routes with safe enquiry/payment decision gates |
 | 09 | Blog, Stories and Three Complete Launch Posts | Pending | 3 complete launch articles, MDX/content data |
 | 10 | FAQ, Contact and Search | Pending | Accordions, verified phone/contact, client search |

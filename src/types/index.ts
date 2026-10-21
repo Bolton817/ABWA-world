@@ -1,22 +1,37 @@
 ﻿export type ProgrammeStatus = "Active" | "Planned" | "Completed";
 
+export interface ProgrammeActivity {
+  title: string;
+  items: string[];
+}
+
 export interface Programme {
   slug: string;
   title: string;
+  subtitle: string;
   summary: string;
   location: string;
   status: ProgrammeStatus;
   heroImage: string;
   heroImageAlt: string;
-  subtitle: string;
+  metaTitle: string;
+  metaDescription: string;
   description: string;
   context: string[];
-  whatHappens: {
-    title: string;
-    items: string[];
-  }[];
+  whatHappens: ProgrammeActivity[];
   aims: string[];
+  safeguardingNote?: {
+    title: string;
+    body: string;
+  };
+  contactTopic: string;
+  ctaText: string;
+  secondaryCta?: {
+    label: string;
+    href: string;
+  };
   relatedSlug?: string;
+  relatedPostSlug?: string;
 }
 
 export interface BlogPost {

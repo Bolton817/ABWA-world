@@ -10,6 +10,9 @@ export const programmesData: Programme[] = [
     status: "Active",
     heroImage: "/images/heroes/download-19.jpg",
     heroImageAlt: "Young people engaged in creative art, music, and learning in Mathare",
+    metaTitle: "Youth Empowerment and Skills in Mathare | ABWA World",
+    metaDescription:
+      "ABWA's youth programme in Mathare, Nairobi brings art, music, learning support and environmental action together, led alongside a local youth group.",
     description:
       "Together with a local youth group, ABWA creates space for young people to build skills, share their talents and take part in the life of their community.",
     context: [
@@ -50,10 +53,21 @@ export const programmesData: Programme[] = [
     aims: [
       "Help young people build creative and practical skills",
       "Support informed life choices and health education",
-      "Encourage participation in local community decisions",
-      "Improve and care for the local neighbourhood environment",
+      "Encourage participation in decisions that affect them",
+      "Look after their local environment without overstating employment guarantees",
     ],
+    safeguardingNote: {
+      title: "Keeping young people safe",
+      body: "Young people's names, faces and stories are shared only with their consent and, for children, their parent or guardian's consent. We take care not to reveal personal histories or details that could put anyone at risk.",
+    },
+    contactTopic: "youth",
+    ctaText: "Ask about the youth programme",
+    secondaryCta: {
+      label: "Read: Youth Empowerment Article",
+      href: "/blog/youth-empowerment-creativity-skills-community-action",
+    },
     relatedSlug: "environmental-conservation",
+    relatedPostSlug: "youth-empowerment-creativity-skills-community-action",
   },
   {
     slug: "womens-empowerment-sustainable-agriculture",
@@ -64,6 +78,9 @@ export const programmesData: Programme[] = [
     status: "Active",
     heroImage: "/images/blog/blog-sustainable-farming.jpg",
     heroImageAlt: "Women's group members preparing vegetable farming beds in Kangundo",
+    metaTitle: "Women's Farming and Empowerment in Kangundo | ABWA World",
+    metaDescription:
+      "A women's group in Kangundo, Machakos County shares sustainable vegetable-farming skills and leadership conversations with ABWA and volunteers.",
     description:
       "Women and volunteers learn from each other about growing vegetables well, caring for the land, and making confident decisions about income and community life.",
     context: [
@@ -97,12 +114,19 @@ export const programmesData: Programme[] = [
       },
     ],
     aims: [
-      "Support food security and improved nutrition for farming households",
-      "Build sustainable vegetable yields adapted to changing weather",
-      "Strengthen women's collective voice in farming and household finances",
-      "Practice eco-friendly pest management protecting local pollinators and water",
+      "Support food security, better nutrition and improved incomes for farming households",
+      "Help farmers adapt to local climate conditions and reach market demand",
+      "Manage pests in ways that protect pollinators and local water sources",
+      "Provide open forums for women's leadership and financial decision-making",
     ],
+    contactTopic: "women-agriculture",
+    ctaText: "Ask about this programme",
+    secondaryCta: {
+      label: "Volunteer With ABWA",
+      href: "/volunteer",
+    },
     relatedSlug: "umisiiyu-women-group",
+    relatedPostSlug: "sustainable-agriculture-resilient-communities-kenya",
   },
   {
     slug: "umisiiyu-women-group",
@@ -113,6 +137,9 @@ export const programmesData: Programme[] = [
     status: "Active",
     heroImage: "/images/programs/umisiiyu-hero.svg",
     heroImageAlt: "Umisiiyu Women Group tending to drought-resilient kitchen gardens in Kibwezi",
+    metaTitle: "Umisiiyu Women Group, Kibwezi | ABWA World",
+    metaDescription:
+      "ABWA works with the Umisiiyu Women Group in Kibwezi, Makueni County on vegetable farming and kitchen gardens for food and family income.",
     description:
       "A women's farming group with a long record of welcoming volunteers shares its knowledge of growing food in a dry climate.",
     context: [
@@ -132,9 +159,7 @@ export const programmesData: Programme[] = [
       {
         title: "Women's empowerment conversations",
         items: [
-          "Leadership and shared decisions",
-          "Financial planning and small enterprise",
-          "Access to health information and personal choices",
+          "Leadership, financial decisions, access to health information and the freedom to make your own choices",
         ],
       },
       {
@@ -145,10 +170,16 @@ export const programmesData: Programme[] = [
       },
     ],
     aims: [
-      "Promote food security and kitchen garden vegetables in dry climates",
-      "Optimize water conservation and drought-adapted growing techniques",
-      "Strengthen group solidarity and shared household incomes",
+      "Support food security and healthier family diets",
+      "Improve smallholder farm incomes in semi-arid zones",
+      "Help the group make sustainable, careful use of local water",
     ],
+    contactTopic: "umisiiyu",
+    ctaText: "Ask about the Umisiiyu project",
+    secondaryCta: {
+      label: "Explore all programmes",
+      href: "/programs",
+    },
     relatedSlug: "womens-empowerment-sustainable-agriculture",
   },
   {
@@ -160,6 +191,9 @@ export const programmesData: Programme[] = [
     status: "Active",
     heroImage: "/images/heroes/download-22.jpg",
     heroImageAlt: "Community tree planting and plastic waste recycling activity in Nairobi",
+    metaTitle: "Environmental Conservation, Trees and Recycling | ABWA",
+    metaDescription:
+      "How ABWA works with local groups on tree planting, waste management and creative recycling in Nairobi and beyond.",
     description:
       "Looking after the environment is part of everything we do. Here is how we do it with local groups.",
     context: [
@@ -188,9 +222,15 @@ export const programmesData: Programme[] = [
     ],
     aims: [
       "Help communities care for their local environment",
-      "Reduce waste and demonstrate creative reuse opportunities",
-      "Demonstrate the practical connection between healthy surroundings and resilient livelihoods",
+      "Reduce waste and demonstrate creative reuse of everyday materials",
+      "Highlight the vital link between healthy surroundings and healthy livelihoods",
     ],
+    contactTopic: "environment",
+    ctaText: "Get involved in environmental action",
+    secondaryCta: {
+      label: "Explore all programmes",
+      href: "/programs",
+    },
     relatedSlug: "youth-empowerment",
   },
 ];
