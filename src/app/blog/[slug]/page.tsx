@@ -8,6 +8,8 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { blogPostsData } from "@/content/blog";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getBlogPostingSchema, getBreadcrumbSchema } from "@/lib/seo/schema";
 
 interface BlogPostPageProps {
   params: {
@@ -34,12 +36,12 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     title: post.metaTitle,
     description: post.metaDescription,
     alternates: {
-      canonical: `https://www.abwaworld.org/blog/${post.slug}`,
+      canonical: `https://abwaworld.org/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.summary,
-      url: `https://www.abwaworld.org/blog/${post.slug}`,
+      url: `https://abwaworld.org/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedDate,
       authors: [post.author],
@@ -63,8 +65,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   // Related posts (excluding current post)
   const relatedPosts = blogPostsData.filter((p) => p.slug !== post.slug).slice(0, 2);
 
+  const breadcrumbsList = [
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: post.title, url: `/blog/${post.slug}` },
+  ];
+
   return (
     <main id="main-content">
+      <JsonLd data={[getBlogPostingSchema(post), getBreadcrumbSchema(breadcrumbsList)]} />
       {/* 1. Header & Breadcrumbs */}
       <section className="bg-slate-50/70 border-b border-slate-200/80 pt-10 pb-12 sm:pt-14 sm:pb-16">
         <Container>

@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Read ABWA's articles on sustainable farming, youth empowerment and ethical volunteering in Kenya.",
   alternates: {
-    canonical: "https://www.abwaworld.org/blog",
+    canonical: "https://abwaworld.org/blog",
   },
   openGraph: {
     title: "Blog | Community Development Stories and Ideas | ABWA",
     description:
       "Read ABWA's articles on sustainable farming, youth empowerment and ethical volunteering in Kenya.",
-    url: "https://www.abwaworld.org/blog",
+    url: "https://abwaworld.org/blog",
     type: "website",
   },
 };

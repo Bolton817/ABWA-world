@@ -6,26 +6,34 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionCTA } from "@/components/ui/SectionCTA";
 import { faqData } from "@/content/faq";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getFAQPageSchema, getBreadcrumbSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | ABWA World",
   description:
     "Straight answers about ABWA: who we are, where we work, how to volunteer, how to give, and how we protect people's privacy.",
   alternates: {
-    canonical: "https://www.abwaworld.org/faq",
+    canonical: "https://abwaworld.org/faq",
   },
   openGraph: {
     title: "Frequently Asked Questions | ABWA World",
     description:
       "Straight answers about ABWA: who we are, where we work, how to volunteer, how to give, and how we protect people's privacy.",
-    url: "https://www.abwaworld.org/faq",
+    url: "https://abwaworld.org/faq",
     type: "website",
   },
 };
 
 export default function FAQPage() {
+  const breadcrumbsList = [
+    { name: "Home", url: "/" },
+    { name: "Frequently Asked Questions", url: "/faq" },
+  ];
+
   return (
     <main id="main-content">
+      <JsonLd data={[getFAQPageSchema(faqData), getBreadcrumbSchema(breadcrumbsList)]} />
       {/* 1. Page Hero */}
       <PageHero
         title="Frequently Asked Questions"

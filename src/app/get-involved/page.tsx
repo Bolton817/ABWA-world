@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "There is more than one way to be part of ABWA's work. Volunteer, partner with us, give, or help spread the word. Find your place here.",
   alternates: {
-    canonical: "https://www.abwaworld.org/get-involved",
+    canonical: "https://abwaworld.org/get-involved",
   },
   openGraph: {
     title: "Get Involved | Volunteer, Partner or Support ABWA",
     description:
       "There is more than one way to be part of ABWA's work. Volunteer, partner with us, give, or help spread the word. Find your place here.",
-    url: "https://www.abwaworld.org/get-involved",
+    url: "https://abwaworld.org/get-involved",
     type: "website",
   },
 };

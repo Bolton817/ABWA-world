@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Get in touch with Action for Better World Association in Nairobi, Kenya. Call us or send a message about volunteering, partnership or giving.",
   alternates: {
-    canonical: "https://www.abwaworld.org/contact",
+    canonical: "https://abwaworld.org/contact",
   },
   openGraph: {
     title: "Contact ABWA | Nairobi, Kenya",
     description:
       "Get in touch with Action for Better World Association in Nairobi, Kenya. Call us or send a message about volunteering, partnership or giving.",
-    url: "https://www.abwaworld.org/contact",
+    url: "https://abwaworld.org/contact",
     type: "website",
   },
 };

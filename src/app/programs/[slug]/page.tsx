@@ -19,6 +19,8 @@ import {
   ArrowLeft,
   BookOpen,
 } from "lucide-react";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getBreadcrumbSchema } from "@/lib/seo/schema";
 
 interface ProgrammePageProps {
   params: {
@@ -64,8 +66,15 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
 
   const relatedProgramme = programmesData.find((p) => p.slug === programme.relatedSlug);
 
+  const breadcrumbsList = [
+    { name: "Home", url: "/" },
+    { name: "Our Programmes", url: "/programs" },
+    { name: programme.title, url: `/programs/${programme.slug}` },
+  ];
+
   return (
     <div>
+      <JsonLd data={getBreadcrumbSchema(breadcrumbsList)} />
       {/* 1. Page Hero with single H1 & Breadcrumbs */}
       <PageHero
         title={programme.title}

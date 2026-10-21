@@ -4,8 +4,8 @@
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 11 — Legal Pages and System States (Completed)**
-- **Next Stage**: **Stage 12 — SEO, Metadata, Structured Data, Sitemap and Robots**
+- **Current Stage**: **Stage 12 — SEO, Metadata, Structured Data, Sitemap and Robots (Completed)**
+- **Next Stage**: **Stage 13 — Apply the Approved Animation Map**
 - **Last Updated**: 2026-10-21
 
 ---
@@ -37,7 +37,7 @@
 | **09** | **Blog, Stories and Three Complete Launch Posts** | **Completed** | 3 complete launch articles (2,700+ words), dynamic reader, stories & consent charter |
 | **10** | **FAQ, Contact and Search** | **Completed** | 12-question accordion with server-rendered HTML, verified contact & topic form, instant client search |
 | **11** | **Legal Pages and System States** | **Completed** | Text-first Privacy Policy & Terms with desktop TOC, custom 404 recovery with search, sanitized client error boundary |
-| 12 | SEO, Metadata, Structured Data, Sitemap and Robots | Pending | JSON-LD NGO/WebSite/BlogPosting, sitemap.ts, robots.ts |
+| **12** | **SEO, Metadata, Structured Data, Sitemap and Robots** | **Completed** | Dynamic sitemap.ts, robots.ts, Schema.org NGO/WebSite/BlogPosting/FAQPage, exact Copy Deck metadata, one-H1 enforcement |
 | 13 | Apply the Approved Animation Map | Pending | Staged GSAP reveals and desktop scroll effects |
 | 14 | Accessibility, Performance and Full QA | Pending | WCAG 2.2 AA audit, Core Web Vitals, cross-viewport checks |
 | 15 | Launch, Redirects and Handover | Pending | Production build, DNS notes, client handover package |
@@ -71,8 +71,8 @@
 | `/search` | Site-wide live search | 080 | Live / Verified |
 | `/privacy` | Privacy Policy (no photo hero) | 083 | Live / Verified |
 | `/terms` | Terms and Conditions (no photo hero) | 084 | Live / Verified |
-| `/sitemap.xml` | Dynamic canonical sitemap | 094 | Baseline Planned |
-| `/robots.txt` | Dynamic crawler directives | 095 | Baseline Planned |
+| `/sitemap.xml` | Dynamic canonical sitemap | 094 | Live / Verified |
+| `/robots.txt` | Dynamic crawler directives | 095 | Live / Verified |
 
 ---
 

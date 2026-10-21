@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   description:
     "Organisations, funders, schools and businesses are invited to partner with ABWA on community projects in Kenya. Start a conversation here.",
   alternates: {
-    canonical: "https://www.abwaworld.org/partner-with-us",
+    canonical: "https://abwaworld.org/partner-with-us",
   },
   openGraph: {
     title: "Partner With ABWA | Collaboration and Funding in Kenya",
     description:
       "Organisations, funders, schools and businesses are invited to partner with ABWA on community projects in Kenya. Start a conversation here.",
-    url: "https://www.abwaworld.org/partner-with-us",
+    url: "https://abwaworld.org/partner-with-us",
     type: "website",
   },
 };

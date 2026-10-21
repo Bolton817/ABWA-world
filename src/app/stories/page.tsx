@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   description:
     "Real people and real places from ABWA's community projects in Kenya, shared with their permission.",
   alternates: {
-    canonical: "https://www.abwaworld.org/stories",
+    canonical: "https://abwaworld.org/stories",
   },
   openGraph: {
     title: "Community Stories | ABWA World",
     description:
       "Real people and real places from ABWA's community projects in Kenya, shared with their permission.",
-    url: "https://www.abwaworld.org/stories",
+    url: "https://abwaworld.org/stories",
     type: "website",
   },
 };

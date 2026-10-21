@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   description:
     "Learn how to support ABWA's community projects in Kenya, and how we will be open with you about where your support goes.",
   alternates: {
-    canonical: "https://www.abwaworld.org/donate",
+    canonical: "https://abwaworld.org/donate",
   },
   openGraph: {
     title: "Support ABWA's Work | Giving to ABWA World",
     description:
       "Learn how to support ABWA's community projects in Kenya, and how we will be open with you about where your support goes.",
-    url: "https://www.abwaworld.org/donate",
+    url: "https://abwaworld.org/donate",
     type: "website",
   },
 };

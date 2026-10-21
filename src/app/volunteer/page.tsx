@@ -26,13 +26,13 @@ export const metadata: Metadata = {
   description:
     "Thinking of volunteering with ABWA in Kenya? Read what to expect, what we ask of volunteers and how to send an enquiry. No promises, just honest information.",
   alternates: {
-    canonical: "https://www.abwaworld.org/volunteer",
+    canonical: "https://abwaworld.org/volunteer",
   },
   openGraph: {
     title: "Volunteer With ABWA | Community Volunteering in Kenya",
     description:
       "Thinking of volunteering with ABWA in Kenya? Read what to expect, what we ask of volunteers and how to send an enquiry. No promises, just honest information.",
-    url: "https://www.abwaworld.org/volunteer",
+    url: "https://abwaworld.org/volunteer",
     type: "website",
   },
 };

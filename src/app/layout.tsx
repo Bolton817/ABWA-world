@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -56,6 +56,9 @@ const fontGoldie = localFont({
   display: "swap",
 });
 
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getOrganizationSchema, getWebSiteSchema } from "@/lib/seo/schema";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -70,6 +73,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: "ABWA World | Community Action in Nairobi, Kenya",
     description: siteConfig.description,
+    images: [
+      {
+        url: `${siteConfig.url}/images/brand/logo.svg`,
+        width: 1200,
+        height: 630,
+        alt: "ABWA World — Action for Better World Association",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ABWA World | Community Action in Nairobi, Kenya",
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/images/brand/logo.svg`],
   },
   alternates: {
     canonical: siteConfig.url,
@@ -94,6 +111,9 @@ export default function RootLayout({
 
   return (
     <html lang="en-KE" className={fontVariables}>
+      <head>
+        <JsonLd data={[getOrganizationSchema(), getWebSiteSchema()]} />
+      </head>
       <body className="min-h-screen flex flex-col bg-white text-abwa-ink font-sans antialiased selection:bg-abwa-pale selection:text-abwa-navy">
         <SkipLink />
         <Header />
