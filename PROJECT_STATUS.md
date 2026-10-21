@@ -4,8 +4,8 @@
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 07 — Programme Index and Detail Template (Completed)**
-- **Next Stage**: **Stage 08 — Get Involved, Volunteer, Donate and Partner**
+- **Current Stage**: **Stage 08 — Get Involved, Volunteer, Donate and Partner (Completed)**
+- **Next Stage**: **Stage 09 — Blog, Stories and Three Complete Launch Posts**
 - **Last Updated**: 2026-10-21
 
 ---
@@ -33,7 +33,7 @@
 | **05** | **Homepage Structure and Responsive Layout** | **Completed** | 10 homepage sections per Copy Deck |
 | **06** | **About Page** | **Completed** | Story, purpose, focus areas, governance |
 | **07** | **Programme Index and Detail Template** | **Completed** | 4 active programmes + dynamic detail template |
-| 08 | Get Involved, Volunteer, Donate and Partner | Pending | Engagement routes with safe enquiry/payment decision gates |
+| **08** | **Get Involved, Volunteer, Donate and Partner** | **Completed** | Engagement routes with safe enquiry/payment decision gates & forms |
 | 09 | Blog, Stories and Three Complete Launch Posts | Pending | 3 complete launch articles, MDX/content data |
 | 10 | FAQ, Contact and Search | Pending | Accordions, verified phone/contact, client search |
 | 11 | Legal Pages and System States | Pending | Privacy Policy, Terms, 404, Error boundaries |
@@ -55,10 +55,10 @@
 | `/programs/womens-empowerment-sustainable-agriculture` | Women's Farming & Empowerment (Kangundo) | 058 | Baseline Planned |
 | `/programs/umisiiyu-women-group` | Umisiiyu Women Group (Kibwezi) | 059 | Baseline Planned |
 | `/programs/environmental-conservation` | Environmental Conservation | 060 | Baseline Planned |
-| `/get-involved` | Engagement pathways overview | 066 | Baseline Planned |
-| `/volunteer` | Volunteering expectations & enquiry form | 067ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“068 | Baseline Planned |
-| `/donate` | Support Our Work (Version A enquiry fallback) | 069 | Baseline Planned |
-| `/partner-with-us` | Institutional collaboration & enquiry form | 070 | Baseline Planned |
+| `/get-involved` | Engagement pathways overview | 066 | Live / Verified |
+| `/volunteer` | Volunteering expectations & enquiry form | 067–068 | Live / Verified |
+| `/donate` | Support Our Work (Version A enquiry fallback) | 069 | Live / Verified |
+| `/partner-with-us` | Institutional collaboration & enquiry form | 070 | Live / Verified |
 | `/impact` | Impact definitions & qualitative evidence | 071 | Baseline Planned |
 | `/stories` & `[slug]` | Community stories & consent framework | 072 | Baseline Planned |
 | `/gallery` | Photo gallery & accessible lightbox | 073 | Baseline Planned |

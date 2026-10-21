@@ -1,4 +1,4 @@
-﻿export type ProgrammeStatus = "Active" | "Planned" | "Completed";
+export type ProgrammeStatus = "Active" | "Planned" | "Completed";
 
 export interface ProgrammeActivity {
   title: string;
@@ -71,3 +71,32 @@ export interface CTAButton {
   variant?: "primary" | "secondary" | "outline" | "gold";
   accessibleName?: string;
 }
+
+export interface VolunteerFormData {
+  fullName: string;
+  email: string;
+  phone?: string;
+  country?: string;
+  interestArea: string;
+  availability?: string;
+  message: string;
+  consent: boolean;
+  honeypot?: string;
+}
+
+export interface PartnerFormData {
+  organisation: string;
+  contactName: string;
+  email: string;
+  interestArea: string;
+  message: string;
+  consent: boolean;
+  honeypot?: string;
+}
+
+export interface EnquiryResponse {
+  success: boolean;
+  message: string;
+  errors?: Record<string, string>;
+}
+
