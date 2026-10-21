@@ -1,4 +1,6 @@
-﻿export const siteConfig = {
+﻿import { NavItem } from "@/types";
+
+export const siteConfig = {
   name: "ABWA World",
   formalName: "Action for Better World Association",
   tagline: "Transforming Lives Through Action",
@@ -56,7 +58,7 @@
         ],
       },
       { label: "Contact", href: "/contact" },
-    ],
+    ] as readonly NavItem[],
   },
 } as const;
 

@@ -39,10 +39,15 @@ export interface FAQItem {
   category?: string;
 }
 
+export interface NavChildItem {
+  label: string;
+  href: string;
+}
+
 export interface NavItem {
   label: string;
   href: string;
-  children?: { label: string; href: string }[];
+  children?: readonly NavChildItem[];
 }
 
 export interface CTAButton {

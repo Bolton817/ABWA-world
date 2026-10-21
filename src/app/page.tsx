@@ -8,12 +8,12 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionCTA } from "@/components/ui/SectionCTA";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
+import { Phone, CheckCircle2, Sparkles, HeartHandshake } from "lucide-react";
 
 export default function HomePage() {
   return (
     <div>
-      {/* 1. Hero per TDD Module 030 & 033 */}
+      {/* 1. Hero Template with Local Image & Dark Overlay */}
       <PageHero
         eyebrow={`${siteConfig.formalName} · ${siteConfig.contact.location}`}
         title="Community action for a better world"
@@ -33,93 +33,85 @@ export default function HomePage() {
         }}
       />
 
-      {/* 2. Brand Identity & Shared UI Primitives Preview */}
+      {/* 2. Global Shell & Navigation Showcase */}
       <Section surface="white">
         <Container>
           <SectionHeader
-            eyebrow="Stage 02 Primitives"
-            title="Brand Assets, UI Primitives & Image Inventory"
-            description="All brand SVGs, button variants, responsive cards, and hero templates now resolve from local files."
+            eyebrow="Stage 03 Verification"
+            title="Global Navigation, Shell & Premium Fonts"
+            description="The desktop two-tier sticky header, accessible mobile drawer, four-column footer, floating actions, and custom typefaces are now active across the site."
           />
 
-          {/* Logo showcase */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="p-8 rounded-xl border border-abwa-border bg-white flex flex-col justify-between space-y-4 shadow-sm">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-muted">
-                Primary Brand Mark (`logo.svg`)
-              </span>
-              <div className="py-2">
-                <Image
-                  src="/images/brand/logo.svg"
-                  alt="Action for Better World Association primary logo"
-                  width={300}
-                  height={75}
-                  className="h-14 w-auto object-contain"
-                />
-              </div>
-              <p className="text-xs text-abwa-muted">
-                Used in expanded desktop header, brand navigation, and light surfaces.
-              </p>
+          {/* Typography & Premium Fonts Showcase */}
+          <div className="p-8 rounded-2xl bg-slate-50 border border-abwa-border space-y-6 mb-12 shadow-sm">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-abwa-gold" />
+              <h3 className="text-lg font-bold text-abwa-navy font-sans">
+                Selective Premium Fonts Palette
+              </h3>
             </div>
-
-            <div className="p-8 rounded-xl border border-abwa-navy bg-abwa-navy text-white flex flex-col justify-between space-y-4 shadow-sm">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-                Inverted Brand Mark (`logo-white.svg`)
-              </span>
-              <div className="py-2">
-                <Image
-                  src="/images/brand/logo-white.svg"
-                  alt="Action for Better World Association white logo"
-                  width={300}
-                  height={75}
-                  className="h-14 w-auto object-contain"
-                />
-              </div>
-              <p className="text-xs text-slate-300">
-                Used in dark footers and high-contrast hero headers.
-              </p>
-            </div>
-          </div>
-
-          {/* Button variants showcase */}
-          <div className="p-8 rounded-xl bg-abwa-pale border border-abwa-border space-y-4">
-            <h3 className="text-lg font-bold text-abwa-navy">
-              Standardized Button Variants & States
-            </h3>
-            <p className="text-sm text-abwa-muted">
-              Built with polymorphic Next.js Link support, loading indicators, and WCAG focus-visible rings.
+            <p className="text-sm text-abwa-muted leading-relaxed">
+              These typefaces are loaded via Next.js local font optimization and can be applied selectively via Tailwind utilities for headings, calligraphic subheadings, and warm personal accents.
             </p>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Button variant="primary" size="md">
-                Primary Navy
-              </Button>
-              <Button variant="blue" size="md">
-                Brand Blue
-              </Button>
-              <Button variant="gold" size="md">
-                Warm Gold
-              </Button>
-              <Button variant="secondary" size="md">
-                Secondary Pale
-              </Button>
-              <Button variant="outline" size="md">
-                Outline
-              </Button>
-              <Button variant="ghost" size="md">
-                Ghost Action
-              </Button>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+              {/* Bold Headings */}
+              <div className="p-5 rounded-xl bg-white border border-abwa-border space-y-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-abwa-gold">
+                  Display / Headings (`font-mequin` & `font-leeds`)
+                </span>
+                <div className="text-2xl font-bold text-abwa-navy font-mequin tracking-wide">
+                  Action for Better World
+                </div>
+                <div className="text-xl font-bold text-abwa-navy font-leeds tracking-normal">
+                  Community Leadership & Growth
+                </div>
+                <p className="text-xs text-abwa-muted pt-1">
+                  High-impact bold character for titles and primary callouts.
+                </p>
+              </div>
+
+              {/* Calligraphy & Script */}
+              <div className="p-5 rounded-xl bg-white border border-abwa-border space-y-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-abwa-gold">
+                  Calligraphy / Subheadings (`font-kaushan` & `font-ragnar`)
+                </span>
+                <div className="text-xl text-abwa-blue font-kaushan">
+                  Transforming Lives Through Action
+                </div>
+                <div className="text-lg text-abwa-navy font-ragnar tracking-wider">
+                  Sustainable Agriculture & Youth Skills
+                </div>
+                <p className="text-xs text-abwa-muted pt-1">
+                  Fluid, human warmth for subtitles and featured callouts.
+                </p>
+              </div>
+
+              {/* Handwritten Accents */}
+              <div className="p-5 rounded-xl bg-white border border-abwa-border space-y-2 md:col-span-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-abwa-gold">
+                  Handwritten / Personal Accents (`font-anak` & `font-goldie`)
+                </span>
+                <div className="flex flex-wrap items-center gap-6">
+                  <span className="text-2xl text-abwa-gold font-goldie">
+                    "Built with communities, not for them."
+                  </span>
+                  <span className="text-lg text-abwa-ink font-anak">
+                    Nairobi • Machakos • Makueni
+                  </span>
+                </div>
+                <p className="text-xs text-abwa-muted pt-1">
+                  Authentic community notes, quotes, and badges.
+                </p>
+              </div>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      {/* 3. Sample Programme Cards Grid with Local Images */}
-      <Section surface="pale">
-        <Container>
+          {/* Quick Programme Highlights */}
           <SectionHeader
-            eyebrow="Local Media Verification"
-            title="Programme Card Primitives"
-            description="Testing local SVG asset rendering, responsive card grid, and hover microinteractions."
+            eyebrow="Our Work"
+            title="Featured Community Programmes"
+            description="Explore verified initiatives led in partnership with local groups."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -160,7 +152,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* 4. Final Section CTA Primitive */}
+      {/* 3. Final Conversion CTA Banner */}
       <SectionCTA
         surface="navy"
         title="Let's build something good together"

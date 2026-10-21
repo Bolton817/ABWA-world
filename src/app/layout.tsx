@@ -1,13 +1,59 @@
 ﻿import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { SkipLink } from "@/components/ui/SkipLink";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingActions } from "@/components/layout/FloatingActions";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
+});
+
+const fontMequin = localFont({
+  src: "../assets/fonts/Mequin.otf",
+  variable: "--font-mequin",
+  display: "swap",
+});
+
+const fontImpact = localFont({
+  src: "../assets/fonts/Impact Strike.otf",
+  variable: "--font-impact",
+  display: "swap",
+});
+
+const fontLeeds = localFont({
+  src: "../assets/fonts/Leeds - Personal Use.otf",
+  variable: "--font-leeds",
+  display: "swap",
+});
+
+const fontKaushan = localFont({
+  src: "../assets/fonts/KaushanScript-Regular.otf",
+  variable: "--font-kaushan",
+  display: "swap",
+});
+
+const fontRagnar = localFont({
+  src: "../assets/fonts/RagnarGothic-Regular.otf",
+  variable: "--font-ragnar",
+  display: "swap",
+});
+
+const fontAnak = localFont({
+  src: "../assets/fonts/Anak Bijak.otf",
+  variable: "--font-anak",
+  display: "swap",
+});
+
+const fontGoldie = localFont({
+  src: "../assets/fonts/GoldieClassic-Regular.ttf",
+  variable: "--font-goldie",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -35,15 +81,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fontVariables = [
+    inter.variable,
+    fontMequin.variable,
+    fontImpact.variable,
+    fontLeeds.variable,
+    fontKaushan.variable,
+    fontRagnar.variable,
+    fontAnak.variable,
+    fontGoldie.variable,
+  ].join(" ");
+
   return (
-    <html lang="en-KE" className={inter.variable}>
-      <body className="min-h-screen flex flex-col bg-white text-abwa-ink font-sans antialiased">
+    <html lang="en-KE" className={fontVariables}>
+      <body className="min-h-screen flex flex-col bg-white text-abwa-ink font-sans antialiased selection:bg-abwa-pale selection:text-abwa-navy">
         <SkipLink />
-        <div className="flex-1 flex flex-col">
-          <main id="main-content" className="flex-1">
-            {children}
-          </main>
-        </div>
+        <Header />
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
+        <Footer />
+        <FloatingActions />
       </body>
     </html>
   );
