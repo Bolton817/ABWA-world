@@ -153,4 +153,26 @@ export interface SearchableItem {
   keywords?: string[];
 }
 
+export interface LegalSection {
+  id: string;
+  number: number;
+  title: string;
+  content: string[];
+  listItems?: string[];
+  callout?: string;
+}
+
+export interface LegalDocument {
+  slug: "privacy" | "terms";
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  version: string;
+  effectiveDate: string;
+  statusNotice: string;
+  intro: string[];
+  sections: LegalSection[];
+}
+
+
 

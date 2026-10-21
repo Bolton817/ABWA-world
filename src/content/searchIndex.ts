@@ -76,6 +76,20 @@ export const siteSearchIndex: SearchableItem[] = [
     snippet: "Practical reads on sustainable agriculture, youth empowerment, and ethical community volunteering.",
     keywords: ["articles", "essays", "farming", "youth", "volunteering"],
   },
+  {
+    title: "Privacy Policy",
+    url: "/privacy",
+    category: "Page",
+    snippet: "How ABWA collects, uses and protects personal information shared through this website.",
+    keywords: ["privacy", "data", "protection", "rights", "cookies", "consent", "takedown", "safeguarding"],
+  },
+  {
+    title: "Terms and Conditions",
+    url: "/terms",
+    category: "Page",
+    snippet: "The terms for using the ABWA World website, including how we treat enquiries, content and links.",
+    keywords: ["terms", "conditions", "rules", "usage", "legal", "enquiries", "liability"],
+  },
 
   // Dynamic Programmes
   ...programmesData.map((prog) => ({
