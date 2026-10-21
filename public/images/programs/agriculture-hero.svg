@@ -1,0 +1,28 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" fill="none">
+  <defs>
+    <linearGradient id="bg-agriculture-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#184232" />
+      <stop offset="60%" stop-color="#15345A" />
+      <stop offset="100%" stop-color="#0E233D" />
+    </linearGradient>
+    <pattern id="grid-agriculture-hero" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg-agriculture-hero)" />
+  <rect width="1200" height="675" fill="url(#grid-agriculture-hero)" />
+  
+  <!-- Subtle organic landscape curves in Warm Gold and Pale Blue -->
+  <path d="M 0 520 Q 300 460 600 500 T 1200 480 L 1200 675 L 0 675 Z" fill="rgba(183, 144, 69, 0.15)" />
+  <path d="M 0 560 Q 400 510 800 550 T 1200 530 L 1200 675 L 0 675 Z" fill="rgba(30, 99, 184, 0.25)" />
+  <circle cx="1020" cy="180" r="140" fill="rgba(183, 144, 69, 0.08)" />
+  <circle cx="1020" cy="180" r="80" fill="rgba(183, 144, 69, 0.15)" />
+
+  <!-- Badge and Typography Representation -->
+  <g transform="translate(100, 240)">
+    <rect width="180" height="32" rx="16" fill="rgba(183, 144, 69, 0.2)" stroke="#B79045" stroke-width="1.5" />
+    <text x="90" y="21" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#B79045" text-anchor="middle" letter-spacing="0.1em">ABWA WORLD</text>
+    <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Women's Empowerment & Agriculture</text>
+    <text x="0" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#EAF2FA">Kangundo, Machakos</text>
+  </g>
+</svg>

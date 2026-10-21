@@ -1,11 +1,11 @@
-# ABWA World — Project Status & Implementation Tracker
+# ABWA World â€” Project Status & Implementation Tracker
 
 ## 1. Project Overview
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 01 — Framework Foundation and Design Tokens (Completed)**
-- **Next Stage**: **Stage 02 — Fonts, Image Inventory and Shared UI Primitives**
+- **Current Stage**: **Stage 01 â€” Framework Foundation and Design Tokens (Completed)**
+- **Next Stage**: **Stage 02 â€” Fonts, Image Inventory and Shared UI Primitives**
 - **Last Updated**: 2026-10-21
 
 ---
@@ -27,7 +27,7 @@
 | :--- | :--- | :--- | :--- |
 | **00** | **Repository Audit and Baseline** | **In Progress (Active)** | Environment verified, Git repo initialized, baseline documentation created |
 | **01** | **Framework Foundation and Design Tokens** | **Completed** | Next.js App Router, Tailwind, colour/typography tokens |
-| 02 | Fonts, Image Inventory and Shared UI Primitives | Pending | Brand assets, PageHero, Container, Button variants |
+| **02** | **Fonts, Image Inventory and Shared UI Primitives** | **Completed** | Brand assets, PageHero, Container, Button variants |
 | 03 | Header, Footer and Floating Controls | Pending | Two-tier desktop header, mobile drawer, 4-col footer, action hub |
 | 04 | GSAP Integration and Motion System | Pending | `useGSAP`, ScrollTrigger setup, reduced motion handling |
 | 05 | Homepage Structure and Responsive Layout | Pending | 11 homepage sections per Copy Deck |
@@ -48,15 +48,15 @@
 
 | Route | Expected Content | TDD Module | Status |
 | :--- | :--- | :--- | :--- |
-| `/` | Homepage (11 sections) | 032–043 | Baseline Planned |
-| `/about` | About ABWA, history, purpose, focus areas | 044–050 | Baseline Planned |
-| `/programs` | Programmes directory | 051–052 | Baseline Planned |
+| `/` | Homepage (11 sections) | 032â€“043 | Baseline Planned |
+| `/about` | About ABWA, history, purpose, focus areas | 044â€“050 | Baseline Planned |
+| `/programs` | Programmes directory | 051â€“052 | Baseline Planned |
 | `/programs/youth-empowerment` | Youth Empowerment and Skills (Mathare) | 057 | Baseline Planned |
 | `/programs/womens-empowerment-sustainable-agriculture` | Women's Farming & Empowerment (Kangundo) | 058 | Baseline Planned |
 | `/programs/umisiiyu-women-group` | Umisiiyu Women Group (Kibwezi) | 059 | Baseline Planned |
 | `/programs/environmental-conservation` | Environmental Conservation | 060 | Baseline Planned |
 | `/get-involved` | Engagement pathways overview | 066 | Baseline Planned |
-| `/volunteer` | Volunteering expectations & enquiry form | 067–068 | Baseline Planned |
+| `/volunteer` | Volunteering expectations & enquiry form | 067â€“068 | Baseline Planned |
 | `/donate` | Support Our Work (Version A enquiry fallback) | 069 | Baseline Planned |
 | `/partner-with-us` | Institutional collaboration & enquiry form | 070 | Baseline Planned |
 | `/impact` | Impact definitions & qualitative evidence | 071 | Baseline Planned |
@@ -67,7 +67,7 @@
 | `/blog/youth-empowerment-creativity-skills-community-action` | Launch Article 2 (941 words) | 077 | Baseline Planned |
 | `/blog/ethical-community-volunteering-in-kenya` | Launch Article 3 (872 words) | 078 | Baseline Planned |
 | `/faq` | Frequently Asked Questions (12 questions) | 079 | Baseline Planned |
-| `/contact` | Contact information & general form | 081–082 | Baseline Planned |
+| `/contact` | Contact information & general form | 081â€“082 | Baseline Planned |
 | `/privacy` | Privacy Policy (no photo hero) | 083 | Baseline Planned |
 | `/terms` | Terms and Conditions (no photo hero) | 084 | Baseline Planned |
 | `/sitemap.xml` | Dynamic canonical sitemap | 094 | Baseline Planned |

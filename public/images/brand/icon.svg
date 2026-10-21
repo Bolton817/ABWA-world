@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#15345A" />
+  <!-- Sun in Gold -->
+  <circle cx="44" cy="20" r="5" fill="#B79045" />
+  <!-- Trunk / Tree -->
+  <path d="M32 50 V30 M32 38 C26 32 22 26 22 20 M32 38 C38 32 42 26 42 20" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Leaf dots -->
+  <circle cx="22" cy="20" r="4" fill="#EAF2FA" />
+  <circle cx="32" cy="16" r="4.5" fill="#FFFFFF" />
+  <circle cx="42" cy="20" r="4" fill="#B79045" />
+  <path d="M18 50 H46" stroke="#B79045" stroke-width="2" stroke-linecap="round"/>
+</svg>

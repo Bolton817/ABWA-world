@@ -1,107 +1,179 @@
 ﻿import React from "react";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { Phone, MapPin, CheckCircle2 } from "lucide-react";
+import { PageHero } from "@/components/ui/PageHero";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SectionCTA } from "@/components/ui/SectionCTA";
+import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { CheckCircle2, ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
 
 export default function HomePage() {
   return (
     <div>
-      {/* Foundation Hero Preview */}
-      <section className="bg-abwa-navy text-white py-16 sm:py-24">
-        <Container>
-          <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-abwa-gold border border-abwa-gold/30">
-              <span>{siteConfig.formalName}</span>
-              <span>•</span>
-              <span>{siteConfig.contact.location}</span>
-            </div>
-            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
-              Community action for a better world
-            </h1>
-            <p className="text-lg sm:text-xl text-slate-200">
-              Working with women, young people and children in Kenyan communities.
-            </p>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Since {siteConfig.foundingYear}, ABWA has worked alongside community groups on farming,
-              creative skills, environmental action and learning. We believe lasting change is built
-              with people, not delivered to them.
-            </p>
-            <div className="pt-4 flex flex-wrap gap-4 items-center">
-              <a
-                href={siteConfig.contact.phoneHref}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-abwa-blue hover:bg-abwa-blue-hover text-white font-medium text-sm transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Call {siteConfig.contact.phone}</span>
-              </a>
-              <div className="inline-flex items-center gap-2 text-slate-300 text-sm">
-                <MapPin className="w-4 h-4 text-abwa-gold" />
-                <span>{siteConfig.contact.location}</span>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      {/* 1. Hero per TDD Module 030 & 033 */}
+      <PageHero
+        eyebrow={`${siteConfig.formalName} · ${siteConfig.contact.location}`}
+        title="Community action for a better world"
+        subtitle="Working with women, young people and children in Kenyan communities."
+        description={`Since ${siteConfig.foundingYear}, ABWA has worked alongside community groups on farming, creative skills, environmental action and learning. We believe lasting change is built with people, not delivered to them, and we'd love you to be part of it.`}
+        imageSrc="/images/heroes/hero-home.svg"
+        imageAlt="Community members collaborating on agricultural and skills projects in Kenya"
+        primaryCta={{
+          label: "Explore Our Programmes",
+          href: "/programs",
+          variant: "blue",
+        }}
+        secondaryCta={{
+          label: "About ABWA",
+          href: "/about",
+          variant: "outline-white",
+        }}
+      />
 
-      {/* Design System Token Verification Section */}
-      <Section surface="pale">
+      {/* 2. Brand Identity & Shared UI Primitives Preview */}
+      <Section surface="white">
         <Container>
-          <div className="max-w-3xl space-y-6">
-            <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-                Design Foundation
+          <SectionHeader
+            eyebrow="Stage 02 Primitives"
+            title="Brand Assets, UI Primitives & Image Inventory"
+            description="All brand SVGs, button variants, responsive cards, and hero templates now resolve from local files."
+          />
+
+          {/* Logo showcase */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="p-8 rounded-xl border border-abwa-border bg-white flex flex-col justify-between space-y-4 shadow-sm">
+              <span className="text-xs font-bold uppercase tracking-wider text-abwa-muted">
+                Primary Brand Mark (`logo.svg`)
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-abwa-navy">
-                Design Tokens & Architectural Baseline
-              </h2>
-              <p className="text-abwa-muted text-sm sm:text-base">
-                Verifying color hierarchy, responsive typography, and layout primitives for Stage 01.
+              <div className="py-2">
+                <Image
+                  src="/images/brand/logo.svg"
+                  alt="Action for Better World Association primary logo"
+                  width={300}
+                  height={75}
+                  className="h-14 w-auto object-contain"
+                />
+              </div>
+              <p className="text-xs text-abwa-muted">
+                Used in expanded desktop header, brand navigation, and light surfaces.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
-              <div className="p-4 rounded-lg bg-abwa-navy text-white text-xs font-mono space-y-1 shadow-sm">
-                <div className="font-bold text-sm">abwa-navy</div>
-                <div>#15345A</div>
-                <div className="text-slate-300 text-[10px]">Primary surface</div>
-              </div>
-              <div className="p-4 rounded-lg bg-abwa-blue text-white text-xs font-mono space-y-1 shadow-sm">
-                <div className="font-bold text-sm">abwa-blue</div>
-                <div>#1E63B8</div>
-                <div className="text-slate-200 text-[10px]">Action & links</div>
-              </div>
-              <div className="p-4 rounded-lg bg-abwa-gold text-white text-xs font-mono space-y-1 shadow-sm">
-                <div className="font-bold text-sm">abwa-gold</div>
-                <div>#B79045</div>
-                <div className="text-amber-100 text-[10px]">Warm accent</div>
-              </div>
-              <div className="p-4 rounded-lg bg-white border border-abwa-border text-abwa-ink text-xs font-mono space-y-1 shadow-sm">
-                <div className="font-bold text-sm">abwa-pale</div>
-                <div>#EAF2FA</div>
-                <div className="text-abwa-muted text-[10px]">Surface contrast</div>
-              </div>
-              <div className="p-4 rounded-lg bg-white border border-abwa-border text-abwa-ink text-xs font-mono space-y-1 shadow-sm">
-                <div className="font-bold text-sm">abwa-ink</div>
-                <div>#263445</div>
-                <div className="text-abwa-muted text-[10px]">Body text</div>
-              </div>
-              <div className="p-4 rounded-lg bg-white border border-abwa-border text-abwa-muted text-xs font-mono space-y-1 shadow-sm">
-                <div className="font-bold text-sm">abwa-muted</div>
-                <div>#5E6B78</div>
-                <div className="text-abwa-muted text-[10px]">Secondary text</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2 pt-2 text-sm text-abwa-ink">
-              <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-              <span>
-                WCAG 2.2 AA token target: Contrast ratios verified on white and pale backgrounds.
+            <div className="p-8 rounded-xl border border-abwa-navy bg-abwa-navy text-white flex flex-col justify-between space-y-4 shadow-sm">
+              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+                Inverted Brand Mark (`logo-white.svg`)
               </span>
+              <div className="py-2">
+                <Image
+                  src="/images/brand/logo-white.svg"
+                  alt="Action for Better World Association white logo"
+                  width={300}
+                  height={75}
+                  className="h-14 w-auto object-contain"
+                />
+              </div>
+              <p className="text-xs text-slate-300">
+                Used in dark footers and high-contrast hero headers.
+              </p>
+            </div>
+          </div>
+
+          {/* Button variants showcase */}
+          <div className="p-8 rounded-xl bg-abwa-pale border border-abwa-border space-y-4">
+            <h3 className="text-lg font-bold text-abwa-navy">
+              Standardized Button Variants & States
+            </h3>
+            <p className="text-sm text-abwa-muted">
+              Built with polymorphic Next.js Link support, loading indicators, and WCAG focus-visible rings.
+            </p>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Button variant="primary" size="md">
+                Primary Navy
+              </Button>
+              <Button variant="blue" size="md">
+                Brand Blue
+              </Button>
+              <Button variant="gold" size="md">
+                Warm Gold
+              </Button>
+              <Button variant="secondary" size="md">
+                Secondary Pale
+              </Button>
+              <Button variant="outline" size="md">
+                Outline
+              </Button>
+              <Button variant="ghost" size="md">
+                Ghost Action
+              </Button>
             </div>
           </div>
         </Container>
       </Section>
+
+      {/* 3. Sample Programme Cards Grid with Local Images */}
+      <Section surface="pale">
+        <Container>
+          <SectionHeader
+            eyebrow="Local Media Verification"
+            title="Programme Card Primitives"
+            description="Testing local SVG asset rendering, responsive card grid, and hover microinteractions."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card
+              badge="Active Candidate"
+              badgeVariant="green"
+              subtitle="Mathare, Nairobi"
+              title="Youth Empowerment and Skills"
+              description="Art, music, learning support and community action led together with young people in Mathare."
+              imageSrc="/images/programs/youth-hero.svg"
+              imageAlt="Young people engaged in creative art, music, and learning in Mathare"
+              href="/programs/youth-empowerment"
+              ctaLabel="Explore youth empowerment"
+            />
+            <Card
+              badge="Active Candidate"
+              badgeVariant="gold"
+              subtitle="Kangundo, Machakos"
+              title="Women's Empowerment & Agriculture"
+              description="Practical farming knowledge and shared learning with a women's group in Kangundo."
+              imageSrc="/images/programs/agriculture-hero.svg"
+              imageAlt="Women's group members preparing vegetable farming beds in Kangundo"
+              href="/programs/womens-empowerment-sustainable-agriculture"
+              ctaLabel="Explore women's agriculture"
+            />
+            <Card
+              badge="Active Candidate"
+              badgeVariant="default"
+              subtitle="Kibwezi, Makueni"
+              title="Umisiiyu Women Group"
+              description="Vegetable farming and kitchen gardens in dry-climate conditions with women farmers."
+              imageSrc="/images/programs/umisiiyu-hero.svg"
+              imageAlt="Umisiiyu Women Group tending to drought-resilient kitchen gardens in Kibwezi"
+              href="/programs/umisiiyu-women-group"
+              ctaLabel="Explore Umisiiyu project"
+            />
+          </div>
+        </Container>
+      </Section>
+
+      {/* 4. Final Section CTA Primitive */}
+      <SectionCTA
+        surface="navy"
+        title="Let's build something good together"
+        description="Whether you want to volunteer, partner with us, or simply learn more, we'd be glad to hear from you."
+        primaryCta={{
+          label: "Get Involved",
+          href: "/get-involved",
+        }}
+        secondaryCta={{
+          label: "Contact ABWA",
+          href: "/contact",
+        }}
+      />
     </div>
   );
 }
