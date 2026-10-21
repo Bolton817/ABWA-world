@@ -44,3 +44,6 @@ desktop.ini
 # Testing coverage
 coverage/
 .nyc_output/
+
+# TypeScript build info
+*.tsbuildinfo

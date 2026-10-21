@@ -1,11 +1,11 @@
-﻿# ABWA World — Project Status & Implementation Tracker
+# ABWA World — Project Status & Implementation Tracker
 
 ## 1. Project Overview
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 00 — Repository Audit and Baseline**
-- **Next Stage**: **Stage 01 — Framework Foundation and Design Tokens**
+- **Current Stage**: **Stage 01 — Framework Foundation and Design Tokens (Completed)**
+- **Next Stage**: **Stage 02 — Fonts, Image Inventory and Shared UI Primitives**
 - **Last Updated**: 2026-10-21
 
 ---
@@ -26,7 +26,7 @@
 | Stage | Name | Status | Notes |
 | :--- | :--- | :--- | :--- |
 | **00** | **Repository Audit and Baseline** | **In Progress (Active)** | Environment verified, Git repo initialized, baseline documentation created |
-| 01 | Framework Foundation and Design Tokens | Pending | Next.js App Router, Tailwind, colour/typography tokens |
+| **01** | **Framework Foundation and Design Tokens** | **Completed** | Next.js App Router, Tailwind, colour/typography tokens |
 | 02 | Fonts, Image Inventory and Shared UI Primitives | Pending | Brand assets, PageHero, Container, Button variants |
 | 03 | Header, Footer and Floating Controls | Pending | Two-tier desktop header, mobile drawer, 4-col footer, action hub |
 | 04 | GSAP Integration and Motion System | Pending | `useGSAP`, ScrollTrigger setup, reduced motion handling |
