@@ -5,13 +5,12 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
   try {
     const data = await request.json();
 
-    // Honeypot spam check
+    // Honeypot bot spam trap
     if (data.honeypot) {
-      // Silently succeed to discard spam bots
       return NextResponse.json(
         {
           success: true,
-          message: "Your enquiry has reached us. We'll read it carefully and reply to the email address you gave.",
+          message: "Thank you. Your message has reached us. We'll read it carefully and reply to the email address you gave.",
         },
         { status: 200 }
       );
@@ -22,6 +21,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
 
     // Detect type of enquiry
     const isPartner = Boolean(data.organisation || data.contactName);
+    const isGeneralContact = Boolean(data.topic);
 
     if (isPartner) {
       if (!data.organisation || typeof data.organisation !== "string" || !data.organisation.trim()) {
@@ -35,6 +35,19 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
       }
       if (!data.message || typeof data.message !== "string" || !data.message.trim()) {
         errors.message = "Please share what you have in mind.";
+      }
+      if (!data.consent) {
+        errors.consent = "Please confirm that you agree to ABWA using these details to reply.";
+      }
+    } else if (isGeneralContact) {
+      if (!data.fullName || typeof data.fullName !== "string" || !data.fullName.trim()) {
+        errors.fullName = "Please enter your full name.";
+      }
+      if (!data.email || typeof data.email !== "string" || !emailRegex.test(data.email.trim())) {
+        errors.email = "Please enter a valid email address.";
+      }
+      if (!data.message || typeof data.message !== "string" || !data.message.trim()) {
+        errors.message = "Please enter your message.";
       }
       if (!data.consent) {
         errors.consent = "Please confirm that you agree to ABWA using these details to reply.";
@@ -67,20 +80,25 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
     }
 
     // Factual server log for enquiry
+    const enquiryType = isPartner ? "Partner" : isGeneralContact ? "General Contact" : "Volunteer";
     console.log(
-      `[Enquiry Received - ${isPartner ? "Partner" : "Volunteer"}]`,
+      `[Enquiry Received - ${enquiryType}]`,
       JSON.stringify({
         sender: isPartner ? `${data.contactName} (${data.organisation})` : data.fullName,
         email: data.email,
-        interest: data.interestArea || "General",
+        topic: data.topic || data.interestArea || "General",
         timestamp: new Date().toISOString(),
       })
     );
 
+    const successMessage = isGeneralContact
+      ? "Thank you. Your message has reached us. We'll read it carefully and reply to the email address you gave."
+      : "Thank you. Your enquiry has reached us. We'll read it carefully and reply to the email address you gave.";
+
     return NextResponse.json(
       {
         success: true,
-        message: "Thank you. Your enquiry has reached us. We'll read it carefully and reply to the email address you gave.",
+        message: successMessage,
       },
       { status: 200 }
     );

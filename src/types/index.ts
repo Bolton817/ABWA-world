@@ -135,3 +135,22 @@ export interface EnquiryResponse {
   errors?: Record<string, string>;
 }
 
+export interface ContactFormData {
+  fullName: string;
+  email: string;
+  phone?: string;
+  topic: string;
+  message: string;
+  consent: boolean;
+  honeypot?: string;
+}
+
+export interface SearchableItem {
+  title: string;
+  url: string;
+  category: "Programme" | "Article" | "Story" | "Page" | "FAQ";
+  snippet: string;
+  keywords?: string[];
+}
+
+
