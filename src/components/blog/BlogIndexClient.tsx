@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, Calendar, ArrowRight, BookOpen } from "lucide-react";
 import { BlogPost } from "@/types";
+import { StaggerGroup } from "@/components/animation/StaggerGroup";
 
 interface BlogIndexClientProps {
   initialPosts: BlogPost[];
@@ -43,8 +44,12 @@ export function BlogIndexClient({ initialPosts }: BlogIndexClientProps) {
         })}
       </div>
 
-      {/* Articles Grid */}
-      <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {/* Articles Grid with Staggered Entrance */}
+      <StaggerGroup
+        key={selectedCategory}
+        stagger={0.08}
+        className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+      >
         {filteredPosts.map((post) => (
           <article
             key={post.slug}
@@ -103,7 +108,7 @@ export function BlogIndexClient({ initialPosts }: BlogIndexClientProps) {
             </div>
           </article>
         ))}
-      </div>
+      </StaggerGroup>
 
       {filteredPosts.length === 0 && (
         <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-12 text-center text-abwa-ink/70">

@@ -1,8 +1,9 @@
-﻿import React from "react";
+import React from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Palette, TreePine, Carrot, BookOpen, ArrowRight, ShieldCheck } from "lucide-react";
+import { StaggerGroup } from "@/components/animation/StaggerGroup";
 
 export function HomeImpact() {
   const pillars = [
@@ -51,7 +52,7 @@ export function HomeImpact() {
         </div>
 
         {/* Four Focus Pillars (Qualitative Evidence) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <StaggerGroup stagger={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {pillars.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -69,7 +70,7 @@ export function HomeImpact() {
               </div>
             );
           })}
-        </div>
+        </StaggerGroup>
 
         {/* CTA */}
         <div className="text-center">

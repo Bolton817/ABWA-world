@@ -1,9 +1,10 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ArrowRight, Sparkles, Sprout, TreePine, BookOpen } from "lucide-react";
+import { StaggerGroup } from "@/components/animation/StaggerGroup";
 
 export function AboutFocusAreas() {
   const focusAreas = [
@@ -50,7 +51,7 @@ export function AboutFocusAreas() {
           description="A focus area is a long-term priority. A programme is a specific piece of work within it. Here is how they connect."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <StaggerGroup stagger={0.08} className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {focusAreas.map((area, idx) => {
             const Icon = area.icon;
             return (
@@ -78,7 +79,7 @@ export function AboutFocusAreas() {
               </Link>
             );
           })}
-        </div>
+        </StaggerGroup>
       </Container>
     </Section>
   );

@@ -1,9 +1,10 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Check, Info, ArrowRight } from "lucide-react";
+import { ParallaxImage } from "@/components/animation/ParallaxImage";
 
 export function HomeFeaturedProgramme() {
   const activities = [
@@ -19,9 +20,9 @@ export function HomeFeaturedProgramme() {
     <Section surface="white">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          {/* Image */}
+          {/* Image with subtle desktop parallax */}
           <div className="lg:col-span-5 order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg border border-abwa-border aspect-[4/3] sm:aspect-[16/11]">
+            <ParallaxImage className="rounded-2xl shadow-lg border border-abwa-border aspect-[4/3] sm:aspect-[16/11]">
               <Image
                 src="/images/heroes/kenya-s-apollo-agriculture-raises-6m-series-a-led-by-anthemis-techcrunch.jpg"
                 alt="Women group members tending to vegetable crops in Kangundo"
@@ -29,8 +30,8 @@ export function HomeFeaturedProgramme() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/70 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/70 via-transparent to-transparent z-10" />
+              <div className="absolute bottom-4 left-4 right-4 text-white z-20">
                 <span className="text-xs font-semibold text-abwa-gold block">
                   Kangundo, Machakos County
                 </span>
@@ -38,7 +39,7 @@ export function HomeFeaturedProgramme() {
                   Women&apos;s Empowerment & Sustainable Agriculture
                 </span>
               </div>
-            </div>
+            </ParallaxImage>
           </div>
 
           {/* Content */}

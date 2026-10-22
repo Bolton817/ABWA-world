@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { programmesData } from "@/content/programmes";
 import { ArrowRight } from "lucide-react";
+import { StaggerGroup } from "@/components/animation/StaggerGroup";
 
 export function HomeProgrammes() {
   const ctaMap: Record<string, string> = {
@@ -30,7 +31,7 @@ export function HomeProgrammes() {
           }
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StaggerGroup stagger={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {programmesData.map((item) => (
             <Card
               key={item.slug}
@@ -43,7 +44,7 @@ export function HomeProgrammes() {
               ctaLabel={ctaMap[item.slug] || "Explore programme"}
             />
           ))}
-        </div>
+        </StaggerGroup>
 
         <div className="pt-10 text-center md:hidden">
           <Button href="/programs" variant="primary" size="lg" className="w-full sm:w-auto">

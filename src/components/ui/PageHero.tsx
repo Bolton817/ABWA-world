@@ -1,10 +1,11 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button, ButtonProps } from "@/components/ui/Button";
 import { Breadcrumbs, BreadcrumbItem } from "@/components/ui/Breadcrumbs";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { HeroReveal } from "@/components/animation/HeroReveal";
 
 export interface HeroCTA {
   label: string;
@@ -44,7 +45,7 @@ export function PageHero({
     return (
       <header className={twMerge("bg-abwa-navy text-white pt-12 pb-14 sm:pt-16 sm:pb-20 border-b border-white/10", className)}>
         <Container>
-          <div className="max-w-3xl space-y-4">
+          <HeroReveal className="max-w-3xl space-y-4">
             {breadcrumbs && <Breadcrumbs items={breadcrumbs} light className="mb-2" />}
             {eyebrow && (
               <span className="inline-block text-xs font-bold uppercase tracking-wider text-abwa-gold">
@@ -64,7 +65,7 @@ export function PageHero({
                 {description}
               </p>
             )}
-          </div>
+          </HeroReveal>
         </Container>
       </header>
     );
@@ -89,7 +90,7 @@ export function PageHero({
 
       {/* Content */}
       <Container className="relative z-20 py-16 sm:py-20 lg:py-24">
-        <div className="max-w-3xl space-y-4 sm:space-y-5">
+        <HeroReveal className="max-w-3xl space-y-4 sm:space-y-5">
           {breadcrumbs && <Breadcrumbs items={breadcrumbs} light className="mb-1" />}
           
           {eyebrow && (
@@ -136,7 +137,7 @@ export function PageHero({
               )}
             </div>
           )}
-        </div>
+        </HeroReveal>
       </Container>
     </header>
   );

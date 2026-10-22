@@ -4,9 +4,9 @@
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 12 — SEO, Metadata, Structured Data, Sitemap and Robots (Completed)**
-- **Next Stage**: **Stage 13 — Apply the Approved Animation Map**
-- **Last Updated**: 2026-10-21
+- **Current Stage**: **Stage 13 — Apply the Approved Animation Map (Completed)**
+- **Next Stage**: **Stage 14 — Accessibility, Performance and Full QA**
+- **Last Updated**: 2026-10-22
 
 ---
 
@@ -37,8 +37,7 @@
 | **09** | **Blog, Stories and Three Complete Launch Posts** | **Completed** | 3 complete launch articles (2,700+ words), dynamic reader, stories & consent charter |
 | **10** | **FAQ, Contact and Search** | **Completed** | 12-question accordion with server-rendered HTML, verified contact & topic form, instant client search |
 | **11** | **Legal Pages and System States** | **Completed** | Text-first Privacy Policy & Terms with desktop TOC, custom 404 recovery with search, sanitized client error boundary |
-| **12** | **SEO, Metadata, Structured Data, Sitemap and Robots** | **Completed** | Dynamic sitemap.ts, robots.ts, Schema.org NGO/WebSite/BlogPosting/FAQPage, exact Copy Deck metadata, one-H1 enforcement |
-| 13 | Apply the Approved Animation Map | Pending | Staged GSAP reveals and desktop scroll effects |
+| **13** | **Apply the Approved Animation Map** | **Completed** | Hero coordinated reveals (`HeroReveal`), desktop subtle parallax (`ParallaxImage`), staggered card cascades (`StaggerGroup`), strict `isReducedMotion()` guards |
 | 14 | Accessibility, Performance and Full QA | Pending | WCAG 2.2 AA audit, Core Web Vitals, cross-viewport checks |
 | 15 | Launch, Redirects and Handover | Pending | Production build, DNS notes, client handover package |
 

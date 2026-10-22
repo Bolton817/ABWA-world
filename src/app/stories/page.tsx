@@ -8,6 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionCTA } from "@/components/ui/SectionCTA";
 import { communityStoriesData, consentChecklist } from "@/content/stories";
+import { StaggerGroup } from "@/components/animation/StaggerGroup";
 
 export const metadata: Metadata = {
   title: "Community Stories | ABWA World",
@@ -86,7 +87,7 @@ export default function StoriesPage() {
       {/* 3. Community Stories Grid */}
       <Section className="bg-slate-50/70 border-t border-slate-100">
         <Container>
-          <div className="mx-auto max-w-4xl space-y-12">
+          <StaggerGroup stagger={0.12} className="mx-auto max-w-4xl space-y-12">
             {communityStoriesData.map((story) => (
               <article
                 key={story.slug}
@@ -151,7 +152,7 @@ export default function StoriesPage() {
                 </div>
               </article>
             ))}
-          </div>
+          </StaggerGroup>
 
           {/* Unconditional Takedown Policy Notice */}
           <div className="mx-auto mt-12 max-w-3xl rounded-xl border border-slate-200 bg-white p-6 text-center text-sm text-abwa-ink/75">

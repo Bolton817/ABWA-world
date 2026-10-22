@@ -1,8 +1,8 @@
-﻿import React from "react";
+import React from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CheckCircle2 } from "lucide-react";
+import { StaggerGroup } from "@/components/animation/StaggerGroup";
 
 export function AboutPrinciples() {
   const principles = [
@@ -42,7 +42,7 @@ export function AboutPrinciples() {
           description="Five foundational principles guiding every initiative, interaction and partnership."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerGroup stagger={0.07} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {principles.map((item, idx) => (
             <div
               key={idx}
@@ -55,7 +55,7 @@ export function AboutPrinciples() {
               <p className="text-sm text-abwa-muted leading-relaxed">{item.text}</p>
             </div>
           ))}
-        </div>
+        </StaggerGroup>
       </Container>
     </Section>
   );
