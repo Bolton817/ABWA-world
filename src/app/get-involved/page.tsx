@@ -60,7 +60,7 @@ const pathways = [
 
 export default function GetInvolvedPage() {
   return (
-    <main id="main-content">
+    <>
       {/* 1. Page Hero */}
       <PageHero
         title="Get Involved"
@@ -170,6 +170,6 @@ export default function GetInvolvedPage() {
         }}
         surface="pale"
       />
-    </main>
+    </>
   );
 }

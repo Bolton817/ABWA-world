@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function StoriesPage() {
   return (
-    <main id="main-content">
+    <>
       {/* 1. Page Hero */}
       <PageHero
         title="Community Stories"
@@ -185,6 +185,6 @@ export default function StoriesPage() {
         }}
         surface="pale"
       />
-    </main>
+    </>
   );
 }

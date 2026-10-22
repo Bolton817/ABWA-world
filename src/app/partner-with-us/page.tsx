@@ -80,7 +80,7 @@ const partnershipPillars = [
 
 export default function PartnerWithUsPage() {
   return (
-    <main id="main-content">
+    <>
       {/* 1. Page Hero */}
       <PageHero
         title="Partner With Us"
@@ -216,6 +216,6 @@ export default function PartnerWithUsPage() {
           </div>
         </Container>
       </Section>
-    </main>
+    </>
   );
 }

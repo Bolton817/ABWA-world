@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function BlogIndexPage() {
   return (
-    <main id="main-content">
+    <>
       {/* 1. Page Hero */}
       <PageHero
         title="Blog"
@@ -76,6 +76,6 @@ export default function BlogIndexPage() {
         }}
         surface="pale"
       />
-    </main>
+    </>
   );
 }

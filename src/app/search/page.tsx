@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function SearchPage() {
   return (
-    <main id="main-content">
+    <>
       {/* Header section */}
       <section className="bg-slate-50/70 border-b border-slate-200/80 pt-10 pb-12 sm:pt-14 sm:pb-16">
         <Container>
@@ -52,6 +52,6 @@ export default function SearchPage() {
           </div>
         </Container>
       </Section>
-    </main>
+    </>
   );
 }

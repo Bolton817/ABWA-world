@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -55,9 +55,9 @@ export function FloatingActions() {
           type="button"
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm border border-abwa-border text-abwa-navy hover:text-abwa-blue hover:bg-abwa-pale hover:border-abwa-blue/50 shadow-md flex items-center justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
+          className="w-11 h-11 rounded-lg bg-white/90 backdrop-blur-sm border border-abwa-border text-abwa-navy hover:text-abwa-blue hover:bg-abwa-pale hover:border-abwa-blue/50 shadow-md flex items-center justify-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
         >
-          <ArrowUp className="w-4 h-4" />
+          <ArrowUp className="w-5 h-5" />
         </button>
       </div>
 
@@ -130,7 +130,7 @@ export function FloatingActions() {
           onClick={() => setHubOpen(!hubOpen)}
           aria-expanded={hubOpen}
           aria-label={hubOpen ? "Close contact options" : "Open contact options"}
-          className="flex items-center gap-2.5 px-4 py-3 rounded-full bg-abwa-navy hover:bg-[#0E233D] text-white shadow-xl transition-all duration-200 border-2 border-white/20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-gold"
+          className="flex items-center justify-center gap-2.5 px-4 py-3 min-h-[44px] min-w-[44px] rounded-full bg-abwa-navy hover:bg-[#0E233D] text-white shadow-xl transition-all duration-200 border-2 border-white/20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-gold"
         >
           {hubOpen ? (
             <>

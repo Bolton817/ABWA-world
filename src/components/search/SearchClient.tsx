@@ -61,6 +61,7 @@ function SearchClientInner() {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            aria-label="Search programmes, articles, stories, FAQs, or pages"
             placeholder="Search programmes, articles, stories, FAQs, or pages..."
             className="w-full rounded-2xl border border-slate-300 bg-white py-4 pl-12 pr-12 text-base text-abwa-ink placeholder:text-abwa-ink/40 shadow-sm focus:border-abwa-blue focus:outline-none focus:ring-2 focus:ring-abwa-blue/20"
           />
@@ -68,7 +69,7 @@ function SearchClientInner() {
             <button
               type="button"
               onClick={() => setQuery("")}
-              className="absolute right-4 rounded-full p-1 text-abwa-ink/40 hover:bg-slate-100 hover:text-abwa-ink"
+              className="absolute right-4 w-8 h-8 rounded-full flex items-center justify-center text-abwa-ink/40 hover:bg-slate-100 hover:text-abwa-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
               aria-label="Clear search query"
             >
               <X className="h-4 w-4" />
@@ -86,7 +87,7 @@ function SearchClientInner() {
               key={cat}
               type="button"
               onClick={() => setSelectedCategory(cat)}
-              className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all ${
+              className={`rounded-full px-4 py-2 min-h-[38px] flex items-center justify-center text-xs font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue ${
                 isActive
                   ? "bg-abwa-navy text-white shadow-sm"
                   : "bg-slate-100 text-abwa-ink/70 hover:bg-slate-200 hover:text-abwa-navy"

@@ -58,7 +58,7 @@ const practicalCosts = [
 
 export default function DonatePage() {
   return (
-    <main id="main-content">
+    <>
       {/* 1. Page Hero */}
       <PageHero
         title="Support Our Work"
@@ -242,6 +242,6 @@ export default function DonatePage() {
           </div>
         </Container>
       </Section>
-    </main>
+    </>
   );
 }

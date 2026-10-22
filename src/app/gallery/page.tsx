@@ -1,0 +1,90 @@
+import React from "react";
+import { Metadata } from "next";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
+import { PageHero } from "@/components/ui/PageHero";
+import { SectionCTA } from "@/components/ui/SectionCTA";
+import { ShieldCheck } from "lucide-react";
+import { GalleryClient } from "@/components/gallery/GalleryClient";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getBreadcrumbSchema } from "@/lib/seo/schema";
+
+export const metadata: Metadata = {
+  title: "Photo Gallery | ABWA World Community Projects | ABWA World",
+  description:
+    "Photographs from ABWA's community projects in Kenya, shared with the consent of the people pictured.",
+  alternates: {
+    canonical: "https://abwaworld.org/gallery",
+  },
+  openGraph: {
+    title: "Photo Gallery | ABWA World Community Projects | ABWA World",
+    description:
+      "Photographs from ABWA's community projects in Kenya, shared with the consent of the people pictured.",
+    url: "https://abwaworld.org/gallery",
+    type: "website",
+  },
+};
+
+export default function GalleryPage() {
+  const breadcrumbsList = [
+    { name: "Home", url: "/" },
+    { name: "Gallery", url: "/gallery" },
+  ];
+
+  return (
+    <>
+      <JsonLd data={[getBreadcrumbSchema(breadcrumbsList)]} />
+
+      {/* 1. Page Hero */}
+      <PageHero
+        title="Gallery"
+        subtitle="A look at life in our projects."
+        description="Photographs from community projects and events, shared with consent."
+        imageSrc="/images/heroes/hero-community-gathering.jpg"
+        imageAlt="Community members and volunteers working together"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Gallery", href: "/gallery" },
+        ]}
+      />
+
+      {/* 2. Consent & Takedown Promise (Verbatim Copy Deck p. 44) */}
+      <Section className="bg-white">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+              Dignity & Consent
+            </span>
+            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
+              Moments from our work
+            </h2>
+            <p className="mt-4 text-base sm:text-lg leading-relaxed text-abwa-ink/80">
+              Every photograph here is shared with the permission of the people in it. If you appear in a photo and
+              would like it taken down, please contact us and we will remove it promptly.
+            </p>
+          </div>
+
+          {/* Interactive Lightbox Gallery */}
+          <div className="mt-12">
+            <GalleryClient />
+          </div>
+        </Container>
+      </Section>
+
+      {/* 3. Closing Call to Action (Verbatim Copy Deck p. 45) */}
+      <SectionCTA
+        title="Want to see this for yourself?"
+        description="There is more than one way to be part of our work, whether through volunteering, partnership, or community support."
+        primaryCta={{
+          label: "Get Involved",
+          href: "/get-involved",
+        }}
+        secondaryCta={{
+          label: "Contact ABWA",
+          href: "/contact",
+        }}
+        surface="pale"
+      />
+    </>
+  );
+}

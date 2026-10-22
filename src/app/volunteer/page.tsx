@@ -109,7 +109,7 @@ const processSteps = [
 
 export default function VolunteerPage() {
   return (
-    <main id="main-content">
+    <>
       {/* 1. Page Hero */}
       <PageHero
         title="Volunteer With ABWA"
@@ -355,6 +355,6 @@ export default function VolunteerPage() {
         }}
         surface="white"
       />
-    </main>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -82,8 +82,8 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
           <button
             type="button"
             onClick={onClose}
-            className="p-2 rounded-md text-abwa-ink hover:text-abwa-blue hover:bg-abwa-pale transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
-            aria-label="Close main menu"
+            className="w-11 h-11 rounded-md text-abwa-ink hover:text-abwa-blue hover:bg-abwa-pale transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
+            aria-label="Close navigation menu"
           >
             <X className="w-6 h-6" />
           </button>
@@ -96,10 +96,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
               <input
                 type="search"
                 name="q"
+                aria-label="Search ABWA World"
                 placeholder="Search ABWA World..."
-                className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-abwa-border bg-white text-abwa-ink placeholder-abwa-muted focus:outline-none focus:border-abwa-blue focus:ring-1 focus:ring-abwa-blue"
+                className="w-full h-11 pl-9 pr-3 text-sm rounded-lg border border-abwa-border bg-white text-abwa-ink placeholder-abwa-muted focus:outline-none focus:border-abwa-blue focus:ring-1 focus:ring-abwa-blue"
               />
-              <Search className="w-4 h-4 text-abwa-muted absolute left-3 top-2.5" />
+              <Search className="w-4 h-4 text-abwa-muted absolute left-3 top-3.5" />
             </div>
           </form>
         </div>
@@ -154,7 +155,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                           key={child.href}
                           href={child.href}
                           onClick={onClose}
-                          className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                          className={`px-3 py-2.5 min-h-[44px] flex items-center rounded-md text-sm font-medium transition-colors ${
                             isChildActive
                               ? "bg-white text-abwa-blue font-semibold shadow-xs"
                               : "text-abwa-ink hover:text-abwa-blue hover:bg-white"

@@ -64,7 +64,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
                   setSelectedCategory(cat);
                   setOpenIndices(new Set([0]));
                 }}
-                className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all ${
+                className={`rounded-full px-4 py-2 text-xs font-semibold transition-all min-h-[38px] flex items-center justify-center ${
                   isActive
                     ? "bg-abwa-navy text-white shadow-sm"
                     : "bg-slate-100 text-abwa-ink/70 hover:bg-slate-200 hover:text-abwa-navy"
@@ -77,11 +77,11 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
         </div>
 
         {/* Expand / Collapse All buttons */}
-        <div className="flex items-center gap-2 text-xs font-medium text-abwa-ink/60 shrink-0">
+        <div className="flex items-center gap-1 text-xs font-medium text-abwa-ink/60 shrink-0">
           <button
             type="button"
             onClick={handleExpandAll}
-            className="hover:text-abwa-blue hover:underline"
+            className="p-2 hover:text-abwa-blue hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue rounded"
           >
             Expand all
           </button>
@@ -89,7 +89,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
           <button
             type="button"
             onClick={handleCollapseAll}
-            className="hover:text-abwa-blue hover:underline"
+            className="p-2 hover:text-abwa-blue hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue rounded"
           >
             Collapse all
           </button>

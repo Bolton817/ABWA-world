@@ -72,7 +72,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   ];
 
   return (
-    <main id="main-content">
+    <>
       <JsonLd data={[getBlogPostingSchema(post), getBreadcrumbSchema(breadcrumbsList)]} />
       {/* 1. Header & Breadcrumbs */}
       <section className="bg-slate-50/70 border-b border-slate-200/80 pt-10 pb-12 sm:pt-14 sm:pb-16">
@@ -295,6 +295,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </Container>
         </Section>
       )}
-    </main>
+    </>
   );
 }

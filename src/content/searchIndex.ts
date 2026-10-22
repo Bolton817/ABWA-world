@@ -70,6 +70,20 @@ export const siteSearchIndex: SearchableItem[] = [
     keywords: ["stories", "consent", "dignity", "people", "profiles"],
   },
   {
+    title: "Our Impact",
+    url: "/impact",
+    category: "Page",
+    snippet: "How ABWA thinks about change, what we can show honestly so far, and how we keep activities, outputs and outcomes distinct.",
+    keywords: ["impact", "results", "evidence", "outcomes", "outputs", "reporting", "measurement"],
+  },
+  {
+    title: "Photo Gallery",
+    url: "/gallery",
+    category: "Page",
+    snippet: "Photographs from community projects and events across youth, farming, environment, and volunteering, shared with consent.",
+    keywords: ["gallery", "photos", "images", "pictures", "lightbox", "events"],
+  },
+  {
     title: "Blog & Reflections",
     url: "/blog",
     category: "Page",

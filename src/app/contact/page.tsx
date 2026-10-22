@@ -49,7 +49,7 @@ const contactCards = [
 
 export default function ContactPage() {
   return (
-    <main id="main-content">
+    <>
       {/* 1. Page Hero */}
       <PageHero
         title="Contact Us"
@@ -145,6 +145,6 @@ export default function ContactPage() {
           </div>
         </Container>
       </Section>
-    </main>
+    </>
   );
 }

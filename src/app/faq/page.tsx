@@ -32,7 +32,7 @@ export default function FAQPage() {
   ];
 
   return (
-    <main id="main-content">
+    <>
       <JsonLd data={[getFAQPageSchema(faqData), getBreadcrumbSchema(breadcrumbsList)]} />
       {/* 1. Page Hero */}
       <PageHero
@@ -83,6 +83,6 @@ export default function FAQPage() {
         }}
         surface="pale"
       />
-    </main>
+    </>
   );
 }

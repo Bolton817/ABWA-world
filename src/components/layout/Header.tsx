@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -185,7 +185,7 @@ export function Header() {
                 <button
                   type="button"
                   onClick={() => setMobileMenuOpen(true)}
-                  className="lg:hidden p-2 rounded-lg text-abwa-navy hover:bg-abwa-pale transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
+                  className="lg:hidden w-11 h-11 rounded-lg text-abwa-navy hover:bg-abwa-pale transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
                   aria-expanded={mobileMenuOpen}
                   aria-controls="mobile-menu"
                   aria-label="Open main menu"

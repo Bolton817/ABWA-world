@@ -4,8 +4,8 @@
 - **Project Name**: ABWA World Website Rebuild
 - **Client**: Action for Better World Association (ABWA)
 - **Target Stack**: Next.js App Router, TypeScript, Tailwind CSS, GSAP + ScrollTrigger
-- **Current Stage**: **Stage 13 — Apply the Approved Animation Map (Completed)**
-- **Next Stage**: **Stage 14 — Accessibility, Performance and Full QA**
+- **Current Stage**: **Stage 14 — Accessibility, Performance and Full QA (Completed)**
+- **Next Stage**: **Stage 15 — Launch, Redirects and Handover**
 - **Last Updated**: 2026-10-22
 
 ---
@@ -37,8 +37,9 @@
 | **09** | **Blog, Stories and Three Complete Launch Posts** | **Completed** | 3 complete launch articles (2,700+ words), dynamic reader, stories & consent charter |
 | **10** | **FAQ, Contact and Search** | **Completed** | 12-question accordion with server-rendered HTML, verified contact & topic form, instant client search |
 | **11** | **Legal Pages and System States** | **Completed** | Text-first Privacy Policy & Terms with desktop TOC, custom 404 recovery with search, sanitized client error boundary |
+| **12** | **SEO, Metadata, Structured Data, Sitemap and Robots** | **Completed** | Dynamic sitemap.ts, robots.ts, Schema.org NGO/WebSite/BlogPosting/FAQPage, exact Copy Deck metadata, one-H1 enforcement |
 | **13** | **Apply the Approved Animation Map** | **Completed** | Hero coordinated reveals (`HeroReveal`), desktop subtle parallax (`ParallaxImage`), staggered card cascades (`StaggerGroup`), strict `isReducedMotion()` guards |
-| 14 | Accessibility, Performance and Full QA | Pending | WCAG 2.2 AA audit, Core Web Vitals, cross-viewport checks |
+| **14** | **Accessibility, Performance and Full QA** | **Completed** | WCAG 2.2 AA audit, single main landmark, touch target min 44px, full link integrity crawl (22/22 routes 200 OK), `/impact` & `/gallery` built |
 | 15 | Launch, Redirects and Handover | Pending | Production build, DNS notes, client handover package |
 
 ---
@@ -47,20 +48,20 @@
 
 | Route | Expected Content | TDD Module | Status |
 | :--- | :--- | :--- | :--- |
-| `/` | Homepage (11 sections) | 032ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“043 | Baseline Planned |
-| `/about` | About ABWA, history, purpose, focus areas | 044ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“050 | Baseline Planned |
-| `/programs` | Programmes directory | 051ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“052 | Baseline Planned |
-| `/programs/youth-empowerment` | Youth Empowerment and Skills (Mathare) | 057 | Baseline Planned |
-| `/programs/womens-empowerment-sustainable-agriculture` | Women's Farming & Empowerment (Kangundo) | 058 | Baseline Planned |
-| `/programs/umisiiyu-women-group` | Umisiiyu Women Group (Kibwezi) | 059 | Baseline Planned |
-| `/programs/environmental-conservation` | Environmental Conservation | 060 | Baseline Planned |
+| `/` | Homepage (11 sections) | 032–043 | Live / Verified |
+| `/about` | About ABWA, history, purpose, focus areas | 044–050 | Live / Verified |
+| `/programs` | Programmes directory | 051–052 | Live / Verified |
+| `/programs/youth-empowerment` | Youth Empowerment and Skills (Mathare) | 057 | Live / Verified |
+| `/programs/womens-empowerment-sustainable-agriculture` | Women's Farming & Empowerment (Kangundo) | 058 | Live / Verified |
+| `/programs/umisiiyu-women-group` | Umisiiyu Women Group (Kibwezi) | 059 | Live / Verified |
+| `/programs/environmental-conservation` | Environmental Conservation | 060 | Live / Verified |
 | `/get-involved` | Engagement pathways overview | 066 | Live / Verified |
 | `/volunteer` | Volunteering expectations & enquiry form | 067–068 | Live / Verified |
 | `/donate` | Support Our Work (Version A enquiry fallback) | 069 | Live / Verified |
 | `/partner-with-us` | Institutional collaboration & enquiry form | 070 | Live / Verified |
-| `/impact` | Impact definitions & qualitative evidence | 071 | Baseline Planned |
+| `/impact` | Impact definitions & qualitative evidence | 071 | Live / Verified |
 | `/stories` & `[slug]` | Community stories & consent framework | 072 | Live / Verified |
-| `/gallery` | Photo gallery & accessible lightbox | 073 | Baseline Planned |
+| `/gallery` | Photo gallery & accessible lightbox | 073 | Live / Verified |
 | `/blog` | Blog index & category tags | 074 | Live / Verified |
 | `/blog/sustainable-agriculture-resilient-communities-kenya` | Launch Article 1 (888 words) | 076 | Live / Verified |
 | `/blog/youth-empowerment-creativity-skills-community-action` | Launch Article 2 (941 words) | 077 | Live / Verified |

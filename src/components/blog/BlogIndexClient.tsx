@@ -32,7 +32,7 @@ export function BlogIndexClient({ initialPosts }: BlogIndexClientProps) {
               key={category}
               type="button"
               onClick={() => setSelectedCategory(category)}
-              className={`rounded-full px-5 py-2 text-sm font-semibold transition-all ${
+              className={`rounded-full px-5 py-2 min-h-[44px] flex items-center justify-center text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue ${
                 isActive
                   ? "bg-abwa-navy text-white shadow-sm"
                   : "bg-slate-100 text-abwa-ink/70 hover:bg-slate-200 hover:text-abwa-navy"
