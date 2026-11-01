@@ -157,7 +157,7 @@ export function GalleryClient() {
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-abwa-blue block">
+              <span className="font-kaushan text-abwa-blue text-base tracking-wide block">
                 {item.category}
               </span>
               <p className="text-xs text-abwa-ink/80 line-clamp-2 leading-relaxed">

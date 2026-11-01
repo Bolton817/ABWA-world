@@ -1,117 +1,89 @@
-﻿import React from "react";
+import React from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Briefcase, HeartHandshake, Leaf, GraduationCap, Compass } from "lucide-react";
+import { Eye, Target, HeartHandshake } from "lucide-react";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export function AboutPurpose() {
-  const objectives = [
-    {
-      title: "Economic opportunity",
-      description:
-        "We aim to support local entrepreneurship and small businesses, especially in rural areas and urban informal settlements, through training, market links and access to finance.",
-      icon: Briefcase,
-    },
-    {
-      title: "Inclusion and equity",
-      description:
-        "We aim to run initiatives that empower people who are often left out, including people living with disability.",
-      icon: HeartHandshake,
-    },
-    {
-      title: "Care for the environment",
-      description:
-        "We aim to promote sustainable practices and conservation with communities, including tree planting and waste management.",
-      icon: Leaf,
-    },
-    {
-      title: "Skills and mentoring",
-      description:
-        "We aim to offer training, mentoring and capacity-building so that community members can grow their skills.",
-      icon: GraduationCap,
-    },
-  ];
-
   return (
     <Section surface="white">
       <Container>
-        {/* Purpose & Vision Cards */}
-        <div className="max-w-4xl mx-auto space-y-10 mb-16">
-          <SectionHeader
-            eyebrow="Mission & Vision"
-            title="What we aim to do"
-            description="Our purpose is rooted in long-term community wellbeing and inclusive local growth."
-            align="center"
-          />
+        <div className="max-w-4xl mx-auto space-y-10">
+          <ScrollReveal yOffset={20} duration={0.6}>
+            <SectionHeader
+              eyebrow="Our purpose"
+              title="Vision, mission and commitment"
+              description="Guided by client-approved principles to support children, young people, women and families across Kenya."
+              align="center"
+            />
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Purpose */}
-            <div className="p-8 rounded-3xl bg-abwa-navy text-white shadow-md space-y-3 flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-white/10 text-abwa-gold flex items-center justify-center">
-                  <Compass className="w-5 h-5" />
+          {/* Vision & Mission Split Cards */}
+          <ScrollReveal
+            stagger={0.12}
+            yOffset={28}
+            duration={0.65}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
+            {/* Vision Card */}
+            <div className="p-8 rounded-3xl bg-abwa-pale border border-abwa-border shadow-xs space-y-4 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-white text-abwa-blue border border-abwa-border flex items-center justify-center shadow-2xs">
+                  <Eye className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white">Our Purpose</h3>
-                <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
-                  ABWA aims to promote sustainable community development to improve people&apos;s
-                  quality of life and to foster inclusive growth by improving their social,
-                  economic and environmental wellbeing.
+                <h3 className="text-2xl font-bold text-abwa-navy">Our vision</h3>
+                <p className="text-base text-abwa-ink leading-relaxed">
+                  A world where all people have equal opportunities to live healthy, dignified,
+                  productive and fulfilling lives.
                 </p>
               </div>
-              <span className="text-[11px] text-abwa-gold/80 font-mono pt-2">
-                Core Organizational Objective
+              <span className="font-kaushan text-abwa-blue text-base tracking-wide block pt-2">
+                Long-Term Horizon
               </span>
             </div>
 
-            {/* Vision */}
-            <div className="p-8 rounded-3xl bg-abwa-pale border border-abwa-border shadow-xs space-y-3 flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-white text-abwa-blue border border-abwa-border flex items-center justify-center">
-                  <Leaf className="w-5 h-5" />
+            {/* Mission Card */}
+            <div className="p-8 rounded-3xl bg-abwa-pale border border-abwa-border shadow-xs space-y-4 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-white text-abwa-gold border border-abwa-border flex items-center justify-center shadow-2xs">
+                  <Target className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-abwa-navy">Our Vision</h3>
-                <p className="text-sm sm:text-base text-abwa-muted leading-relaxed font-serif italic">
-                  &ldquo;A world where communities have the skills, opportunities and support to shape
-                  their own futures.&rdquo;
+                <h3 className="text-2xl font-bold text-abwa-navy">Our mission</h3>
+                <p className="text-base text-abwa-ink leading-relaxed">
+                  To empower communities through education, skills development, sustainable
+                  livelihoods, food security, environmental conservation and community-led
+                  development initiatives.
                 </p>
               </div>
-              <span className="text-[11px] text-abwa-muted font-mono pt-2">
-                Shared Horizon
+              <span className="font-kaushan text-abwa-gold text-base tracking-wide block pt-2">
+                Everyday Mandate
               </span>
             </div>
-          </div>
-        </div>
+          </ScrollReveal>
 
-        {/* Four Objectives */}
-        <div className="space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h3 className="text-xl sm:text-2xl font-bold text-abwa-navy">Our objectives</h3>
-            <p className="text-sm text-abwa-muted">
-              These four pillars shape how we choose, plan and evaluate our community projects.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {objectives.map((obj, idx) => {
-              const Icon = obj.icon;
-              return (
-                <div
-                  key={idx}
-                  className="p-6 rounded-2xl bg-white border border-abwa-border shadow-xs space-y-3 flex flex-col justify-between hover:shadow-md transition-shadow"
-                >
-                  <div className="space-y-3">
-                    <div className="w-10 h-10 rounded-xl bg-abwa-pale text-abwa-blue flex items-center justify-center">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <h4 className="text-base font-bold text-abwa-navy">{obj.title}</h4>
-                    <p className="text-xs sm:text-sm text-abwa-muted leading-relaxed">
-                      {obj.description}
-                    </p>
-                  </div>
+          {/* Commitment Callout Card */}
+          <ScrollReveal yOffset={24} duration={0.65} delay={0.15}>
+            <div className="p-8 sm:p-10 rounded-3xl bg-abwa-navy text-white shadow-md relative overflow-hidden">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pb-4 border-b border-white/10">
+                <div className="w-12 h-12 rounded-2xl bg-white/10 text-abwa-gold flex items-center justify-center flex-shrink-0">
+                  <HeartHandshake className="w-6 h-6" />
                 </div>
-              );
-            })}
-          </div>
+                <div>
+                  <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                    Our Promise
+                  </span>
+                  <h3 className="text-2xl font-bold text-white">Our commitment</h3>
+                </div>
+              </div>
+              <p className="pt-5 text-base sm:text-lg text-slate-200 leading-relaxed font-sans">
+                We are committed to working with communities to create practical, lasting responses
+                to poverty, youth unemployment, educational barriers, food insecurity and
+                environmental degradation—so that families can strengthen their livelihoods and
+                shape their own future.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </Container>
     </Section>

@@ -1,9 +1,10 @@
-﻿import { gsap } from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-// Safely register ScrollTrigger only in client-side runtime
+// Safely register ScrollTrigger and useGSAP only in client-side runtime
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
 
   // Global motion defaults per TDD Module 100
   gsap.defaults({
@@ -20,4 +21,4 @@ export function isReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-export { gsap, ScrollTrigger };
+export { gsap, ScrollTrigger, useGSAP };

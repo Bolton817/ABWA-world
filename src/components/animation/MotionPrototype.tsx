@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
@@ -50,17 +50,19 @@ export function MotionPrototype() {
             alt="Community gathering in Kenya"
             fill
             sizes="100vw"
-            className="object-cover object-center opacity-35"
+            className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-abwa-navy/95 via-abwa-navy/80 to-abwa-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/35" />
         </div>
 
         {/* Stationary Foreground Content */}
         <Container className="relative z-10 py-12">
           <div className="max-w-2xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-abwa-gold border border-abwa-gold/30 backdrop-blur-sm">
-              <Activity className="w-3.5 h-3.5 text-abwa-gold" />
-              <span>GSAP Motion Prototype</span>
+            <div className="flex items-center gap-2">
+              <Activity className="w-4 h-4 text-abwa-gold" />
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide">
+                GSAP Motion Prototype
+              </span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white font-mequin">

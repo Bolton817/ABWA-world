@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -10,13 +10,15 @@ export function AboutOverview() {
     { label: "Founded", value: "2015", icon: Calendar },
     { label: "Based in", value: "Nairobi, Kenya", icon: MapPin },
     {
-      label: "We work with",
-      value: "Women's groups, young people, children and volunteers",
+      label: "Who we work with",
+      value:
+        "Children, young people, women's groups, low-income families and local/international volunteers",
       icon: Users,
     },
     {
       label: "Our focus",
-      value: "Skills, farming and livelihoods, creativity, learning and the environment",
+      value:
+        "Education, youth and women's skills, sustainable agriculture, WASH, health awareness, creative arts and environmental care",
       icon: Target,
     },
   ];
@@ -28,7 +30,7 @@ export function AboutOverview() {
           {/* Main Overview Text */}
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
                 Overview
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-abwa-navy">
@@ -38,19 +40,17 @@ export function AboutOverview() {
 
             <div className="space-y-4 text-base sm:text-lg text-abwa-muted leading-relaxed">
               <p>
-                Action for Better World Association (ABWA) is a community organisation based in
-                Nairobi, Kenya. We work with women&apos;s groups, young people and children, and with
-                volunteers who join us from Kenya and abroad, on projects that build skills,
-                strengthen livelihoods and care for the environment.
+                Action for Better World Association (ABWA) is a community-focused organisation
+                committed to working alongside underserved communities across Kenya. Founded in
+                2015 and based in Nairobi, we promote education, economic empowerment, food
+                security, health awareness, environmental conservation and community-led
+                development.
               </p>
               <p>
-                Our tagline is{" "}
-                <span className="text-abwa-navy font-semibold">
-                  Transforming Lives Through Action
-                </span>
-                . It is a big promise, so we try to keep it honest. Change is slow, it belongs to
-                the people living it, and our role is to walk alongside them with practical help,
-                shared skills and patience.
+                We believe that everyone deserves the opportunity to live a better life. Rather than
+                handing down ready-made answers, we work hand in hand with local community groups,
+                volunteers and partner organisations to address everyday social and economic
+                challenges affecting children, young people, women and low-income households.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export function AboutOverview() {
           <div className="lg:col-span-5">
             <div className="p-6 sm:p-8 rounded-3xl bg-abwa-pale border border-abwa-border shadow-sm space-y-6">
               <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+                <span className="font-kaushan text-abwa-gold text-base sm:text-lg tracking-wide block">
                   Summary
                 </span>
                 <h3 className="text-xl font-bold text-abwa-navy">At a glance</h3>

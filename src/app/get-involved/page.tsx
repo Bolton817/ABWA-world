@@ -26,7 +26,8 @@ export const metadata: Metadata = {
 const pathways = [
   {
     title: "Volunteer with ABWA",
-    description: "Join community projects, bring a skill, and learn from the people you work with.",
+    description:
+      "Join a short-term work camp (2–3 weeks) or a long-term placement (2 months or more) to share skills, promote peace and learn alongside Kenyan communities.",
     href: "/volunteer",
     ctaLabel: "Volunteer With ABWA",
     icon: Users,
@@ -66,8 +67,8 @@ export default function GetInvolvedPage() {
         title="Get Involved"
         subtitle="There is more than one way to be part of this."
         description="Whether you have time, a skill, a connection or a gift to give, here is how you can take part."
-        imageSrc="/images/heroes/hero-get-involved.svg"
-        imageAlt="Volunteers and community members collaborating together"
+        imageSrc="/images/heroes/download-22.jpg"
+        imageAlt="Community volunteers and local groups participating together in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },
@@ -78,7 +79,7 @@ export default function GetInvolvedPage() {
       <Section className="bg-white">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
               Ways to take part
             </span>
             <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
@@ -128,7 +129,7 @@ export default function GetInvolvedPage() {
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-abwa-pale text-abwa-blue">
                         <Icon className="h-6 w-6" />
                       </div>
-                      <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-abwa-ink/70">
+                      <span className="font-kaushan text-abwa-gold text-base tracking-wide">
                         {pathway.tag}
                       </span>
                     </div>

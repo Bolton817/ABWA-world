@@ -11,6 +11,7 @@ export function VolunteerForm() {
     email: "",
     phone: "",
     country: "",
+    durationPreference: "Not sure yet",
     interestArea: "Not sure yet",
     availability: "",
     message: "",
@@ -90,6 +91,7 @@ export function VolunteerForm() {
       email: "",
       phone: "",
       country: "",
+      durationPreference: "Not sure yet",
       interestArea: "Not sure yet",
       availability: "",
       message: "",
@@ -255,8 +257,24 @@ export function VolunteerForm() {
         </div>
       </div>
 
-      {/* Grid for Area of Interest & Availability */}
+      {/* Grid for Work Camp Track & Area of Interest */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label htmlFor="durationPreference" className="block text-sm font-semibold text-abwa-ink">
+            Work camp timeframe
+          </label>
+          <select
+            id="durationPreference"
+            value={formData.durationPreference || "Not sure yet"}
+            onChange={(e) => setFormData({ ...formData, durationPreference: e.target.value })}
+            className="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-abwa-ink focus:border-abwa-blue focus:outline-none focus:ring-2 focus:ring-abwa-blue/20"
+          >
+            <option value="Short-Term Work Camp (2–3 weeks)">Short-Term Work Camp (2–3 weeks)</option>
+            <option value="Long-Term Volunteering (2+ months)">Long-Term Volunteering (2+ months)</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+
         <div>
           <label htmlFor="interestArea" className="block text-sm font-semibold text-abwa-ink">
             I&apos;d like to help with
@@ -274,21 +292,22 @@ export function VolunteerForm() {
             <option value="Not sure yet">Not sure yet</option>
           </select>
         </div>
+      </div>
 
-        <div>
-          <label htmlFor="availability" className="block text-sm font-semibold text-abwa-ink">
-            When might you be available?{" "}
-            <span className="text-xs font-normal text-abwa-ink/60">(optional)</span>
-          </label>
-          <input
-            id="availability"
-            type="text"
-            value={formData.availability}
-            onChange={(e) => setFormData({ ...formData, availability: e.target.value })}
-            className="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-abwa-ink placeholder:text-abwa-ink/40 focus:border-abwa-blue focus:outline-none focus:ring-2 focus:ring-abwa-blue/20"
-            placeholder="e.g. June – August or flexible"
-          />
-        </div>
+      {/* Availability / Timing */}
+      <div>
+        <label htmlFor="availability" className="block text-sm font-semibold text-abwa-ink">
+          When might you be available?{" "}
+          <span className="text-xs font-normal text-abwa-ink/60">(optional)</span>
+        </label>
+        <input
+          id="availability"
+          type="text"
+          value={formData.availability}
+          onChange={(e) => setFormData({ ...formData, availability: e.target.value })}
+          className="mt-1.5 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-abwa-ink placeholder:text-abwa-ink/40 focus:border-abwa-blue focus:outline-none focus:ring-2 focus:ring-abwa-blue/20"
+          placeholder="e.g. June – August or flexible"
+        />
       </div>
 
       {/* Message textarea */}

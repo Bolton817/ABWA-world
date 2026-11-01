@@ -111,7 +111,7 @@ export const siteSearchIndex: SearchableItem[] = [
     url: `/programs/${prog.slug}`,
     category: "Programme" as const,
     snippet: prog.summary,
-    keywords: [prog.location, prog.status, ...prog.aims],
+    keywords: [prog.location, prog.status, prog.category, ...(prog.aims || prog.intendedOutcomes || [])],
   })),
 
   // Dynamic Blog Articles

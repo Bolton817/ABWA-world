@@ -1,4 +1,4 @@
-﻿import { NavItem } from "@/types";
+import { NavItem } from "@/types";
 
 export const siteConfig = {
   name: "ABWA World",
@@ -9,10 +9,10 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.abwaworld.org",
   foundingYear: 2015,
   contact: {
-    location: "Nairobi, Kenya",
+    location: "Buruburu, Nairobi, Kenya",
     phone: "+254 720 021 001",
     phoneHref: "tel:+254720021001",
-    postalBox: "P.O. Box 1204-00515 Buruburu",
+    postalBox: "P.O. Box 1204-00515 Buruburu, Nairobi, Kenya",
     email: undefined as string | undefined, // Verified: add only once ABWA confirms
   },
   features: {
@@ -21,19 +21,45 @@ export const siteConfig = {
   },
   nav: {
     main: [
+      { label: "Home", href: "/" },
       { label: "About", href: "/about" },
       {
         label: "Programmes",
         href: "/programs",
         children: [
           { label: "All Programmes", href: "/programs" },
-          { label: "Youth Empowerment and Skills", href: "/programs/youth-empowerment" },
+          { label: "Education & Child Development", href: "/programs/education-child-wellbeing" },
+          { label: "Youth Empowerment & Skills", href: "/programs/youth-empowerment" },
           {
-            label: "Women's Empowerment & Sustainable Agriculture",
+            label: "Women's Empowerment & Agriculture",
             href: "/programs/womens-empowerment-sustainable-agriculture",
           },
-          { label: "Umisiiyu Women Group", href: "/programs/umisiiyu-women-group" },
-          { label: "Environmental Conservation", href: "/programs/environmental-conservation" },
+          {
+            label: "Food Security & Sustainable Agriculture",
+            href: "/programs/food-security-sustainable-agriculture",
+          },
+          { label: "Umisiiyu Women Group (Kibwezi)", href: "/programs/umisiiyu-women-group" },
+          { label: "Health & Community Wellbeing", href: "/programs/health-community-wellbeing" },
+          {
+            label: "Environmental Conservation & Climate",
+            href: "/programs/environmental-conservation",
+          },
+          {
+            label: "Poverty Reduction & Livelihoods",
+            href: "/programs/poverty-reduction-livelihoods",
+          },
+          {
+            label: "Water, Sanitation & Hygiene (WASH)",
+            href: "/programs/water-sanitation-hygiene-wash",
+          },
+          {
+            label: "Arts, Culture & Creative Development",
+            href: "/programs/arts-culture-creative-development",
+          },
+          {
+            label: "Community Development & Social Support",
+            href: "/programs/community-development-social-support",
+          },
         ],
       },
       {

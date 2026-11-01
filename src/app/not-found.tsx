@@ -20,14 +20,16 @@ export default function NotFound() {
     <div className="bg-[#FAF7EE] min-h-[80vh] flex items-center py-24 md:py-32">
       <Container>
         <div className="max-w-3xl mx-auto text-center">
-          {/* Visual 404 Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EAF2FA] text-[#15345A] font-bold text-sm mb-6 border border-[#1E63B8]/20">
-            <HelpCircle className="w-4 h-4 text-[#B79045]" />
-            <span>Error 404 • Page Not Found</span>
+          {/* Visual 404 Subheading */}
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <HelpCircle className="w-4 h-4 text-abwa-gold" />
+            <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide">
+              Error 404 • Page Not Found
+            </span>
           </div>
 
           <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#15345A] tracking-tight mb-4">
-            We can't find that page
+            We can&apos;t find that page
           </h1>
 
           <p className="text-[#263445]/80 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-sans">

@@ -5,28 +5,31 @@ import {
   GraduationCap,
   Coins,
   Lightbulb,
-  CheckCircle2,
+  Building2,
   Users2,
-  FileSignature,
-  HeartHandshake,
-  MessageSquare,
+  ClipboardList,
+  ShieldCheck,
+  Sprout,
+  ArrowRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PageHero } from "@/components/ui/PageHero";
 import { PartnerForm } from "@/components/forms/PartnerForm";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Partner With ABWA | Collaboration and Funding in Kenya",
+  title: "Partner With ABWA | Collaboration and Partnerships in Kenya",
   description:
-    "Organisations, funders, schools and businesses are invited to partner with ABWA on community projects in Kenya. Start a conversation here.",
+    "ABWA welcomes collaboration with NGOs, funders, schools, businesses and community groups. Learn how we work together and start a conversation.",
   alternates: {
     canonical: "https://abwaworld.org/partner-with-us",
   },
   openGraph: {
-    title: "Partner With ABWA | Collaboration and Funding in Kenya",
+    title: "Partner With ABWA | Collaboration and Partnerships in Kenya",
     description:
-      "Organisations, funders, schools and businesses are invited to partner with ABWA on community projects in Kenya. Start a conversation here.",
+      "ABWA welcomes collaboration with NGOs, funders, schools, businesses and community groups. Learn how we work together and start a conversation.",
     url: "https://abwaworld.org/partner-with-us",
     type: "website",
   },
@@ -34,47 +37,73 @@ export const metadata: Metadata = {
 
 const waysToWorkTogether = [
   {
-    title: "Programme partnerships",
-    description: "Work with us directly on active youth empowerment, sustainable agriculture, or environmental initiatives.",
+    title: "Local & International NGOs and CBOs",
+    tag: "Civil Society",
+    description:
+      "Co-design and deliver community programmes in education, youth skills, women's enterprise, health, WASH and environmental conservation.",
     icon: Handshake,
+    color: "bg-blue-50 text-abwa-blue border-blue-200",
   },
   {
-    title: "Funding and grants",
-    description: "Support a programme or a specific piece of community work. We share transparent records of how funds are used.",
+    title: "Funders, Donors & Grantmakers",
+    tag: "Financial Stewardship",
+    description:
+      "Support a specific community project or thematic pillar with clear budgets, measurable indicators, before-and-after assessments and transparent financial accountability.",
     icon: Coins,
+    color: "bg-amber-50 text-abwa-gold border-amber-200",
   },
   {
-    title: "Skills and expertise",
-    description: "Offer training, mentorship, or technical advisory in farming, education, creative arts, or ecological restoration.",
-    icon: Lightbulb,
-  },
-  {
-    title: "Schools, universities & groups",
-    description: "Explore how groups of students or volunteers can take part in structured, respectful, community-led learning visits.",
+    title: "Educational Institutions & Universities",
+    tag: "Learning & Research",
+    description:
+      "Collaborate on student exchanges, ethical work camps, digital literacy labs, school improvements and community research.",
     icon: GraduationCap,
+    color: "bg-indigo-50 text-indigo-700 border-indigo-200",
+  },
+  {
+    title: "Private-Sector & Corporate Partners",
+    tag: "CSR & Enterprise",
+    description:
+      "Partner through CSR initiatives, vocational training, mentorship, equipment donations (such as computers, sewing machines or water tanks) and market linkages for local enterprises.",
+    icon: Building2,
+    color: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  },
+  {
+    title: "Technical Experts & Skills Partners",
+    tag: "Advisory & Mentorship",
+    description:
+      "Share practical expertise in climate-smart agriculture, health outreach, creative arts, entrepreneurship or financial literacy alongside local mentors.",
+    icon: Lightbulb,
+    color: "bg-purple-50 text-purple-700 border-purple-200",
+  },
+  {
+    title: "Public & Community Institutions",
+    tag: "Local Coordination",
+    description:
+      "Coordinate with schools, qualified health providers and local leadership to ensure community projects align with local needs and safeguard participants.",
+    icon: Users2,
+    color: "bg-rose-50 text-rose-700 border-rose-200",
   },
 ];
 
-const partnershipPillars = [
+const planningHighlights = [
   {
-    title: "Conversation first",
-    description: "We start with an open conversation about shared values and long-term community goals.",
-    icon: MessageSquare,
+    title: "Structured Project Design",
+    description:
+      "Every joint project includes a clear background and problem statement, specific objectives, planned schedule, detailed budget, and agreed monitoring indicators.",
+    icon: ClipboardList,
   },
   {
-    title: "Clear agreements",
-    description: "We agree clearly on what each side will do, avoiding ambiguity and mismatched expectations.",
-    icon: FileSignature,
+    title: "Transparent Monitoring & Reporting",
+    description:
+      "We track progress through attendance and activity records, site visits, community feedback and financial expenditure reports shared openly with partners.",
+    icon: ShieldCheck,
   },
   {
-    title: "Community at the centre",
-    description: "Local community groups remain the primary decision-makers for activities affecting their lives.",
-    icon: Users2,
-  },
-  {
-    title: "Honest updates",
-    description: "We share transparent progress reports, celebrating milestones while discussing challenges openly.",
-    icon: CheckCircle2,
+    title: "Built-In Exit & Sustainability Strategy",
+    description:
+      "We train community management committees and link projects to local income generation so initiatives continue thriving after initial funding ends.",
+    icon: Sprout,
   },
 ];
 
@@ -83,134 +112,191 @@ export default function PartnerWithUsPage() {
     <>
       {/* 1. Page Hero */}
       <PageHero
+        eyebrow="Partnerships and Collaboration"
         title="Partner With Us"
-        subtitle="Organisations, funders, schools and businesses: let's talk."
-        description="ABWA works best alongside others. If your goals overlap with ours, we'd like to hear from you."
-        imageSrc="/images/heroes/hero-partner.svg"
-        imageAlt="Collaborative partnership workshop"
+        subtitle="Organisations, schools, funders, businesses and community groups: let's work together."
+        description="ABWA welcomes collaboration with local and international partners to share knowledge, mobilise resources, strengthen local capacity and expand sustainable community development."
+        imageSrc="/images/heroes/tracing-turkey-s-development-aid-in-namibia.jpg"
+        imageAlt="Community partners, leaders, and organisations collaborating on sustainable development in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },
           { label: "Partner With Us", href: "/partner-with-us" },
         ]}
+        primaryCta={{
+          label: "Start a conversation",
+          href: "#partner-enquiry",
+          variant: "blue",
+        }}
       />
 
       {/* 2. Why Partner With ABWA */}
-      <Section className="bg-white">
+      <Section surface="white">
         <Container>
-          <div className="mx-auto max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-              Collaborative Philosophy
-            </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-              Why partner with ABWA
-            </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-abwa-ink/80 sm:text-lg">
+          <div className="mx-auto max-w-4xl space-y-6">
+            <ScrollReveal yOffset={20} duration={0.6}>
+              <div className="space-y-3">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  Working together
+                </span>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-abwa-navy">
+                  Why partner with ABWA
+                </h2>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal yOffset={24} duration={0.65} className="space-y-4 text-base sm:text-lg text-abwa-muted leading-relaxed">
               <p>
-                We are a community organisation with working relationships with women&apos;s and youth groups in
-                Nairobi, Machakos and Makueni counties. We combine local knowledge with the skills and resources
-                partners bring.
+                Action for Better World Association works directly with women&apos;s groups, young
+                people, schools and families in Nairobi, Machakos and Makueni counties. We combine
+                deep local relationships with the technical skills, volunteer energy and funding
+                that partners bring.
               </p>
               <p>
-                We&apos;d rather build a few good partnerships than collect many logos. We approach every partnership
-                as a conversation first.
+                We welcome collaboration with local and international NGOs, community-based
+                organisations (CBOs), educational institutions, private-sector partners, volunteer
+                networks, donors and government agencies where appropriate.
               </p>
-            </div>
+              <p>
+                We approach every partnership as an open conversation first—agreeing clearly on
+                shared goals, keeping communities at the centre of decisions, and providing
+                transparent activity and financial reporting.
+              </p>
+            </ScrollReveal>
           </div>
         </Container>
       </Section>
 
-      {/* 3. Ways We Could Work Together */}
-      <Section className="bg-slate-50/70 border-t border-slate-100">
+      {/* 3. Who We Collaborate With & Ways to Work Together (6-Card Grid) */}
+      <Section surface="pale">
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-              Collaboration Pathways
-            </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-              Ways we could work together
-            </h2>
-          </div>
+          <div className="mx-auto max-w-4xl space-y-12">
+            <ScrollReveal yOffset={20} duration={0.6}>
+              <SectionHeader
+                eyebrow="How we collaborate"
+                title="Ways we can work together"
+                description="We partner across six collaborative channels to build sustainable, community-led initiatives."
+                align="center"
+              />
+            </ScrollReveal>
 
-          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
-            {waysToWorkTogether.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-abwa-blue/30 hover:shadow-md"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-abwa-pale text-abwa-blue">
-                    <Icon className="h-6 w-6" />
+            <ScrollReveal
+              stagger={0.1}
+              yOffset={30}
+              duration={0.65}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {waysToWorkTogether.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="p-6 sm:p-7 rounded-3xl bg-white border border-abwa-border shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-4"
+                  >
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div
+                          className={`w-11 h-11 rounded-2xl flex items-center justify-center border ${item.color}`}
+                        >
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <span className="font-kaushan text-abwa-gold text-base tracking-wide">
+                          {item.tag}
+                        </span>
+                      </div>
+
+                      <h3 className="text-lg font-bold text-abwa-navy">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-sm text-abwa-muted leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-slate-100">
+                      <a
+                        href="#partner-enquiry"
+                        className="inline-flex items-center gap-1 text-xs font-semibold text-abwa-blue hover:text-abwa-blue-hover transition-colors"
+                      >
+                        <span>Explore this pathway</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
                   </div>
-                  <h3 className="mt-5 font-heading text-xl font-bold text-abwa-navy">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-abwa-ink/75">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </ScrollReveal>
           </div>
         </Container>
       </Section>
 
-      {/* 4. What Partnership Looks Like */}
-      <Section className="bg-white border-t border-slate-100">
+      {/* 4. How We Plan, Monitor and Sustain Partner Projects */}
+      <Section surface="white">
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-              Working Standards
-            </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-              What partnership looks like
-            </h2>
-          </div>
+          <div className="mx-auto max-w-4xl space-y-10">
+            <ScrollReveal yOffset={20} duration={0.6}>
+              <SectionHeader
+                eyebrow="Our commitment to partners"
+                title="Clear planning, honest reporting and lasting ownership"
+                description="We know that strong partnerships depend on clear expectations, open communication and demonstrable local ownership."
+                align="center"
+              />
+            </ScrollReveal>
 
-          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
-            {partnershipPillars.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-slate-50/50 p-6"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-abwa-blue shadow-sm">
-                    <Icon className="h-5 w-5" />
+            <ScrollReveal
+              stagger={0.12}
+              yOffset={28}
+              duration={0.65}
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            >
+              {planningHighlights.map((block, idx) => {
+                const Icon = block.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="p-6 sm:p-8 rounded-3xl bg-abwa-pale/60 border border-abwa-border shadow-2xs space-y-4 flex flex-col justify-between"
+                  >
+                    <div className="space-y-3">
+                      <div className="w-11 h-11 rounded-2xl bg-white text-abwa-blue border border-abwa-border flex items-center justify-center shadow-2xs">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-abwa-navy">
+                        {block.title}
+                      </h3>
+                      <p className="text-sm text-abwa-muted leading-relaxed">
+                        {block.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-abwa-border/50 text-[11px] font-mono text-abwa-gold uppercase tracking-wider">
+                      Standard 0{idx + 1}
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-heading text-base font-bold text-abwa-navy">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1 text-sm leading-relaxed text-abwa-ink/75">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </ScrollReveal>
           </div>
         </Container>
       </Section>
 
       {/* 5. Start a Conversation (Partner Form) */}
-      <Section id="partner-enquiry" className="bg-abwa-pale/40 border-t border-slate-200">
+      <Section id="partner-enquiry" surface="pale">
         <Container>
           <div className="mx-auto max-w-2xl">
-            <div className="text-center">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <div className="text-center space-y-2 mb-8">
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
                 Initiate Dialogue
               </span>
-              <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
                 Start a conversation
               </h2>
-              <p className="mt-3 text-sm text-abwa-ink/75">
+              <p className="text-sm text-abwa-muted">
                 Tell us about your organisation and the kind of collaboration you would like to explore.
               </p>
             </div>
 
-            <div className="mt-8 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm sm:p-10">
+            <div className="rounded-3xl border border-abwa-border bg-white p-6 sm:p-10 shadow-sm">
               <PartnerForm />
             </div>
           </div>

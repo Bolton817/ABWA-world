@@ -1,60 +1,153 @@
-﻿import { Programme } from "@/types";
+import { Programme } from "@/types";
 
 export const programmesData: Programme[] = [
+  // 1. Education and Child Development (Unlocked from Hold)
   {
-    slug: "youth-empowerment",
-    title: "Youth Empowerment and Skills",
-    subtitle: "Art, music, learning and community action with young people in Mathare, Nairobi.",
-    summary: "Art, music, learning support and community action with young people in Mathare, Nairobi.",
-    location: "Mathare, Nairobi",
+    slug: "education-child-wellbeing",
+    category: "Education & Youth",
+    title: "Education and Child Development",
+    subtitle: "Improving access to quality education and creating supportive learning environments for children.",
+    summary: "Removing practical barriers to education through school support, feeding, learning materials, digital literacy and mentorship.",
+    location: "Nairobi and underserved schools",
     status: "Active",
-    heroImage: "/images/heroes/download-19.jpg",
-    heroImageAlt: "Young people engaged in creative art, music, and learning in Mathare",
-    metaTitle: "Youth Empowerment and Skills in Mathare | ABWA World",
+    heroImage: "/images/gallery/gallery-community-education.jpg",
+    heroImageAlt: "Children and students in a supportive community learning environment in Kenya",
+    metaTitle: "Education and Child Development | ABWA World",
     metaDescription:
-      "ABWA's youth programme in Mathare, Nairobi brings art, music, learning support and environmental action together, led alongside a local youth group.",
+      "How ABWA supports children's access to education, school feeding, learning materials, digital literacy and mentorship in underserved communities.",
     description:
-      "Together with a local youth group, ABWA creates space for young people to build skills, share their talents and take part in the life of their community.",
+      "Children learn and grow best when they are fed, equipped and encouraged. We work alongside families and underserved schools to remove everyday barriers to learning.",
+    goal: "To improve access to quality education and create better learning opportunities for children from low-income families.",
     context: [
-      "Mathare is one of the oldest and largest informal settlements in Nairobi. Like many neighbourhoods with limited infrastructure and few job opportunities, it is also full of talent, energy and ideas.",
-      "Young people here are already making things, organising and learning from each other. This programme aims to back what they are already doing, with skills, mentoring and a wider circle of people to learn with.",
+      "Many bright children in low-income neighbourhoods face practical hurdles to staying in school—from the cost of uniforms and books to hunger during the school day and a lack of computers or creative learning tools.",
+      "ABWA works alongside local schools, parents and teachers to bridge these gaps while putting child safeguarding and dignity first.",
+    ],
+    objectives: [
+      "Support children from disadvantaged families to access and stay in school.",
+      "Improve everyday learning environments in underserved schools.",
+      "Promote digital literacy, computer skills and creative learning.",
+      "Support children's physical, emotional and social development.",
+    ],
+    activities: [
+      "School sponsorship support for vulnerable and orphaned children",
+      "School feeding and everyday nutrition support",
+      "Donation of books, stationery, school uniforms and learning materials",
+      "Establishment of computer training laboratories",
+      "Digital literacy and introductory computer skills training",
+      "School classroom and infrastructure improvements",
+      "Art, music and creative talent development",
+      "Educational mentorship and career guidance",
     ],
     whatHappens: [
       {
-        title: "Art and music",
+        title: "School access and learning materials",
         items: [
-          "Drawing and painting lessons for children and interested young people, led by art teachers with volunteers",
-          "Music production, where volunteers and local young people record and perform together",
+          "School sponsorship support for vulnerable and orphaned children",
+          "School feeding and everyday nutrition support",
+          "Donation of books, stationery, school uniforms and learning materials",
+          "School classroom and infrastructure improvements",
         ],
       },
       {
-        title: "Learning and mentoring",
+        title: "Digital literacy, creative arts and mentorship",
         items: [
-          "Mentors working with teenage girls on health education and on making informed choices about their lives",
-          "Volunteers supporting teachers in local primary and secondary schools",
-          "Conversations about leadership, money decisions and having a say in your own future",
-        ],
-      },
-      {
-        title: "Community and environment",
-        items: [
-          "Tree planting along the Mathare River and nearby",
-          "Waste management and recycling, including making useful products from waste plastic",
-          "Kitchen gardens: growing vegetables in plastic bottles and pipes in small urban spaces",
-        ],
-      },
-      {
-        title: "Sharing and cultural exchange",
-        items: [
-          "Sport, games, shared meals and outings that let young people and volunteers swap traditions and challenge stereotypes.",
+          "Establishment of computer training laboratories",
+          "Digital literacy and introductory computer skills training",
+          "Art, music and creative talent development",
+          "Educational mentorship and career guidance",
         ],
       },
     ],
+    intendedOutcomes: [
+      "We aim to increase access to consistent schooling for children from low-income households.",
+      "We aim to help create healthier, better-equipped classroom conditions.",
+      "We aim to widen children's access to practical digital and creative skills.",
+    ],
     aims: [
-      "Help young people build creative and practical skills",
-      "Support informed life choices and health education",
-      "Encourage participation in decisions that affect them",
-      "Look after their local environment without overstating employment guarantees",
+      "We aim to increase access to consistent schooling for children from low-income households.",
+      "We aim to help create healthier, better-equipped classroom conditions.",
+      "We aim to widen children's access to practical digital and creative skills.",
+    ],
+    safeguardingNote: {
+      title: "Keeping children safe",
+      body: "Safeguarding note: We never publish children's full names, personal histories or school schedules without verified parent/guardian consent, and we do not link online donations to individual children.",
+    },
+    contactTopic: "education",
+    ctaText: "Ask about education support",
+    secondaryCta: {
+      label: "Explore all programmes",
+      href: "/programs",
+    },
+    relatedSlug: "youth-empowerment",
+  },
+
+  // 2. Youth Empowerment and Skills Development (Preserve existing slug: youth-empowerment)
+  {
+    slug: "youth-empowerment",
+    category: "Education & Youth",
+    title: "Youth Empowerment and Skills Development",
+    subtitle: "Practical vocational skills, entrepreneurship, creative expression and community leadership with young people.",
+    summary: "Equipping young people in Mathare, Nairobi with vocational training, digital skills, entrepreneurship, creative arts and mentorship.",
+    location: "Mathare, Nairobi and partner communities",
+    status: "Active",
+    heroImage: "/images/heroes/download-19.jpg",
+    heroImageAlt: "Young people engaged in creative art, music, and learning in Mathare",
+    metaTitle: "Youth Empowerment and Skills Development | ABWA World",
+    metaDescription:
+      "Equipping young people in Mathare, Nairobi and beyond with vocational training, digital skills, entrepreneurship, creative arts and mentorship.",
+    description:
+      "Together with local youth groups—including our long-standing community work in Mathare, Nairobi—ABWA creates space for young people to build employable skills, develop their talents and lead change in their neighbourhoods.",
+    goal: "To equip young people with practical skills, knowledge and opportunities for employment, self-employment and active community leadership.",
+    context: [
+      "Neighbourhoods like Mathare in Nairobi are full of young makers, artists and organisers, yet many face limited access to vocational tools, training and work opportunities.",
+      "This programme backs what young people are already doing—combining technical and business training with mentoring, creative arts, health education for teenage girls, and local environmental action.",
+    ],
+    objectives: [
+      "Reduce youth unemployment through practical vocational and technical training.",
+      "Promote youth entrepreneurship, small-business skills and innovation.",
+      "Develop creative talents, confidence and community leadership skills.",
+      "Provide positive, constructive pathways and alternatives to harmful activities.",
+    ],
+    activities: [
+      "Computer and digital skills training",
+      "Tailoring, dressmaking and fashion design training",
+      "Technical and vocational skills development",
+      "Entrepreneurship and small-business management workshops",
+      "Youth leadership, life-skills and peer mentorship (including girls' health and choices mentoring)",
+      "Arts, crafts, drawing, painting and music production",
+      "Sports, games and talent development",
+      "Employment readiness and self-employment support",
+      "Community action in Mathare: supporting local teachers, planting trees along the Mathare River, and urban kitchen gardening",
+    ],
+    whatHappens: [
+      {
+        title: "Technical, digital and vocational training",
+        items: [
+          "Computer and digital skills training",
+          "Tailoring, dressmaking and fashion design training",
+          "Technical and vocational skills development",
+          "Entrepreneurship and small-business management workshops",
+        ],
+      },
+      {
+        title: "Mentorship, creative arts and community action",
+        items: [
+          "Youth leadership, life-skills and peer mentorship (including girls' health and choices mentoring)",
+          "Arts, crafts, drawing, painting and music production",
+          "Sports, games and talent development",
+          "Community action in Mathare: supporting local teachers, planting trees along the Mathare River, and urban kitchen gardening",
+        ],
+      },
+    ],
+    intendedOutcomes: [
+      "We aim to expand young people's access to practical, marketable skills.",
+      "We aim to open pathways to employment, self-employment and youth-led small businesses.",
+      "We aim to strengthen young people's voice and participation in community development.",
+    ],
+    aims: [
+      "We aim to expand young people's access to practical, marketable skills.",
+      "We aim to open pathways to employment, self-employment and youth-led small businesses.",
+      "We aim to strengthen young people's voice and participation in community development.",
     ],
     safeguardingNote: {
       title: "Keeping young people safe",
@@ -66,85 +159,205 @@ export const programmesData: Programme[] = [
       label: "Read: Youth Empowerment Article",
       href: "/blog/youth-empowerment-creativity-skills-community-action",
     },
-    relatedSlug: "environmental-conservation",
+    relatedSlug: "arts-culture-creative-development",
     relatedPostSlug: "youth-empowerment-creativity-skills-community-action",
   },
+
+  // 3. Women's Empowerment and Sustainable Agriculture (Preserve existing slug: womens-empowerment-sustainable-agriculture)
   {
     slug: "womens-empowerment-sustainable-agriculture",
+    category: "Women & Livelihoods",
     title: "Women's Empowerment and Sustainable Agriculture",
-    subtitle: "Farming skills, shared learning and stronger livelihoods with a women's group in Kangundo, Machakos County.",
-    summary: "Practical farming knowledge and shared learning with a women's group in Kangundo, Machakos County.",
-    location: "Kangundo, Machakos County",
+    subtitle: "Strengthening women's livelihoods, vocational skills, small businesses and sustainable farming.",
+    summary: "Strengthening women's economic independence and family wellbeing through tailoring, small business, village savings and sustainable farming in Kangundo.",
+    location: "Kangundo (Machakos County) and partner communities",
     status: "Active",
     heroImage: "/images/blog/blog-sustainable-farming.jpg",
     heroImageAlt: "Women's group members preparing vegetable farming beds in Kangundo",
-    metaTitle: "Women's Farming and Empowerment in Kangundo | ABWA World",
+    metaTitle: "Women's Empowerment, Enterprise and Agriculture | ABWA World",
     metaDescription:
-      "A women's group in Kangundo, Machakos County shares sustainable vegetable-farming skills and leadership conversations with ABWA and volunteers.",
+      "Strengthening women's economic independence and family wellbeing through tailoring, small business, village savings and sustainable farming in Kangundo.",
     description:
-      "Women and volunteers learn from each other about growing vegetables well, caring for the land, and making confident decisions about income and community life.",
+      "We work alongside women's groups—including in Kangundo, Machakos County—to build income-generating enterprises, share climate-smart farming knowledge and support women's leadership and financial independence.",
+    goal: "To strengthen women's economic independence and improve the overall wellbeing of women, young mothers and their families.",
     context: [
-      "Farming is central to life in much of Kenya. Many smallholder farmers have limited access to modern tools and up-to-date information, which can mean uncertain harvests and unpredictable income.",
-      "This programme works with a women's group in Kangundo. The group's knowledge of local soil, weather and crops is the starting point. Volunteers join in, share ideas and help with the work.",
+      "When women have access to practical skills, startup tools, savings groups and agricultural know-how, whole households become more resilient.",
+      "From vegetable farming and leadership conversations with our partner women's group in Kangundo to tailoring, poultry keeping and small-business mentorship, we start with women's own priorities and local knowledge.",
+    ],
+    objectives: [
+      "Support women to establish and grow reliable income-generating activities.",
+      "Improve access to vocational training, sewing equipment and small-business opportunities.",
+      "Strengthen women's groups, village savings circles and community enterprises.",
+      "Provide dedicated skills and psychosocial support for young mothers and women facing hardship.",
+    ],
+    activities: [
+      "Sewing machine provision and practical tailoring training",
+      "Small-business development and entrepreneurship training",
+      "Poultry farming and small livestock projects",
+      "Kitchen gardening and sustainable vegetable cultivation (including our Kangundo women's group partnership)",
+      "Financial literacy and village savings and loan groups",
+      "Training in agricultural product processing, value addition and marketing",
+      "Leadership conversations, mentorship and business management",
+      "Psychosocial support, health awareness and life-skills sessions",
     ],
     whatHappens: [
       {
-        title: "Vegetable farming",
+        title: "Vocational skills and enterprises",
         items: [
-          "Choosing vegetable varieties that suit the local climate",
-          "Preparing land and soil, including when to add manure or fertiliser",
-          "Managing pests and diseases with care for the wider environment",
-          "Watering, using local water sources well",
+          "Sewing machine provision and practical tailoring training",
+          "Small-business development and entrepreneurship training",
+          "Financial literacy and village savings and loan groups",
+          "Training in agricultural product processing, value addition and marketing",
         ],
       },
       {
-        title: "Women's empowerment conversations",
+        title: "Sustainable farming and leadership",
         items: [
-          "Leadership and decision-making",
-          "Financial investment and income",
-          "Access to health services and information",
-          "Rights and protections, and the freedom to make your own choices",
+          "Kitchen gardening and sustainable vegetable cultivation (including our Kangundo women's group partnership)",
+          "Poultry farming and small livestock projects",
+          "Leadership conversations, mentorship and business management",
+          "Psychosocial support, health awareness and life-skills sessions",
         ],
       },
-      {
-        title: "Cultural exchange",
-        items: [
-          "Kamba traditions such as drumming, wood carving and beadwork, along with storytelling, games, hill walks and cooking together.",
-        ],
-      },
+    ],
+    intendedOutcomes: [
+      "We aim to support higher, more predictable incomes among participating women.",
+      "We aim to improve household financial stability and family nutrition.",
+      "We aim to foster stronger, self-governing women-led community groups and enterprises.",
+      "We aim to create practical opportunities for young mothers to become self-reliant.",
     ],
     aims: [
-      "Support food security, better nutrition and improved incomes for farming households",
-      "Help farmers adapt to local climate conditions and reach market demand",
-      "Manage pests in ways that protect pollinators and local water sources",
-      "Provide open forums for women's leadership and financial decision-making",
+      "We aim to support higher, more predictable incomes among participating women.",
+      "We aim to improve household financial stability and family nutrition.",
+      "We aim to foster stronger, self-governing women-led community groups and enterprises.",
+      "We aim to create practical opportunities for young mothers to become self-reliant.",
     ],
     contactTopic: "women-agriculture",
-    ctaText: "Ask about this programme",
+    ctaText: "Ask about women's empowerment",
     secondaryCta: {
-      label: "Volunteer With ABWA",
-      href: "/volunteer",
+      label: "Read: Sustainable Agriculture Article",
+      href: "/blog/sustainable-agriculture-resilient-communities-kenya",
     },
     relatedSlug: "umisiiyu-women-group",
     relatedPostSlug: "sustainable-agriculture-resilient-communities-kenya",
   },
+
+  // 4. Food Security and Sustainable Agriculture (New Dedicated Thematic Route)
+  {
+    slug: "food-security-sustainable-agriculture",
+    category: "Agriculture & Environment",
+    title: "Food Security and Sustainable Agriculture",
+    subtitle: "Climate-smart farming, water conservation and kitchen gardens for healthier harvests and household income.",
+    summary: "Promoting climate-smart farming, urban kitchen gardens, rainwater harvesting and household nutrition across Kenyan communities.",
+    location: "Nairobi, Machakos and Makueni Counties",
+    status: "Active",
+    heroImage: "/images/heroes/kenya-s-apollo-agriculture-raises-6m-series-a-led-by-anthemis-techcrunch.jpg",
+    heroImageAlt: "Smallholder farming and sustainable agricultural practices in Kenya",
+    metaTitle: "Food Security and Sustainable Agriculture | ABWA World",
+    metaDescription:
+      "Promoting climate-smart farming, urban kitchen gardens, rainwater harvesting and household nutrition across Kenyan communities.",
+    description:
+      "From urban vertical gardens in informal settlements to smallholder plots in Machakos and Makueni counties, we work with farmers and families to grow nutritious food and adapt to changing seasons.",
+    goal: "To improve food security, household nutrition, agricultural productivity and farm income through sustainable, climate-smart practices.",
+    context: [
+      "For many Kenyan households, small-scale farming is both how the family eats and how everyday expenses are met.",
+      "Unpredictable rainfall, soil exhaustion and limited access to water or tools can make harvests fragile. ABWA brings community farmers and volunteers together to share practical techniques in soil care, rainwater harvesting, organic composting and crop diversity.",
+    ],
+    objectives: [
+      "Promote sustainable and climate-smart agricultural practices suited to local conditions.",
+      "Improve smallholder farmers' access to practical farming tools and reliable water storage.",
+      "Support small-scale farmers and women's farming groups to improve yields and nutrition.",
+      "Develop agricultural value addition and market links that generate sustainable household income.",
+    ],
+    activities: [
+      "Urban vegetable farming in informal settlements using vertical sacks, bottles and pipes",
+      "Water tank installation and rainwater harvesting for gardens and farms",
+      "Climate-smart agriculture and drought-resilient crop training",
+      "Poultry farming and small livestock development",
+      "Household kitchen gardens for daily family nutrition",
+      "Coffee processing and local marketing support",
+      "Organic farming, mulching and compost manure production",
+      "Distribution of essential agricultural tools and quality seeds",
+      "Water-efficient drip and root irrigation practices",
+      "Agricultural entrepreneurship and local market access",
+    ],
+    whatHappens: [
+      {
+        title: "Urban and smallholder farming",
+        items: [
+          "Urban vegetable farming in informal settlements using vertical sacks, bottles and pipes",
+          "Household kitchen gardens for daily family nutrition",
+          "Climate-smart agriculture and drought-resilient crop training",
+          "Organic farming, mulching and compost manure production",
+        ],
+      },
+      {
+        title: "Water and market links",
+        items: [
+          "Water tank installation and rainwater harvesting for gardens and farms",
+          "Water-efficient drip and root irrigation practices",
+          "Poultry farming and small livestock development",
+          "Coffee processing, distribution of quality seeds, and local market access",
+        ],
+      },
+    ],
+    intendedOutcomes: [
+      "We aim to increase local, nutritious food production for participating families.",
+      "We aim to strengthen household diets and reduce seasonal food insecurity.",
+      "We aim to help smallholder farmers build steadier income from surplus produce.",
+      "We aim to support practical adaptation to shifting rainfall and climate patterns.",
+      "We aim to reduce farm waste through organic composting and resource reuse.",
+    ],
+    aims: [
+      "We aim to increase local, nutritious food production for participating families.",
+      "We aim to strengthen household diets and reduce seasonal food insecurity.",
+      "We aim to help smallholder farmers build steadier income from surplus produce.",
+      "We aim to support practical adaptation to shifting rainfall and climate patterns.",
+      "We aim to reduce farm waste through organic composting and resource reuse.",
+    ],
+    contactTopic: "agriculture",
+    ctaText: "Explore farming partnerships",
+    secondaryCta: {
+      label: "Volunteer on agricultural projects",
+      href: "/volunteer",
+    },
+    relatedSlug: "environmental-conservation",
+  },
+
+  // 5. Umisiiyu Women Group — Kibwezi Community Project (Preserve existing slug: umisiiyu-women-group)
   {
     slug: "umisiiyu-women-group",
-    title: "Umisiiyu Women Group",
-    subtitle: "Vegetable farming and kitchen gardens with a women's group in Kibwezi, Makueni County.",
+    category: "Women & Livelihoods",
+    title: "Umisiiyu Women Group — Kibwezi Community Project",
+    subtitle: "Vegetable farming, kitchen gardens and shared livelihoods with a women's group in Kibwezi, Makueni County.",
     summary: "Vegetable farming and kitchen gardens with a women's group in Kibwezi, Makueni County.",
     location: "Kibwezi, Makueni County",
     status: "Active",
-    heroImage: "/images/programs/umisiiyu-hero.svg",
-    heroImageAlt: "Umisiiyu Women Group tending to drought-resilient kitchen gardens in Kibwezi",
+    heroImage: "/images/gallery/ungezuckerte-ananas-so-fair-so-gut.jpg",
+    heroImageAlt: "Umisiiyu Women Group members with drought-resilient garden produce in Kibwezi",
     metaTitle: "Umisiiyu Women Group, Kibwezi | ABWA World",
     metaDescription:
       "ABWA works with the Umisiiyu Women Group in Kibwezi, Makueni County on vegetable farming and kitchen gardens for food and family income.",
     description:
       "A women's farming group with a long record of welcoming volunteers shares its knowledge of growing food in a dry climate.",
+    goal: "To support food security, household nutrition and sustainable smallholder farming incomes for the Umisiiyu women in Kibwezi.",
     context: [
       "The Umisiiyu Women Group is based in Kibwezi, in Makueni County in eastern Kenya, and its members farm together. According to the group's own history, it began in 2015, after a long drought and the end of charcoal burning, which had been a main source of family income, left many households looking for new ways to earn.",
       "ABWA's role is to support the group's farming and to welcome volunteers who want to learn from the women's experience.",
+    ],
+    objectives: [
+      "Support food security and healthier family diets in semi-arid Kibwezi.",
+      "Improve smallholder farm incomes and drought-resilient vegetable production.",
+      "Help the group make sustainable, careful use of local water sources.",
+      "Strengthen group savings, mutual support and women's leadership.",
+    ],
+    activities: [
+      "Selecting vegetables that suit the local semi-arid climate",
+      "Preparing land and timing manure and natural compost",
+      "Managing pests and diseases through collective observation",
+      "Watering and using local water sources wisely",
+      "Women's empowerment conversations on leadership, finance and health",
+      "Cultural exchange with volunteers: Akamba crafts, drumming, storytelling and hill walks",
     ],
     whatHappens: [
       {
@@ -157,80 +370,495 @@ export const programmesData: Programme[] = [
         ],
       },
       {
-        title: "Women's empowerment conversations",
+        title: "Empowerment and cultural exchange",
         items: [
           "Leadership, financial decisions, access to health information and the freedom to make your own choices",
-        ],
-      },
-      {
-        title: "Cultural exchange",
-        items: [
           "Akamba crafts, drumming, storytelling, hill walks and shared cooking.",
         ],
       },
     ],
+    intendedOutcomes: [
+      "We aim to support food security and healthier family diets.",
+      "We aim to improve smallholder farm incomes in semi-arid zones.",
+      "We aim to help the group make sustainable, careful use of local water.",
+    ],
     aims: [
-      "Support food security and healthier family diets",
-      "Improve smallholder farm incomes in semi-arid zones",
-      "Help the group make sustainable, careful use of local water",
+      "We aim to support food security and healthier family diets.",
+      "We aim to improve smallholder farm incomes in semi-arid zones.",
+      "We aim to help the group make sustainable, careful use of local water.",
     ],
     contactTopic: "umisiiyu",
     ctaText: "Ask about the Umisiiyu project",
     secondaryCta: {
-      label: "Explore all programmes",
-      href: "/programs",
+      label: "Explore farming partnerships",
+      href: "/programs/food-security-sustainable-agriculture",
     },
     relatedSlug: "womens-empowerment-sustainable-agriculture",
   },
+
+  // 6. Health and Community Wellbeing (New Thematic Route)
   {
-    slug: "environmental-conservation",
-    title: "Environmental Conservation",
-    subtitle: "Planting trees, reducing waste and giving everyday materials a second life.",
-    summary: "Tree planting, waste management and creative recycling with local groups.",
-    location: "Mathare and nearby",
+    slug: "health-community-wellbeing",
+    category: "Health & WASH",
+    title: "Health and Community Wellbeing",
+    subtitle: "Preventive health awareness, psychosocial support, nutrition education and community outreach.",
+    summary: "Promoting preventive health education, mental health awareness, nutrition and maternal wellbeing in underserved Kenyan communities.",
+    location: "Nairobi and partner communities",
     status: "Active",
-    heroImage: "/images/heroes/download-22.jpg",
-    heroImageAlt: "Community tree planting and plastic waste recycling activity in Nairobi",
-    metaTitle: "Environmental Conservation, Trees and Recycling | ABWA",
+    heroImage: "/images/heroes/love-and-life.jpg",
+    heroImageAlt: "Community health awareness, nutrition and maternal wellbeing gathering in Kenya",
+    metaTitle: "Health and Community Wellbeing | ABWA World",
     metaDescription:
-      "How ABWA works with local groups on tree planting, waste management and creative recycling in Nairobi and beyond.",
+      "Promoting preventive health education, mental health awareness, nutrition and maternal wellbeing in underserved Kenyan communities.",
     description:
-      "Looking after the environment is part of everything we do. Here is how we do it with local groups.",
+      "Good health begins in the neighbourhood with clear information, supportive conversations and timely links to qualified care.",
+    goal: "To promote healthier communities through preventive health education, mental health awareness and practical support for vulnerable households.",
     context: [
-      "Clean surroundings, shade, healthy soil and safe water matter to everyone, and they matter most in places with limited public services.",
-      "Our environmental work is led together with local groups, so that it reflects what they want to see in their own neighbourhoods.",
+      "Many preventable health challenges become harder when families lack accessible health information or a safe space to talk about wellbeing.",
+      "Working alongside community mentors and qualified local health providers, ABWA supports practical awareness around nutrition, hygiene, maternal health and emotional wellbeing.",
+    ],
+    objectives: [
+      "Increase community awareness of practical, preventive healthcare.",
+      "Promote mental health awareness, emotional resilience and psychosocial wellbeing.",
+      "Improve household knowledge of everyday nutrition and hygiene.",
+      "Help vulnerable community members connect with appropriate, qualified health services.",
+    ],
+    activities: [
+      "Community health awareness and preventive education campaigns",
+      "Mental health awareness and peer psychosocial support circles",
+      "Household and child nutrition education",
+      "Menstrual health and hygiene education for young women and schoolgirls",
+      "Maternal and child health awareness sessions",
+      "Substance abuse prevention education for young people",
+      "Community health outreach days in partnership with qualified healthcare providers",
+      "Wellbeing and mutual-support groups",
     ],
     whatHappens: [
       {
-        title: "Tree planting",
+        title: "Preventive health and nutrition",
         items: [
-          "Planting trees together with local young people, including along the Mathare River and nearby areas.",
+          "Community health awareness and preventive education campaigns",
+          "Household and child nutrition education",
+          "Maternal and child health awareness sessions",
+          "Community health outreach days in partnership with qualified healthcare providers",
         ],
       },
       {
-        title: "Waste management and recycling",
+        title: "Psychosocial wellbeing and youth health",
         items: [
-          "Helping communities reduce, sort and reuse waste, including making useful and beautiful products from waste plastic.",
+          "Mental health awareness and peer psychosocial support circles",
+          "Menstrual health and hygiene education for young women and schoolgirls",
+          "Substance abuse prevention education for young people",
+          "Wellbeing and mutual-support groups",
         ],
       },
-      {
-        title: "Growing food sustainably",
-        items: [
-          "Kitchen gardens in small urban spaces, and sustainable vegetable farming that uses local water sources carefully.",
-        ],
-      },
+    ],
+    intendedOutcomes: [
+      "We aim to foster stronger preventive health knowledge across participating neighbourhoods.",
+      "We aim to reduce stigma and improve everyday understanding of mental health.",
+      "We aim to support healthier family nutrition and hygiene habits.",
+      "We aim to help community members access qualified local health services when needed.",
     ],
     aims: [
-      "Help communities care for their local environment",
-      "Reduce waste and demonstrate creative reuse of everyday materials",
-      "Highlight the vital link between healthy surroundings and healthy livelihoods",
+      "We aim to foster stronger preventive health knowledge across participating neighbourhoods.",
+      "We aim to reduce stigma and improve everyday understanding of mental health.",
+      "We aim to support healthier family nutrition and hygiene habits.",
+      "We aim to help community members access qualified local health services when needed.",
+    ],
+    contactTopic: "health",
+    ctaText: "Partner on community health",
+    secondaryCta: {
+      label: "Explore WASH initiatives",
+      href: "/programs/water-sanitation-hygiene-wash",
+    },
+    relatedSlug: "water-sanitation-hygiene-wash",
+  },
+
+  // 7. Environmental Conservation and Climate Action (Preserve existing slug: environmental-conservation)
+  {
+    slug: "environmental-conservation",
+    category: "Agriculture & Environment",
+    title: "Environmental Conservation and Climate Action",
+    subtitle: "Planting trees, cleaning neighbourhoods, recycling waste and caring for shared natural resources.",
+    summary: "How ABWA works with local groups on tree planting, community clean-ups, plastic recycling, composting and climate action in Kenya.",
+    location: "Mathare, Nairobi and partner communities",
+    status: "Active",
+    heroImage: "/images/heroes/download-22.jpg",
+    heroImageAlt: "Community tree planting and plastic waste recycling activity in Nairobi",
+    metaTitle: "Environmental Conservation and Climate Action | ABWA World",
+    metaDescription:
+      "How ABWA works with local groups on tree planting, community clean-ups, plastic recycling, composting and climate action in Kenya.",
+    description:
+      "Clean surroundings, shade, healthy soil and safe water matter to every family. Our environmental work is led together with youth groups, schools and residents.",
+    goal: "To promote environmental protection, climate resilience and the sustainable care of natural resources in local communities.",
+    context: [
+      "Clean surroundings, shade, healthy soil and safe water matter to everyone, and they matter most in places with limited public services.",
+      "Environmental care sits alongside everything else we do—from planting trees with young people along the Mathare River to sorting plastic waste, composting organic matter for kitchen gardens and teaching environmental stewardship in local schools.",
+    ],
+    objectives: [
+      "Encourage responsible, community-led waste management and recycling.",
+      "Promote practical environmental education in schools and neighbourhoods.",
+      "Support local climate change adaptation and greening initiatives.",
+      "Work with residents to create cleaner, healthier and greener public spaces.",
+    ],
+    activities: [
+      "Community tree planting along rivers, schools and public spaces",
+      "Neighbourhood clean-up campaigns",
+      "Plastic waste collection, sorting and recycling",
+      "Organic waste composting for community and kitchen gardens",
+      "Environmental conservation clubs and education in schools",
+      "Establishment of community gardens and shared green spaces",
+      "Rainwater harvesting and everyday water conservation",
+      "Creative upcycling: making useful products and art from waste materials",
+    ],
+    whatHappens: [
+      {
+        title: "Greening and tree planting",
+        items: [
+          "Community tree planting along rivers, schools and public spaces",
+          "Establishment of community gardens and shared green spaces",
+          "Rainwater harvesting and everyday water conservation",
+          "Environmental conservation clubs and education in schools",
+        ],
+      },
+      {
+        title: "Waste management and upcycling",
+        items: [
+          "Neighbourhood clean-up campaigns",
+          "Plastic waste collection, sorting and recycling",
+          "Organic waste composting for community and kitchen gardens",
+          "Creative upcycling: making useful products and art from waste materials",
+        ],
+      },
+    ],
+    intendedOutcomes: [
+      "We aim to help residents build cleaner, healthier neighbourhood environments.",
+      "We aim to establish practical household and community waste-sorting habits.",
+      "We aim to deepen environmental awareness among children and young people.",
+      "We aim to encourage lasting community participation in local conservation.",
+    ],
+    aims: [
+      "We aim to help residents build cleaner, healthier neighbourhood environments.",
+      "We aim to establish practical household and community waste-sorting habits.",
+      "We aim to deepen environmental awareness among children and young people.",
+      "We aim to encourage lasting community participation in local conservation.",
     ],
     contactTopic: "environment",
-    ctaText: "Get involved in environmental action",
+    ctaText: "Join an environmental project",
     secondaryCta: {
-      label: "Explore all programmes",
-      href: "/programs",
+      label: "Explore volunteer work camps",
+      href: "/volunteer",
+    },
+    relatedSlug: "food-security-sustainable-agriculture",
+  },
+
+  // 8. Poverty Reduction and Livelihood Development (New Thematic Route)
+  {
+    slug: "poverty-reduction-livelihoods",
+    category: "Women & Livelihoods",
+    title: "Poverty Reduction and Livelihood Development",
+    subtitle: "Building household resilience through small-business skills, village savings, tools and market links.",
+    summary: "Supporting vulnerable households in Kenya to build sustainable small businesses, financial literacy, savings groups and steady livelihoods.",
+    location: "Urban informal settlements and rural communities",
+    status: "Active",
+    heroImage: "/images/gallery/support-ugandan-girls-with-tailoring-materials.jpg",
+    heroImageAlt: "Tailoring equipment and small business tools supporting community livelihoods",
+    metaTitle: "Poverty Reduction and Livelihood Development | ABWA World",
+    metaDescription:
+      "Supporting vulnerable households in Kenya to build sustainable small businesses, financial literacy, savings groups and steady livelihoods.",
+    description:
+      "We work alongside low-income families to turn practical skills into steady household livelihoods and community-owned enterprises.",
+    goal: "To improve household income and everyday living standards through sustainable, community-led economic opportunities.",
+    context: [
+      "Lasting security for a family comes from having reliable ways to earn, save and plan ahead.",
+      "ABWA supports vulnerable households and community groups with business training, financial literacy, essential work tools and value-addition skills so local enterprises can thrive on their own terms.",
+    ],
+    objectives: [
+      "Support low-income families to establish practical income-generating activities.",
+      "Promote everyday entrepreneurship, bookkeeping and financial literacy.",
+      "Strengthen cooperative and community-based enterprises.",
+      "Reduce economic vulnerability among disadvantaged households.",
+    ],
+    activities: [
+      "Small-business start-up guidance and mentoring",
+      "Practical entrepreneurship and bookkeeping training",
+      "Village savings circles and household financial literacy initiatives",
+      "Support for smallholder farming and livestock enterprises",
+      "Provision of essential business equipment and trade tools",
+      "Product development, processing and value addition",
+      "Market access support and local business networking",
+      "Household livelihood planning and resilience initiatives",
+    ],
+    whatHappens: [
+      {
+        title: "Small-business skills and startup support",
+        items: [
+          "Small-business start-up guidance and mentoring",
+          "Practical entrepreneurship and bookkeeping training",
+          "Provision of essential business equipment and trade tools",
+          "Product development, processing and value addition",
+        ],
+      },
+      {
+        title: "Savings circles and market access",
+        items: [
+          "Village savings circles and household financial literacy initiatives",
+          "Support for smallholder farming and livestock enterprises",
+          "Market access support and local business networking",
+          "Household livelihood planning and resilience initiatives",
+        ],
+      },
+    ],
+    intendedOutcomes: [
+      "We aim to help participating households build steadier, more resilient incomes.",
+      "We aim to strengthen day-to-day financial management and family savings.",
+      "We aim to foster sustainable, locally managed small businesses.",
+      "We aim to support greater economic independence for participating families.",
+    ],
+    aims: [
+      "We aim to help participating households build steadier, more resilient incomes.",
+      "We aim to strengthen day-to-day financial management and family savings.",
+      "We aim to foster sustainable, locally managed small businesses.",
+      "We aim to support greater economic independence for participating families.",
+    ],
+    contactTopic: "livelihoods",
+    ctaText: "Support livelihood projects",
+    secondaryCta: {
+      label: "Explore Get Involved options",
+      href: "/get-involved",
+    },
+    relatedSlug: "womens-empowerment-sustainable-agriculture",
+  },
+
+  // 9. Water, Sanitation and Hygiene — WASH (New Thematic Route)
+  {
+    slug: "water-sanitation-hygiene-wash",
+    category: "Health & WASH",
+    title: "Water, Sanitation and Hygiene (WASH)",
+    subtitle: "Safe water access, rainwater harvesting, school handwashing facilities and practical hygiene education.",
+    summary: "Improving access to safe water storage, rainwater harvesting, handwashing stations and hygiene education in Kenyan schools and communities.",
+    location: "Underserved schools and communities",
+    status: "Active",
+    heroImage: "/images/heroes/tracing-turkey-s-development-aid-in-namibia.jpg",
+    heroImageAlt: "Water storage, rainwater harvesting and sanitation facilities in an underserved community",
+    metaTitle: "Water, Sanitation and Hygiene (WASH) | ABWA World",
+    metaDescription:
+      "Improving access to safe water storage, rainwater harvesting, handwashing stations and hygiene education in Kenyan schools and communities.",
+    description:
+      "Clean water and safe sanitation protect children's health, keep students in school and ease the daily workload on families.",
+    goal: "To improve access to safe water, sanitation facilities and healthy hygiene practices in underserved schools and communities.",
+    context: [
+      "Reliable water storage and clean sanitation facilities are foundational to community health and education.",
+      "ABWA works with schools, women's groups and neighbourhoods to install water tanks, harvest seasonal rainwater, build handwashing stations and share practical hygiene education.",
+    ],
+    objectives: [
+      "Improve safe water access for households, schools and community groups.",
+      "Promote safe water harvesting, storage and handling practices.",
+      "Encourage everyday handwashing and good hygiene habits.",
+      "Support cleaner, safer sanitation facilities in participating schools and centres.",
+    ],
+    activities: [
+      "Community and school water tank installation",
+      "Roof rainwater harvesting systems",
+      "Handwashing stations in schools and community centres",
+      "Community hygiene education and awareness campaigns",
+      "Sanitation facility repair and improvement",
+      "Menstrual hygiene awareness and support in schools",
+      "Community water conservation initiatives",
+      "Clean water handling and safety education",
+    ],
+    whatHappens: [
+      {
+        title: "Water harvesting and infrastructure",
+        items: [
+          "Community and school water tank installation",
+          "Roof rainwater harvesting systems",
+          "Handwashing stations in schools and community centres",
+          "Sanitation facility repair and improvement",
+        ],
+      },
+      {
+        title: "Hygiene education and safety",
+        items: [
+          "Community hygiene education and awareness campaigns",
+          "Menstrual hygiene awareness and support in schools",
+          "Community water conservation initiatives",
+          "Clean water handling and safety education",
+        ],
+      },
+    ],
+    intendedOutcomes: [
+      "We aim to improve reliable access to clean water for participating schools and households.",
+      "We aim to encourage lasting everyday hygiene and handwashing habits.",
+      "We aim to support safer, more dignified sanitation in community institutions.",
+      "We aim to reduce health risks linked to unsafe water and poor sanitation.",
+    ],
+    aims: [
+      "We aim to improve reliable access to clean water for participating schools and households.",
+      "We aim to encourage lasting everyday hygiene and handwashing habits.",
+      "We aim to support safer, more dignified sanitation in community institutions.",
+      "We aim to reduce health risks linked to unsafe water and poor sanitation.",
+    ],
+    contactTopic: "wash",
+    ctaText: "Partner on WASH initiatives",
+    secondaryCta: {
+      label: "Explore Health and Wellbeing",
+      href: "/programs/health-community-wellbeing",
+    },
+    relatedSlug: "health-community-wellbeing",
+  },
+
+  // 10. Arts, Culture and Creative Development (New Thematic Route)
+  {
+    slug: "arts-culture-creative-development",
+    category: "Education & Youth",
+    title: "Arts, Culture and Creative Development",
+    subtitle: "Drawing, painting, public murals, music, recycled art and cultural exchange in the community.",
+    summary: "Nurturing artistic talent, community murals, recycled art, music and cultural exchange with children and young people in Kenya.",
+    location: "Mathare, Nairobi and partner communities",
+    status: "Active",
+    heroImage: "/images/gallery/download-19.jpg",
+    heroImageAlt: "Young people creating community murals, music and artwork in Mathare",
+    metaTitle: "Arts, Culture and Creative Development | ABWA World",
+    metaDescription:
+      "Nurturing artistic talent, community murals, recycled art, music and cultural exchange with children and young people in Kenya.",
+    description:
+      "Creativity brings people together across age and background, turns neglected spaces into places of pride, and opens new pathways for young makers.",
+    goal: "To nurture artistic talent, develop practical creative skills and use the arts to strengthen positive community engagement.",
+    context: [
+      "Art and music are welcoming starting points for community life.",
+      "Whether painting a neighbourhood mural, recording music with local youth, crafting useful items from recycled materials, or sharing traditional drumming, beadwork and storytelling during a work camp, creative work builds confidence and community pride.",
+    ],
+    objectives: [
+      "Provide space and materials for children and young people to develop artistic talents.",
+      "Promote creative skills as a pathway to self-expression and creative enterprise.",
+      "Use collaborative art to support neighbourhood beautification and social cohesion.",
+      "Encourage creative reuse of waste materials through upcycled art projects.",
+    ],
+    activities: [
+      "Community art, drawing, painting and mixed-media workshops",
+      "Public murals and neighbourhood beautification projects",
+      "Creative arts and music mentorship for children and youth",
+      "Recycled-art and creative upcycling workshops",
+      "Community art exhibitions, performances and cultural exchange days",
+      "Creative entrepreneurship and craft marketing skills",
+      "Collaborative cross-cultural art initiatives with visiting volunteers",
+    ],
+    whatHappens: [
+      {
+        title: "Visual arts and public murals",
+        items: [
+          "Community art, drawing, painting and mixed-media workshops",
+          "Public murals and neighbourhood beautification projects",
+          "Recycled-art and creative upcycling workshops",
+          "Creative entrepreneurship and craft marketing skills",
+        ],
+      },
+      {
+        title: "Music, mentorship and cultural exchange",
+        items: [
+          "Creative arts and music mentorship for children and youth",
+          "Community art exhibitions, performances and cultural exchange days",
+          "Collaborative cross-cultural art initiatives with visiting volunteers",
+        ],
+      },
+    ],
+    intendedOutcomes: [
+      "We aim to help children and young people grow their artistic and creative skills.",
+      "We aim to increase youth participation in positive, collaborative neighbourhood activities.",
+      "We aim to help residents create brighter, more welcoming shared community spaces.",
+      "We aim to open pathways for local creative entrepreneurship.",
+    ],
+    aims: [
+      "We aim to help children and young people grow their artistic and creative skills.",
+      "We aim to increase youth participation in positive, collaborative neighbourhood activities.",
+      "We aim to help residents create brighter, more welcoming shared community spaces.",
+      "We aim to open pathways for local creative entrepreneurship.",
+    ],
+    contactTopic: "arts",
+    ctaText: "Get involved in creative projects",
+    secondaryCta: {
+      label: "Explore Volunteer Work Camps",
+      href: "/volunteer",
     },
     relatedSlug: "youth-empowerment",
+  },
+
+  // 11. Community Development and Social Support (New Thematic Route)
+  {
+    slug: "community-development-social-support",
+    category: "Community & Inclusion",
+    title: "Community Development and Social Support",
+    subtitle: "Strengthening grassroots groups, supporting vulnerable households and promoting inclusive local leadership.",
+    summary: "Strengthening local community groups, supporting elderly people and people with disabilities, and building community resilience in Kenya.",
+    location: "Nairobi, Machakos and Makueni Counties",
+    status: "Active",
+    heroImage: "/images/heroes/hero-community-gathering.jpg",
+    heroImageAlt: "Grassroots community gathering and mutual social support network in Kenya",
+    metaTitle: "Community Development and Social Support | ABWA World",
+    metaDescription:
+      "Strengthening local community groups, supporting elderly people and people with disabilities, and building community resilience in Kenya.",
+    description:
+      "Strong communities look out for every neighbour. We work with local groups to identify priority needs, build leadership capacity and support households facing hardship.",
+    goal: "To strengthen grassroots community participation and improve the wellbeing and inclusion of vulnerable individuals and families.",
+    context: [
+      "Every neighbourhood has its own strengths and its own urgent pressures.",
+      "ABWA works alongside community-based groups to carry out participatory needs assessments, strengthen local leadership committees, and ensure that elderly residents, people living with disability and families in crisis are supported with dignity.",
+    ],
+    objectives: [
+      "Listen to and respond to priority needs identified by community members themselves.",
+      "Strengthen the governance and capacity of local women's, youth and neighbourhood groups.",
+      "Provide respectful practical support for vulnerable households, elderly residents and people with disabilities.",
+      "Promote inclusive participation in local development decisions.",
+    ],
+    activities: [
+      "Participatory community needs assessments and listening forums",
+      "Support for vulnerable children and low-income families",
+      "Community food assistance and solidarity initiatives",
+      "Inclusion and practical support for elderly people and people living with disability",
+      "Community home visits and family wellbeing check-ins",
+      "Grassroots leadership training and committee capacity building",
+      "Community disaster preparedness and emergency coordination",
+      "Partnerships with local community-based organisations (CBOs)",
+    ],
+    whatHappens: [
+      {
+        title: "Grassroots governance and listening",
+        items: [
+          "Participatory community needs assessments and listening forums",
+          "Grassroots leadership training and committee capacity building",
+          "Partnerships with local community-based organisations (CBOs)",
+          "Community disaster preparedness and emergency coordination",
+        ],
+      },
+      {
+        title: "Vulnerable household support and inclusion",
+        items: [
+          "Support for vulnerable children and low-income families",
+          "Inclusion and practical support for elderly people and people living with disability",
+          "Community home visits and family wellbeing check-ins",
+          "Community food assistance and solidarity initiatives",
+        ],
+      },
+    ],
+    intendedOutcomes: [
+      "We aim to strengthen practical, dignified support networks for vulnerable households.",
+      "We aim to help local community groups become more resilient and self-managing.",
+      "We aim to widen inclusive participation in neighbourhood development.",
+      "We aim to improve overall community preparedness and mutual care.",
+    ],
+    aims: [
+      "We aim to strengthen practical, dignified support networks for vulnerable households.",
+      "We aim to help local community groups become more resilient and self-managing.",
+      "We aim to widen inclusive participation in neighbourhood development.",
+      "We aim to improve overall community preparedness and mutual care.",
+    ],
+    contactTopic: "community",
+    ctaText: "Partner with our community teams",
+    secondaryCta: {
+      label: "Explore Partnership Framework",
+      href: "/partner-with-us",
+    },
+    relatedSlug: "poverty-reduction-livelihoods",
   },
 ];

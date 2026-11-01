@@ -20,7 +20,7 @@ export const privacyPolicy: LegalDocument = {
       number: 1,
       title: "Who we are",
       content: [
-        "This website is run by Action for Better World Association (ABWA), a community-based organisation founded in 2015 and headquartered in Nairobi, Kenya. In this policy, 'we', 'our' and 'us' refer to ABWA.",
+        "This website is run by Action for Better World Association (ABWA), a community-based organisation founded in 2015 and headquartered in Buruburu, Nairobi, Kenya. In this policy, 'we', 'our' and 'us' refer to ABWA.",
         "You can reach our team at any time by calling our primary telephone line at +254 720 021 001, emailing contact@abwaworld.org, or writing to us through our online Contact page.",
       ],
     },
@@ -157,7 +157,7 @@ export const privacyPolicy: LegalDocument = {
       listItems: [
         "Telephone: +254 720 021 001",
         "Email: contact@abwaworld.org",
-        "Headquarters: Nairobi, Kenya",
+        "Headquarters: Buruburu, Nairobi, Kenya",
         "Postal Address: P.O. Box 1204-00515 Buruburu, Nairobi, Kenya",
         "Online Contact: Use our secure form at /contact",
       ],
@@ -277,7 +277,7 @@ export const termsAndConditions: LegalDocument = {
       listItems: [
         "Telephone: +254 720 021 001",
         "Email: contact@abwaworld.org",
-        "Headquarters: Nairobi, Kenya",
+        "Headquarters: Buruburu, Nairobi, Kenya",
         "Online Contact: Use our Contact page at /contact",
       ],
     },

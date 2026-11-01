@@ -1,8 +1,9 @@
-﻿import React from "react";
+import React from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { MapPin, Navigation } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export function AboutGeography() {
   const locations = [
@@ -29,13 +30,22 @@ export function AboutGeography() {
   return (
     <Section surface="white">
       <Container>
-        <SectionHeader
-          eyebrow="Geography"
-          title="Where we work"
-          description="ABWA is based in Nairobi, Kenya. We work where we have built relationships with community groups, rather than claiming to be everywhere. Our project plans involve three places."
-        />
+        {/* Section Header with ScrollReveal */}
+        <ScrollReveal yOffset={20} duration={0.6}>
+          <SectionHeader
+            eyebrow="Geography"
+            title="Where we work"
+            description="ABWA is based in Nairobi, Kenya. We work where we have built relationships with community groups, rather than claiming to be everywhere. Our project plans involve three places."
+          />
+        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* 3 Location Cards with Staggered ScrollReveal */}
+        <ScrollReveal
+          stagger={0.12}
+          yOffset={32}
+          duration={0.65}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {locations.map((loc, idx) => (
             <div
               key={idx}
@@ -45,7 +55,7 @@ export function AboutGeography() {
                 <div className="w-10 h-10 rounded-xl bg-white text-abwa-gold border border-abwa-border flex items-center justify-center shadow-xs">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-abwa-muted bg-white px-2.5 py-1 rounded-full border border-abwa-border">
+                <span className="font-kaushan text-abwa-gold text-base tracking-wide">
                   {loc.tag}
                 </span>
               </div>
@@ -58,7 +68,7 @@ export function AboutGeography() {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
       </Container>
     </Section>
   );

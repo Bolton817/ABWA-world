@@ -40,8 +40,8 @@ export default function GalleryPage() {
         title="Gallery"
         subtitle="A look at life in our projects."
         description="Photographs from community projects and events, shared with consent."
-        imageSrc="/images/heroes/hero-community-gathering.jpg"
-        imageAlt="Community members and volunteers working together"
+        imageSrc="/images/gallery/beautiful-children.jpg"
+        imageAlt="Moments of community, learning and everyday life in ABWA partner communities"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Gallery", href: "/gallery" },
@@ -52,7 +52,7 @@ export default function GalleryPage() {
       <Section className="bg-white">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
               Dignity & Consent
             </span>
             <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">

@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
@@ -16,18 +16,21 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-gold rounded">
               <Image
-                src="/images/brand/logo-white.svg"
+                src="/images/brand/abwa-logo2.png"
                 alt={siteConfig.name}
                 width={200}
-                height={50}
-                className="h-11 w-auto"
+                height={70}
+                className="h-11 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-slate-300 leading-relaxed">
-              A Nairobi-based community organisation working with women, young people and children
+              A community organisation based in Buruburu, Nairobi, Kenya working with women, young people and children
               on skills, farming, creativity and the environment.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 space-y-1">
+              <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
+                Empowering Communities
+              </span>
               <span className="text-sm text-abwa-gold font-goldie tracking-wide block">
                 {siteConfig.tagline}
               </span>

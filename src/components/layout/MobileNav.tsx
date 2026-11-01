@@ -18,9 +18,14 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const drawerRef = useRef<HTMLDivElement>(null);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
-  // Close drawer when route changes
+  const prevPathnameRef = useRef(pathname);
+
+  // Close drawer only when route actually changes
   useEffect(() => {
-    onClose();
+    if (prevPathnameRef.current !== pathname) {
+      prevPathnameRef.current = pathname;
+      onClose();
+    }
   }, [pathname, onClose]);
 
   // Handle Escape key and body scroll lock
@@ -65,6 +70,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
       {/* Slide-out Drawer */}
       <div
+        id="mobile-menu"
         ref={drawerRef}
         className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl flex flex-col z-50 animate-in slide-in-from-right duration-300"
       >
@@ -72,11 +78,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         <div className="flex items-center justify-between p-4 border-b border-abwa-border">
           <Link href="/" onClick={onClose} className="flex items-center">
             <Image
-              src="/images/brand/logo.svg"
+              src="/images/brand/abwa-logo1.png"
               alt={siteConfig.name}
               width={160}
-              height={40}
-              className="h-10 w-auto"
+              height={56}
+              className="h-10 w-auto object-contain"
             />
           </Link>
           <button

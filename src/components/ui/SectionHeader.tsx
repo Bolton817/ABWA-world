@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -33,7 +33,7 @@ export function SectionHeader({
     >
       <div className={twMerge("space-y-2.5", isCenter ? "max-w-2xl mx-auto" : "max-w-3xl")}>
         {eyebrow && (
-          <span className="inline-block text-xs font-bold uppercase tracking-wider text-abwa-gold">
+          <span className="inline-block font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide">
             {eyebrow}
           </span>
         )}

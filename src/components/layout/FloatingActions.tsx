@@ -71,7 +71,7 @@ export function FloatingActions() {
             className="mb-3 w-64 bg-white rounded-2xl shadow-2xl border border-abwa-border p-3 space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-200"
           >
             <div className="px-3 py-1.5 border-b border-slate-100">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-abwa-gold">
+              <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
                 Get in touch
               </span>
               <p className="text-xs text-abwa-muted">We’d love to hear from you.</p>

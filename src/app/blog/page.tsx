@@ -31,8 +31,8 @@ export default function BlogIndexPage() {
         title="Blog"
         subtitle="Notes from our work, and ideas worth sharing."
         description="Short, practical reads on community development, volunteering and the thinking behind our programmes."
-        imageSrc="/images/heroes/hero-blog.svg"
-        imageAlt="Hands-on community learning and knowledge exchange"
+        imageSrc="/images/blog/blog-youth-action.jpg"
+        imageAlt="Youth and community leaders engaged in reflective learning and action in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Blog", href: "/blog" },
@@ -43,7 +43,7 @@ export default function BlogIndexPage() {
       <Section className="bg-white">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
               Knowledge Sharing
             </span>
             <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">

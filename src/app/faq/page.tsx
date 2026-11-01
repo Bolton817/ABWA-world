@@ -39,8 +39,8 @@ export default function FAQPage() {
         title="Frequently Asked Questions"
         subtitle="Straight answers to common questions."
         description="If you can't find what you're looking for, we're happy to help."
-        imageSrc="/images/heroes/hero-faq.svg"
-        imageAlt="Community members discussing projects openly"
+        imageSrc="/images/gallery/donate-ghni.jpg"
+        imageAlt="Community members discussing programmes and answering questions openly"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Frequently Asked Questions", href: "/faq" },
@@ -52,7 +52,7 @@ export default function FAQPage() {
         <Container>
           <div className="mx-auto max-w-3xl">
             <div className="text-center mb-10">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
                 Clear & Honest Answers
               </span>
               <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">

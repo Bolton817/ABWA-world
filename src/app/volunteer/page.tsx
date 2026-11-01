@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   AlertTriangle,
   Heart,
-  CheckCircle2,
   Compass,
   CameraOff,
   Users2,
@@ -14,45 +13,79 @@ import {
   MessageCircle,
   Clock,
   Sparkles,
+  CheckCircle2,
+  Globe2,
+  ArrowRight,
+  ShieldCheck,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionCTA } from "@/components/ui/SectionCTA";
 import { VolunteerForm } from "@/components/forms/VolunteerForm";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Volunteer With ABWA | Community Volunteering in Kenya",
+  title: "Volunteer With ABWA | International & Local Volunteer Work Camps in Kenya",
   description:
-    "Thinking of volunteering with ABWA in Kenya? Read what to expect, what we ask of volunteers and how to send an enquiry. No promises, just honest information.",
+    "Join short-term (2–3 weeks) or long-term volunteer work camps with ABWA in Kenya. Promote peace, exchange skills and work alongside community groups.",
   alternates: {
     canonical: "https://abwaworld.org/volunteer",
   },
   openGraph: {
-    title: "Volunteer With ABWA | Community Volunteering in Kenya",
+    title: "Volunteer With ABWA | International & Local Volunteer Work Camps in Kenya",
     description:
-      "Thinking of volunteering with ABWA in Kenya? Read what to expect, what we ask of volunteers and how to send an enquiry. No promises, just honest information.",
+      "Join short-term (2–3 weeks) or long-term volunteer work camps with ABWA in Kenya. Promote peace, exchange skills and work alongside community groups.",
     url: "https://abwaworld.org/volunteer",
     type: "website",
   },
 };
 
-const projectOptions = [
+const shortTermActivities = [
+  "Community clean-ups and environmental conservation",
+  "Educational support and creative activities with children and young people",
+  "Community art, murals, cultural exchange and creative workshops",
+  "Urban farming, kitchen gardens, food security and environmental awareness",
+  "Community visits and shared work days with local women's and youth groups",
+  "Peacebuilding, teamwork and intercultural learning",
+];
+
+const longTermActivities = [
+  "Supporting education, vocational training and digital literacy",
+  "Developing sustainable agriculture and household food security projects",
+  "Working alongside women, young people and low-income families on livelihood skills",
+  "Supporting environmental conservation, tree planting and waste management",
+  "Promoting peacebuilding, social inclusion and community cooperation",
+  "Offering ongoing mentorship, skills sharing and local capacity building",
+];
+
+const projectLocations = [
   {
     location: "Mathare, Nairobi",
-    focus: "Youth empowerment, art, music, learning support and environmental action",
-    slug: "youth-empowerment",
+    focus: "Youth empowerment, art, music, learning support, urban kitchen gardens and environmental action.",
+    href: "/programs/youth-empowerment",
   },
   {
     location: "Kangundo, Machakos County",
-    focus: "Vegetable farming, sustainable soil care and women's empowerment",
-    slug: "womens-empowerment-sustainable-agriculture",
+    focus: "Sustainable vegetable farming, water care and women's empowerment.",
+    href: "/programs/womens-empowerment-sustainable-agriculture",
   },
   {
     location: "Kibwezi, Makueni County",
-    focus: "Vegetable farming and kitchen gardens with the Umisiiyu Women Group in dry climates",
-    slug: "umisiiyu-women-group",
+    focus: "Vegetable farming and kitchen gardens with the Umisiiyu Women Group.",
+    href: "/programs/umisiiyu-women-group",
   },
+];
+
+const programObjectives = [
+  "Promote peace, unity and mutual understanding among people from different cultures.",
+  "Encourage practical cooperation between international and local volunteers.",
+  "Foster genuine cultural exchange and two-way learning.",
+  "Support sustainable, community-led development initiatives.",
+  "Strengthen local communities through skills sharing and capacity building.",
+  "Encourage young people to grow as active citizens and community leaders.",
+  "Build lasting partnerships between local groups and international organisations.",
 ];
 
 const expectations = [
@@ -112,41 +145,105 @@ export default function VolunteerPage() {
     <>
       {/* 1. Page Hero */}
       <PageHero
+        eyebrow="International and Local Volunteering"
         title="Volunteer With ABWA"
-        subtitle="Share your time and skills, and learn from the communities you join."
-        description="We welcome local and international volunteers. Here is what to expect before you get in touch."
-        imageSrc="/images/heroes/hero-volunteer.svg"
-        imageAlt="Volunteers and community members working side by side"
+        subtitle="Work hand in hand with Kenyan communities to share skills, build peace and create lasting change."
+        description="We organise short-term and long-term volunteer work camps that bring local and international volunteers together with community groups. Read how our work camps run and send us an enquiry."
+        imageSrc="/images/blog/blog-ethical-volunteering.jpg"
+        imageAlt="Local and international volunteers working alongside community members in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },
           { label: "Volunteer With ABWA", href: "/volunteer" },
         ]}
+        primaryCta={{
+          label: "Send an enquiry",
+          href: "#volunteer-enquiry",
+          variant: "blue",
+        }}
+        secondaryCta={{
+          label: "Explore Our Programmes",
+          href: "/programs",
+        }}
       />
 
-      {/* 2. Before You Enquire Alert Box */}
-      <Section className="bg-white">
+      {/* 2. Program Overview & Work Camp Vision */}
+      <Section surface="white">
         <Container>
-          <div className="mx-auto max-w-4xl rounded-2xl border-2 border-amber-300 bg-amber-50/70 p-6 sm:p-8 text-abwa-ink shadow-sm">
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800">
-                <AlertTriangle className="h-7 w-7" />
+          <div className="mx-auto max-w-4xl space-y-10">
+            <ScrollReveal yOffset={20} duration={0.6}>
+              <div className="space-y-3">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  How our work camps work
+                </span>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-abwa-navy">
+                  International and local volunteer work camps
+                </h2>
               </div>
-              <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-amber-900">
+            </ScrollReveal>
+
+            <ScrollReveal yOffset={24} duration={0.65} className="space-y-4 text-base sm:text-lg text-abwa-muted leading-relaxed">
+              <p>
+                Action for Better World Association (ABWA), in collaboration with local and
+                international volunteers, organises short-term and long-term work camps aimed at
+                promoting peace, cultural exchange, community development and international
+                cooperation.
+              </p>
+              <p>
+                Our work camps bring together people from different backgrounds to work side by
+                side with local community groups—addressing everyday social challenges,
+                exchanging practical knowledge and skills, and supporting community-led solutions.
+              </p>
+            </ScrollReveal>
+
+            {/* Work Camp Vision Callout Card */}
+            <ScrollReveal yOffset={28} duration={0.65}>
+              <div className="p-8 sm:p-10 rounded-3xl bg-abwa-pale border-2 border-abwa-gold/40 shadow-xs relative overflow-hidden">
+                <div className="flex items-center gap-3 pb-3 border-b border-abwa-gold/20">
+                  <div className="w-10 h-10 rounded-xl bg-white text-abwa-blue border border-abwa-border flex items-center justify-center shadow-2xs">
+                    <Globe2 className="w-5 h-5 text-abwa-gold" />
+                  </div>
+                  <div>
+                    <span className="font-kaushan text-abwa-blue text-base sm:text-lg tracking-wide block">
+                      Core Purpose
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-abwa-navy">
+                      Our work camp vision
+                    </h3>
+                  </div>
+                </div>
+                <p className="pt-4 text-base sm:text-lg text-abwa-ink leading-relaxed font-serif italic">
+                  &ldquo;To build a peaceful, inclusive and sustainable world where people from
+                  different backgrounds work together to create positive change.&rdquo;
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 3. Honest Expectations Callout */}
+      <Section surface="pale">
+        <Container>
+          <div className="mx-auto max-w-4xl rounded-3xl border-2 border-amber-300 bg-amber-50/80 p-6 sm:p-10 text-abwa-ink shadow-sm">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-200/80 text-amber-900 shadow-2xs mt-1">
+                <AlertTriangle className="h-6 w-6" />
+              </div>
+              <div className="space-y-3">
+                <span className="font-kaushan text-amber-900 text-lg sm:text-xl tracking-wide block">
                   Honest expectations
                 </span>
-                <h2 className="mt-1 font-heading text-2xl font-bold text-amber-950 sm:text-3xl">
+                <h2 className="text-2xl sm:text-3xl font-bold text-amber-950">
                   Before you enquire
                 </h2>
-                <div className="mt-4 space-y-3 text-base leading-relaxed text-amber-900">
+                <div className="space-y-3 text-base text-amber-950/90 leading-relaxed">
                   <p>
-                    <strong>Please read this first.</strong> Volunteering with ABWA depends on current projects and on
-                    what our community partners want. Sending an enquiry does not guarantee a place.
-                  </p>
-                  <p>
-                    Dates, costs, accommodation, meals, transport and insurance differ by project, and we confirm them
-                    in writing before you commit. <strong>Nothing on this website should be taken as a booking or a price.</strong>
+                    Volunteering with ABWA depends on active community projects and what our local
+                    host groups need at the time. Sending an enquiry starts a conversation—it does
+                    not guarantee a placement. Dates, accommodation arrangements and any practical
+                    costs differ by project, and we confirm everything with you in writing before you
+                    commit.
                   </p>
                 </div>
               </div>
@@ -155,196 +252,370 @@ export default function VolunteerPage() {
         </Container>
       </Section>
 
-      {/* 3. Who Can Enquire */}
-      <Section className="bg-slate-50/70 border-t border-slate-100">
+      {/* 4. Two Ways to Volunteer — Short-Term & Long-Term Tracks */}
+      <Section surface="white">
         <Container>
-          <div className="mx-auto max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-              Eligibility & Openness
-            </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-              Who can enquire
-            </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-abwa-ink/80 sm:text-lg">
-              <p>
-                We welcome enquiries from local and international volunteers. You do not need special qualifications to
-                ask. Curiosity, respect and a willingness to learn matter more than a CV.
-              </p>
-              <p>
-                Skills that are often useful include teaching and learning support, art, music, farming and gardening,
-                and environmental work. If you have another skill you would like to share, tell us.
-              </p>
-            </div>
+          <div className="mx-auto max-w-4xl space-y-12">
+            <ScrollReveal yOffset={20} duration={0.6}>
+              <SectionHeader
+                eyebrow="Choose your timeframe"
+                title="Short-term and long-term work camps"
+                description="Whether you have a couple of weeks to join a group work camp or several months to walk alongside a project in depth, we shape placements around community priorities."
+                align="center"
+              />
+            </ScrollReveal>
 
-            <div className="mt-8 rounded-xl border border-slate-200 bg-white p-5 text-sm text-abwa-ink/70">
-              <p>
-                <strong className="text-abwa-navy">A note on sensitive information:</strong> Please do not submit
-                passport numbers, personal identification documents, or medical records in your initial message. We
-                will never ask for these prior to mutual consultation.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 4. What Volunteering Can Look Like */}
-      <Section className="bg-white border-t border-slate-100">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-              The Experience
-            </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-              What volunteering can look like
-            </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-abwa-ink/80">
-              <p>
-                Our work-camp plans describe small groups spending around two weeks with a community project. Days are
-                shaped by the host group: working on a farm or kitchen garden, helping with lessons, taking part in art
-                or music, planting trees, and sharing meals, games and stories.
-              </p>
-              <p>
-                Volunteers usually live simply, often with host families or in basic shared accommodation, and take part
-                in everyday household tasks such as cooking together.
-              </p>
-            </div>
-
-            {/* Project Locations */}
-            <h3 className="mt-10 font-heading text-xl font-bold text-abwa-navy">
-              Current Project Areas
-            </h3>
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {projectOptions.map((project) => (
-                <div
-                  key={project.location}
-                  className="rounded-xl border border-slate-200 bg-slate-50/50 p-5 transition hover:border-abwa-blue/30 hover:bg-white"
-                >
-                  <div className="flex items-center gap-2 text-abwa-blue">
-                    <MapPin className="h-4 w-4 shrink-0" />
-                    <h4 className="font-heading text-sm font-bold text-abwa-navy">
-                      {project.location}
-                    </h4>
+            {/* 2 Track Cards Comparison */}
+            <ScrollReveal
+              stagger={0.15}
+              yOffset={32}
+              duration={0.65}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
+              {/* Short-Term Card */}
+              <div className="p-8 rounded-3xl bg-white border border-abwa-border shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="font-kaushan text-abwa-blue text-base sm:text-lg tracking-wide">
+                      Duration: 2–3 weeks
+                    </span>
+                    <Clock className="w-5 h-5 text-abwa-gold" />
                   </div>
-                  <p className="mt-2 text-xs leading-relaxed text-abwa-ink/75">
-                    {project.focus}
+
+                  <h3 className="text-2xl font-bold text-abwa-navy">
+                    Short-term work camps
+                  </h3>
+
+                  <p className="text-sm text-abwa-muted leading-relaxed">
+                    Short-term camps bring international and local volunteers together for focused,
+                    hands-on community activities, cultural understanding and shared learning.
                   </p>
+
+                  <div className="pt-2 border-t border-abwa-border">
+                    <span className="text-xs font-bold uppercase tracking-wider text-abwa-navy block mb-3">
+                      Key Activities:
+                    </span>
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-abwa-ink">
+                      {shortTermActivities.map((act, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-abwa-blue shrink-0 mt-0.5" />
+                          <span>{act}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-abwa-border/50">
                   <Link
-                    href={`/programs/${project.slug}`}
-                    className="mt-3 inline-block text-xs font-semibold text-abwa-blue hover:underline"
+                    href="#volunteer-enquiry"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-abwa-blue hover:text-abwa-blue-hover transition-colors"
                   >
-                    View programme details &rarr;
+                    <span>Enquire about short-term camps</span>
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              ))}
-            </div>
+              </div>
+
+              {/* Long-Term Card */}
+              <div className="p-8 rounded-3xl bg-white border border-abwa-border shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-6">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="font-kaushan text-abwa-gold text-base sm:text-lg tracking-wide">
+                      Duration: 2 months to several years
+                    </span>
+                    <Calendar className="w-5 h-5 text-abwa-gold" />
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-abwa-navy">
+                    Long-term volunteer programmes
+                  </h3>
+
+                  <p className="text-sm text-abwa-muted leading-relaxed">
+                    Long-term placements are for local and international volunteers who want to take
+                    part in sustained community development—working closely with local groups and
+                    partner organisations to strengthen capacity over time.
+                  </p>
+
+                  <div className="pt-2 border-t border-abwa-border">
+                    <span className="text-xs font-bold uppercase tracking-wider text-abwa-navy block mb-3">
+                      Key Activities:
+                    </span>
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-abwa-ink">
+                      {longTermActivities.map((act, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-abwa-gold shrink-0 mt-0.5" />
+                          <span>{act}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-abwa-border/50">
+                  <Link
+                    href="#volunteer-enquiry"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-abwa-blue hover:text-abwa-blue-hover transition-colors"
+                  >
+                    <span>Enquire about long-term volunteering</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Community Project Locations Sub-block */}
+            <ScrollReveal yOffset={24} duration={0.65} className="pt-6">
+              <div className="p-8 rounded-3xl bg-abwa-pale/60 border border-abwa-border space-y-6">
+                <div className="space-y-2">
+                  <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                    Where you could be placed
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-abwa-navy">
+                    Where volunteers work alongside local groups
+                  </h3>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {projectLocations.map((loc, idx) => (
+                    <div
+                      key={idx}
+                      className="p-5 rounded-2xl bg-white border border-abwa-border shadow-2xs space-y-3 flex flex-col justify-between"
+                    >
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-abwa-blue">
+                          <MapPin className="w-4 h-4 shrink-0 text-abwa-gold" />
+                          <h4 className="font-bold text-sm text-abwa-navy">
+                            {loc.location}
+                          </h4>
+                        </div>
+                        <p className="text-xs text-abwa-muted leading-relaxed">
+                          {loc.focus}
+                        </p>
+                      </div>
+
+                      <Link
+                        href={loc.href}
+                        className="inline-flex items-center gap-1 text-xs font-semibold text-abwa-blue hover:underline pt-2 border-t border-slate-100"
+                      >
+                        <span>View programme details</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </Container>
       </Section>
 
-      {/* 5. What We Ask of You (Dignity & Respect) */}
-      <Section className="bg-slate-50/70 border-t border-slate-100">
+      {/* 5. Work Camp Objectives & Expected Outcomes */}
+      <Section surface="pale">
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-              Our Commitments
-            </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-              What we ask of you
-            </h2>
-          </div>
+          <div className="mx-auto max-w-4xl space-y-10">
+            <ScrollReveal yOffset={20} duration={0.6}>
+              <SectionHeader
+                eyebrow="Why we host work camps"
+                title="What our work camps aim to achieve"
+                description="Our work camps are structured around clear principles that deliver genuine two-way value for host communities and volunteers alike."
+                align="center"
+              />
+            </ScrollReveal>
 
-          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
-            {expectations.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-abwa-pale text-abwa-blue">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-4 font-heading text-lg font-bold text-abwa-navy">
-                    {item.title}
+            <ScrollReveal
+              stagger={0.12}
+              yOffset={28}
+              duration={0.65}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+            >
+              {/* Left Column: 7 Objectives */}
+              <div className="lg:col-span-7 p-6 sm:p-8 rounded-3xl bg-white border border-abwa-border shadow-xs space-y-5">
+                <div className="space-y-1">
+                  <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                    Framework
+                  </span>
+                  <h3 className="text-xl font-bold text-abwa-navy">
+                    Our main objectives
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-abwa-ink/80">
-                    {item.description}
+                </div>
+
+                <ol className="space-y-3.5 text-sm text-abwa-ink">
+                  {programObjectives.map((obj, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-6 h-6 rounded-full bg-abwa-pale text-abwa-blue font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 border border-abwa-border">
+                        {i + 1}
+                      </span>
+                      <span className="leading-relaxed">{obj}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* Right Column: Expected Outcomes */}
+              <div className="lg:col-span-5 p-6 sm:p-8 rounded-3xl bg-abwa-navy text-white shadow-md space-y-5">
+                <div className="space-y-2">
+                  <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                    Mutual Impact
+                  </span>
+                  <h3 className="text-xl font-bold text-white">
+                    Expected outcomes for communities and volunteers
+                  </h3>
+                </div>
+
+                <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
+                  Through these work camps, we aim to strengthen community relationships, deepen
+                  intercultural understanding, build practical local skills and support the
+                  wellbeing of participating households.
+                </p>
+
+                <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-sans pt-2 border-t border-white/10">
+                  At the same time, volunteers gain the chance to live simply alongside hosts, learn
+                  from Kenyan communities and contribute meaningfully to work that lasts.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </Container>
+      </Section>
+
+      {/* 6. Who Can Enquire, Ground Rules & 4-Step Process */}
+      <Section surface="white">
+        <Container>
+          <div className="mx-auto max-w-4xl space-y-16">
+            {/* Eligibility Note */}
+            <div className="space-y-4">
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                Eligibility & Openness
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
+                Who can enquire
+              </h2>
+              <div className="space-y-4 text-base leading-relaxed text-abwa-muted sm:text-lg">
+                <p>
+                  We welcome enquiries from local and international volunteers. You do not need
+                  special qualifications to ask. Curiosity, respect and a willingness to learn matter
+                  more than a CV.
+                </p>
+                <p>
+                  Skills that are often useful include teaching and learning support, art, music,
+                  farming and gardening, and environmental work. If you have another skill you would
+                  like to share, tell us.
+                </p>
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-abwa-border bg-abwa-pale/60 p-5 text-sm text-abwa-ink">
+                <p>
+                  <strong className="text-abwa-navy">A note on sensitive information:</strong>{" "}
+                  Please do not submit passport numbers, personal identification documents, or medical
+                  records in your initial message. We will never ask for these prior to mutual
+                  consultation.
+                </p>
+              </div>
+            </div>
+
+            {/* What We Ask of You (Ground Rules) */}
+            <div className="space-y-8">
+              <div className="text-center max-w-2xl mx-auto space-y-2">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  Our Commitments
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-bold text-abwa-navy">
+                  What we ask of you
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {expectations.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={item.title}
+                      className="rounded-3xl border border-abwa-border bg-white p-6 sm:p-7 shadow-xs space-y-3"
+                    >
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-abwa-pale text-abwa-blue border border-abwa-border shadow-2xs">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h4 className="text-lg font-bold text-abwa-navy">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm leading-relaxed text-abwa-muted">
+                        {item.description}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* 4-Step Process */}
+            <div className="space-y-8">
+              <div className="text-center max-w-2xl mx-auto space-y-2">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  Simple & Transparent
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-bold text-abwa-navy">
+                  How an enquiry works
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {processSteps.map((step) => {
+                  const Icon = step.icon;
+                  return (
+                    <div
+                      key={step.step}
+                      className="rounded-3xl border border-abwa-border bg-abwa-pale/40 p-6 flex flex-col justify-between space-y-4"
+                    >
+                      <div className="space-y-3">
+                        <span className="inline-block rounded-md bg-abwa-pale px-2.5 py-1 text-xs font-bold text-abwa-navy border border-abwa-border">
+                          {step.step}
+                        </span>
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-abwa-blue shadow-2xs">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <h4 className="text-base font-bold text-abwa-navy">
+                          {step.title}
+                        </h4>
+                        <p className="text-xs leading-relaxed text-abwa-muted">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Form Container */}
+            <div id="volunteer-enquiry" className="pt-6">
+              <div className="rounded-3xl border border-abwa-border bg-abwa-pale/40 p-6 sm:p-10 shadow-sm">
+                <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
+                  <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                    Get in touch
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-abwa-navy">
+                    Send us an enquiry
+                  </h3>
+                  <p className="text-sm text-abwa-muted">
+                    Fill out the form below to start a conversation. We will review your message and
+                    reply promptly.
                   </p>
                 </div>
-              );
-            })}
-          </div>
-        </Container>
-      </Section>
 
-      {/* 6. How an Enquiry Works (4 Steps) */}
-      <Section className="bg-white border-t border-slate-100">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-              Simple & Transparent
-            </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-              How an enquiry works
-            </h2>
-          </div>
-
-          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {processSteps.map((step) => {
-              const Icon = step.icon;
-              return (
-                <div
-                  key={step.step}
-                  className="relative flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50/50 p-6"
-                >
-                  <div>
-                    <span className="inline-block rounded-md bg-abwa-pale px-2.5 py-1 text-xs font-bold text-abwa-navy">
-                      {step.step}
-                    </span>
-                    <div className="mt-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white text-abwa-blue shadow-sm">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="mt-4 font-heading text-base font-bold text-abwa-navy">
-                      {step.title}
-                    </h3>
-                    <p className="mt-2 text-xs leading-relaxed text-abwa-ink/75">
-                      {step.description}
-                    </p>
-                  </div>
+                <div className="rounded-2xl border border-abwa-border bg-white p-6 sm:p-10 shadow-xs">
+                  <VolunteerForm />
                 </div>
-              );
-            })}
-          </div>
-        </Container>
-      </Section>
-
-      {/* 7. Interactive Enquiry Form */}
-      <Section id="enquire" className="bg-abwa-pale/40 border-t border-slate-200">
-        <Container>
-          <div className="mx-auto max-w-2xl">
-            <div className="text-center">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-                Get in touch
-              </span>
-              <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
-                Send us an enquiry
-              </h2>
-              <p className="mt-3 text-sm text-abwa-ink/75">
-                Fill out the form below to start a conversation. We will review your message and reply promptly.
-              </p>
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm sm:p-10">
-              <VolunteerForm />
+              </div>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* 8. Closing CTA */}
+      {/* 7. Closing CTA */}
       <SectionCTA
         title="Still deciding?"
-        description="Read our guide to ethical volunteering, or browse our frequently asked questions."
+        description="Read our guide to ethical community volunteering in Kenya, or browse our answers to common questions."
         primaryCta={{
           label: "Read: Ethical Volunteering in Kenya",
           href: "/blog/ethical-community-volunteering-in-kenya",
@@ -353,7 +624,7 @@ export default function VolunteerPage() {
           label: "Read the FAQ",
           href: "/faq",
         }}
-        surface="white"
+        surface="pale"
       />
     </>
   );

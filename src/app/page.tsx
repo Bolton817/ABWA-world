@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { HomeHero } from "@/components/sections/home/HomeHero";
 import { HomeIntro } from "@/components/sections/home/HomeIntro";
 import { HomeProgrammes } from "@/components/sections/home/HomeProgrammes";
@@ -10,58 +10,46 @@ import { HomeGalleryPreview } from "@/components/sections/home/HomeGalleryPrevie
 import { HomeBlogPreview } from "@/components/sections/home/HomeBlogPreview";
 import { HomeFAQPreview } from "@/components/sections/home/HomeFAQPreview";
 import { SectionCTA } from "@/components/ui/SectionCTA";
-import { FadeIn } from "@/components/animation/FadeIn";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export default function HomePage() {
   return (
     <div>
-      {/* 1. Hero */}
+      {/* 1. Hero: Coordinated Reveal & Background Parallax */}
       <HomeHero />
 
-      {/* 2. Introduction */}
-      <FadeIn direction="up">
-        <HomeIntro />
-      </FadeIn>
+      {/* 2. Introduction: Split Text & Visual Reveal */}
+      <HomeIntro />
 
-      {/* 3. Programmes Overview */}
-      <FadeIn direction="up">
-        <HomeProgrammes />
-      </FadeIn>
+      {/* 3. Programmes Overview: Staggered 4-Card Cascade */}
+      <HomeProgrammes />
 
-      {/* 4. Featured Programme */}
-      <FadeIn direction="up">
-        <HomeFeaturedProgramme />
-      </FadeIn>
+      {/* 4. Featured Programme: Pinned Split-Screen Storytelling (Unwrapped to allow full viewport fixed pinning) */}
+      <HomeFeaturedProgramme />
 
-      {/* 5. Our Approach */}
-      <FadeIn direction="up">
-        <HomeApproach />
-      </FadeIn>
+      {/* 5. Our Approach: Staggered Principles */}
+      <HomeApproach />
 
       {/* 6. Impact and Evidence */}
-      <FadeIn direction="up">
+      <ScrollReveal yOffset={24} duration={0.6}>
         <HomeImpact />
-      </FadeIn>
+      </ScrollReveal>
 
       {/* 7. Community Voices */}
-      <FadeIn direction="up">
+      <ScrollReveal yOffset={24} duration={0.6}>
         <HomeCommunityVoices />
-      </FadeIn>
+      </ScrollReveal>
 
-      {/* 8. Gallery Preview */}
-      <FadeIn direction="up">
-        <HomeGalleryPreview />
-      </FadeIn>
+      {/* 8. Gallery Preview: Pinned Horizontal Scroll Track (Unwrapped to allow full viewport fixed pinning) */}
+      <HomeGalleryPreview />
 
-      {/* 9. Blog and Stories Preview */}
-      <FadeIn direction="up">
-        <HomeBlogPreview />
-      </FadeIn>
+      {/* 9. Blog and Stories Preview: Staggered Article Cards */}
+      <HomeBlogPreview />
 
       {/* 10. FAQ Preview */}
-      <FadeIn direction="up">
+      <ScrollReveal yOffset={24} duration={0.6}>
         <HomeFAQPreview />
-      </FadeIn>
+      </ScrollReveal>
 
       {/* 11. Final Call to Action */}
       <SectionCTA

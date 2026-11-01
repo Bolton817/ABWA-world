@@ -1,8 +1,7 @@
-﻿"use client";
+"use client";
 
 import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, isReducedMotion } from "@/lib/animation/gsap";
+import { useGSAP, gsap, isReducedMotion } from "@/lib/animation/gsap";
 
 export interface FadeInProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -44,6 +43,7 @@ export function FadeIn({
         duration,
         delay,
         ease: "power2.out",
+        clearProps: "transform,opacity",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 88%",

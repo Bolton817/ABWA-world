@@ -10,6 +10,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { blogPostsData } from "@/content/blog";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getBlogPostingSchema, getBreadcrumbSchema } from "@/lib/seo/schema";
+import { ArticleReadingProgress } from "@/components/blog/ArticleReadingProgress";
 
 interface BlogPostPageProps {
   params: {
@@ -73,6 +74,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
+      <ArticleReadingProgress targetSelector="#blog-article-content" />
       <JsonLd data={[getBlogPostingSchema(post), getBreadcrumbSchema(breadcrumbsList)]} />
       {/* 1. Header & Breadcrumbs */}
       <section className="bg-slate-50/70 border-b border-slate-200/80 pt-10 pb-12 sm:pt-14 sm:pb-16">
@@ -88,7 +90,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Meta Tags */}
             <div className="mt-8 flex flex-wrap items-center gap-3 text-sm">
-              <span className="rounded-full bg-abwa-pale px-3.5 py-1 text-xs font-bold text-abwa-blue">
+              <span className="font-kaushan text-abwa-blue text-lg sm:text-xl tracking-wide">
                 {post.category}
               </span>
               <span className="text-abwa-ink/40">•</span>
@@ -146,7 +148,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       {/* 3. Article Body */}
-      <article className="bg-white py-12 sm:py-16">
+      <article id="blog-article-content" className="bg-white py-12 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl space-y-10 text-abwa-ink">
             {post.sections.map((section, idx) => (
@@ -194,7 +196,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* End of article CTAs */}
             <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50/70 p-8 sm:p-10">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
                 Next Steps
               </span>
               <h3 className="mt-2 font-heading text-2xl font-bold text-abwa-navy">
@@ -245,7 +247,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="mx-auto max-w-4xl">
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+                  <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
                     Further Reading
                   </span>
                   <h2 className="mt-1 font-heading text-2xl font-bold text-abwa-navy">
@@ -268,7 +270,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     className="flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-abwa-blue/30 hover:shadow-md"
                   >
                     <div>
-                      <span className="rounded-full bg-abwa-pale px-3 py-1 text-xs font-bold text-abwa-blue">
+                      <span className="font-kaushan text-abwa-blue text-base sm:text-lg tracking-wide block">
                         {related.category}
                       </span>
                       <h3 className="mt-4 font-heading text-lg font-bold leading-snug text-abwa-navy hover:text-abwa-blue">

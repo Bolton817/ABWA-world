@@ -1,20 +1,23 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
-import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { MobileNav } from "@/components/layout/MobileNav";
-import { Phone, MapPin, Search, ChevronDown, Menu, Heart } from "lucide-react";
+import { Phone, MapPin, Search, ChevronDown, Menu, Heart, ArrowRight } from "lucide-react";
 
 export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const handleCloseMobileMenu = useCallback(() => {
+    setMobileMenuOpen(false);
+  }, []);
 
   // Scroll listener for sticky header condensation per TDD Module 023
   useEffect(() => {
@@ -37,7 +40,7 @@ export function Header() {
             isScrolled ? "h-0 opacity-0 pointer-events-none" : "h-9 opacity-100 hidden md:block"
           }`}
         >
-          <Container>
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="h-9 flex items-center justify-between">
               {/* Contact & Location utilities */}
               <div className="flex items-center gap-6">
@@ -71,7 +74,7 @@ export function Header() {
                 </form>
               </div>
             </div>
-          </Container>
+          </div>
         </div>
 
         {/* Tier 2: Main Navigation Bar */}
@@ -80,15 +83,15 @@ export function Header() {
             isScrolled ? "shadow-md py-2.5" : "py-3.5 sm:py-4"
           }`}
         >
-          <Container>
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between gap-4">
               {/* Logo */}
               <Link href="/" className="flex items-center flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue rounded">
                 <Image
-                  src="/images/brand/logo.svg"
+                  src="/images/brand/abwa-logo1.png"
                   alt={`${siteConfig.name} - Home`}
                   width={210}
-                  height={52}
+                  height={73}
                   priority
                   className={`w-auto object-contain transition-all duration-300 ${
                     isScrolled ? "h-9 sm:h-10" : "h-11 sm:h-12"
@@ -142,25 +145,80 @@ export function Header() {
 
                       {/* Dropdown Menu */}
                       {activeDropdown === item.label && (
-                        <div className="absolute top-full left-0 w-64 pt-2 z-50">
-                          <div className="bg-white rounded-xl shadow-xl border border-abwa-border p-2 space-y-0.5 animate-in fade-in slide-in-from-top-1 duration-200">
-                            {item.children?.map((child) => {
-                              const isChildActive = pathname === child.href;
-                              return (
-                                <Link
-                                  key={child.href}
-                                  href={child.href}
-                                  className={`block px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-colors ${
-                                    isChildActive
-                                      ? "bg-abwa-pale text-abwa-blue"
-                                      : "text-abwa-ink hover:bg-slate-50 hover:text-abwa-blue"
-                                  }`}
-                                  aria-current={isChildActive ? "page" : undefined}
-                                >
-                                  {child.label}
-                                </Link>
-                              );
-                            })}
+                        <div
+                          className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50 ${
+                            item.label === "Programmes"
+                              ? "w-[560px] xl:w-[620px]"
+                              : "w-64"
+                          }`}
+                        >
+                          <div className="bg-white rounded-2xl shadow-xl border border-abwa-border overflow-hidden animate-in fade-in slide-in-from-top-1 duration-200">
+                            {item.label === "Programmes" ? (
+                              <div>
+                                {/* Header Link for All Programmes */}
+                                <div className="px-4 py-3 bg-abwa-pale/70 border-b border-abwa-border flex items-center justify-between">
+                                  <div>
+                                    <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
+                                      Thematic Pillars &amp; Projects
+                                    </span>
+                                    <span className="text-xs font-bold text-abwa-navy">
+                                      10 Focus Areas &amp; Community Partnerships
+                                    </span>
+                                  </div>
+                                  <Link
+                                    href="/programs"
+                                    onClick={() => setActiveDropdown(null)}
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-abwa-blue text-white text-xs font-semibold hover:bg-abwa-blue-hover transition-colors shadow-2xs"
+                                  >
+                                    <span>All Programmes</span>
+                                    <ArrowRight className="w-3.5 h-3.5" />
+                                  </Link>
+                                </div>
+
+                                {/* 2-Column Grid of 11 Programmes */}
+                                <div className="grid grid-cols-2 gap-1 p-2.5">
+                                  {item.children?.slice(1).map((child) => {
+                                    const isChildActive = pathname === child.href;
+                                    return (
+                                      <Link
+                                        key={child.href}
+                                        href={child.href}
+                                        onClick={() => setActiveDropdown(null)}
+                                        className={`flex items-center px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
+                                          isChildActive
+                                            ? "bg-abwa-pale text-abwa-blue"
+                                            : "text-abwa-ink hover:bg-slate-50 hover:text-abwa-blue"
+                                        }`}
+                                        aria-current={isChildActive ? "page" : undefined}
+                                      >
+                                        <span className="line-clamp-1">{child.label}</span>
+                                      </Link>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="p-2 space-y-0.5">
+                                {item.children?.map((child) => {
+                                  const isChildActive = pathname === child.href;
+                                  return (
+                                    <Link
+                                      key={child.href}
+                                      href={child.href}
+                                      onClick={() => setActiveDropdown(null)}
+                                      className={`block px-3.5 py-2.5 rounded-lg text-xs font-semibold transition-colors ${
+                                        isChildActive
+                                          ? "bg-abwa-pale text-abwa-blue"
+                                          : "text-abwa-ink hover:bg-slate-50 hover:text-abwa-blue"
+                                      }`}
+                                      aria-current={isChildActive ? "page" : undefined}
+                                    >
+                                      {child.label}
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            )}
                           </div>
                         </div>
                       )}
@@ -174,10 +232,10 @@ export function Header() {
                 <Button
                   href="/get-involved"
                   variant="blue"
-                  size="sm"
-                  className="hidden sm:inline-flex"
+                  size="md"
+                  className="hidden sm:inline-flex h-11 px-5 text-sm font-semibold shadow-sm tracking-wide"
                 >
-                  <Heart className="w-3.5 h-3.5 text-white/90" />
+                  <Heart className="w-4 h-4 text-white/95" />
                   <span>Support Our Work</span>
                 </Button>
 
@@ -194,12 +252,12 @@ export function Header() {
                 </button>
               </div>
             </div>
-          </Container>
+          </div>
         </div>
       </header>
 
       {/* Mobile Navigation Drawer */}
-      <MobileNav isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
+      <MobileNav isOpen={mobileMenuOpen} onClose={handleCloseMobileMenu} />
     </>
   );
 }

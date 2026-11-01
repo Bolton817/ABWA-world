@@ -1,20 +1,21 @@
-﻿import React from "react";
+import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export function HomeIntro() {
   return (
     <Section surface="white">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <div className="lg:col-span-7 space-y-6">
+          {/* Text Content with ScrollReveal */}
+          <ScrollReveal yOffset={20} duration={0.6} className="lg:col-span-7 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
-                Who we are
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                Who we are · Empowering Communities
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-abwa-navy">
                 Meet Action for Better World Association
@@ -23,18 +24,20 @@ export function HomeIntro() {
 
             <div className="space-y-4 text-base sm:text-lg text-abwa-muted leading-relaxed">
               <p>
-                Action for Better World Association, or ABWA, is a community organisation based in
-                Nairobi, Kenya. Since 2015 we have worked with women&apos;s groups, young people,
-                children and volunteers from Kenya and around the world on projects that build skills,
-                grow food, nurture creativity and care for the environment.
+                Action for Better World Association, or ABWA, is a community-focused organisation based in
+                Nairobi, Kenya. Since 2015, we have worked alongside local communities, women&apos;s
+                groups, young people, volunteers and partner organisations to build practical, lasting
+                solutions to social and economic challenges.
               </p>
               <p>
-                Our purpose is to promote sustainable community development: improving people&apos;s
-                social, economic and environmental wellbeing, and helping growth include everyone.
+                We believe that everyone deserves a fair chance to live a healthy, dignified and
+                fulfilling life. Through initiatives in education, skills development, sustainable
+                farming, health awareness and environmental conservation, we support children, young
+                people, women and low-income families to build self-reliant communities.
               </p>
               <p>
-                We work with community groups because they know their own priorities best. Volunteers
-                and supporters bring hands, ideas and resources to walk alongside them.
+                We start with local groups because they know their own priorities best. Volunteers and
+                partners bring hands, ideas and resources to walk alongside them.
               </p>
             </div>
 
@@ -44,10 +47,10 @@ export function HomeIntro() {
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Genuine Community Visual */}
-          <div className="lg:col-span-5">
+          {/* Genuine Community Visual with ScrollReveal */}
+          <ScrollReveal yOffset={24} duration={0.65} delay={0.15} className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden border border-abwa-border shadow-md bg-abwa-pale aspect-[4/3] sm:aspect-[16/11]">
               <Image
                 src="/images/heroes/about-our-charity-mondetta-usa.jpg"
@@ -66,7 +69,7 @@ export function HomeIntro() {
                 </span>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </Container>
     </Section>

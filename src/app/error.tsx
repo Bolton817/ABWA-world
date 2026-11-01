@@ -32,7 +32,7 @@ export default function ErrorBoundary({ error, reset }: ErrorProps) {
           </h1>
 
           <p className="text-[#263445]/80 text-base md:text-lg mb-8 leading-relaxed font-sans">
-            We're sorry about that. Please try again. If the problem continues, you can still reach us on{" "}
+            We&apos;re sorry about that. Please try again. If the problem continues, you can still reach us on{" "}
             <a
               href="tel:+254720021001"
               className="font-semibold text-[#15345A] hover:text-[#1E63B8] underline underline-offset-4"

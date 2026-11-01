@@ -1,5 +1,12 @@
 export type ProgrammeStatus = "Active" | "Planned" | "Completed";
 
+export type ProgrammeCategory =
+  | "Education & Youth"
+  | "Women & Livelihoods"
+  | "Agriculture & Environment"
+  | "Health & WASH"
+  | "Community & Inclusion";
+
 export interface ProgrammeActivity {
   title: string;
   items: string[];
@@ -12,14 +19,19 @@ export interface Programme {
   summary: string;
   location: string;
   status: ProgrammeStatus;
+  category: ProgrammeCategory;
   heroImage: string;
   heroImageAlt: string;
   metaTitle: string;
   metaDescription: string;
   description: string;
+  goal: string;
   context: string[];
-  whatHappens: ProgrammeActivity[];
-  aims: string[];
+  objectives: string[];
+  activities: string[];
+  whatHappens?: ProgrammeActivity[];
+  aims?: string[];
+  intendedOutcomes: string[];
   safeguardingNote?: {
     title: string;
     body: string;
@@ -113,6 +125,7 @@ export interface VolunteerFormData {
   phone?: string;
   country?: string;
   interestArea: string;
+  durationPreference?: string;
   availability?: string;
   message: string;
   consent: boolean;

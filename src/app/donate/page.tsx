@@ -64,8 +64,8 @@ export default function DonatePage() {
         title="Support Our Work"
         subtitle="Your support helps community projects keep going, and we'll tell you plainly where it goes."
         description="Here is how giving to ABWA works, and how to be sure your gift reaches us."
-        imageSrc="/images/heroes/hero-donate.svg"
-        imageAlt="Community members and volunteers working together"
+        imageSrc="/images/heroes/food-and-mattresses-donation.jpg"
+        imageAlt="Community relief, direct support, and resource distribution reaching families in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },
@@ -77,7 +77,7 @@ export default function DonatePage() {
       <Section className="bg-white">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
               Practical & Transparent
             </span>
             <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
@@ -144,7 +144,7 @@ export default function DonatePage() {
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-abwa-pale text-abwa-blue">
               <Heart className="h-7 w-7" />
             </div>
-            <span className="mt-4 inline-block text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <span className="mt-4 block font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide">
               Direct Enquiry
             </span>
             <h2 className="mt-2 font-heading text-3xl font-bold text-abwa-navy sm:text-4xl">

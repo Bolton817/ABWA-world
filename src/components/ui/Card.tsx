@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -73,17 +73,12 @@ export function Card({
       <div className="flex-1 p-6 flex flex-col justify-between space-y-4">
         <div className="space-y-2">
           {!imageSrc && badge && (
-            <span
-              className={twMerge(
-                "inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full mb-1",
-                badgeStyles[badgeVariant]
-              )}
-            >
+            <span className="font-kaushan text-abwa-gold text-base tracking-wide block mb-1">
               {badge}
             </span>
           )}
           {subtitle && (
-            <p className="text-xs font-medium text-abwa-gold uppercase tracking-wider">
+            <p className="font-kaushan text-abwa-gold text-base tracking-wide">
               {subtitle}
             </p>
           )}

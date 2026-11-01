@@ -66,6 +66,16 @@ export const metadata: Metadata = {
     template: "%s | ABWA World",
   },
   description: siteConfig.description,
+  icons: {
+    icon: [
+      { url: "/images/brand/abwa-icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/images/brand/abwa-icon.png",
+    apple: [
+      { url: "/images/brand/abwa-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "en_KE",
@@ -75,9 +85,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: `${siteConfig.url}/images/brand/logo.svg`,
-        width: 1200,
-        height: 630,
+        url: `${siteConfig.url}/images/brand/abwa-logo1.png`,
+        width: 1750,
+        height: 608,
         alt: "ABWA World — Action for Better World Association",
       },
     ],
@@ -86,7 +96,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ABWA World | Community Action in Nairobi, Kenya",
     description: siteConfig.description,
-    images: [`${siteConfig.url}/images/brand/logo.svg`],
+    images: [`${siteConfig.url}/images/brand/abwa-logo1.png`],
   },
   alternates: {
     canonical: siteConfig.url,

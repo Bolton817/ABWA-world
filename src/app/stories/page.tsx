@@ -34,8 +34,8 @@ export default function StoriesPage() {
         title="Community Stories"
         subtitle="Real people, real places, shared with their permission."
         description="These stories come from the groups and volunteers we work with. We tell them with care."
-        imageSrc="/images/heroes/hero-stories.svg"
-        imageAlt="Community members working together with dignity and pride"
+        imageSrc="/images/heroes/19-most-popular-africa-facts-november-2015-africa-facts.jpg"
+        imageAlt="Dignified community members sharing personal journeys of resilience in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Community Stories", href: "/stories" },
@@ -46,7 +46,7 @@ export default function StoriesPage() {
       <Section className="bg-white">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
               Dignity & Consent
             </span>
             <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">

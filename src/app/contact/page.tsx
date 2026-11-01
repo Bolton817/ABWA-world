@@ -7,16 +7,16 @@ import { PageHero } from "@/components/ui/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact ABWA | Nairobi, Kenya",
+  title: "Contact ABWA | Buruburu, Nairobi, Kenya",
   description:
-    "Get in touch with Action for Better World Association in Nairobi, Kenya. Call us or send a message about volunteering, partnership or giving.",
+    "Get in touch with Action for Better World Association in Buruburu, Nairobi, Kenya. Call us or send a message about volunteering, partnership or giving.",
   alternates: {
     canonical: "https://abwaworld.org/contact",
   },
   openGraph: {
-    title: "Contact ABWA | Nairobi, Kenya",
+    title: "Contact ABWA | Buruburu, Nairobi, Kenya",
     description:
-      "Get in touch with Action for Better World Association in Nairobi, Kenya. Call us or send a message about volunteering, partnership or giving.",
+      "Get in touch with Action for Better World Association in Buruburu, Nairobi, Kenya. Call us or send a message about volunteering, partnership or giving.",
     url: "https://abwaworld.org/contact",
     type: "website",
   },
@@ -33,14 +33,14 @@ const contactCards = [
   },
   {
     title: "Headquarters & Base",
-    value: "Nairobi, Kenya",
+    value: "Buruburu, Nairobi, Kenya",
     description: "Coordination office for community partnerships across Kenya",
     icon: MapPin,
     isLink: false,
   },
   {
     title: "Postal Address",
-    value: "P.O. Box 1204-00515 Buruburu",
+    value: "P.O. Box 1204-00515 Buruburu, Nairobi, Kenya",
     description: "Postal correspondence and official documents",
     icon: Mailbox,
     isLink: false,
@@ -55,8 +55,8 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="We'd love to hear from you."
         description="Ask a question, offer your skills, or start a conversation about working together."
-        imageSrc="/images/heroes/hero-contact.svg"
-        imageAlt="Community coordination in Nairobi"
+        imageSrc="/images/heroes/download-21.jpg"
+        imageAlt="Community coordination in Buruburu, Nairobi, Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact Us", href: "/contact" },
@@ -67,7 +67,7 @@ export default function ContactPage() {
       <Section className="bg-white">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+            <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
               Direct Communication
             </span>
             <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">
@@ -121,7 +121,7 @@ export default function ContactPage() {
         <Container>
           <div className="mx-auto max-w-2xl">
             <div className="text-center">
-              <span className="text-xs font-bold uppercase tracking-wider text-abwa-gold">
+              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
                 Send a Message
               </span>
               <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-abwa-navy sm:text-4xl">

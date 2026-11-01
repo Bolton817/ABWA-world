@@ -1,8 +1,9 @@
-﻿import React from "react";
+import React from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Users2, Wrench, Sprout, HeartHandshake } from "lucide-react";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export function HomeApproach() {
   const principles = [
@@ -39,14 +40,23 @@ export function HomeApproach() {
   return (
     <Section surface="pale">
       <Container>
-        <SectionHeader
-          eyebrow="How we work"
-          title="Built with communities, not for them"
-          description="These are the ideas that guide how we plan and carry out our projects."
-          align="center"
-        />
+        {/* Section Header with ScrollReveal */}
+        <ScrollReveal yOffset={20} duration={0.6}>
+          <SectionHeader
+            eyebrow="How we work"
+            title="Built with communities, not for them"
+            description="These are the ideas that guide how we plan and carry out our projects."
+            align="center"
+          />
+        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 4 Cards Grid with Staggered ScrollReveal */}
+        <ScrollReveal
+          stagger={0.12}
+          yOffset={32}
+          duration={0.65}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {principles.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -66,7 +76,7 @@ export function HomeApproach() {
               </div>
             );
           })}
-        </div>
+        </ScrollReveal>
       </Container>
     </Section>
   );
