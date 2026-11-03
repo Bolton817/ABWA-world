@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionCTA } from "@/components/ui/SectionCTA";
 import { communityStoriesData, consentChecklist } from "@/content/stories";
-import { StaggerGroup } from "@/components/animation/StaggerGroup";
+import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Community Stories | ABWA World",
@@ -87,72 +87,71 @@ export default function StoriesPage() {
       {/* 3. Community Stories Grid */}
       <Section className="bg-slate-50/70 border-t border-slate-100">
         <Container>
-          <StaggerGroup stagger={0.12} className="mx-auto max-w-4xl space-y-12">
+          <div className="mx-auto max-w-4xl space-y-12">
             {communityStoriesData.map((story) => (
-              <article
-                key={story.slug}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-abwa-blue/30 hover:shadow-md"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-12">
-                  {/* Photo Column */}
-                  <div className="relative aspect-[16/10] md:aspect-auto md:col-span-5 bg-slate-100">
-                    <Image
-                      src={story.heroImage}
-                      alt={story.heroImageAlt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 400px"
-                      className="object-cover"
-                    />
-                    <div className="absolute left-4 top-4">
-                      <span className="flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-emerald-700 shadow-sm backdrop-blur-sm">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                        Consent Verified
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Text Column */}
-                  <div className="p-6 sm:p-8 md:col-span-7 flex flex-col justify-between">
-                    <div>
-                      <div className="flex flex-wrap items-center gap-3 text-xs text-abwa-ink/60">
-                        <span className="flex items-center gap-1 text-abwa-blue font-semibold">
-                          <MapPin className="h-3.5 w-3.5" />
-                          {story.location}
+              <ScrollReveal key={story.slug} yOffset={24} duration={0.6}>
+                <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-[border-color,box-shadow] duration-200 hover:border-abwa-blue/30 hover:shadow-md">
+                  <div className="grid grid-cols-1 md:grid-cols-12">
+                    {/* Photo Column */}
+                    <div className="relative aspect-[16/10] md:aspect-auto md:col-span-5 bg-slate-100 min-h-[220px]">
+                      <Image
+                        src={story.heroImage}
+                        alt={story.heroImageAlt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 400px"
+                        className="object-cover"
+                      />
+                      <div className="absolute left-4 top-4">
+                        <span className="flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-emerald-700 shadow-sm backdrop-blur-sm">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
+                          Consent Verified
                         </span>
-                        <span>•</span>
-                        <span>{story.programmeTag}</span>
-                      </div>
-
-                      <h3 className="mt-3 font-heading text-2xl font-bold leading-tight text-abwa-navy">
-                        {story.title}
-                      </h3>
-
-                      <p className="mt-2 text-sm font-medium text-abwa-gold">
-                        {story.subtitle}
-                      </p>
-
-                      <div className="mt-4 space-y-3 text-sm leading-relaxed text-abwa-ink/80">
-                        {story.content.map((para, pIdx) => (
-                          <p key={pIdx}>{para}</p>
-                        ))}
                       </div>
                     </div>
 
-                    <div className="mt-6 border-t border-slate-100 pt-4 flex items-center justify-between text-xs text-abwa-ink/60">
-                      <span>Published: {story.publishedDate}</span>
-                      <Link
-                        href="/programs"
-                        className="inline-flex items-center gap-1 font-semibold text-abwa-blue hover:text-abwa-navy"
-                      >
-                        <span>Related programme</span>
-                        <ArrowRight className="h-3.5 w-3.5" />
-                      </Link>
+                    {/* Text Column */}
+                    <div className="p-6 sm:p-8 md:col-span-7 flex flex-col justify-between">
+                      <div>
+                        <div className="flex flex-wrap items-center gap-3 text-xs text-abwa-ink/60">
+                          <span className="flex items-center gap-1 text-abwa-blue font-semibold">
+                            <MapPin className="h-3.5 w-3.5" />
+                            {story.location}
+                          </span>
+                          <span>•</span>
+                          <span>{story.programmeTag}</span>
+                        </div>
+
+                        <h3 className="mt-3 font-heading text-2xl font-bold leading-tight text-abwa-navy">
+                          {story.title}
+                        </h3>
+
+                        <p className="mt-2 text-sm font-medium text-abwa-gold">
+                          {story.subtitle}
+                        </p>
+
+                        <div className="mt-4 space-y-3 text-sm leading-relaxed text-abwa-ink/80">
+                          {story.content.map((para, pIdx) => (
+                            <p key={pIdx}>{para}</p>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="mt-6 border-t border-slate-100 pt-4 flex items-center justify-between text-xs text-abwa-ink/60">
+                        <span>Published: {story.publishedDate}</span>
+                        <Link
+                          href="/programs"
+                          className="inline-flex items-center gap-1 font-semibold text-abwa-blue hover:text-abwa-navy"
+                        >
+                          <span>Related programme</span>
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </ScrollReveal>
             ))}
-          </StaggerGroup>
+          </div>
 
           {/* Unconditional Takedown Policy Notice */}
           <div className="mx-auto mt-12 max-w-3xl rounded-xl border border-slate-200 bg-white p-6 text-center text-sm text-abwa-ink/75">

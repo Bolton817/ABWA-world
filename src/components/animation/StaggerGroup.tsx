@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -32,11 +32,12 @@ export function StaggerGroup({
       if (!items.length) return;
 
       const animationVars: gsap.TweenVars = {
-        opacity: 0,
+        autoAlpha: 0,
         y: yOffset,
         duration,
         stagger,
         ease: "power2.out",
+        clearProps: "transform,opacity,visibility",
       };
 
       if (triggerOnScroll) {
