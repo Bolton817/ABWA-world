@@ -85,7 +85,7 @@ const slides: HeroSlide[] = [
     overlayGradient: "bg-gradient-to-l from-black/85 via-black/60 to-black/35",
     primaryCta: {
       label: "Support Education",
-      href: "/programs/education-child-development",
+      href: "/programs/education-child-wellbeing",
     },
     secondaryCta: {
       label: "Get Involved",
@@ -127,7 +127,7 @@ const slides: HeroSlide[] = [
     overlayGradient: "bg-gradient-to-t from-black/85 via-black/55 to-black/45",
     primaryCta: {
       label: "Conservation Work",
-      href: "/programs/environmental-conservation-climate-action",
+      href: "/programs/environmental-conservation",
     },
     secondaryCta: {
       label: "Explore Gallery",
@@ -148,7 +148,7 @@ const slides: HeroSlide[] = [
     overlayGradient: "bg-gradient-to-l from-black/85 via-black/60 to-black/35",
     primaryCta: {
       label: "See Water Impact",
-      href: "/programs/water-sanitation-hygiene",
+      href: "/programs/water-sanitation-hygiene-wash",
     },
     secondaryCta: {
       label: "Contact Our Team",

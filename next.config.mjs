@@ -25,6 +25,21 @@ const nextConfig = {
         destination: "/programs",
         permanent: true,
       },
+      {
+        source: "/programs/education-child-development",
+        destination: "/programs/education-child-wellbeing",
+        permanent: true,
+      },
+      {
+        source: "/programs/environmental-conservation-climate-action",
+        destination: "/programs/environmental-conservation",
+        permanent: true,
+      },
+      {
+        source: "/programs/water-sanitation-hygiene",
+        destination: "/programs/water-sanitation-hygiene-wash",
+        permanent: true,
+      },
       // About legacy routes
       {
         source: "/about-us",
