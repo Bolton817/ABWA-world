@@ -34,14 +34,22 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-40 w-full transition-all duration-300">
-        {/* Tier 1: Utility Bar (Desktop only, hides smoothly on scroll) */}
+        {/* Tier 1: Utility Bar (Desktop + Mobile, hides smoothly on scroll) */}
         <div
           className={`bg-abwa-navy text-white text-xs border-b border-white/10 transition-all duration-300 overflow-hidden ${
-            isScrolled ? "h-0 opacity-0 pointer-events-none" : "h-9 opacity-100 hidden md:block"
+            isScrolled ? "h-0 opacity-0 pointer-events-none border-b-0" : "h-8 md:h-9 opacity-100"
           }`}
         >
           <div className="w-full px-4 sm:px-6 lg:px-8">
-            <div className="h-9 flex items-center justify-between">
+            {/* Mobile View: Slogan Only */}
+            <div className="md:hidden flex items-center justify-center h-8 text-center">
+              <span className="text-abwa-gold font-medium tracking-wide text-xs sm:text-sm font-goldie">
+                Transforming Lives Through Action
+              </span>
+            </div>
+
+            {/* Desktop View: Contact, Location, Tagline & Search */}
+            <div className="hidden md:flex h-9 items-center justify-between">
               {/* Contact & Location utilities */}
               <div className="flex items-center gap-6">
                 <a
