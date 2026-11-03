@@ -1,7 +1,5 @@
 import React from "react";
 import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Section";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Users2, Wrench, Sprout, HeartHandshake } from "lucide-react";
 import { ScrollReveal } from "@/components/animation/ScrollReveal";
 
@@ -38,16 +36,29 @@ export function HomeApproach() {
   ];
 
   return (
-    <Section surface="pale">
-      <Container>
-        {/* Section Header with ScrollReveal */}
+    <section
+      className="relative py-16 sm:py-20 lg:py-24 bg-fixed bg-cover bg-center overflow-hidden"
+      style={{
+        backgroundImage: "url('/images/programs/community_development_social_support/6abwa (74).jpeg')",
+      }}
+    >
+      {/* Light, non-overpowering dark overlay for natural photo visibility */}
+      <div className="absolute inset-0 bg-black/35 pointer-events-none" />
+
+      <Container className="relative z-10">
+        {/* Section Header with ScrollReveal & dark shadow readability */}
         <ScrollReveal yOffset={20} duration={0.6}>
-          <SectionHeader
-            eyebrow="How we work"
-            title="Built with communities, not for them"
-            description="These are the ideas that guide how we plan and carry out our projects."
-            align="center"
-          />
+          <div className="text-center max-w-2xl mx-auto space-y-2.5 mb-8 sm:mb-12">
+            <span className="inline-block font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide [text-shadow:_0_2px_8px_rgba(0,0,0,0.9)] drop-shadow-md">
+              How we work
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white [text-shadow:_0_3px_12px_rgba(0,0,0,0.95)] drop-shadow-lg">
+              Built with communities, not for them
+            </h2>
+            <p className="text-base sm:text-lg text-slate-100 font-medium leading-relaxed [text-shadow:_0_2px_8px_rgba(0,0,0,0.9)] drop-shadow-md">
+              These are the ideas that guide how we plan and carry out our projects.
+            </p>
+          </div>
         </ScrollReveal>
 
         {/* 4 Cards Grid with Staggered ScrollReveal */}
@@ -78,6 +89,6 @@ export function HomeApproach() {
           })}
         </ScrollReveal>
       </Container>
-    </Section>
+    </section>
   );
 }
