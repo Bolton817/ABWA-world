@@ -162,7 +162,7 @@ const SLIDE_DURATION = 6000; // 6 seconds per slide
 export function HomeHero() {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [isHoverPaused, setIsHoverPaused] = useState(false);
 
   const heroRef = useRef<HTMLElement>(null);
   const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -174,7 +174,6 @@ export function HomeHero() {
   const goToSlide = useCallback((nextIndex: number) => {
     if (isTransitioningRef.current || nextIndex === current) return;
     isTransitioningRef.current = true;
-    setProgress(0);
 
     const prevIndex = current;
     const outgoingBg = bgRefs.current[prevIndex];
@@ -218,10 +217,10 @@ export function HomeHero() {
       tl.to(
         outgoingItems,
         {
-          y: -26,
+          y: -22,
           autoAlpha: 0,
-          duration: 0.4,
-          stagger: 0.04,
+          duration: 0.35,
+          stagger: 0.03,
           ease: "power2.in",
         },
         0
@@ -239,28 +238,27 @@ export function HomeHero() {
         {
           autoAlpha: 1,
           scale: 1.0,
-          duration: 0.9,
+          duration: 0.85,
           ease: "power2.out",
         },
-        0.2
+        0.15
       );
     }
 
-    // 3. Incoming text items enter from below with staggered parallax
+    // 3. Incoming text items enter from below with staggered parallax (maintain rendered size)
     if (incomingContent && incomingItems && incomingItems.length > 0) {
       gsap.set(incomingContent, { autoAlpha: 1, zIndex: 10 });
       tl.fromTo(
         incomingItems,
-        { y: 36, autoAlpha: 0 },
+        { y: 28, autoAlpha: 0 },
         {
           y: 0,
           autoAlpha: 1,
-          duration: 0.7,
-          stagger: 0.08,
+          duration: 0.65,
+          stagger: 0.07,
           ease: "power3.out",
-          clearProps: "transform,opacity,visibility",
         },
-        0.45
+        0.35
       );
     }
   }, [current]);
@@ -290,14 +288,13 @@ export function HomeHero() {
             if (!isReducedMotion() && items.length > 0) {
               gsap.fromTo(
                 items,
-                { y: 32, autoAlpha: 0 },
+                { y: 28, autoAlpha: 0 },
                 {
                   y: 0,
                   autoAlpha: 1,
-                  duration: 0.75,
-                  stagger: 0.09,
+                  duration: 0.7,
+                  stagger: 0.08,
                   ease: "power3.out",
-                  clearProps: "transform,opacity,visibility",
                 }
               );
             }
@@ -311,25 +308,16 @@ export function HomeHero() {
     { scope: heroRef }
   );
 
-  // Auto-play timer and live progress tracker
+  // Auto-play timer (pauses only when isPaused or when hovering over pause icon)
   useEffect(() => {
-    if (isPaused) return;
-
-    const intervalMs = 50;
-    const step = (intervalMs / SLIDE_DURATION) * 100;
+    if (isPaused || isHoverPaused) return;
 
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          handleNext();
-          return 0;
-        }
-        return prev + step;
-      });
-    }, intervalMs);
+      handleNext();
+    }, SLIDE_DURATION);
 
     return () => clearInterval(timer);
-  }, [isPaused, handleNext]);
+  }, [isPaused, isHoverPaused, handleNext]);
 
   // Touch Swipe for mobile devices
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -354,12 +342,10 @@ export function HomeHero() {
   return (
     <header
       ref={heroRef}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       aria-label="Homepage Featured Highlights"
-      className="relative min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex items-center bg-slate-950 text-white overflow-hidden select-none"
+      className="relative h-[calc(100svh-5.75rem)] lg:h-[calc(100svh-7.25rem)] min-h-[480px] max-h-[760px] flex items-center bg-slate-950 text-white overflow-hidden select-none"
     >
       {/* 1. Layered Background Images (Crossfade without black gap) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -385,83 +371,86 @@ export function HomeHero() {
         ))}
       </div>
 
-      {/* 2. Slide Content Containers with Variable Alignments */}
-      <Container className="relative z-20 py-20 sm:py-24 lg:py-28 w-full">
-        {slides.map((slide, idx) => {
-          const isActive = idx === current;
-          const isLeft = slide.align === "left";
-          const isCenter = slide.align === "center";
-          const isRight = slide.align === "right";
+      {/* 2. Slide Content Containers with Stable Sizing & Variable Alignments */}
+      <Container className="relative z-20 w-full h-full flex items-center py-6 sm:py-8 lg:py-10 pb-16 sm:pb-20">
+        <div className="relative w-full h-full">
+          {slides.map((slide, idx) => {
+            const isActive = idx === current;
+            const isCenter = slide.align === "center";
+            const isRight = slide.align === "right";
 
-          return (
-            <div
-              key={slide.id}
-              ref={(el) => {
-                contentRefs.current[idx] = el;
-              }}
-              aria-hidden={!isActive}
-              className={`w-full ${isActive ? "relative" : "absolute inset-0 pointer-events-none"}`}
-            >
+            return (
               <div
-                className={`space-y-4 sm:space-y-5 flex flex-col ${
-                  isCenter
-                    ? "max-w-3xl mx-auto items-center text-center"
-                    : isRight
-                    ? "max-w-2xl ml-auto items-start lg:items-end text-left lg:text-right"
-                    : "max-w-2xl items-start text-left"
+                key={slide.id}
+                ref={(el) => {
+                  contentRefs.current[idx] = el;
+                }}
+                aria-hidden={!isActive}
+                className={`absolute inset-0 w-full h-full flex items-center ${
+                  isActive ? "pointer-events-auto" : "pointer-events-none"
                 }`}
               >
-                {/* Eyebrow / Pillar Badge */}
-                <div className="hero-parallax-item">
-                  <span className="inline-block font-kaushan text-abwa-gold text-lg sm:text-xl md:text-2xl tracking-wide [text-shadow:_0_2px_8px_rgba(0,0,0,0.95)] drop-shadow-md">
-                    {slide.eyebrow}
-                  </span>
-                </div>
-
-                {/* Main Heading (H1 for active slide) */}
-                <h1 className="hero-parallax-item text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-tight [text-shadow:_0_3px_14px_rgba(0,0,0,0.95)] drop-shadow-lg">
-                  {slide.title}
-                </h1>
-
-                {/* Subtitle */}
-                <p className="hero-parallax-item text-lg sm:text-xl text-slate-100 font-medium leading-snug [text-shadow:_0_2px_8px_rgba(0,0,0,0.95)] drop-shadow-md">
-                  {slide.subtitle}
-                </p>
-
-                {/* Description */}
-                <p className="hero-parallax-item text-sm sm:text-base text-slate-200 leading-relaxed [text-shadow:_0_1px_6px_rgba(0,0,0,0.9)] drop-shadow-sm max-w-xl">
-                  {slide.description}
-                </p>
-
-                {/* Action Buttons */}
                 <div
-                  className={`hero-parallax-item pt-3 flex flex-wrap items-center gap-4 ${
+                  className={`space-y-3 sm:space-y-4 flex flex-col w-full ${
                     isCenter
-                      ? "justify-center"
+                      ? "max-w-3xl mx-auto items-center text-center"
                       : isRight
-                      ? "justify-start lg:justify-end"
-                      : "justify-start"
+                      ? "max-w-2xl ml-auto items-start lg:items-end text-left lg:text-right"
+                      : "max-w-2xl items-start text-left"
                   }`}
                 >
-                  <Button href={slide.primaryCta.href} variant="blue" size="lg">
-                    {slide.primaryCta.label}
-                  </Button>
-                  <Button
-                    href={slide.secondaryCta.href}
-                    variant="outline-white"
-                    size="lg"
+                  {/* Eyebrow / Pillar Badge */}
+                  <div className="hero-parallax-item">
+                    <span className="inline-block font-kaushan text-abwa-gold text-base sm:text-lg md:text-xl tracking-wide [text-shadow:_0_2px_8px_rgba(0,0,0,0.95)] drop-shadow-md">
+                      {slide.eyebrow}
+                    </span>
+                  </div>
+
+                  {/* Main Heading (H1) - Maintains balanced display scale */}
+                  <h1 className="hero-parallax-item text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight [text-shadow:_0_3px_14px_rgba(0,0,0,0.95)] drop-shadow-lg">
+                    {slide.title}
+                  </h1>
+
+                  {/* Subtitle */}
+                  <p className="hero-parallax-item text-base sm:text-lg text-slate-100 font-medium leading-snug [text-shadow:_0_2px_8px_rgba(0,0,0,0.95)] drop-shadow-md">
+                    {slide.subtitle}
+                  </p>
+
+                  {/* Description */}
+                  <p className="hero-parallax-item text-xs sm:text-sm text-slate-200 leading-relaxed [text-shadow:_0_1px_6px_rgba(0,0,0,0.9)] drop-shadow-sm max-w-xl">
+                    {slide.description}
+                  </p>
+
+                  {/* Action Buttons */}
+                  <div
+                    className={`hero-parallax-item pt-2 flex flex-wrap items-center gap-3 sm:gap-4 ${
+                      isCenter
+                        ? "justify-center"
+                        : isRight
+                        ? "justify-start lg:justify-end"
+                        : "justify-start"
+                    }`}
                   >
-                    {slide.secondaryCta.label}
-                  </Button>
+                    <Button href={slide.primaryCta.href} variant="blue" size="md">
+                      {slide.primaryCta.label}
+                    </Button>
+                    <Button
+                      href={slide.secondaryCta.href}
+                      variant="outline-white"
+                      size="md"
+                    >
+                      {slide.secondaryCta.label}
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </Container>
 
-      {/* 3. Bottom Carousel Navigation, Indicator Progress Pills, and Play/Pause */}
-      <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 z-30 pointer-events-auto">
+      {/* 3. Bottom Carousel Navigation, Clean Indicator Dots, and Scoped Play/Pause */}
+      <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 z-30 pointer-events-auto">
         <Container>
           <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-white/15">
             {/* Slide Index Counter & Pillar Title */}
@@ -474,9 +463,9 @@ export function HomeHero() {
               </span>
             </div>
 
-            {/* 6 Progress Pills */}
+            {/* Clean Indicator Dots without progressive fill bar */}
             <div
-              className="flex items-center gap-2 sm:gap-2.5"
+              className="flex items-center gap-2"
               role="tablist"
               aria-label="Carousel navigation dots"
             >
@@ -489,29 +478,25 @@ export function HomeHero() {
                     role="tab"
                     aria-selected={isSelected}
                     aria-label={`Go to slide ${idx + 1}: ${s.pillar}`}
-                    className={`relative h-2 rounded-full transition-all duration-300 focus:outline-hidden focus:ring-2 focus:ring-abwa-gold ${
+                    className={`h-2.5 rounded-full transition-all duration-300 focus:outline-hidden focus:ring-2 focus:ring-abwa-gold cursor-pointer ${
                       isSelected
-                        ? "w-12 sm:w-16 bg-white/25 overflow-hidden"
-                        : "w-6 sm:w-8 bg-white/30 hover:bg-white/60 cursor-pointer"
+                        ? "w-8 bg-abwa-gold"
+                        : "w-2.5 bg-white/40 hover:bg-white/70"
                     }`}
-                  >
-                    {isSelected && (
-                      <span
-                        className="absolute inset-y-0 left-0 bg-abwa-gold rounded-full transition-all duration-75 ease-linear"
-                        style={{ width: `${progress}%` }}
-                      />
-                    )}
-                  </button>
+                  />
                 );
               })}
             </div>
 
-            {/* Controls: Prev, Next & Pause Toggle */}
+            {/* Controls: Prev, Next & Hover-Scoped Pause Toggle */}
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsPaused((prev) => !prev)}
+                onMouseEnter={() => setIsHoverPaused(true)}
+                onMouseLeave={() => setIsHoverPaused(false)}
                 aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition-all"
+                title={isPaused ? "Resume slideshow" : "Pause slideshow"}
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition-all cursor-pointer"
               >
                 {isPaused ? (
                   <Play className="w-3.5 h-3.5 fill-current" />
@@ -522,14 +507,14 @@ export function HomeHero() {
               <button
                 onClick={handlePrev}
                 aria-label="Previous slide"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition-all"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition-all cursor-pointer"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={handleNext}
                 aria-label="Next slide"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition-all"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md text-white border border-white/20 flex items-center justify-center transition-all cursor-pointer"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
