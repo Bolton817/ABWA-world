@@ -56,6 +56,8 @@ export default function HomePage() {
         surface="navy"
         title="Let's build something good together"
         description="Whether you want to volunteer, partner with us, or simply learn more, we'd be glad to hear from you."
+        imageSrc="/images/programs/community_development_social_support/6abwa (73).jpeg"
+        imageAlt="Grassroots community gathering and mutual social support network in Kenya"
         primaryCta={{
           label: "Get Involved",
           href: "/get-involved",

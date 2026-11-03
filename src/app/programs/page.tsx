@@ -156,6 +156,8 @@ export default function ProgrammesPage() {
         surface="navy"
         title="Want to partner or get involved?"
         description="Tell us what area interests you—from volunteer work camps to institutional partnerships—and we'll connect you with the right team."
+        imageSrc="/images/programs/Kasiagu_Wildlife_conservation/6abwa (85).jpeg"
+        imageAlt="Community wildlife conservation and habitat protection team in Kasigau, Kenya"
         primaryCta={{
           label: "Contact ABWA",
           href: "/contact",

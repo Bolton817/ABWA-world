@@ -159,8 +159,11 @@ export default function GetInvolvedPage() {
 
       {/* 4. Closing CTA */}
       <SectionCTA
+        surface="navy"
         title="Not sure where you fit?"
         description="Tell us a little about yourself and we'll suggest where you could help. You can also read our answers to common questions first."
+        imageSrc="/images/programs/youth_empowerment_&_skills/5abwa (43).jpeg"
+        imageAlt="Young leaders and community volunteers collaborating on vocational skills and enterprise in Kenya"
         primaryCta={{
           label: "Contact ABWA",
           href: "/contact",
@@ -169,7 +172,6 @@ export default function GetInvolvedPage() {
           label: "Read the FAQ",
           href: "/faq",
         }}
-        surface="pale"
       />
     </>
   );

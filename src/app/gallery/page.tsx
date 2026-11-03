@@ -72,8 +72,11 @@ export default function GalleryPage() {
 
       {/* 4. Closing Call to Action (Verbatim Copy Deck p. 45) */}
       <SectionCTA
+        surface="navy"
         title="Want to see this for yourself?"
         description="There is more than one way to be part of our work, whether through volunteering, partnership, or community support."
+        imageSrc="/images/programs/arts_culture_&_creative_development/7abwa (7).jpeg"
+        imageAlt="Children and young people presenting creative paintings and cultural artwork in Mathare, Nairobi"
         primaryCta={{
           label: "Get Involved",
           href: "/get-involved",
@@ -82,7 +85,6 @@ export default function GalleryPage() {
           label: "Contact ABWA",
           href: "/contact",
         }}
-        surface="pale"
       />
     </>
   );

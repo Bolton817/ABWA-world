@@ -42,7 +42,7 @@ export function SectionCTA({
     <section
       className={twMerge(
         "relative py-20 sm:py-28 overflow-hidden",
-        surfaceStyles[surface],
+        imageSrc ? "bg-abwa-navy text-white" : surfaceStyles[surface],
         className
       )}
     >

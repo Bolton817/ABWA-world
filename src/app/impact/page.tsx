@@ -537,6 +537,8 @@ export default function ImpactPage() {
         surface="navy"
         title="Help us build stronger, self-reliant communities"
         description="We are committed to working alongside children, young people, women and families to build practical, lasting responses to poverty, unemployment, educational barriers, food insecurity and environmental challenges. If you would like to support a project or ask how we measure our work, we would be glad to talk."
+        imageSrc="/images/programs/food_security_&_sustainable_agriculture/6abwa (67).jpeg"
+        imageAlt="Smallholder farmers and community volunteers celebrating a thriving harvest in Kenya"
         primaryCta={{
           label: "Get Involved",
           href: "/get-involved",

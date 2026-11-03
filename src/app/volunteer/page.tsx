@@ -619,8 +619,11 @@ export default function VolunteerPage() {
 
       {/* 7. Closing CTA */}
       <SectionCTA
+        surface="navy"
         title="Still deciding?"
         description="Read our guide to ethical community volunteering in Kenya, or browse our answers to common questions."
+        imageSrc="/images/programs/environmental_conservation_&_climate/7abwa (24).jpeg"
+        imageAlt="Volunteers and community members planting indigenous tree saplings together in Kenya"
         primaryCta={{
           label: "Read: Ethical Volunteering in Kenya",
           href: "/blog/ethical-community-volunteering-in-kenya",
@@ -629,7 +632,6 @@ export default function VolunteerPage() {
           label: "Read the FAQ",
           href: "/faq",
         }}
-        surface="pale"
       />
     </>
   );

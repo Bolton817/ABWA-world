@@ -173,8 +173,11 @@ export default function StoriesPage() {
 
       {/* 4. Closing CTA */}
       <SectionCTA
+        surface="navy"
         title="Be part of these stories"
         description="Whether you would like to volunteer your time, collaborate as an institutional partner, or support community projects, there is a place for you."
+        imageSrc="/images/programs/education_&_child_development/5abwa (83).jpeg"
+        imageAlt="Smiling children and students participating in community education support in Kenya"
         primaryCta={{
           label: "Get Involved",
           href: "/get-involved",
@@ -183,7 +186,6 @@ export default function StoriesPage() {
           label: "Read Our Blog",
           href: "/blog",
         }}
-        surface="pale"
       />
     </>
   );

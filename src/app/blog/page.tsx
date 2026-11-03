@@ -64,8 +64,11 @@ export default function BlogIndexPage() {
 
       {/* 3. Closing CTA */}
       <SectionCTA
+        surface="navy"
         title="Have a question or an idea?"
         description="We'd love to hear your thoughts on these articles or explore ideas for practical collaboration."
+        imageSrc="/images/programs/women_empowerment_&_agriculture/6abwa (60).jpeg"
+        imageAlt="Women community leaders and farmers exchanging knowledge and techniques in Kenya"
         primaryCta={{
           label: "Contact ABWA",
           href: "/contact",
@@ -74,7 +77,6 @@ export default function BlogIndexPage() {
           label: "Explore Programmes",
           href: "/programs",
         }}
-        surface="pale"
       />
     </>
   );

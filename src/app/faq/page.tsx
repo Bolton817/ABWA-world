@@ -71,8 +71,11 @@ export default function FAQPage() {
 
       {/* 3. Closing CTA */}
       <SectionCTA
+        surface="navy"
         title="Still have a question?"
         description="If you can't find the answer you're looking for, we'd be glad to talk through any details directly."
+        imageSrc="/images/programs/water_sanitation_&_hygiene/1abwa (13).jpeg"
+        imageAlt="Community water access point management and hygiene education in Kenya"
         primaryCta={{
           label: "Contact ABWA",
           href: "/contact",
@@ -81,7 +84,6 @@ export default function FAQPage() {
           label: "Explore Programmes",
           href: "/programs",
         }}
-        surface="pale"
       />
     </>
   );
