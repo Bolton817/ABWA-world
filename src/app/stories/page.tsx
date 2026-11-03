@@ -136,11 +136,10 @@ export default function StoriesPage() {
                         </div>
                       </div>
 
-                      <div className="mt-6 border-t border-slate-100 pt-4 flex items-center justify-between text-xs text-abwa-ink/60">
-                        <span>Published: {story.publishedDate}</span>
+                      <div className="mt-6 border-t border-slate-100 pt-4 flex items-center justify-end text-xs text-abwa-ink/60">
                         <Link
                           href="/programs"
-                          className="inline-flex items-center gap-1 font-semibold text-abwa-blue hover:text-abwa-navy"
+                          className="inline-flex items-center gap-1 font-semibold text-abwa-blue hover:text-abwa-navy transition-colors"
                         >
                           <span>Related programme</span>
                           <ArrowRight className="h-3.5 w-3.5" />
