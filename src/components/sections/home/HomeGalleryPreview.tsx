@@ -63,7 +63,7 @@ export function HomeGalleryPreview() {
 
       const mm = gsap.matchMedia();
 
-      // Desktop behavior (min-width: 1024px) per Animation 3 specifications
+      // Desktop layout (min-width: 1024px): Pinned horizontal scrub with calibrated top offset
       mm.add("(min-width: 1024px)", () => {
         if (!wrapperRef.current || !trackRef.current || !containerRef.current) return;
 
@@ -71,7 +71,7 @@ export function HomeGalleryPreview() {
           return trackRef.current!.scrollWidth - wrapperRef.current!.clientWidth;
         };
 
-        // Pin entire section and scrub horizontal track along X-axis
+        // Pin section flush with the 60px sticky header and scrub horizontal track along X-axis
         const horizontalTween = gsap.to(trackRef.current, {
           x: () => -getScrollDistance(),
           ease: "none",
@@ -79,9 +79,10 @@ export function HomeGalleryPreview() {
             trigger: containerRef.current,
             pin: true,
             scrub: 1,
-            start: "top 80px",
+            start: "top 60px",
             end: () => "+=" + getScrollDistance(),
             invalidateOnRefresh: true,
+            anticipatePin: 1,
           },
         });
 
@@ -109,6 +110,36 @@ export function HomeGalleryPreview() {
         });
       });
 
+      // Mobile layout (max-width: 1023px): Normal vertical flow with alternating side-entry scroll animations
+      mm.add("(max-width: 1023px)", () => {
+        const mobileCards = containerRef.current?.querySelectorAll<HTMLElement>(".gallery-mobile-card");
+        if (!mobileCards || mobileCards.length === 0) return;
+
+        mobileCards.forEach((card, index) => {
+          // Interchangeable entry: even indexes from left (-60px), odd indexes from right (60px)
+          const fromLeft = index % 2 === 0;
+
+          gsap.fromTo(
+            card,
+            {
+              x: fromLeft ? -60 : 60,
+              opacity: 0,
+            },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.65,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 88%",
+                once: true,
+              },
+            }
+          );
+        });
+      });
+
       return () => mm.revert();
     },
     { scope: containerRef }
@@ -117,7 +148,7 @@ export function HomeGalleryPreview() {
   return (
     <section
       ref={containerRef}
-      className="py-16 sm:py-24 bg-slate-50 border-y border-abwa-border relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-6 bg-slate-50 border-y border-abwa-border relative overflow-hidden"
     >
       <Container>
         {/* Section Header */}
@@ -125,35 +156,36 @@ export function HomeGalleryPreview() {
           eyebrow="Gallery"
           title="Moments from our work"
           description="A few glimpses of community projects. We share photographs only with the consent of the people in them."
+          className="mb-8 lg:mb-5"
           action={
-            <Button href="/gallery" variant="outline" size="md">
+            <Button href="/gallery" variant="outline" size="md" className="hidden lg:inline-flex">
               <span>View the full gallery</span>
               <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
           }
         />
 
-        {/* Horizontal Track Wrapper */}
+        {/* 1. Desktop Horizontal Track (lg:block, hidden on mobile) */}
         <div
           ref={wrapperRef}
-          className="overflow-x-auto lg:overflow-hidden pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 snap-x snap-mandatory scrollbar-none"
+          className="hidden lg:block overflow-hidden"
         >
           <div
             ref={trackRef}
-            className="flex flex-nowrap gap-6 w-max items-center"
+            className="flex flex-nowrap gap-6 w-max items-center py-2"
           >
             {photos.map((item, idx) => (
               <Link
                 key={idx}
                 href="/gallery"
-                className="gallery-horizontal-card group relative flex-shrink-0 w-[280px] sm:w-[340px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden border border-abwa-border shadow-xs bg-slate-100 snap-start block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
+                className="gallery-horizontal-card group relative flex-shrink-0 w-[340px] xl:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden border border-abwa-border shadow-xs bg-slate-100 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
               >
                 <div className="gallery-card-inner-img absolute inset-0 will-change-transform scale-110">
                   <Image
                     src={item.src}
                     alt={item.alt}
                     fill
-                    sizes="(max-width: 640px) 280px, 380px"
+                    sizes="(max-width: 1280px) 340px, 380px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -167,8 +199,34 @@ export function HomeGalleryPreview() {
           </div>
         </div>
 
+        {/* 2. Mobile Vertical Stack with Interchangeable Side Entry (lg:hidden) */}
+        <div className="lg:hidden flex flex-col gap-6 sm:gap-8">
+          {photos.map((item, idx) => (
+            <Link
+              key={idx}
+              href="/gallery"
+              className="gallery-mobile-card group relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden border border-abwa-border shadow-xs bg-slate-100 block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue will-change-transform"
+            >
+              <div className="absolute inset-0">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 640px, 400px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/90 via-abwa-navy/25 to-transparent flex items-end p-5 z-10">
+                <span className="text-sm font-semibold text-white line-clamp-2 leading-snug">
+                  {item.caption}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+
         {/* Mobile View full gallery CTA */}
-        <div className="pt-8 text-center md:hidden">
+        <div className="pt-8 text-center lg:hidden">
           <Button href="/gallery" variant="primary" size="lg" className="w-full sm:w-auto">
             <span>View the full gallery</span>
             <ArrowRight className="w-4 h-4 ml-1" />
