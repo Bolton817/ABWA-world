@@ -247,16 +247,16 @@ export function Header() {
                   <span>Support Our Work</span>
                 </Button>
 
-                {/* Mobile Menu Button */}
+                {/* Mobile Menu Button with Tactile Feedback */}
                 <button
                   type="button"
                   onClick={() => setMobileMenuOpen(true)}
-                  className="lg:hidden w-11 h-11 rounded-lg text-abwa-navy hover:bg-abwa-pale transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue"
+                  className="lg:hidden w-11 h-11 rounded-xl text-abwa-navy hover:text-abwa-blue hover:bg-abwa-pale transition-all duration-200 active:scale-90 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-blue border border-transparent hover:border-abwa-border/50 group"
                   aria-expanded={mobileMenuOpen}
                   aria-controls="mobile-menu"
                   aria-label="Open main menu"
                 >
-                  <Menu className="w-6 h-6" />
+                  <Menu className="w-6 h-6 transition-transform duration-200 group-hover:scale-105 active:rotate-12" />
                 </button>
               </div>
             </div>
