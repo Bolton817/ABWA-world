@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Activity,
@@ -20,6 +21,8 @@ import {
   Building2,
   TreePine,
   CheckCircle2,
+  MapPin,
+  Images,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -52,40 +55,56 @@ const impactFrameworks = [
     term: "Activity",
     heading: "What we do",
     description:
-      "A tree-planting day, an art or tailoring lesson, a sustainable farming session, or a school water tank installation.",
-    note: "Direct & observable",
+      "A tree planting day, an art or tailoring lesson, a sustainable farming session, or a school water tank installation.",
+    note: "Direct and observable action",
     icon: Activity,
     color: "bg-blue-50 text-abwa-blue border-blue-200",
+    imageSrc: "/images/programs/environmental_conservation_&_climate/5abwa (41).jpeg",
+    imageAlt: "Volunteers and community members planting trees together in Kenya",
+    tag: "Field Activity",
+    location: "Kenya Community Sites",
   },
   {
     step: "Step 02",
     term: "Output",
     heading: "What the activity produces",
     description:
-      "How many people took part, how many sessions ran, or what tools and learning materials were shared (counted only from verified records).",
+      "How many people took part, how many sessions ran, or what tools and learning materials were shared, counted only from verified records.",
     note: "Documented records only",
     icon: Layers,
     color: "bg-amber-50 text-abwa-gold border-amber-200",
+    imageSrc: "/images/programs/education_&_child_development/1abwa (11).jpeg",
+    imageAlt: "Primary school students with learning materials and books in classroom",
+    tag: "Verified Records",
+    location: "Community Primary Schools",
   },
   {
     step: "Step 03",
     term: "Outcome",
     heading: "What changes for people",
     description:
-      "A practical skill used for income, a more reliable harvest, cleaner water at school, or stronger women's and youth groups (described only where there is evidence).",
-    note: "Evidence-based change",
+      "A practical skill used for income, a more reliable harvest, cleaner water at school, or stronger women and youth groups.",
+    note: "Evidence based change",
     icon: Sparkles,
     color: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    imageSrc: "/images/programs/women_empowerment_&_agriculture/6abwa (64).jpeg",
+    imageAlt: "Community women farmers celebrating a bountiful agricultural harvest in Machakos",
+    tag: "Observed Benefit",
+    location: "Machakos County",
   },
   {
     step: "Step 04",
-    term: "Long-Term Impact",
+    term: "Long Term Impact",
     heading: "Lasting change over years",
     description:
-      "More resilient, self-reliant households and healthier neighbourhoods—something we work towards steadily and never claim prematurely.",
-    note: "Long-term community horizon",
+      "More resilient, self reliant households and healthier neighbourhoods, something we work towards steadily and never claim prematurely.",
+    note: "Long term community horizon",
     icon: TrendingUp,
     color: "bg-purple-50 text-purple-700 border-purple-200",
+    imageSrc: "/images/programs/community_development_social_support/6abwa (73).jpeg",
+    imageAlt: "Community members and local leaders gathered together celebrating long term development",
+    tag: "Generational Horizon",
+    location: "Rural and Urban Communities",
   },
 ];
 
@@ -108,12 +127,12 @@ const planningElements = [
   {
     num: "04",
     title: "Participating community members",
-    description: "Who takes part—children, young people, women's groups or vulnerable households.",
+    description: "Who takes part, including children, young people, women groups or vulnerable households.",
   },
   {
     num: "05",
     title: "Planned activities and schedule",
-    description: "A realistic step-by-step timetable agreed with the host group.",
+    description: "A realistic step by step timetable agreed with the host group.",
   },
   {
     num: "06",
@@ -123,7 +142,7 @@ const planningElements = [
   {
     num: "07",
     title: "Expected outputs and outcomes",
-    description: "Clear targets separating immediate deliverables from longer-term changes.",
+    description: "Clear targets separating immediate deliverables from longer term changes.",
   },
   {
     num: "08",
@@ -172,7 +191,7 @@ const mePractices = [
     tag: "Ground Reality",
   },
   {
-    title: "Before-and-After Assessments",
+    title: "Comparative Skill Assessments",
     description:
       "Comparing conditions and skills before and after a project to understand real change.",
     icon: Scale,
@@ -181,14 +200,14 @@ const mePractices = [
   {
     title: "Output & Outcome Tracking",
     description:
-      "Measuring practical deliverables alongside longer-term household and community improvements.",
+      "Measuring practical deliverables alongside longer term household and community improvements.",
     icon: TrendingUp,
     tag: "Deliverables & Shifts",
   },
   {
-    title: "Periodic Partner & Community Reviews",
+    title: "Periodic Partner Reviews",
     description:
-      "Holding open review sessions with local women's groups, youth leaders and partner organisations.",
+      "Holding open review sessions with local women groups, youth leaders and partner organisations.",
     icon: CalendarCheck,
     tag: "Shared Dialogue",
   },
@@ -208,9 +227,9 @@ const sustainabilityMeasures = [
     icon: HeartHandshake,
   },
   {
-    title: "Income-generating activities",
+    title: "Income generating activities",
     description:
-      "Linking projects to small enterprises—such as tailoring, poultry, vegetable sales or recycled crafts—that help fund ongoing work.",
+      "Linking projects to small enterprises such as tailoring, poultry, vegetable sales or recycled crafts that help fund ongoing work.",
     icon: Coins,
   },
   {
@@ -226,9 +245,9 @@ const sustainabilityMeasures = [
     icon: ShieldCheck,
   },
   {
-    title: "Follow-up mentorship",
+    title: "Follow up mentorship",
     description:
-      "Providing ongoing guidance and technical check-ins rather than walking away when a project closes.",
+      "Providing ongoing guidance and technical check ins rather than walking away when a project closes.",
     icon: Sparkles,
   },
   {
@@ -236,6 +255,49 @@ const sustainabilityMeasures = [
     description:
       "Embedding water conservation, soil care, tree planting and waste reuse into every programme.",
     icon: TreePine,
+  },
+];
+
+const verifiedEvidencePoints = [
+  {
+    title: "Primary Education & School Support",
+    location: "Nairobi County",
+    programme: "Education & Child Wellbeing",
+    description:
+      "Providing essential classroom learning materials, study desks and school feeding partnership so children attend classes consistently and thrive in dignified learning spaces.",
+    evidenceNote: "Monitored through physical attendance logs, headteacher records and learning progress check ins.",
+    imageSrc: "/images/programs/education_&_child_development/5abwa (83).jpeg",
+    imageAlt: "Primary school students engaged in reading and classroom lessons supported by ABWA in Kenya",
+  },
+  {
+    title: "Climate Resilient Kitchen Gardens",
+    location: "Makueni County",
+    programme: "Food Security & Agriculture",
+    description:
+      "Equipping smallholder women farmers with drip bottle irrigation, compost timing methods and drought resilient vegetable varieties to ensure dependable food and market income.",
+    evidenceNote: "Documented through weekly harvest logs and surplus produce sold in local rural markets.",
+    imageSrc: "/images/programs/food_security_&_sustainable_agriculture/5abwa (80).jpeg",
+    imageAlt: "Women farmers harvesting fresh vegetables in a community kitchen garden in Makueni County",
+  },
+  {
+    title: "Youth Skills & Creative Mentorship",
+    location: "Nairobi & Machakos",
+    programme: "Youth Skills & Creative Arts",
+    description:
+      "Mentoring young creators and apprentices in tailoring, mural arts, music production and digital literacy, turning empty neighbourhood rooms into productive creative hubs.",
+    evidenceNote: "Verified through workshop sign in sheets, finished craft products and peer mentor logs.",
+    imageSrc: "/images/programs/arts_culture_&_creative_development/7abwa (7).jpeg",
+    imageAlt: "Young creators and mentors collaborating on creative arts and community painting in Kenya",
+  },
+  {
+    title: "Community Conservation & Water Access",
+    location: "Kasigau & Machakos",
+    programme: "Conservation & WASH",
+    description:
+      "Mobilising youth and volunteers to nurture indigenous tree nurseries, protect wildlife corridors and install school rainwater storage tanks for clean drinking water.",
+    evidenceNote: "Tracked through seedling survival counts, rainfall harvest logs and conservation patrol records.",
+    imageSrc: "/images/programs/Kasiagu_Wildlife_conservation/6abwa (82).jpeg",
+    imageAlt: "Community conservation volunteers and indigenous tree nursery stewardship in Kasigau Kenya",
   },
 ];
 
@@ -255,7 +317,7 @@ export default function ImpactPage() {
         title="Our Impact"
         subtitle="How we plan with communities, measure change honestly, and build work that lasts."
         description="We believe good community development requires clear planning, open financial stewardship, and honest reporting on both what works and what is hard."
-        imageSrc="/images/programs/food_security_&_sustainable_agriculture/6abwa (67).jpeg"
+        imageSrc="/images/programs/food_security_&_sustainable_agriculture/7abwa (77).jpeg"
         imageAlt="Community women and volunteers celebrating a productive harvest from sustainable agriculture in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -268,10 +330,10 @@ export default function ImpactPage() {
         }}
       />
 
-      {/* Section 2: How We Talk About Impact (4-Card Grid) */}
+      {/* Section 2: Results Chain in Action (4 Photographic Framework Cards) */}
       <Section surface="white">
         <Container>
-          <div className="mx-auto max-w-4xl space-y-12">
+          <div className="mx-auto max-w-5xl space-y-12">
             <ScrollReveal yOffset={20} duration={0.6}>
               <SectionHeader
                 eyebrow="Clear language"
@@ -285,43 +347,74 @@ export default function ImpactPage() {
               stagger={0.12}
               yOffset={28}
               duration={0.65}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
             >
               {impactFrameworks.map((item, idx) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={idx}
-                    className="p-6 sm:p-8 rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between space-y-5"
+                    className="group rounded-3xl overflow-hidden bg-white border border-abwa-border shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
                   >
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <div
-                          className={`w-11 h-11 rounded-2xl flex items-center justify-center border ${item.color}`}
-                        >
-                          <Icon className="w-5 h-5" />
-                        </div>
-                        <span className="text-[11px] font-mono font-bold text-abwa-gold">
+                    {/* Photographic Header */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                      <Image
+                        src={item.imageSrc}
+                        alt={item.imageAlt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/85 via-abwa-navy/30 to-transparent pointer-events-none" />
+
+                      {/* Top Badges */}
+                      <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[11px] font-mono font-bold text-abwa-navy shadow-xs">
                           {item.step}
+                        </span>
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-abwa-navy/80 backdrop-blur-md text-[11px] font-medium text-white border border-white/20">
+                          <MapPin className="w-3 h-3 text-abwa-gold" />
+                          <span>{item.location}</span>
                         </span>
                       </div>
 
-                      <div>
-                        <span className="font-kaushan text-abwa-blue text-base tracking-wide block">
+                      {/* Bottom Banner on Image */}
+                      <div className="absolute bottom-4 left-4 right-4 text-white">
+                        <span className="font-kaushan text-abwa-gold text-lg tracking-wide block drop-shadow-sm">
                           {item.term}
                         </span>
-                        <h3 className="text-xl font-bold text-abwa-navy mt-1">
+                        <h3 className="text-xl font-bold text-white drop-shadow-sm">
                           {item.heading}
                         </h3>
                       </div>
-
-                      <p className="text-sm text-abwa-muted leading-relaxed">
-                        {item.description}
-                      </p>
                     </div>
 
-                    <div className="pt-3 border-t border-abwa-border/50 text-[11px] text-abwa-ink/60 font-medium">
-                      Standard: {item.note}
+                    {/* Card Body */}
+                    <div className="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between bg-abwa-pale/30">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          <div
+                            className={`w-9 h-9 rounded-xl flex items-center justify-center border ${item.color}`}
+                          >
+                            <Icon className="w-4 h-4" />
+                          </div>
+                          <span className="text-xs font-bold uppercase tracking-wider text-abwa-blue">
+                            {item.tag}
+                          </span>
+                        </div>
+                        <p className="text-sm text-abwa-muted leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <div className="pt-3 border-t border-abwa-border/60 flex items-center justify-between text-xs">
+                        <span className="text-abwa-ink/60 font-medium">
+                          M&E Verification Rule
+                        </span>
+                        <span className="font-semibold text-abwa-navy">
+                          {item.note}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 );
@@ -331,10 +424,10 @@ export default function ImpactPage() {
         </Container>
       </Section>
 
-      {/* Section 3: How We Plan Every Project (10-Point Framework Grid) */}
+      {/* Section 3: Project Design & Field Planning (Featured Photo Anchor + 10 Building Blocks) */}
       <Section surface="pale">
         <Container>
-          <div className="mx-auto max-w-4xl space-y-12">
+          <div className="mx-auto max-w-6xl space-y-12">
             <ScrollReveal yOffset={20} duration={0.6}>
               <SectionHeader
                 eyebrow="Before work begins"
@@ -344,39 +437,93 @@ export default function ImpactPage() {
               />
             </ScrollReveal>
 
-            <ScrollReveal
-              stagger={0.08}
-              yOffset={24}
-              duration={0.65}
-              className="grid grid-cols-1 md:grid-cols-2 gap-5"
-            >
-              {planningElements.map((el, idx) => (
-                <div
-                  key={idx}
-                  className="p-6 rounded-2xl bg-white border border-abwa-border shadow-2xs hover:shadow-md transition-shadow flex items-start gap-4"
-                >
-                  <div className="w-9 h-9 rounded-xl bg-abwa-pale text-abwa-blue font-bold text-xs flex items-center justify-center shrink-0 border border-abwa-border">
-                    {el.num}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+              {/* Left Column: Visual Photo Anchor Card */}
+              <ScrollReveal
+                yOffset={24}
+                duration={0.65}
+                className="lg:col-span-5 space-y-6"
+              >
+                <div className="group relative rounded-3xl overflow-hidden bg-white border border-abwa-border shadow-md">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                    <Image
+                      src="/images/programs/community_development_social_support/1abwa (12).jpeg"
+                      alt="Community members, elders and local leaders discussing priority needs during a participatory planning meeting in Kenya"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/80 via-transparent to-transparent pointer-events-none" />
+
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-xs font-bold text-abwa-navy shadow-xs">
+                        Participatory Co Design
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <p className="text-xs sm:text-sm font-medium leading-relaxed drop-shadow-sm text-slate-100">
+                        Community consultation circles bring together neighbours, elders and project leads to agree on priorities before work commences.
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-1">
-                    <h3 className="text-base font-bold text-abwa-navy">
-                      {el.title}
-                    </h3>
-                    <p className="text-sm text-abwa-muted leading-relaxed">
-                      {el.description}
+
+                  <div className="p-6 space-y-3 bg-white">
+                    <div className="flex items-center gap-2 text-abwa-navy font-bold text-base">
+                      <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                      <span>100% Community Co Designed</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-abwa-muted leading-relaxed">
+                      Good project design begins with attentive listening. We never impose external blueprints, choosing instead to agree on practical schedules, transparent budgets and local leadership roles with resident families.
                     </p>
                   </div>
                 </div>
-              ))}
-            </ScrollReveal>
+
+                <div className="p-5 rounded-2xl bg-white/80 border border-abwa-border text-xs text-abwa-ink space-y-2">
+                  <span className="font-bold text-abwa-navy uppercase tracking-wider block">
+                    Our Field Principle
+                  </span>
+                  <p className="text-abwa-muted leading-relaxed">
+                    Local ownership is not added at the end of a project. It is established during the very first conversation when community priorities are mapped out.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              {/* Right Column: 10 Planning Building Blocks */}
+              <ScrollReveal
+                stagger={0.06}
+                yOffset={24}
+                duration={0.65}
+                className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4"
+              >
+                {planningElements.map((el, idx) => (
+                  <div
+                    key={idx}
+                    className="p-5 rounded-2xl bg-white border border-abwa-border shadow-2xs hover:shadow-md transition-shadow flex items-start gap-3.5"
+                  >
+                    <div className="w-8 h-8 rounded-xl bg-abwa-pale text-abwa-blue font-bold text-xs flex items-center justify-center shrink-0 border border-abwa-border">
+                      {el.num}
+                    </div>
+                    <div className="space-y-1">
+                      <h3 className="text-sm font-bold text-abwa-navy">
+                        {el.title}
+                      </h3>
+                      <p className="text-xs text-abwa-muted leading-relaxed">
+                        {el.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </ScrollReveal>
+            </div>
           </div>
         </Container>
       </Section>
 
-      {/* Section 4: Monitoring, Evaluation and Accountability (7 M&E Practices) */}
+      {/* Section 4: Monitoring, Evaluation and Financial Openness */}
       <Section surface="white">
         <Container>
-          <div className="mx-auto max-w-4xl space-y-12">
+          <div className="mx-auto max-w-6xl space-y-12">
             <ScrollReveal yOffset={20} duration={0.6}>
               <SectionHeader
                 eyebrow="Checking our work"
@@ -386,15 +533,82 @@ export default function ImpactPage() {
               />
             </ScrollReveal>
 
+            {/* Field Verification in Practice: Dual Photographic Feature */}
+            <ScrollReveal
+              stagger={0.12}
+              yOffset={28}
+              duration={0.65}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              {/* Feature A: On Site Inspection */}
+              <div className="group rounded-3xl overflow-hidden bg-abwa-pale/40 border border-abwa-border shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                  <Image
+                    src="/images/programs/water_sanitation_&_hygiene/1abwa (13).jpeg"
+                    alt="Water and sanitation infrastructure inspection and community water point verification in Kenya"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-xs font-bold text-abwa-navy shadow-xs">
+                      On Site Physical Verification
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h4 className="text-base sm:text-lg font-bold drop-shadow-sm">
+                      Infrastructure and WASH Facility Checks
+                    </h4>
+                  </div>
+                </div>
+                <div className="p-6 space-y-2">
+                  <p className="text-xs sm:text-sm text-abwa-muted leading-relaxed">
+                    Inspectors and community volunteers verify school rainwater storage tanks, hand washing stations and local pipeline connections directly on the ground.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature B: Direct Community Barazas */}
+              <div className="group rounded-3xl overflow-hidden bg-abwa-pale/40 border border-abwa-border shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                  <Image
+                    src="/images/programs/umisiiyu_women_group_kibwezi/7abwa (50).jpeg"
+                    alt="Umisiiyu Women Group holding regular field review and group welfare meeting in Kibwezi"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-xs font-bold text-abwa-navy shadow-xs">
+                      Community Feedback Circles
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h4 className="text-base sm:text-lg font-bold drop-shadow-sm">
+                      Direct Community Dialogue & Reviews
+                    </h4>
+                  </div>
+                </div>
+                <div className="p-6 space-y-2">
+                  <p className="text-xs sm:text-sm text-abwa-muted leading-relaxed">
+                    Meeting consistently with women and youth committees to review activity logs, discuss budget allocations and adjust methods based on local lived experience.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 7 M&E Practice Cards */}
             <ScrollReveal
               stagger={0.08}
               yOffset={28}
               duration={0.65}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4"
             >
               {mePractices.map((practice, idx) => {
                 const Icon = practice.icon;
-                const isSpan = idx === 6; // 7th card spans nicely
+                const isSpan = idx === 6;
                 return (
                   <div
                     key={idx}
@@ -429,19 +643,88 @@ export default function ImpactPage() {
         </Container>
       </Section>
 
-      {/* Section 5: Our Sustainability Strategy (7 Measures) */}
+      {/* Section 5: Sustainability Strategy & Community Ownership */}
       <Section surface="pale">
         <Container>
-          <div className="mx-auto max-w-4xl space-y-12">
+          <div className="mx-auto max-w-6xl space-y-12">
             <ScrollReveal yOffset={20} duration={0.6}>
               <SectionHeader
                 eyebrow="Beyond initial funding"
                 title="How we build projects to last"
-                description="Short-term relief has its place, but our main goal is to help communities build projects that continue benefiting families long after a grant or work camp ends. Our sustainability approach rests on seven practical habits:"
+                description="Short term relief has its place, but our main goal is to help communities build projects that continue benefiting families long after a grant or work camp ends. Our sustainability approach rests on seven practical habits:"
                 align="center"
               />
             </ScrollReveal>
 
+            {/* Community Ownership in Action: Split Editorial Card */}
+            <ScrollReveal
+              yOffset={24}
+              duration={0.65}
+              className="rounded-3xl overflow-hidden bg-white border border-abwa-border shadow-sm grid grid-cols-1 lg:grid-cols-12 items-center"
+            >
+              <div className="lg:col-span-5 relative aspect-[4/3] lg:aspect-auto lg:h-full w-full overflow-hidden bg-slate-100">
+                <Image
+                  src="/images/programs/youth_empowerment_&_skills/7abwa (31).jpeg"
+                  alt="Young entrepreneurs and community artisans managing their tailoring and production workshop independently in Kenya"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="text-[11px] font-mono font-bold text-abwa-gold uppercase tracking-wider block">
+                    Locally Owned Enterprise
+                  </span>
+                  <span className="text-sm font-semibold">
+                    Youth tailoring and production workshop in Kenya
+                  </span>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 space-y-4">
+                <div className="space-y-1.5">
+                  <span className="font-kaushan text-abwa-gold text-lg tracking-wide block">
+                    Community Leadership
+                  </span>
+                  <h3 className="text-2xl font-bold text-abwa-navy">
+                    Handover to independent local management
+                  </h3>
+                </div>
+
+                <p className="text-sm sm:text-base text-abwa-muted leading-relaxed">
+                  Real sustainability means transferring operational and financial ownership to local leadership. By training management committees and linking initiatives to practical income generating enterprises such as tailoring, poultry, vegetable nurseries and craft making, projects continue thriving long after external support concludes.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                  <div className="p-3.5 rounded-2xl bg-abwa-pale/60 border border-abwa-border/70 space-y-1">
+                    <span className="text-xs font-bold text-abwa-navy block">
+                      Local Committees
+                    </span>
+                    <span className="text-[11px] text-abwa-muted leading-snug block">
+                      Autonomous decision making rooted in neighbourhoods.
+                    </span>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-abwa-pale/60 border border-abwa-border/70 space-y-1">
+                    <span className="text-xs font-bold text-abwa-navy block">
+                      Local Revenue
+                    </span>
+                    <span className="text-[11px] text-abwa-muted leading-snug block">
+                      Small enterprises funding ongoing maintenance costs.
+                    </span>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-abwa-pale/60 border border-abwa-border/70 space-y-1">
+                    <span className="text-xs font-bold text-abwa-navy block">
+                      Ongoing Check Ins
+                    </span>
+                    <span className="text-[11px] text-abwa-muted leading-snug block">
+                      Mentorship rather than walking away after completion.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 7 Sustainability Measures */}
             <ScrollReveal
               stagger={0.08}
               yOffset={28}
@@ -450,7 +733,7 @@ export default function ImpactPage() {
             >
               {sustainabilityMeasures.map((measure, idx) => {
                 const Icon = measure.icon;
-                const isSpan = idx === 6; // 7th card centered
+                const isSpan = idx === 6;
                 return (
                   <div
                     key={idx}
@@ -480,37 +763,99 @@ export default function ImpactPage() {
         </Container>
       </Section>
 
-      {/* Section 6: What We Can Share Right Now & Community Stories */}
+      {/* Section 6: Verified Evidence Across Our Focus Counties */}
       <Section surface="white">
         <Container>
-          <div className="mx-auto max-w-4xl space-y-8">
-            <ScrollReveal yOffset={20} duration={0.6} className="text-center space-y-3">
-              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
-                Where we are today
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
-                What we can show honestly right now
-              </h2>
+          <div className="mx-auto max-w-6xl space-y-12">
+            <ScrollReveal yOffset={20} duration={0.6}>
+              <SectionHeader
+                eyebrow="Where we are today"
+                title="Verified evidence across our focus counties"
+                description="Right now, the clearest evidence of our work is the day to day activity across our community programmes in Nairobi, Machakos and Makueni counties. Here is what documented action looks like in the field:"
+                align="center"
+              />
             </ScrollReveal>
 
+            {/* 4 Photographic Evidence Cards */}
+            <ScrollReveal
+              stagger={0.12}
+              yOffset={28}
+              duration={0.65}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
+              {verifiedEvidencePoints.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="group rounded-3xl overflow-hidden bg-white border border-abwa-border shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                    <Image
+                      src={item.imageSrc}
+                      alt={item.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/85 via-abwa-navy/25 to-transparent pointer-events-none" />
+
+                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-xs font-bold text-abwa-navy shadow-xs">
+                        <MapPin className="w-3.5 h-3.5 text-abwa-gold" />
+                        <span>{item.location}</span>
+                      </span>
+                      <span className="px-2.5 py-1 rounded-full bg-abwa-navy/80 backdrop-blur-md text-[11px] font-mono text-abwa-gold border border-white/20">
+                        {item.programme}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <h3 className="text-xl font-bold text-white drop-shadow-sm">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div className="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between bg-abwa-pale/20">
+                    <p className="text-sm text-abwa-muted leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    <div className="pt-3 border-t border-abwa-border/60 space-y-1">
+                      <div className="text-[11px] font-mono font-bold uppercase text-abwa-blue tracking-wider">
+                        Field Verification
+                      </div>
+                      <p className="text-xs text-abwa-ink/75 leading-relaxed">
+                        {item.evidenceNote}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </ScrollReveal>
+
+            {/* Transparent Accountability Commitment Callout Box */}
             <ScrollReveal
               yOffset={24}
               duration={0.65}
-              className="p-8 sm:p-10 rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-xs space-y-6 text-abwa-muted leading-relaxed text-base sm:text-lg"
+              className="p-8 sm:p-10 rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-xs space-y-6"
             >
-              <p>
-                Right now, the clearest evidence of our work is the day-to-day activity across our
-                community programmes in Nairobi, Machakos and Makueni counties: supporting
-                children&apos;s education, training young people and women in practical skills,
-                growing food in urban and rural gardens, promoting clean water and health
-                awareness, and caring for the environment.
-              </p>
-              <p className="text-sm sm:text-base border-t border-abwa-border/70 pt-4">
-                We are gathering and verifying historical attendance records, project outputs and
-                participant reflections so that every figure or story published on this page has a
-                clear date, source and informed consent. When verified reports are ready for public
-                download, they will appear here.
-              </p>
+              <div className="space-y-2">
+                <span className="font-kaushan text-abwa-gold text-lg tracking-wide block">
+                  Commitment to Transparency
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-abwa-navy">
+                  Verified dossiers in progress
+                </h3>
+              </div>
+
+              <div className="space-y-4 text-sm sm:text-base text-abwa-muted leading-relaxed max-w-4xl">
+                <p>
+                  We are actively gathering and verifying historical attendance records, project outputs and participant reflections so that every future evaluation report published on this page has a clear date, verified source and informed consent. When full audit dossiers are ready for public download, they will appear here.
+                </p>
+                <p>
+                  In the meantime, you are welcome to inspect our work across 12 distinct programme pillars or browse over 300 authentic field photographs documenting our daily partnerships in Kenya.
+                </p>
+              </div>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
@@ -519,6 +864,13 @@ export default function ImpactPage() {
                 >
                   <span>Explore Our Programmes</span>
                   <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center gap-2 rounded-xl border border-abwa-border bg-white px-5 py-2.5 text-sm font-semibold text-abwa-navy hover:bg-slate-50 transition"
+                >
+                  <Images className="w-4 h-4 text-abwa-gold" />
+                  <span>View Community Photo Gallery</span>
                 </Link>
                 <Link
                   href="/partner-with-us"
@@ -532,11 +884,11 @@ export default function ImpactPage() {
         </Container>
       </Section>
 
-      {/* Section 7: Closing Call to Action ("Our Commitment") */}
+      {/* Section 7: Closing Call to Action */}
       <SectionCTA
         surface="navy"
-        title="Help us build stronger, self-reliant communities"
-        description="We are committed to working alongside children, young people, women and families to build practical, lasting responses to poverty, unemployment, educational barriers, food insecurity and environmental challenges. If you would like to support a project or ask how we measure our work, we would be glad to talk."
+        title="Help us build stronger, self reliant communities"
+        description="We are committed to working alongside children, young people, women and families to build practical, lasting responses to poverty, educational barriers, food insecurity and environmental challenges. If you would like to support a project or ask how we measure our work, we would be glad to talk."
         imageSrc="/images/programs/food_security_&_sustainable_agriculture/6abwa (67).jpeg"
         imageAlt="Smallholder farmers and community volunteers celebrating a thriving harvest in Kenya"
         primaryCta={{
