@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart } from "lucide-react";
 
 export function AboutStory() {
   return (
@@ -13,8 +13,8 @@ export function AboutStory() {
           <div className="lg:col-span-5">
             <div className="relative rounded-3xl overflow-hidden border border-abwa-border shadow-md aspect-[4/3] bg-white">
               <Image
-                src="/images/heroes/hero-community-gathering.jpg"
-                alt="Community members and volunteers working together in Nairobi"
+                src="/images/programs/community_development_social_support/6abwa (73).jpeg"
+                alt="Community members and volunteers working together in Kenya"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

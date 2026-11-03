@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useGSAP, gsap, ScrollTrigger, isReducedMotion } from "@/lib/animation/gsap";
@@ -38,16 +38,105 @@ export function AboutPrinciples() {
     },
   ];
 
+  // Refresh ScrollTrigger when images/fonts finish loading
+  useEffect(() => {
+    const handleRefresh = () => {
+      ScrollTrigger.refresh();
+    };
+
+    window.addEventListener("load", handleRefresh);
+    const timer = setTimeout(handleRefresh, 600);
+
+    return () => {
+      window.removeEventListener("load", handleRefresh);
+      clearTimeout(timer);
+    };
+  }, []);
+
   useGSAP(
     () => {
-      if (isReducedMotion() || !spineContainerRef.current) return;
+      if (!spineContainerRef.current) return;
 
-      // 1. Vertical progress line scaleY scrub linked to ScrollTrigger per Animation 4A
-      if (progressLineRef.current) {
-        gsap.fromTo(
-          progressLineRef.current,
-          { scaleY: 0 },
-          {
+      if (isReducedMotion()) {
+        if (progressLineRef.current) {
+          gsap.set(progressLineRef.current, { scaleY: 1 });
+        }
+        return;
+      }
+
+      // Responsive animation matchMedia
+      const mm = gsap.matchMedia(containerRef);
+
+      // Mobile setup (< 768px)
+      mm.add("(max-width: 767px)", () => {
+        if (progressLineRef.current && spineContainerRef.current) {
+          gsap.set(progressLineRef.current, {
+            scaleY: 0,
+            transformOrigin: "top center",
+          });
+
+          gsap.to(progressLineRef.current, {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: spineContainerRef.current,
+              start: "top 75%",
+              end: "bottom 65%",
+              scrub: 0.3,
+              invalidateOnRefresh: true,
+            },
+          });
+        }
+
+        const nodes = spineContainerRef.current?.querySelectorAll(".principle-node");
+        nodes?.forEach((node) => {
+          const badge = node.querySelector(".principle-badge");
+          const card = node.querySelector(".principle-card");
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: node,
+              start: "top 78%",
+              end: "top 48%",
+              scrub: 0.3,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          if (badge) {
+            tl.to(
+              badge,
+              {
+                borderColor: "#B79045",
+                backgroundColor: "#1E63B8",
+                color: "#FFFFFF",
+                scale: 1.1,
+                duration: 0.3,
+              },
+              0
+            );
+          }
+
+          if (card) {
+            tl.fromTo(
+              card,
+              { y: 14, opacity: 0.45 },
+              { y: 0, opacity: 1, duration: 0.3 },
+              0
+            );
+          }
+        });
+      });
+
+      // Desktop setup (>= 768px)
+      mm.add("(min-width: 768px)", () => {
+        if (progressLineRef.current && spineContainerRef.current) {
+          gsap.set(progressLineRef.current, {
+            scaleY: 0,
+            transformOrigin: "top center",
+          });
+
+          gsap.to(progressLineRef.current, {
             scaleY: 1,
             ease: "none",
             scrollTrigger: {
@@ -55,48 +144,49 @@ export function AboutPrinciples() {
               start: "top 70%",
               end: "bottom 60%",
               scrub: 0.4,
+              invalidateOnRefresh: true,
             },
+          });
+        }
+
+        const nodes = spineContainerRef.current?.querySelectorAll(".principle-node");
+        nodes?.forEach((node) => {
+          const badge = node.querySelector(".principle-badge");
+          const card = node.querySelector(".principle-card");
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: node,
+              start: "top 68%",
+              end: "top 55%",
+              scrub: 0.3,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          if (badge) {
+            tl.to(
+              badge,
+              {
+                borderColor: "#B79045",
+                backgroundColor: "#1E63B8",
+                color: "#FFFFFF",
+                scale: 1.08,
+                duration: 0.4,
+              },
+              0
+            );
           }
-        );
-      }
 
-      // 2. Animate each principle node and badge border/fill as line passes
-      const nodes = spineContainerRef.current.querySelectorAll(".principle-node");
-      nodes.forEach((node) => {
-        const badge = node.querySelector(".principle-badge");
-        const card = node.querySelector(".principle-card");
-
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: node,
-            start: "top 68%",
-            end: "top 55%",
-            scrub: 0.3,
-          },
+          if (card) {
+            tl.fromTo(
+              card,
+              { y: 16, opacity: 0.4 },
+              { y: 0, opacity: 1, duration: 0.4 },
+              0
+            );
+          }
         });
-
-        if (badge) {
-          tl.to(
-            badge,
-            {
-              borderColor: "#B79045",
-              backgroundColor: "#1E63B8",
-              color: "#FFFFFF",
-              scale: 1.08,
-              duration: 0.4,
-            },
-            0
-          );
-        }
-
-        if (card) {
-          tl.fromTo(
-            card,
-            { y: 16, autoAlpha: 0.4 },
-            { y: 0, autoAlpha: 1, duration: 0.4 },
-            0
-          );
-        }
       });
     },
     { scope: containerRef }
@@ -114,15 +204,15 @@ export function AboutPrinciples() {
 
         <div
           ref={spineContainerRef}
-          className="relative max-w-4xl mx-auto mt-12 sm:mt-16 pl-14 sm:pl-20 md:pl-0"
+          className="relative max-w-4xl mx-auto mt-12 sm:mt-16 pl-14 sm:pl-16 md:pl-0"
         >
           {/* Static Background Spine Track */}
-          <div className="absolute top-4 bottom-4 left-5 sm:left-7 md:left-1/2 md:-translate-x-1/2 w-1 bg-[#EAF2FA] rounded-full pointer-events-none" />
+          <div className="absolute top-4 bottom-4 left-6 md:left-1/2 -translate-x-1/2 w-1 bg-[#EAF2FA] rounded-full pointer-events-none" />
 
           {/* Active Warm Gold Progress Line Overlay */}
           <div
             ref={progressLineRef}
-            className="absolute top-4 bottom-4 left-5 sm:left-7 md:left-1/2 md:-translate-x-1/2 w-1 bg-[#B79045] rounded-full origin-top scale-y-0 pointer-events-none will-change-transform z-10"
+            className="absolute top-4 bottom-4 left-6 md:left-1/2 -translate-x-1/2 w-1 bg-[#B79045] rounded-full origin-top pointer-events-none will-change-transform z-10"
           />
 
           {/* 5 Principles Timeline Nodes */}
@@ -138,15 +228,15 @@ export function AboutPrinciples() {
                   }`}
                 >
                   {/* Spine Numbered Badge */}
-                  <div className="absolute -left-14 sm:-left-20 md:left-1/2 md:-translate-x-1/2 top-4 z-20">
-                    <div className="principle-badge w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-slate-300 text-abwa-navy font-mono font-bold text-xs sm:text-sm flex items-center justify-center shadow-xs transition-colors will-change-transform">
+                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 top-4 z-20">
+                    <div className="principle-badge w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-slate-300 text-abwa-navy font-mono font-bold text-xs sm:text-sm flex items-center justify-center shadow-xs will-change-transform">
                       {item.num}
                     </div>
                   </div>
 
                   {/* Principle Card Content */}
                   <div
-                    className={`principle-card w-full md:w-[calc(50%-2.5rem)] p-6 sm:p-7 rounded-2xl bg-slate-50 border border-abwa-border shadow-2xs space-y-2.5 transition-all ${
+                    className={`principle-card w-full md:w-[calc(50%-2.5rem)] p-6 sm:p-7 rounded-2xl bg-slate-50 border border-abwa-border shadow-2xs space-y-2.5 ${
                       isEven ? "md:mr-auto" : "md:ml-auto"
                     }`}
                   >

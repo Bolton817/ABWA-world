@@ -7,6 +7,7 @@ import { SkipLink } from "@/components/ui/SkipLink";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingActions } from "@/components/layout/FloatingActions";
+import { PageTransitionLoader } from "@/components/ui/PageTransitionLoader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -125,6 +126,7 @@ export default function RootLayout({
         <JsonLd data={[getOrganizationSchema(), getWebSiteSchema()]} />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-abwa-ink font-sans antialiased selection:bg-abwa-pale selection:text-abwa-navy">
+        <PageTransitionLoader />
         <SkipLink />
         <Header />
         <main id="main-content" tabIndex={-1} className="flex-1 focus:outline-none">

@@ -38,12 +38,46 @@ export interface Programme {
   };
   contactTopic: string;
   ctaText: string;
+  primaryCtaHref?: string;
+  eyebrow?: string;
+  vision?: {
+    title: string;
+    body: string;
+  };
+  mission?: {
+    title: string;
+    body: string;
+  };
+  howWeWork?: {
+    title?: string;
+    description?: string;
+    points: {
+      title: string;
+      description: string;
+    }[];
+    safetyCallout?: string;
+  };
+  whoTakesPart?: string;
+  relatedLinks?: {
+    label: string;
+    href: string;
+  }[];
   secondaryCta?: {
     label: string;
     href: string;
   };
   relatedSlug?: string;
   relatedPostSlug?: string;
+  overviewImage?: ProgrammeImage;
+  activityImages?: ProgrammeImage[];
+  momentsGallery?: ProgrammeImage[];
+  ctaImage?: ProgrammeImage;
+}
+
+export interface ProgrammeImage {
+  src: string;
+  alt: string;
+  caption?: string;
 }
 
 export interface BlogSection {

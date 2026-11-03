@@ -45,6 +45,10 @@ export const siteConfig = {
             href: "/programs/environmental-conservation",
           },
           {
+            label: "Kasigau Wildlife Conservation",
+            href: "/programs/kasigau-wildlife-conservation",
+          },
+          {
             label: "Poverty Reduction & Livelihoods",
             href: "/programs/poverty-reduction-livelihoods",
           },

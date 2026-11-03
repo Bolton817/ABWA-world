@@ -34,8 +34,8 @@ export default function StoriesPage() {
         title="Community Stories"
         subtitle="Real people, real places, shared with their permission."
         description="These stories come from the groups and volunteers we work with. We tell them with care."
-        imageSrc="/images/heroes/19-most-popular-africa-facts-november-2015-africa-facts.jpg"
-        imageAlt="Dignified community members sharing personal journeys of resilience in Kenya"
+        imageSrc="/images/programs/education_&_child_development/5abwa (83).jpeg"
+        imageAlt="Local children and young people sharing their journeys of learning and community support in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Community Stories", href: "/stories" },

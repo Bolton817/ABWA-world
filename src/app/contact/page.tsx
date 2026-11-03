@@ -55,8 +55,8 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="We'd love to hear from you."
         description="Ask a question, offer your skills, or start a conversation about working together."
-        imageSrc="/images/heroes/download-21.jpg"
-        imageAlt="Community coordination in Buruburu, Nairobi, Kenya"
+        imageSrc="/images/programs/water_sanitation_&_hygiene/1abwa (24).jpeg"
+        imageAlt="ABWA community members and volunteers welcoming inquiries in Nairobi, Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact Us", href: "/contact" },

@@ -67,8 +67,8 @@ export default function GetInvolvedPage() {
         title="Get Involved"
         subtitle="There is more than one way to be part of this."
         description="Whether you have time, a skill, a connection or a gift to give, here is how you can take part."
-        imageSrc="/images/heroes/download-22.jpg"
-        imageAlt="Community volunteers and local groups participating together in Kenya"
+        imageSrc="/images/programs/youth_empowerment_&_skills/7abwa (25).jpeg"
+        imageAlt="Community youth and volunteers working side by side on community development projects in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },

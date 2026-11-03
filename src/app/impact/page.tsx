@@ -255,8 +255,8 @@ export default function ImpactPage() {
         title="Our Impact"
         subtitle="How we plan with communities, measure change honestly, and build work that lasts."
         description="We believe good community development requires clear planning, open financial stewardship, and honest reporting on both what works and what is hard."
-        imageSrc="/images/heroes/hero-community-gathering.jpg"
-        imageAlt="Community members gathered for local planning in Kenya"
+        imageSrc="/images/programs/food_security_&_sustainable_agriculture/6abwa (67).jpeg"
+        imageAlt="Community women and volunteers celebrating a productive harvest from sustainable agriculture in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Our Impact", href: "/impact" },

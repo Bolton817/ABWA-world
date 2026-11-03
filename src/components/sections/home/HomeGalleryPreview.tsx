@@ -16,44 +16,44 @@ export function HomeGalleryPreview() {
 
   const photos = [
     {
-      src: "/images/gallery/beautiful-children.jpg",
-      alt: "Children participating in educational session",
-      caption: "Creative learning and community activities",
+      src: "/images/programs/education_&_child_development/5abwa (83).jpeg",
+      alt: "Smiling children and youth participating in educational support in Kenya",
+      caption: "Joyful learning and community education",
     },
     {
-      src: "/images/gallery/children-of-the-nations.jpg",
-      alt: "Youth group session in Nairobi",
-      caption: "Youth gathering and teamwork",
+      src: "/images/programs/food_security_&_sustainable_agriculture/6abwa (67).jpeg",
+      alt: "Women farmers and volunteers with harvested cassava in a community garden",
+      caption: "Harvesting sustainable crops and kitchen gardens",
     },
     {
-      src: "/images/gallery/gallery-community-education.jpg",
-      alt: "Parents and teachers engaged in dialogue",
-      caption: "Community members sharing ideas",
+      src: "/images/programs/arts_culture_&_creative_development/7abwa (7).jpeg",
+      alt: "Children and youth proudly displaying their sunset landscape paintings",
+      caption: "Creative arts, painting and talent development",
     },
     {
-      src: "/images/gallery/joy.jpg",
-      alt: "Community celebration and shared meal",
-      caption: "Cultural exchange and connection",
+      src: "/images/programs/community_development_social_support/6abwa (72).jpeg",
+      alt: "Machakos Super Cup youth football team with coaches and mentors",
+      caption: "Youth sports, team spirit and leadership",
     },
     {
-      src: "/images/gallery/oh-joy.jpg",
-      alt: "Smiles and group moments during project work",
-      caption: "Shared effort on project days",
+      src: "/images/programs/environmental_conservation_&_climate/7abwa (24).jpeg",
+      alt: "Volunteers and community members planting indigenous tree sapling",
+      caption: "Tree planting and environmental climate action",
     },
     {
-      src: "/images/gallery/donate-ghni.jpg",
-      alt: "Community gathering and resource distribution",
-      caption: "Practical support and cooperation",
+      src: "/images/programs/women_empowerment_&_agriculture/5abwa (17).jpeg",
+      alt: "Traditional colorful handwoven sisal baskets crafted by women artisans",
+      caption: "Traditional crafts, Kiondo weaving and enterprise",
     },
     {
-      src: "/images/gallery/support-ugandan-girls-with-tailoring-materials.jpg",
-      alt: "Participants practicing practical craft skills",
-      caption: "Skills training and craft workshops",
+      src: "/images/programs/water_sanitation_&_hygiene/1abwa (13).jpeg",
+      alt: "Boy sitting by rural water reservoir and water storage containers",
+      caption: "Water access, rainwater harvesting and WASH",
     },
     {
-      src: "/images/gallery/the-life-you-can-save-best-charities.jpg",
-      alt: "Community members gathered for project planning",
-      caption: "Community reflection and collaboration",
+      src: "/images/programs/Kasiagu_Wildlife_conservation/6abwa (85).jpeg",
+      alt: "Giraffe grazing across the Mount Kasigau savannah plains in Kenya",
+      caption: "Wildlife conservation and habitat protection in Kasigau",
     },
   ];
 

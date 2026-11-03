@@ -147,8 +147,8 @@ export function HomeFeaturedProgramme() {
             {/* Featured Photograph */}
             <div className="relative rounded-2xl overflow-hidden border border-abwa-border shadow-md aspect-[16/10] bg-slate-100">
               <Image
-                src="/images/heroes/kenya-s-apollo-agriculture-raises-6m-series-a-led-by-anthemis-techcrunch.jpg"
-                alt="Women group members tending to vegetable crops in Kangundo"
+                src="/images/programs/women_empowerment_&_agriculture/6abwa (64).jpeg"
+                alt="Women group members and volunteers preparing vegetable farming beds in Kangundo"
                 fill
                 sizes="(max-width: 1024px) 100vw, 55vw"
                 className="object-cover"

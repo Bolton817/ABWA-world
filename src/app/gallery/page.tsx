@@ -4,7 +4,6 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionCTA } from "@/components/ui/SectionCTA";
-import { ShieldCheck } from "lucide-react";
 import { GalleryClient } from "@/components/gallery/GalleryClient";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getBreadcrumbSchema } from "@/lib/seo/schema";
@@ -40,8 +39,8 @@ export default function GalleryPage() {
         title="Gallery"
         subtitle="A look at life in our projects."
         description="Photographs from community projects and events, shared with consent."
-        imageSrc="/images/gallery/beautiful-children.jpg"
-        imageAlt="Moments of community, learning and everyday life in ABWA partner communities"
+        imageSrc="/images/programs/arts_culture_&_creative_development/7abwa (7).jpeg"
+        imageAlt="Children and young people holding creative artwork and celebrating community creativity in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Gallery", href: "/gallery" },
@@ -49,7 +48,7 @@ export default function GalleryPage() {
       />
 
       {/* 2. Consent & Takedown Promise (Verbatim Copy Deck p. 44) */}
-      <Section className="bg-white">
+      <Section className="bg-white pb-6">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
@@ -63,15 +62,15 @@ export default function GalleryPage() {
               would like it taken down, please contact us and we will remove it promptly.
             </p>
           </div>
-
-          {/* Interactive Lightbox Gallery */}
-          <div className="mt-12">
-            <GalleryClient />
-          </div>
         </Container>
       </Section>
 
-      {/* 3. Closing Call to Action (Verbatim Copy Deck p. 45) */}
+      {/* 3. Pinned Opposing-Scroll Gallery Across 12 Programme Collections (378 Authentic Photos) */}
+      <div className="w-full">
+        <GalleryClient />
+      </div>
+
+      {/* 4. Closing Call to Action (Verbatim Copy Deck p. 45) */}
       <SectionCTA
         title="Want to see this for yourself?"
         description="There is more than one way to be part of our work, whether through volunteering, partnership, or community support."

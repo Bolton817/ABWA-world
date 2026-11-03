@@ -17,8 +17,8 @@ export const communityStoriesData: CommunityStory[] = [
     programmeTag: "Youth Empowerment",
     location: "Mathare, Nairobi",
     publishedDate: "2026-10-21",
-    heroImage: "/images/heroes/download-19.jpg",
-    heroImageAlt: "Youth creative session in Mathare",
+    heroImage: "/images/programs/arts_culture_&_creative_development/7abwa (7).jpeg",
+    heroImageAlt: "Youth and children creative painting session in Mathare",
     consentVerified: true,
     content: [
       "In Mathare, one of Nairobi's most vibrant and dynamic informal settlements, talent has never been in short supply. What matters is creating room for that talent to be seen and supported.",
@@ -35,8 +35,8 @@ export const communityStoriesData: CommunityStory[] = [
     programmeTag: "Sustainable Agriculture",
     location: "Kangundo, Machakos County",
     publishedDate: "2026-10-21",
-    heroImage: "/images/heroes/download-21.jpg",
-    heroImageAlt: "Women farmers working together in Kangundo",
+    heroImage: "/images/programs/women_empowerment_&_agriculture/6abwa (64).jpeg",
+    heroImageAlt: "Women farmers and volunteers working together in Kangundo",
     consentVerified: true,
     content: [
       "Farming in Kangundo requires close attention to changing rainfall patterns and soil fertility. When women come together to share seeds and labour, the whole group becomes more resilient.",
@@ -53,8 +53,8 @@ export const communityStoriesData: CommunityStory[] = [
     programmeTag: "Women's Empowerment",
     location: "Kibwezi, Makueni County",
     publishedDate: "2026-10-21",
-    heroImage: "/images/heroes/download-22.jpg",
-    heroImageAlt: "Kitchen gardens in semi-arid Kibwezi",
+    heroImage: "/images/programs/umisiiyu_women_group_kibwezi/7abwa (50).jpeg",
+    heroImageAlt: "Umisiiyu Women Group members tending food crops in semi-arid Kibwezi",
     consentVerified: true,
     content: [
       "Kibwezi is known for its warm, dry climate where water is a precious resource. The Umisiiyu Women Group demonstrates how household kitchen gardens can thrive even with limited supply.",

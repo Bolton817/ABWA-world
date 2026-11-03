@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { programmesData } from "@/content/programmes";
 import { Programme } from "@/types";
@@ -66,6 +67,9 @@ export async function generateMetadata({ params }: ProgrammePageProps): Promise<
 }
 
 function getPrimaryCtaHref(prog: Programme): string {
+  if (prog.primaryCtaHref) {
+    return prog.primaryCtaHref;
+  }
   if (
     prog.slug === "health-community-wellbeing" ||
     prog.slug === "water-sanitation-hygiene-wash" ||
@@ -110,7 +114,7 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
         title={programme.title}
         subtitle={programme.subtitle}
         description={programme.description}
-        eyebrow={`${programme.category} · ${programme.location}`}
+        eyebrow={programme.eyebrow || `${programme.category} · ${programme.location}`}
         imageSrc={programme.heroImage}
         imageAlt={programme.heroImageAlt}
         breadcrumbs={[
@@ -174,6 +178,38 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
                   <p key={idx}>{paragraph}</p>
                 ))}
               </div>
+
+              {/* Project Vision & Mission Callouts */}
+              {(programme.vision || programme.mission) && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                  {programme.vision && (
+                    <div className="p-6 rounded-3xl bg-abwa-pale border border-abwa-border space-y-2">
+                      <span className="font-kaushan text-abwa-blue text-base tracking-wide block">
+                        Project vision
+                      </span>
+                      <h3 className="text-xl font-bold text-abwa-navy">
+                        {programme.vision.title}
+                      </h3>
+                      <p className="text-sm text-abwa-ink leading-relaxed">
+                        {programme.vision.body}
+                      </p>
+                    </div>
+                  )}
+                  {programme.mission && (
+                    <div className="p-6 rounded-3xl bg-amber-50/70 border border-amber-200 space-y-2">
+                      <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
+                        Project mission
+                      </span>
+                      <h3 className="text-xl font-bold text-abwa-navy">
+                        {programme.mission.title}
+                      </h3>
+                      <p className="text-sm text-abwa-ink leading-relaxed">
+                        {programme.mission.body}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Location & Status Sidebar */}
@@ -282,26 +318,42 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
           {/* If whatHappens exists, render structured groups; otherwise render activities grid */}
           {programme.whatHappens && programme.whatHappens.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {programme.whatHappens.map((group, idx) => (
-                <div
-                  key={idx}
-                  className="p-6 sm:p-8 rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-2xs space-y-4"
-                >
-                  <h3 className="text-lg font-bold text-abwa-navy border-b border-slate-200/80 pb-3">
-                    {group.title}
-                  </h3>
-                  <ul className="space-y-3">
-                    {group.items.map((item, itemIdx) => (
-                      <li key={itemIdx} className="flex items-start gap-3 text-sm text-abwa-ink">
-                        <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check className="w-3.5 h-3.5" />
-                        </div>
-                        <span className="leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              {programme.whatHappens.map((group, idx) => {
+                const activityImg = programme.activityImages?.[idx];
+                return (
+                  <div
+                    key={idx}
+                    className="rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-2xs overflow-hidden flex flex-col"
+                  >
+                    {activityImg && (
+                      <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                        <Image
+                          src={activityImg.src}
+                          alt={activityImg.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="p-6 sm:p-8 space-y-4 flex-1">
+                      <h3 className="text-lg font-bold text-abwa-navy border-b border-slate-200/80 pb-3">
+                        {group.title}
+                      </h3>
+                      <ul className="space-y-3">
+                        {group.items.map((item, itemIdx) => (
+                          <li key={itemIdx} className="flex items-start gap-3 text-sm text-abwa-ink">
+                            <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <Check className="w-3.5 h-3.5" />
+                            </div>
+                            <span className="leading-relaxed">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -320,6 +372,111 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
           )}
         </Container>
       </Section>
+
+      {/* Community Moments Strip (Curated Photo Mosaic) */}
+      {programme.momentsGallery && programme.momentsGallery.length > 0 && (
+        <Section surface="white" className="border-t border-abwa-border/50">
+          <Container>
+            <FadeIn direction="up">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                <div className="space-y-2">
+                  <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                    Community In Action
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
+                    Moments from our {programme.title} work
+                  </h2>
+                  <p className="text-sm sm:text-base text-abwa-muted max-w-2xl">
+                    Everyday moments of learning, collaboration and community life shared with dignity and consent.
+                  </p>
+                </div>
+                <Link
+                  href={`/gallery#section-${programme.slug}`}
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-abwa-blue hover:text-abwa-blue-hover self-start sm:self-auto shrink-0"
+                >
+                  <span>Explore in photo gallery</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {programme.momentsGallery.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="group relative overflow-hidden rounded-3xl bg-abwa-pale border border-abwa-border shadow-sm hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  {img.caption && (
+                    <div className="p-4 bg-white border-t border-abwa-border/50 text-xs text-abwa-ink font-medium leading-relaxed">
+                      {img.caption}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
+
+      {/* How We Work & Safety Principles */}
+      {programme.howWeWork && (
+        <Section surface="white" className="border-t border-abwa-border/50">
+          <Container>
+            <FadeIn direction="up">
+              <div className="max-w-3xl space-y-2 mb-10">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  Safety &amp; Responsibility
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
+                  {programme.howWeWork.title || "How we work and keep everyone safe"}
+                </h2>
+                {programme.howWeWork.description && (
+                  <p className="text-sm sm:text-base text-abwa-muted">
+                    {programme.howWeWork.description}
+                  </p>
+                )}
+              </div>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {programme.howWeWork.points.map((pt, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-3xl bg-abwa-pale/40 border border-abwa-border space-y-2 shadow-2xs"
+                >
+                  <h3 className="font-heading text-base font-bold text-abwa-navy">
+                    {pt.title}
+                  </h3>
+                  <p className="text-sm text-abwa-ink/80 leading-relaxed">
+                    {pt.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {programme.howWeWork.safetyCallout && (
+              <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-amber-50/80 border-2 border-amber-300 text-amber-950 space-y-2">
+                <div className="flex items-center gap-2 font-bold text-amber-900">
+                  <ShieldCheck className="w-5 h-5 text-abwa-gold shrink-0" />
+                  <h3 className="text-base font-bold">Safety and responsible conservation</h3>
+                </div>
+                <p className="text-sm leading-relaxed text-amber-950/90">
+                  {programme.howWeWork.safetyCallout}
+                </p>
+              </div>
+            )}
+          </Container>
+        </Section>
+      )}
 
       {/* 5. Expected Outcomes (What we hope to achieve) & Safeguarding */}
       <Section surface="pale">
@@ -388,6 +545,43 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
                 </div>
               )}
 
+              {/* Who Takes Part Card */}
+              {programme.whoTakesPart && (
+                <div className="p-6 rounded-3xl bg-white border border-abwa-border space-y-3 shadow-2xs">
+                  <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
+                    Participation &amp; Community
+                  </span>
+                  <h4 className="text-base font-bold text-abwa-navy">
+                    Who takes part
+                  </h4>
+                  <p className="text-xs sm:text-sm text-abwa-muted leading-relaxed">
+                    {programme.whoTakesPart}
+                  </p>
+                </div>
+              )}
+
+              {/* Related Links Card */}
+              {programme.relatedLinks && programme.relatedLinks.length > 0 && (
+                <div className="p-6 rounded-3xl bg-white border border-abwa-border space-y-3 shadow-2xs">
+                  <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
+                    Related Links
+                  </span>
+                  <ul className="space-y-2.5 text-xs sm:text-sm font-semibold">
+                    {programme.relatedLinks.map((link, idx) => (
+                      <li key={idx}>
+                        <Link
+                          href={link.href}
+                          className="inline-flex items-center gap-1.5 text-abwa-blue hover:text-abwa-navy transition-colors"
+                        >
+                          <ArrowRight className="w-3.5 h-3.5 text-abwa-gold shrink-0" />
+                          <span>{link.label}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {/* General Accountability Link */}
               <div className="p-6 rounded-3xl bg-white border border-abwa-border space-y-3 shadow-2xs">
                 <div className="flex items-center gap-2 text-abwa-navy font-bold">
@@ -413,16 +607,25 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
       {/* 6. Final Call to Action */}
       <SectionCTA
         surface="navy"
+        imageSrc={programme.ctaImage?.src}
+        imageAlt={programme.ctaImage?.alt}
         title="Want to get involved?"
         description="Whether you would like to volunteer on this programme, partner with our teams, or support community activities, we would be glad to talk."
         primaryCta={{
           label: programme.ctaText,
           href: primaryCtaHref,
         }}
-        secondaryCta={{
-          label: "Explore all programmes",
-          href: "/programs",
-        }}
+        secondaryCta={
+          programme.secondaryCta
+            ? {
+                label: programme.secondaryCta.label,
+                href: programme.secondaryCta.href,
+              }
+            : {
+                label: "Explore all programmes",
+                href: "/programs",
+              }
+        }
       />
     </div>
   );

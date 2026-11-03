@@ -12,16 +12,16 @@ import { ProgrammesGridClient } from "@/components/sections/programs/ProgrammesG
 import { Tag, CheckCircle2, Clock, MapPin, ArrowRight, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Programmes | 10 Thematic Pillars & Community Projects | ABWA World",
+  title: "Our Programmes | Thematic Pillars & Community Projects | ABWA World",
   description:
-    "Explore ABWA's 10 programme pillars and grassroots community projects in Mathare (Nairobi), Kangundo (Machakos County), and Kibwezi (Makueni County).",
+    "Explore ABWA's programme pillars and grassroots community projects across Nairobi, Machakos, Makueni and Taita Taveta counties in Kenya.",
   alternates: {
     canonical: `${siteConfig.url}/programs`,
   },
   openGraph: {
-    title: "Our Programmes | 10 Thematic Pillars & Community Projects | ABWA World",
+    title: "Our Programmes | Thematic Pillars & Community Projects | ABWA World",
     description:
-      "Explore ABWA's 10 programme pillars and grassroots community projects in Mathare (Nairobi), Kangundo (Machakos County), and Kibwezi (Makueni County).",
+      "Explore ABWA's programme pillars and grassroots community projects across Nairobi, Machakos, Makueni and Taita Taveta counties in Kenya.",
     url: `${siteConfig.url}/programs`,
   },
 };
@@ -32,10 +32,10 @@ export default function ProgrammesPage() {
       {/* 1. Page Hero with single H1 & Breadcrumbs */}
       <PageHero
         title="Our Programmes"
-        subtitle="10 thematic pillars and place-based community projects across Kenya."
+        subtitle="Thematic pillars and place based community projects across Nairobi, Machakos, Makueni and Taita Taveta counties."
         description="Explore the areas we work in, what happens on the ground with communities, and how you can get involved."
-        imageSrc="/images/gallery/gallery-community-education.jpg"
-        imageAlt="Community members and students participating in local skills and educational programmes in Kenya"
+        imageSrc="/images/programs/environmental_conservation_&_climate/6abwa (20).jpeg"
+        imageAlt="Community members and volunteers collaborating on local development and environmental programmes in Kenya"
         breadcrumbs={[{ label: "Our Programmes" }]}
       />
 
@@ -47,7 +47,7 @@ export default function ProgrammesPage() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
-                    Place-Based Partnerships
+                    Place Based Partnerships
                   </span>
                   <h2 className="text-xl sm:text-2xl font-bold text-abwa-navy">
                     Active community partnerships across Kenya
@@ -62,7 +62,7 @@ export default function ProgrammesPage() {
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {/* Mathare */}
                 <div className="p-4 rounded-2xl bg-white border border-abwa-border space-y-2">
                   <div className="flex items-center gap-2 text-abwa-navy font-bold text-sm">
@@ -70,7 +70,7 @@ export default function ProgrammesPage() {
                     <span>Mathare, Nairobi</span>
                   </div>
                   <p className="text-xs text-abwa-muted leading-relaxed">
-                    Youth empowerment, digital training, creative arts, community clean-ups, river tree planting, and urban kitchen gardening.
+                    Youth empowerment, digital training, creative arts, community clean ups, river tree planting, and urban kitchen gardening.
                   </p>
                 </div>
 
@@ -81,7 +81,7 @@ export default function ProgrammesPage() {
                     <span>Kangundo, Machakos County</span>
                   </div>
                   <p className="text-xs text-abwa-muted leading-relaxed">
-                    Women&apos;s empowerment, sustainable agriculture, tailoring training, village savings circles, and climate-resilient farming.
+                    Women&apos;s empowerment, sustainable agriculture, tailoring training, village savings circles, and climate resilient farming.
                   </p>
                 </div>
 
@@ -92,7 +92,18 @@ export default function ProgrammesPage() {
                     <span>Kibwezi, Makueni County</span>
                   </div>
                   <p className="text-xs text-abwa-muted leading-relaxed">
-                    Umisiiyu Women Group partnership, drought-resilient kitchen gardening, water conservation, and community mutual support.
+                    Umisiiyu Women Group partnership, drought resilient kitchen gardening, water conservation, and community mutual support.
+                  </p>
+                </div>
+
+                {/* Kasigau */}
+                <div className="p-4 rounded-2xl bg-white border border-abwa-border space-y-2">
+                  <div className="flex items-center gap-2 text-abwa-navy font-bold text-sm">
+                    <MapPin className="w-4 h-4 text-abwa-blue flex-shrink-0" />
+                    <span>Kasigau, Taita Taveta County</span>
+                  </div>
+                  <p className="text-xs text-abwa-muted leading-relaxed">
+                    Wildlife conservation, human and wildlife coexistence, Mount Kasigau nature education, tree planting, and Taita cultural exchange.
                   </p>
                 </div>
               </div>
@@ -110,7 +121,7 @@ export default function ProgrammesPage() {
                 Approach &amp; Structure
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
-                Our 10 thematic pillars and community initiatives
+                Our thematic pillars and community initiatives
               </h2>
               <p className="text-base sm:text-lg text-abwa-muted leading-relaxed">
                 Each programme is shaped with the community group it serves. We describe them plainly: what happens, who takes part, and what we set out to achieve together.

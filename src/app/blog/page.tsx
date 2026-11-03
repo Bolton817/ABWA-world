@@ -31,8 +31,8 @@ export default function BlogIndexPage() {
         title="Blog"
         subtitle="Notes from our work, and ideas worth sharing."
         description="Short, practical reads on community development, volunteering and the thinking behind our programmes."
-        imageSrc="/images/blog/blog-youth-action.jpg"
-        imageAlt="Youth and community leaders engaged in reflective learning and action in Kenya"
+        imageSrc="/images/programs/youth_empowerment_&_skills/7abwa (31).jpeg"
+        imageAlt="Young people and volunteers participating in community activities and skills development in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Blog", href: "/blog" },

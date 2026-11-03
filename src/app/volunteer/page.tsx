@@ -76,6 +76,11 @@ const projectLocations = [
     focus: "Vegetable farming and kitchen gardens with the Umisiiyu Women Group.",
     href: "/programs/umisiiyu-women-group",
   },
+  {
+    location: "Kasigau, Taita Taveta County",
+    focus: "Wildlife conservation, human and wildlife coexistence, Mount Kasigau nature education, tree planting and Taita cultural exchange.",
+    href: "/programs/kasigau-wildlife-conservation",
+  },
 ];
 
 const programObjectives = [
@@ -149,8 +154,8 @@ export default function VolunteerPage() {
         title="Volunteer With ABWA"
         subtitle="Work hand in hand with Kenyan communities to share skills, build peace and create lasting change."
         description="We organise short-term and long-term volunteer work camps that bring local and international volunteers together with community groups. Read how our work camps run and send us an enquiry."
-        imageSrc="/images/blog/blog-ethical-volunteering.jpg"
-        imageAlt="Local and international volunteers working alongside community members in Kenya"
+        imageSrc="/images/programs/community_development_social_support/6abwa (66).jpeg"
+        imageAlt="Volunteers and community children sharing joyful moments and local life in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },
@@ -376,7 +381,7 @@ export default function VolunteerPage() {
                   </h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {projectLocations.map((loc, idx) => (
                     <div
                       key={idx}

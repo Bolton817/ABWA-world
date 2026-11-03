@@ -116,8 +116,8 @@ export default function PartnerWithUsPage() {
         title="Partner With Us"
         subtitle="Organisations, schools, funders, businesses and community groups: let's work together."
         description="ABWA welcomes collaboration with local and international partners to share knowledge, mobilise resources, strengthen local capacity and expand sustainable community development."
-        imageSrc="/images/heroes/tracing-turkey-s-development-aid-in-namibia.jpg"
-        imageAlt="Community partners, leaders, and organisations collaborating on sustainable development in Kenya"
+        imageSrc="/images/programs/umisiiyu_women_group_kibwezi/7abwa (50).jpeg"
+        imageAlt="Community partners, agricultural extension workers, and volunteers collaborating in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },

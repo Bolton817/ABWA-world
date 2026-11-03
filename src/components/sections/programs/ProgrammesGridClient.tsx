@@ -31,6 +31,7 @@ const ctaMap: Record<string, string> = {
   "water-sanitation-hygiene-wash": "Explore WASH initiatives",
   "arts-culture-creative-development": "Explore creative arts",
   "community-development-social-support": "Explore community support",
+  "kasigau-wildlife-conservation": "Explore Kasigau project",
 };
 
 export function ProgrammesGridClient({ programmes }: ProgrammesGridClientProps) {

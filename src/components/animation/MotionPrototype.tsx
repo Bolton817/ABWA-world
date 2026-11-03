@@ -46,7 +46,7 @@ export function MotionPrototype() {
           className="absolute inset-0 -top-12 -bottom-12 z-0 will-change-transform"
         >
           <Image
-            src="/images/heroes/hero-community-gathering.jpg"
+            src="/images/programs/community_development_social_support/6abwa (73).jpeg"
             alt="Community gathering in Kenya"
             fill
             sizes="100vw"

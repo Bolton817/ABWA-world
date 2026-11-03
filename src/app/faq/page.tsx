@@ -39,8 +39,8 @@ export default function FAQPage() {
         title="Frequently Asked Questions"
         subtitle="Straight answers to common questions."
         description="If you can't find what you're looking for, we're happy to help."
-        imageSrc="/images/gallery/donate-ghni.jpg"
-        imageAlt="Community members discussing programmes and answering questions openly"
+        imageSrc="/images/programs/education_&_child_development/1abwa (1).jpeg"
+        imageAlt="Community meeting and discussion on local initiatives and programmes in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Frequently Asked Questions", href: "/faq" },

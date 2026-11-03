@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -53,4 +53,33 @@ body {
 
 .skip-link:focus {
   top: 1rem;
+}
+
+/* Custom Brand Loader Animations */
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 1.2s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.025);
+    opacity: 0.92;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.4s ease-in-out infinite;
 }

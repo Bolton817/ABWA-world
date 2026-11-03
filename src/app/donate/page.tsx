@@ -64,8 +64,8 @@ export default function DonatePage() {
         title="Support Our Work"
         subtitle="Your support helps community projects keep going, and we'll tell you plainly where it goes."
         description="Here is how giving to ABWA works, and how to be sure your gift reaches us."
-        imageSrc="/images/heroes/food-and-mattresses-donation.jpg"
-        imageAlt="Community relief, direct support, and resource distribution reaching families in Kenya"
+        imageSrc="/images/programs/education_&_child_development/1abwa (20).jpeg"
+        imageAlt="Children and community members supported through educational and developmental initiatives in Kenya"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Get Involved", href: "/get-involved" },

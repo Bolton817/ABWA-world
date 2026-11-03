@@ -53,8 +53,8 @@ export function HomeIntro() {
           <ScrollReveal yOffset={24} duration={0.65} delay={0.15} className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden border border-abwa-border shadow-md bg-abwa-pale aspect-[4/3] sm:aspect-[16/11]">
               <Image
-                src="/images/heroes/about-our-charity-mondetta-usa.jpg"
-                alt="ABWA team and community partners collaborating in Nairobi"
+                src="/images/programs/women_empowerment_&_agriculture/6abwa (75).jpeg"
+                alt="ABWA community members and volunteers collaborating warmly in Kenya"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"

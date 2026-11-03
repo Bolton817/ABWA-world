@@ -16,8 +16,8 @@ export const blogPostsData: BlogPost[] = [
     publishedDate: "2026-10-21",
     readTime: "4 min read",
     wordCount: 888,
-    heroImage: "/images/blog/blog-sustainable-farming.jpg",
-    heroImageAlt: "Healthy vegetable crops growing under sustainable irrigation in Kenya",
+    heroImage: "/images/programs/food_security_&_sustainable_agriculture/6abwa (67).jpeg",
+    heroImageAlt: "Kenyan women farmers and volunteers harvesting crops together in a sustainable garden",
     sections: [
       {
         paragraphs: [
@@ -116,8 +116,8 @@ export const blogPostsData: BlogPost[] = [
     publishedDate: "2026-10-21",
     readTime: "5 min read",
     wordCount: 941,
-    heroImage: "/images/blog/blog-youth-action.jpg",
-    heroImageAlt: "Youth creativity session showing painting and collaborative design",
+    heroImage: "/images/programs/arts_culture_&_creative_development/7abwa (7).jpeg",
+    heroImageAlt: "Children and youth proudly displaying their artwork in a creative development session",
     sections: [
       {
         paragraphs: [
@@ -238,8 +238,8 @@ export const blogPostsData: BlogPost[] = [
     publishedDate: "2026-10-21",
     readTime: "4 min read",
     wordCount: 872,
-    heroImage: "/images/blog/blog-ethical-volunteering.jpg",
-    heroImageAlt: "Volunteers listening and working alongside local community farmers",
+    heroImage: "/images/programs/community_development_social_support/6abwa (66).jpeg",
+    heroImageAlt: "International volunteers and local community children sharing sugarcane and friendship in Kenya",
     sections: [
       {
         paragraphs: [

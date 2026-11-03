@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/ui/PageHero";
 
@@ -9,8 +9,8 @@ export function HomeHero() {
       title="Community action for a better world"
       subtitle="Working with women, young people and children in Kenyan communities."
       description={`Since ${siteConfig.foundingYear}, ABWA has worked alongside community groups on farming, creative skills, environmental action and learning. We believe lasting change is built with people, not delivered to them, and we'd love you to be part of it.`}
-      imageSrc="/images/heroes/hero-community-gathering.jpg"
-      imageAlt="Community members collaborating on agricultural and skills projects in Kenya"
+      imageSrc="/images/programs/community_development_social_support/6abwa (73).jpeg"
+      imageAlt="Community members, local women, elders and volunteers collaborating on community initiatives in Kenya"
       primaryCta={{
         label: "Explore Our Programmes",
         href: "/programs",
