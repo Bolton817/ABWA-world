@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { PageHero } from "@/components/ui/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { ContactMap } from "@/components/sections/contact/ContactMap";
 
 export const metadata: Metadata = {
   title: "Contact ABWA | Buruburu, Nairobi, Kenya",
@@ -145,6 +146,9 @@ export default function ContactPage() {
           </div>
         </Container>
       </Section>
+
+      {/* 4. Google Maps Pin to Buruburu, Nairobi, Kenya */}
+      <ContactMap />
     </>
   );
 }
