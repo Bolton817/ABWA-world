@@ -349,26 +349,31 @@ export function HomeHero() {
     >
       {/* 1. Layered Background Images (Crossfade without black gap) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {slides.map((slide, idx) => (
-          <div
-            key={slide.id}
-            ref={(el) => {
-              bgRefs.current[idx] = el;
-            }}
-            className="absolute inset-0 w-full h-full will-change-transform"
-          >
-            <Image
-              src={slide.imageSrc}
-              alt={slide.imageAlt}
-              fill
-              priority={idx === 0}
-              sizes="100vw"
-              className="object-cover object-center"
-            />
-            {/* Slide-specific directional contrast scrim */}
-            <div className={`absolute inset-0 ${slide.overlayGradient} z-10`} />
-          </div>
-        ))}
+        {slides.map((slide, idx) => {
+          const isActive = idx === current;
+          return (
+            <div
+              key={slide.id}
+              ref={(el) => {
+                bgRefs.current[idx] = el;
+              }}
+              className={`absolute inset-0 w-full h-full will-change-transform ${
+                isActive ? "opacity-100 z-[1]" : "opacity-0 z-0 pointer-events-none"
+              }`}
+            >
+              <Image
+                src={slide.imageSrc}
+                alt={slide.imageAlt}
+                fill
+                priority={idx === 0}
+                sizes="100vw"
+                className="object-cover object-center"
+              />
+              {/* Slide-specific directional contrast scrim */}
+              <div className={`absolute inset-0 ${slide.overlayGradient} z-10`} />
+            </div>
+          );
+        })}
       </div>
 
       {/* 2. Slide Content Containers with Stable Sizing & Variable Alignments */}
@@ -387,7 +392,7 @@ export function HomeHero() {
                 }}
                 aria-hidden={!isActive}
                 className={`absolute inset-0 w-full h-full flex items-center ${
-                  isActive ? "pointer-events-auto" : "pointer-events-none"
+                  isActive ? "opacity-100 z-10 pointer-events-auto" : "opacity-0 z-0 pointer-events-none"
                 }`}
               >
                 <div
@@ -489,7 +494,7 @@ export function HomeHero() {
             </div>
 
             {/* Controls: Prev, Next & Hover-Scoped Pause Toggle */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 lg:mr-36 xl:mr-40">
               <button
                 onClick={() => setIsPaused((prev) => !prev)}
                 onMouseEnter={() => setIsHoverPaused(true)}
