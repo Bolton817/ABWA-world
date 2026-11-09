@@ -1,4 +1,4 @@
-export type ProgrammeStatus = "Active" | "Planned" | "Completed";
+export type ProgrammeStatus = "Active" | "Planned" | "Completed" | "Active Community Partnership";
 
 export type ProgrammeCategory =
   | "Education & Youth"
@@ -10,6 +10,16 @@ export type ProgrammeCategory =
 export interface ProgrammeActivity {
   title: string;
   items: string[];
+}
+
+export interface ProgrammeAchievementsAndChallenges {
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  achievedTitle: string;
+  achievedItems: string[];
+  challengesTitle: string;
+  challengesItems: string[];
 }
 
 export interface Programme {
@@ -39,7 +49,22 @@ export interface Programme {
   contactTopic: string;
   ctaText: string;
   primaryCtaHref?: string;
+  heroPrimaryCta?: {
+    label: string;
+    href: string;
+  };
+  heroSecondaryCta?: {
+    label: string;
+    href: string;
+  };
   eyebrow?: string;
+  overviewEyebrow?: string;
+  overviewTitle?: string;
+  goalTitle?: string;
+  visionCallout?: string;
+  achievementsAndChallenges?: ProgrammeAchievementsAndChallenges;
+  ctaSectionTitle?: string;
+  ctaSectionDescription?: string;
   vision?: {
     title: string;
     body: string;

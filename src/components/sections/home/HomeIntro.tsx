@@ -24,8 +24,8 @@ export function HomeIntro() {
 
             <div className="space-y-4 text-base sm:text-lg text-abwa-muted leading-relaxed">
               <p>
-                Action for Better World Association, or ABWA, is a community-focused organisation based in
-                Nairobi, Kenya. Since 2015, we have worked alongside local communities, women&apos;s
+                Action for Better World Association (ABWA) is a community-focused organisation based in
+                Nairobi, Kenya. Since 2015, we work alongside local communities, women&apos;s
                 groups, young people, volunteers and partner organisations to build practical, lasting
                 solutions to social and economic challenges.
               </p>
@@ -36,8 +36,10 @@ export function HomeIntro() {
                 people, women and low-income families to build self-reliant communities.
               </p>
               <p>
-                We start with local groups because they know their own priorities best. Volunteers and
-                partners bring hands, ideas and resources to walk alongside them.
+                We begin by working with local community groups because they understand their needs,
+                challenges and priorities best. Together with locals and internationals, we create
+                meaningful partnerships that empower local people, strengthen communities and promote
+                sustainable development.
               </p>
             </div>
 

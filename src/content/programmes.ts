@@ -118,115 +118,190 @@ export const programmesData: Programme[] = [
   {
     slug: "youth-empowerment",
     category: "Education & Youth",
-    title: "Youth Empowerment and Skills Development",
-    subtitle: "Practical vocational skills, entrepreneurship, creative expression and community leadership with young people.",
-    summary: "Equipping young people in Mathare, Nairobi with vocational training, digital skills, entrepreneurship, creative arts and mentorship.",
-    location: "Mathare, Nairobi and partner communities",
-    status: "Active",
+    title: "Youth Employment and Skills Development",
+    eyebrow: "Mathare, Nairobi · Miami Florida Youth Group",
+    subtitle:
+      "Working alongside the Miami Florida Youth Group in Mathare, Nairobi to build practical skills, steady livelihoods and a safer neighbourhood for children and young people.",
+    summary:
+      "Working alongside the Miami Florida Youth Group in Mathare, Nairobi on vocational skills, urban kitchen farming, waste recycling, children's creative arts and a planned community training centre.",
+    location: "Mathare, Nairobi",
+    status: "Active Community Partnership",
     heroImage: "/images/programs/youth_empowerment_&_skills/7abwa (31).jpeg",
-    heroImageAlt: "Young people engaged in fitness, community action, and skills development in Mathare",
-    metaTitle: "Youth Empowerment and Skills Development | ABWA World",
+    heroImageAlt:
+      "Miami Florida Youth Group members participating in skills training, fitness, and community action in Mathare, Nairobi",
+    heroPrimaryCta: {
+      label: "Support the training centre",
+      href: "/contact",
+    },
+    heroSecondaryCta: {
+      label: "Volunteer With ABWA",
+      href: "/volunteer",
+    },
+    metaTitle: "Youth Employment and Skills Development in Mathare | ABWA World",
     metaDescription:
-      "Equipping young people in Mathare, Nairobi and beyond with vocational training, digital skills, entrepreneurship, creative arts and mentorship.",
+      "How ABWA works with the Miami Florida Youth Group in Mathare, Nairobi on youth employment, urban farming, waste recycling, children's art and practical skills training.",
     description:
-      "Together with local youth groups—including our long-standing community work in Mathare, Nairobi—ABWA creates space for young people to build employable skills, develop their talents and lead change in their neighbourhoods.",
-    goal: "To equip young people with practical skills, knowledge and opportunities for employment, self-employment and active community leadership.",
+      "Through teamwork and determination, young people in Mathare are turning urban farming, waste recycling, creative arts and vocational training into positive livelihoods and community care.",
+    overviewEyebrow: "Community leadership in Mathare",
+    overviewTitle: "About the Miami Florida Youth Group partnership",
+    goalTitle: "Project Goal",
+    goal: "To empower young people, children and women in Mathare through practical skills development, income generating activities and community initiatives that promote self reliance, neighbourhood safety and sustainable livelihoods.",
     context: [
-      "Neighbourhoods like Mathare in Nairobi are full of young makers, artists and organisers, yet many face limited access to vocational tools, training and work opportunities.",
-      "This programme backs what young people are already doing—combining technical and business training with mentoring, creative arts, health education for teenage girls, and local environmental action.",
+      "The Miami Florida Youth Group is a registered community based organisation founded and run by young people living in Mathare, Nairobi. Faced with high youth unemployment, crowded living conditions, and the everyday pull of crime and negative influences, these young leaders chose to take ownership of their neighbourhood. Rather than waiting for external interventions, they came together to create practical opportunities for themselves, safe creative outlets for children, and productive community spaces along the Mathare river valley.",
+      "Through daily teamwork, the group runs hands on activities that touch many parts of neighbourhood life. They gather plastic waste, scrap metal, and recyclable materials to sell, turning community clean ups into modest daily income. Along the riverbank, they established an urban kitchen farm, clearing degraded land to grow fresh spinach, kales, and traditional vegetables for member households and neighbouring families. Every week, they also host creative drawing sessions and free porridge for neighbourhood children, providing nourishment, mentorship, and a safe, joyful environment away from street risks.",
+      "ABWA has partnered with the Miami Florida Youth Group as an active community partner, providing institutional accompaniment, linkage to international volunteers including visiting teams through Voltra Hong Kong, and joint fundraising to establish a permanent Community Training Centre. Our shared aim is to help the group move from informal survival initiatives to sustainable, well equipped, community owned enterprises that offer accredited training, dignified jobs, and lifelong alternatives to young people in Mathare.",
     ],
+    achievementsAndChallenges: {
+      eyebrow: "On the ground and looking forward",
+      title: "Progress on the ground and current challenges",
+      subtitle:
+        "Real milestones achieved by the Miami Florida Youth Group alongside the ongoing obstacles we are working together to overcome.",
+      achievedTitle: "Community action and partner support",
+      achievedItems: [
+        "Registered community group: Fully formalised as a registered Community Based Organisation in Mathare, led by local youth.",
+        "Waste recycling enterprise: Regular collection and sorting of plastic and scrap metal, generating modest daily income for youth members.",
+        "Urban kitchen garden: Cleared and cultivated riverbank land to grow fresh spinach, kales, and vegetables for community food security.",
+        "Children's art and porridge club: Weekly sessions offering art classes, mentorship, and nutritious porridge to over 50 neighbourhood children.",
+        "International volunteer exchange: Hosted international volunteers in partnership with Voltra Hong Kong, facilitating cultural exchange and joint community work.",
+      ],
+      challengesTitle: "Challenges the group faces today",
+      challengesItems: [
+        "Lack of a permanent facility: Current activities operate in open, rented, or temporary spaces that are vulnerable to weather, insecurity, and displacement.",
+        "Equipment shortages: Need modern tools for waste recycling, kitchen garden irrigation, welding, woodworking, and digital training.",
+        "Limited working capital: High demand from local youth for apprenticeships and training, but restricted financial resources to purchase materials.",
+        "High local youth vulnerability: Persistent risks from crime, substance abuse, and unemployment that require expanded, year round community programmes.",
+      ],
+    },
     objectives: [
-      "Reduce youth unemployment through practical vocational and technical training.",
-      "Promote youth entrepreneurship, small-business skills and innovation.",
-      "Develop creative talents, confidence and community leadership skills.",
-      "Provide positive, constructive pathways and alternatives to harmful activities.",
-    ],
-    activities: [
-      "Computer and digital skills training",
-      "Tailoring, dressmaking and fashion design training",
-      "Technical and vocational skills development",
-      "Entrepreneurship and small-business management workshops",
-      "Youth leadership, life-skills and peer mentorship (including girls' health and choices mentoring)",
-      "Arts, crafts, drawing, painting and music production",
-      "Sports, games and talent development",
-      "Employment readiness and self-employment support",
-      "Community action in Mathare: supporting local teachers, planting trees along the Mathare River, and urban kitchen gardening",
+      "Provide practical vocational and technical training for at least 100 young people annually in high demand trades.",
+      "Establish a fully equipped, permanent Community Training Centre in Mathare to host vocational courses, workshops, and safe youth activities.",
+      "Expand the waste recycling and circular economy project into a registered, profitable micro enterprise creating dignified green jobs.",
+      "Scale up urban kitchen farming along the Mathare riverbank to improve community nutrition and provide fresh produce for local sale.",
+      "Sustain weekly children's creative arts, reading, and porridge nutrition sessions as a protective space against street risks.",
+      "Strengthen youth leadership, financial literacy, life skills, and peer mentorship networks to prevent crime and substance abuse.",
     ],
     whatHappens: [
       {
-        title: "Technical, digital and vocational training",
+        title: "Waste Recycling and Circular Economy",
         items: [
-          "Computer and digital skills training",
-          "Tailoring, dressmaking and fashion design training",
-          "Technical and vocational skills development",
-          "Entrepreneurship and small-business management workshops",
+          "Community collection drives: Organised collection of plastic bottles, scrap metal, and recyclable paper across Mathare neighbourhoods.",
+          "Sorting and processing: Manual sorting, cleaning, and preparation of recyclables for bulk sale to licensed recycling plants.",
+          "Future value addition: Plans to acquire plastic shredders and baling equipment to manufacture recycled products locally.",
         ],
       },
       {
-        title: "Mentorship, creative arts and community action",
+        title: "Urban Kitchen Farming and Food Security",
         items: [
-          "Youth leadership, life-skills and peer mentorship (including girls' health and choices mentoring)",
-          "Arts, crafts, drawing, painting and music production",
-          "Sports, games and talent development",
-          "Community action in Mathare: supporting local teachers, planting trees along the Mathare River, and urban kitchen gardening",
+          "Riverbank cultivation: Transforming vacant or neglected spaces along the Mathare river into productive vegetable plots.",
+          "Organic farming techniques: Using composted organic waste to grow chemical free spinach, kales, traditional greens, and herbs.",
+          "Community food distribution: Providing fresh vegetables to member households, vulnerable neighbours, and local nursery schools.",
+        ],
+      },
+      {
+        title: "Children's Creative Arts and Nutrition Club",
+        items: [
+          "Weekly art and expression workshops: Free weekend drawing, painting, and craft sessions where children develop creativity and confidence.",
+          "Porridge and nutrition support: Serving hot nutritious porridge to every child participating in weekend activities.",
+          "Positive peer mentorship: Older youth mentor younger children, providing role models, homework assistance, and safe companionship.",
+        ],
+      },
+      {
+        title: "Planned Community Training Centre",
+        items: [
+          "Permanent training hub: Securing land and erecting a multi purpose facility in Mathare for classrooms, workshops, and community meetings.",
+          "Vocational workshops: Fully equipped stations for tailoring, carpentry, metal fabrication, ICT and computer literacy, and solar maintenance.",
+          "Youth enterprise incubator: Providing co working space, shared equipment, tool libraries, and mentorship for youth start ups.",
         ],
       },
     ],
+    activities: [
+      "Community collection drives: Organised collection of plastic bottles, scrap metal, and recyclable paper across Mathare neighbourhoods.",
+      "Sorting and processing: Manual sorting, cleaning, and preparation of recyclables for bulk sale to licensed recycling plants.",
+      "Future value addition: Plans to acquire plastic shredders and baling equipment to manufacture recycled products locally.",
+      "Riverbank cultivation: Transforming vacant or neglected spaces along the Mathare river into productive vegetable plots.",
+      "Organic farming techniques: Using composted organic waste to grow chemical free spinach, kales, traditional greens, and herbs.",
+      "Community food distribution: Providing fresh vegetables to member households, vulnerable neighbours, and local nursery schools.",
+      "Weekly art and expression workshops: Free weekend drawing, painting, and craft sessions where children develop creativity and confidence.",
+      "Porridge and nutrition support: Serving hot nutritious porridge to every child participating in weekend activities.",
+      "Positive peer mentorship: Older youth mentor younger children, providing role models, homework assistance, and safe companionship.",
+      "Permanent training hub: Securing land and erecting a multi purpose facility in Mathare for classrooms, workshops, and community meetings.",
+      "Vocational workshops: Fully equipped stations for tailoring, carpentry, metal fabrication, ICT and computer literacy, and solar maintenance.",
+      "Youth enterprise incubator: Providing co working space, shared equipment, tool libraries, and mentorship for youth start ups.",
+    ],
+    visionCallout:
+      "A self sustaining community where young people are equipped with practical skills, economic opportunities, and the leadership capacity to transform their lives and community.",
     intendedOutcomes: [
-      "We aim to expand young people's access to practical, marketable skills.",
-      "We aim to open pathways to employment, self-employment and youth-led small businesses.",
-      "We aim to strengthen young people's voice and participation in community development.",
+      "Economic self sufficiency: Young people gain marketable skills in recycling, urban farming, and vocational trades leading to sustainable income generation.",
+      "Safe community spaces: Reduction in crime, substance abuse, and vulnerability among children and youth through safe, positive community hubs and training centres.",
+      "Enhanced food and nutrition security: Increased access to fresh, organic vegetables for families in Mathare through urban kitchen farming.",
+      "Children's holistic development: Children have safe spaces for creativity, learning, and nutrition through regular art and porridge sessions.",
+      "Community leadership and ownership: Youth take active leadership roles in neighbourhood development, environmental stewardship, and community decision making.",
     ],
     aims: [
-      "We aim to expand young people's access to practical, marketable skills.",
-      "We aim to open pathways to employment, self-employment and youth-led small businesses.",
-      "We aim to strengthen young people's voice and participation in community development.",
+      "Economic self sufficiency: Young people gain marketable skills in recycling, urban farming, and vocational trades leading to sustainable income generation.",
+      "Safe community spaces: Reduction in crime, substance abuse, and vulnerability among children and youth through safe, positive community hubs and training centres.",
+      "Enhanced food and nutrition security: Increased access to fresh, organic vegetables for families in Mathare through urban kitchen farming.",
+      "Children's holistic development: Children have safe spaces for creativity, learning, and nutrition through regular art and porridge sessions.",
+      "Community leadership and ownership: Youth take active leadership roles in neighbourhood development, environmental stewardship, and community decision making.",
     ],
     safeguardingNote: {
       title: "Keeping young people safe",
       body: "Young people's names, faces and stories are shared only with their consent and, for children, their parent or guardian's consent. We take care not to reveal personal histories or details that could put anyone at risk.",
     },
     contactTopic: "youth",
-    ctaText: "Ask about the youth programme",
+    ctaSectionTitle: "Help build the community training centre in Mathare",
+    ctaSectionDescription:
+      "Whether you would like to contribute tools and training materials, partner with us on the community training centre, or join the Miami Florida Youth Group during a volunteer work camp, we would love to talk with you.",
+    ctaText: "Ask about supporting this project",
+    primaryCtaHref: "/contact",
     secondaryCta: {
-      label: "Read: Youth Empowerment Article",
+      label: "Read: Youth Empowerment Through Creativity and Action",
       href: "/blog/youth-empowerment-creativity-skills-community-action",
     },
     relatedSlug: "arts-culture-creative-development",
     activityImages: [
-    {
-        "src": "/images/programs/youth_empowerment_&_skills/4abwa (7).jpeg",
-        "alt": "Young people engaged in practical vocational training and enterprise in Mathare",
-        "caption": "Vocational skills, tooling and enterprise development."
-    },
-    {
-        "src": "/images/programs/youth_empowerment_&_skills/5abwa (44).jpeg",
-        "alt": "Youth participating in peer mentorship, sports, and outdoor fitness",
-        "caption": "Peer mentorship, fitness and creative leadership."
-    }
-],
+      {
+        src: "/images/programs/youth_empowerment_&_skills/4abwa (7).jpeg",
+        alt: "Young people working with tools, materials, and equipment during practical community enterprise in Mathare",
+        caption: "Practical equipment, tools, and enterprise skills in Mathare.",
+      },
+      {
+        src: "/images/programs/youth_empowerment_&_skills/5abwa (44).jpeg",
+        alt: "Youth participating in peer mentorship, sports, fitness, and team building activities",
+        caption: "Peer mentorship, physical fitness, and teamwork in Mathare.",
+      },
+      {
+        src: "/images/programs/youth_empowerment_&_skills/4abwa (2).jpeg",
+        alt: "Community youth team collaborating on local initiatives in Nairobi",
+        caption: "Youth collaboration and neighbourhood development in Nairobi.",
+      },
+      {
+        src: "/images/programs/youth_empowerment_&_skills/5abwa (42).jpeg",
+        alt: "Youth leaders gathered for skills training and group discussions in Mathare",
+        caption: "Youth leadership and vocational workshops in Mathare.",
+      },
+    ],
     momentsGallery: [
-    {
-        "src": "/images/programs/youth_empowerment_&_skills/4abwa (2).jpeg",
-        "alt": "Youth teamwork and community engagement in Nairobi",
-        "caption": "Youth teamwork and community development action."
-    },
-    {
-        "src": "/images/programs/youth_empowerment_&_skills/5abwa (42).jpeg",
-        "alt": "Youth leaders gathered for skills training and discussion",
-        "caption": "Youth leadership and vocational workshops."
-    },
-    {
-        "src": "/images/programs/youth_empowerment_&_skills/1abwa (18).jpeg",
-        "alt": "Young person working with practical equipment",
-        "caption": "Practical equipment and technical apprenticeship."
-    }
-],
+      {
+        src: "/images/programs/youth_empowerment_&_skills/4abwa (2).jpeg",
+        alt: "Youth teamwork and community engagement in Nairobi",
+        caption: "Youth teamwork and community development action.",
+      },
+      {
+        src: "/images/programs/youth_empowerment_&_skills/5abwa (42).jpeg",
+        alt: "Youth leaders gathered for skills training and discussion in Mathare",
+        caption: "Youth leadership and vocational workshops.",
+      },
+      {
+        src: "/images/programs/youth_empowerment_&_skills/1abwa (18).jpeg",
+        alt: "Young person working with practical equipment and tools",
+        caption: "Practical equipment and technical apprenticeship.",
+      },
+    ],
     ctaImage: {
-    "src": "/images/programs/youth_empowerment_&_skills/7abwa (25).jpeg",
-    "alt": "Community youth and volunteers collaborating on skills development in Kenya"
-},
-    
+      src: "/images/programs/youth_empowerment_&_skills/7abwa (25).jpeg",
+      alt: "Community youth and international volunteers collaborating on skills development in Mathare, Nairobi",
+    },
     relatedPostSlug: "youth-empowerment-creativity-skills-community-action",
   },
 

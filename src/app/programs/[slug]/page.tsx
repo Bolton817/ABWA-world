@@ -121,13 +121,27 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
           { label: "Our Programmes", href: "/programs" },
           { label: programme.title },
         ]}
-        primaryCta={{
-          label: programme.ctaText,
-          href: primaryCtaHref,
-          variant: "blue",
-        }}
+        primaryCta={
+          programme.heroPrimaryCta
+            ? {
+                label: programme.heroPrimaryCta.label,
+                href: programme.heroPrimaryCta.href,
+                variant: "blue",
+              }
+            : {
+                label: programme.ctaText,
+                href: primaryCtaHref,
+                variant: "blue",
+              }
+        }
         secondaryCta={
-          programme.secondaryCta
+          programme.heroSecondaryCta
+            ? {
+                label: programme.heroSecondaryCta.label,
+                href: programme.heroSecondaryCta.href,
+                variant: "outline-white",
+              }
+            : programme.secondaryCta
             ? {
                 label: programme.secondaryCta.label,
                 href: programme.secondaryCta.href,
@@ -148,10 +162,10 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
             <div className="lg:col-span-8 space-y-6">
               <div className="space-y-2">
                 <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
-                  Overview & Purpose
+                  {programme.overviewEyebrow || "Overview & Purpose"}
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
-                  About this programme
+                  {programme.overviewTitle || "About this programme"}
                 </h2>
               </div>
 
@@ -163,7 +177,7 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
                   </div>
                   <div className="space-y-1">
                     <span className="font-kaushan text-abwa-blue text-base tracking-wide block">
-                      Overarching Programme Goal
+                      {programme.goalTitle || "Overarching Programme Goal"}
                     </span>
                     <p className="text-base sm:text-lg font-semibold text-abwa-navy leading-snug">
                       {programme.goal}
@@ -261,9 +275,88 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
         </Container>
       </Section>
 
+      {/* 2. Achievements & Challenges 2-Column Comparison Block */}
+      {programme.achievementsAndChallenges && (
+        <Section surface="pale">
+          <Container>
+            <FadeIn direction="up">
+              <div className="max-w-3xl space-y-2 mb-10">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  {programme.achievementsAndChallenges.eyebrow || "On The Ground & Looking Forward"}
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
+                  {programme.achievementsAndChallenges.title || "Progress on the ground and current challenges"}
+                </h2>
+                {programme.achievementsAndChallenges.subtitle && (
+                  <p className="text-sm sm:text-base text-abwa-muted">
+                    {programme.achievementsAndChallenges.subtitle}
+                  </p>
+                )}
+              </div>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+              {/* Column 1: Verified Progress & Partner Support */}
+              <div className="p-7 sm:p-8 rounded-3xl bg-white border border-abwa-border shadow-sm flex flex-col space-y-5">
+                <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+                  <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-700" />
+                  </div>
+                  <div>
+                    <span className="font-kaushan text-emerald-700 text-sm tracking-wide block">
+                      Community action and partner support
+                    </span>
+                    <h3 className="text-lg sm:text-xl font-bold text-abwa-navy">
+                      {programme.achievementsAndChallenges.achievedTitle}
+                    </h3>
+                  </div>
+                </div>
+                <ul className="space-y-3.5 flex-1">
+                  {programme.achievementsAndChallenges.achievedItems.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-abwa-ink">
+                      <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5" />
+                      </div>
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 2: Current Challenges We Are Working to Solve */}
+              <div className="p-7 sm:p-8 rounded-3xl bg-amber-50/60 border border-amber-200/90 shadow-sm flex flex-col space-y-5">
+                <div className="flex items-center gap-3 border-b border-amber-200/60 pb-4">
+                  <div className="w-10 h-10 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-5 h-5 text-amber-800" />
+                  </div>
+                  <div>
+                    <span className="font-kaushan text-amber-800 text-sm tracking-wide block">
+                      Challenges the group faces today
+                    </span>
+                    <h3 className="text-lg sm:text-xl font-bold text-abwa-navy">
+                      {programme.achievementsAndChallenges.challengesTitle}
+                    </h3>
+                  </div>
+                </div>
+                <ul className="space-y-3.5 flex-1">
+                  {programme.achievementsAndChallenges.challengesItems.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-amber-950">
+                      <div className="w-5 h-5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </div>
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Container>
+        </Section>
+      )}
+
       {/* 3. Objectives */}
       {programme.objectives && programme.objectives.length > 0 && (
-        <Section surface="pale">
+        <Section surface={programme.achievementsAndChallenges ? "white" : "pale"}>
           <Container>
             <FadeIn direction="up">
               <div className="max-w-3xl space-y-2 mb-10">
@@ -496,6 +589,17 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
                 </p>
               </div>
 
+              {programme.visionCallout && (
+                <div className="p-6 rounded-3xl bg-white border border-abwa-border/90 shadow-2xs space-y-2">
+                  <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
+                    Project Vision
+                  </span>
+                  <p className="text-base sm:text-lg font-semibold text-abwa-navy leading-relaxed">
+                    {programme.visionCallout}
+                  </p>
+                </div>
+              )}
+
               <div className="space-y-3">
                 {programme.intendedOutcomes.map((outcome, idx) => (
                   <div
@@ -609,8 +713,11 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
         surface="navy"
         imageSrc={programme.ctaImage?.src}
         imageAlt={programme.ctaImage?.alt}
-        title="Want to get involved?"
-        description="Whether you would like to volunteer on this programme, partner with our teams, or support community activities, we would be glad to talk."
+        title={programme.ctaSectionTitle || "Want to get involved?"}
+        description={
+          programme.ctaSectionDescription ||
+          "Whether you would like to volunteer on this programme, partner with our teams, or support community activities, we would be glad to talk."
+        }
         primaryCta={{
           label: programme.ctaText,
           href: primaryCtaHref,
