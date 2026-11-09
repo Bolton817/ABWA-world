@@ -14,33 +14,33 @@ export function HomeFeaturedProgramme() {
   const activities = [
     {
       num: "01",
-      title: "Choosing crops that suit the place",
-      desc: "Selecting drought-resilient vegetables and indigenous crops suited for local microclimates and seasonal rainfall patterns.",
+      title: "Collecting and recycling neighbourhood waste",
+      desc: "Collecting plastic bottles and scrap metal across Mathare neighbourhoods to sell for recycling and earn steady daily income.",
     },
     {
       num: "02",
-      title: "Preparing land and soil",
-      desc: "Building natural compost, mulching beds, and applying regenerative soil enrichment techniques that protect long-term land fertility.",
+      title: "Cultivating urban riverbank kitchen gardens",
+      desc: "Transforming vacant riverbank plots into productive organic vegetable gardens that supply fresh spinach, kales and greens for local families.",
     },
     {
       num: "03",
-      title: "Using water wisely",
-      desc: "Rainwater harvesting, sunken garden beds, and water-wise conservation practices to sustain crops across dry periods.",
+      title: "Mentoring children with art and porridge",
+      desc: "Hosting weekly weekend creative art sessions and serving warm nutritious porridge to dozens of neighbourhood children in a safe caring space.",
     },
     {
       num: "04",
-      title: "Caring for crops and managing pests",
-      desc: "Companion planting, botanical deterrents, and careful biological observation without reliance on costly synthetic inputs.",
+      title: "Building leadership and neighbourhood safety",
+      desc: "Strengthening youth leadership, team fitness, life skills and peer mentorship networks that provide positive alternatives to crime and street risks.",
     },
     {
       num: "05",
-      title: "Talking about leadership and money decisions",
-      desc: "Table banking, financial literacy, group savings, and open dialogues that empower women's voices in household and community decisions.",
+      title: "Welcoming international volunteer teams",
+      desc: "Collaborating with visiting international volunteers and partners like Voltra Hong Kong on joint community work camps and shared learning.",
     },
     {
       num: "06",
-      title: "Sharing food, stories and traditions",
-      desc: "Celebrating harvest days with communal cooking, storytelling, and intergenerational knowledge exchange between elders and youth.",
+      title: "Establishing the Community Training Centre",
+      desc: "Securing resources to build a permanent centre in Mathare equipped for vocational workshops, apprenticeships and youth enterprise.",
     },
   ];
 
@@ -99,21 +99,21 @@ export function HomeFeaturedProgramme() {
                   Featured programme
                 </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-abwa-navy leading-tight">
-                  Growing food, skills and confidence together
+                  Building skills, livelihoods and community care in Mathare
                 </h2>
               </div>
 
               <div className="space-y-4 text-base sm:text-lg text-abwa-muted leading-relaxed">
                 <p>
-                  In Kangundo, in Machakos County, women&apos;s group members and volunteers share what
-                  they know about growing vegetables: which crops suit the local climate, how to prepare
-                  the soil, how to use local water well, and how to manage pests with care for the wider
-                  environment.
+                  In Mathare, Nairobi, the Miami Florida Youth Group is taking ownership of their
+                  neighbourhood. Faced with high youth unemployment and crowded living conditions, these
+                  young leaders came together to turn waste recycling, urban farming and creative arts
+                  into positive livelihoods.
                 </p>
                 <p>
-                  Alongside the farming, our plans include conversations about leadership, financial
-                  decision-making and having a say in your own life. Farming days are also days of
-                  cooking, storytelling and cultural exchange.
+                  Alongside weekly children&apos;s art sessions and community clean ups, the group is
+                  working towards establishing a permanent Community Training Centre that will offer
+                  accredited vocational courses, tool libraries and enterprise incubation for local youth.
                 </p>
               </div>
 
@@ -121,14 +121,14 @@ export function HomeFeaturedProgramme() {
               <div className="p-4 rounded-2xl bg-amber-50/80 border border-amber-200/80 text-xs sm:text-sm text-amber-900 flex items-start gap-3">
                 <Info className="w-4 h-4 text-abwa-gold flex-shrink-0 mt-0.5" />
                 <span>
-                  Dates and availability for volunteering differ by project. Ask us what is possible right now.
+                  Activities run year round in Mathare. Talk with us about partnerships or visiting during a volunteer work camp.
                 </span>
               </div>
 
               {/* CTAs */}
               <div className="pt-2 flex flex-wrap gap-4 items-center">
                 <Button
-                  href="/programs/womens-empowerment-sustainable-agriculture"
+                  href="/programs/youth-empowerment"
                   variant="primary"
                   size="md"
                 >
@@ -147,8 +147,8 @@ export function HomeFeaturedProgramme() {
             {/* Featured Photograph */}
             <div className="relative rounded-2xl overflow-hidden border border-abwa-border shadow-md aspect-[16/10] bg-slate-100">
               <Image
-                src="/images/programs/women_empowerment_&_agriculture/6abwa (64).jpeg"
-                alt="Women group members and volunteers preparing vegetable farming beds in Kangundo"
+                src="/images/programs/youth_empowerment_&_skills/4abwa (7).jpeg"
+                alt="Miami Florida Youth Group members participating in skills training and community action in Mathare Nairobi"
                 fill
                 sizes="(max-width: 1024px) 100vw, 55vw"
                 className="object-cover"
@@ -156,10 +156,10 @@ export function HomeFeaturedProgramme() {
               <div className="absolute inset-0 bg-gradient-to-t from-abwa-navy/80 via-transparent to-transparent z-10" />
               <div className="absolute bottom-4 left-4 right-4 text-white z-20">
                 <span className="text-xs font-semibold text-abwa-gold block">
-                  Kangundo, Machakos County
+                  Mathare, Nairobi
                 </span>
                 <span className="text-sm font-bold text-white">
-                  Women&apos;s Empowerment & Sustainable Agriculture
+                  Youth Employment and Skills Development
                 </span>
               </div>
             </div>
