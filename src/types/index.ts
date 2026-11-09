@@ -91,6 +91,7 @@ export interface Programme {
   overviewEyebrow?: string;
   overviewTitle?: string;
   goalTitle?: string;
+  visionCalloutTitle?: string;
   visionCallout?: string;
   achievementsAndChallenges?: ProgrammeAchievementsAndChallenges;
   ctaSectionTitle?: string;

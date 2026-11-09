@@ -13,7 +13,7 @@ export function AboutGeography() {
       place: "Mathare, Nairobi",
       tag: "Urban Community Hub",
       description:
-        "Work with a local youth group on art, music, learning support and environmental action.",
+        "Educational support at Caso Upendo Primary School, youth enterprise with the Miami Florida Youth Group, and tailoring with the Young Mothers Women Group.",
       link: "/programs/youth-empowerment",
       imageSrc: "/images/programs/youth_empowerment_&_skills/4abwa (7).jpeg",
       imageAlt: "Youth and community members participating in skills training in Mathare Nairobi",

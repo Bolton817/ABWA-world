@@ -196,11 +196,17 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
 
               {/* Project Vision & Mission Callouts */}
               {(programme.vision || programme.mission) && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                <div
+                  className={`grid grid-cols-1 ${
+                    programme.vision && programme.mission ? "sm:grid-cols-2" : ""
+                  } gap-4 pt-4`}
+                >
                   {programme.vision && (
                     <div className="p-6 rounded-3xl bg-abwa-pale border border-abwa-border space-y-2">
                       <span className="font-kaushan text-abwa-blue text-base tracking-wide block">
-                        Project vision
+                        {programme.vision.title === "Our belief"
+                          ? "Core conviction"
+                          : "Project vision"}
                       </span>
                       <h3 className="text-xl font-bold text-abwa-navy">
                         {programme.vision.title}
@@ -701,7 +707,7 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
               {programme.visionCallout && (
                 <div className="p-6 rounded-3xl bg-white border border-abwa-border/90 shadow-2xs space-y-2">
                   <span className="font-kaushan text-abwa-gold text-base tracking-wide block">
-                    Project Vision
+                    {programme.visionCalloutTitle || "Project Vision"}
                   </span>
                   <p className="text-base sm:text-lg font-semibold text-abwa-navy leading-relaxed">
                     {programme.visionCallout}

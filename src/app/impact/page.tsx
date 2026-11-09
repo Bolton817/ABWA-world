@@ -261,10 +261,10 @@ const sustainabilityMeasures = [
 const verifiedEvidencePoints = [
   {
     title: "Primary Education & School Support",
-    location: "Nairobi County",
+    location: "Mathare, Nairobi",
     programme: "Education & Child Wellbeing",
     description:
-      "Providing essential classroom learning materials, study desks and school feeding partnership so children attend classes consistently and thrive in dignified learning spaces.",
+      "Partnering with Caso Upendo Primary School in Mathare, Nairobi to deliver computers, learning materials and school support alongside visiting teams from VTC Hong Kong.",
     evidenceNote: "Monitored through physical attendance logs, headteacher records and learning progress check ins.",
     imageSrc: "/images/programs/education_&_child_development/5abwa (83).jpeg",
     imageAlt: "Primary school students engaged in reading and classroom lessons supported by ABWA in Kenya",
@@ -281,10 +281,10 @@ const verifiedEvidencePoints = [
   },
   {
     title: "Youth Skills & Creative Mentorship",
-    location: "Nairobi & Machakos",
+    location: "Mathare, Nairobi",
     programme: "Youth Skills & Creative Arts",
     description:
-      "Mentoring young creators and apprentices in tailoring, mural arts, music production and digital literacy, turning empty neighbourhood rooms into productive creative hubs.",
+      "Working with the Miami Florida Youth Group on recycling, urban farming and training, and the Young Mothers Women Group on tailoring in Mathare, Nairobi.",
     evidenceNote: "Verified through workshop sign in sheets, finished craft products and peer mentor logs.",
     imageSrc: "/images/programs/arts_culture_&_creative_development/7abwa (7).jpeg",
     imageAlt: "Young creators and mentors collaborating on creative arts and community painting in Kenya",

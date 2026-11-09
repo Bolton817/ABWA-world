@@ -1,117 +1,210 @@
 import { Programme } from "@/types";
 
 export const programmesData: Programme[] = [
-  // 1. Education and Child Development (Unlocked from Hold)
+  // 1. Education and Child Development (Preserve existing slug: education-child-wellbeing)
   {
     slug: "education-child-wellbeing",
     category: "Education & Youth",
     title: "Education and Child Development",
-    subtitle: "Improving access to quality education and creating supportive learning environments for children.",
-    summary: "Removing practical barriers to education through school support, feeding, learning materials, digital literacy and mentorship.",
-    location: "Nairobi and underserved schools",
-    status: "Active",
+    eyebrow: "Mathare, Nairobi · Caso Upendo Primary School",
+    subtitle:
+      "Supporting quality learning, digital literacy and everyday child wellbeing at Caso Upendo Primary School in Mathare, Nairobi.",
+    summary:
+      "Supporting quality education and digital literacy at Caso Upendo Primary School in Mathare, Nairobi through computers, learning materials, school feeding and mentorship.",
+    location: "Mathare, Nairobi (Caso Upendo Primary School)",
+    status: "Active Community Partnership",
     heroImage: "/images/programs/education_&_child_development/5abwa (83).jpeg",
-    heroImageAlt: "Smiling children and students participating in community education support in Kenya",
-    metaTitle: "Education and Child Development | ABWA World",
+    heroImageAlt:
+      "Pupils and teachers in classroom learning and digital literacy at Caso Upendo Primary School in Mathare, Nairobi",
+    heroPrimaryCta: {
+      label: "Support school learning",
+      href: "/contact",
+    },
+    heroSecondaryCta: {
+      label: "Partner With Us",
+      href: "/partner-with-us",
+    },
+    metaTitle:
+      "Education and Child Development at Caso Upendo Primary School | ABWA World",
     metaDescription:
-      "How ABWA supports children's access to education, school feeding, learning materials, digital literacy and mentorship in underserved communities.",
+      "How ABWA and the Vocational Training Council (VTC) from Hong Kong support digital literacy, computers and learning materials at Caso Upendo Primary School in Mathare, Nairobi.",
     description:
-      "Children learn and grow best when they are fed, equipped and encouraged. We work alongside families and underserved schools to remove everyday barriers to learning.",
-    goal: "To improve access to quality education and create better learning opportunities for children from low-income families.",
+      "Every child deserves the chance to learn, grow and explore their talents. We work alongside Caso Upendo Primary School, families and international partners to equip classrooms, introduce computer skills and remove everyday barriers to schooling.",
+    overviewEyebrow: "Quality education in Mathare",
+    overviewTitle: "Supporting learners at Caso Upendo Primary School",
+    goalTitle: "Project Goal",
+    goal: "To improve access to quality education, promote digital literacy and create supportive, well equipped learning environments for children from low income families in Mathare, Nairobi.",
     context: [
-      "Many bright children in low-income neighbourhoods face practical hurdles to staying in school—from the cost of uniforms and books to hunger during the school day and a lack of computers or creative learning tools.",
-      "ABWA works alongside local schools, parents and teachers to bridge these gaps while putting child safeguarding and dignity first.",
+      "Caso Upendo Primary School serves children and families in Mathare, one of the oldest and most densely populated informal settlements in Nairobi. While the neighbourhood is home to thousands of eager school age children, public primary school places are limited. Many families rely on community and low cost private schools, which often work with tight resources, crowded classrooms and a shortage of books, stationery and computers.",
+      "When a school lacks basic learning tools, it becomes harder for children to study comfortably, discover their talents and reach their full potential. Action for Better World Association walks alongside Caso Upendo Primary School and the wider community to bridge these practical gaps.",
+      "We believe that supporting education goes far beyond handing over supplies. It is about encouraging children, building their confidence, nurturing their creativity and opening doors to a brighter future.",
     ],
+    vision: {
+      title: "Our belief",
+      body: "Every child has the right to quality education, regardless of their background or family circumstances. Investing in children's education is an investment in stronger families, safer neighbourhoods and a fairer future for generations to come.",
+    },
+    achievementsAndChallenges: {
+      eyebrow: "Partnership and community context",
+      title: "Computers, classroom learning and community realities",
+      subtitle:
+        "How ABWA and VTC Hong Kong are supporting Caso Upendo Primary School alongside the educational realities facing local families.",
+      achievedEyebrow: "Partnership in action",
+      achievedTitle: "Computers and learning support with VTC Hong Kong",
+      achievedItems: [
+        "Collaboration between Action for Better World Association (ABWA) and the Vocational Training Council (VTC) from Hong Kong to support Caso Upendo Primary School",
+        "Delivery of computers and essential learning materials to strengthen the school's learning environment and classroom resources",
+        "Introduction of practical digital literacy classes, helping pupils build foundational computer skills for a world where technology matters more each day",
+        "Ongoing volunteer teaching assistance, creative art and music lessons, and mentorship alongside local teachers",
+      ],
+      challengesEyebrow: "Why continued support matters",
+      challengesTitle: "Educational challenges in Mathare",
+      challengesItems: [
+        "High numbers of school going children in the neighbourhood with very limited public school capacity",
+        "Financial pressure on low income households struggling to cover school fees, uniforms, shoes and daily meals",
+        "The ongoing need for additional classroom furniture, textbooks, stationery and expanded computer lab capacity",
+        "Ensuring every child has a safe, encouraging place to learn and receive nutritious food during the school day",
+      ],
+    },
     objectives: [
-      "Support children from disadvantaged families to access and stay in school.",
-      "Improve everyday learning environments in underserved schools.",
-      "Promote digital literacy, computer skills and creative learning.",
-      "Support children's physical, emotional and social development.",
-    ],
-    activities: [
-      "School sponsorship support for vulnerable and orphaned children",
-      "School feeding and everyday nutrition support",
-      "Donation of books, stationery, school uniforms and learning materials",
-      "Establishment of computer training laboratories",
-      "Digital literacy and introductory computer skills training",
-      "School classroom and infrastructure improvements",
-      "Art, music and creative talent development",
-      "Educational mentorship and career guidance",
+      "Access to Quality Education: Improve access to consistent, quality schooling for vulnerable and disadvantaged children in Mathare.",
+      "Digital Literacy and Computer Skills: Promote practical digital literacy and basic computer skills so learners are prepared for modern education and work.",
+      "Classroom Learning Materials: Provide books, stationery, uniforms, computers and essential teaching resources that improve everyday classroom life.",
+      "Equal Educational Opportunities: Ensure children from low income families have fair opportunities to stay in school and succeed alongside their peers.",
+      "Creativity and Confidence: Support children's personal growth, artistic talents, emotional wellbeing and self confidence.",
+      "Lasting Educational Partnerships: Strengthen collaborations between local schools, parents, volunteers and international institutions like VTC Hong Kong.",
     ],
     whatHappens: [
       {
-        title: "School access and learning materials",
+        title: "Digital Literacy and Computer Laboratories",
         items: [
-          "School sponsorship support for vulnerable and orphaned children",
-          "School feeding and everyday nutrition support",
-          "Donation of books, stationery, school uniforms and learning materials",
-          "School classroom and infrastructure improvements",
+          "Setting up and maintaining school computer learning spaces at Caso Upendo Primary School",
+          "Teaching foundational computer literacy and digital skills to primary learners",
+          "Working with partners and volunteers to keep equipment working and lessons engaging",
         ],
       },
       {
-        title: "Digital literacy, creative arts and mentorship",
+        title: "Essential Learning Materials and Classroom Support",
         items: [
-          "Establishment of computer training laboratories",
-          "Digital literacy and introductory computer skills training",
-          "Art, music and creative talent development",
-          "Educational mentorship and career guidance",
+          "Providing textbooks, exercise books, stationery, school uniforms and teaching aids",
+          "Supporting classroom repairs and school infrastructure improvements",
+          "Connecting visiting volunteers with local teachers to assist with lessons and reading support",
+        ],
+      },
+      {
+        title: "School Feeding and Child Wellbeing",
+        items: [
+          "Supporting school feeding and nutrition initiatives so children can focus in class without hunger",
+          "Assisting vulnerable and orphaned children with school sponsorship and basic daily necessities",
+        ],
+      },
+      {
+        title: "Creative Arts, Mentorship and Talent Development",
+        items: [
+          "Running drawing, painting, music and creative workshops that let children express themselves",
+          "Offering caring mentorship, life skills and career encouragement as learners grow",
         ],
       },
     ],
+    activities: [
+      "Setting up and maintaining school computer learning spaces at Caso Upendo Primary School",
+      "Teaching foundational computer literacy and digital skills to primary learners",
+      "Working with partners and volunteers to keep equipment working and lessons engaging",
+      "Providing textbooks, exercise books, stationery, school uniforms and teaching aids",
+      "Supporting classroom repairs and school infrastructure improvements",
+      "Connecting visiting volunteers with local teachers to assist with lessons and reading support",
+      "Supporting school feeding and nutrition initiatives so children can focus in class without hunger",
+      "Assisting vulnerable and orphaned children with school sponsorship and basic daily necessities",
+      "Running drawing, painting, music and creative workshops that let children express themselves",
+      "Offering caring mentorship, life skills and career encouragement as learners grow",
+    ],
+    visionCalloutTitle: "Vision for the Future",
+    visionCallout:
+      "We aim to continue working closely with Caso Upendo Primary School, parents, local teachers, volunteers and development partners to expand educational opportunities across Mathare. We warmly welcome partnerships from individuals, schools, universities and organisations who share our commitment to helping every child learn, grow and achieve their dreams.",
     intendedOutcomes: [
-      "We aim to increase access to consistent schooling for children from low-income households.",
-      "We aim to help create healthier, better-equipped classroom conditions.",
-      "We aim to widen children's access to practical digital and creative skills.",
+      "More children in Mathare able to attend school consistently with the books, uniforms and meals they need",
+      "Improved classroom learning conditions at Caso Upendo Primary School and partner schools",
+      "Growing digital confidence and foundational computer skills among primary school learners",
+      "Greater confidence, creativity and aspiration among participating children",
     ],
     aims: [
-      "We aim to increase access to consistent schooling for children from low-income households.",
-      "We aim to help create healthier, better-equipped classroom conditions.",
-      "We aim to widen children's access to practical digital and creative skills.",
+      "More children in Mathare able to attend school consistently with the books, uniforms and meals they need",
+      "Improved classroom learning conditions at Caso Upendo Primary School and partner schools",
+      "Growing digital confidence and foundational computer skills among primary school learners",
+      "Greater confidence, creativity and aspiration among participating children",
     ],
     safeguardingNote: {
       title: "Keeping children safe",
-      body: "Safeguarding note: We never publish children's full names, personal histories or school schedules without verified parent/guardian consent, and we do not link online donations to individual children.",
+      body: "Child protection comes first in everything we do. Children's photographs and stories are shared only with clear parent or guardian consent. We never publish children's full names, personal family histories or school timetables, and we do not link online donations to an individual child.",
     },
     contactTopic: "education",
-    ctaText: "Ask about education support",
+    ctaSectionTitle: "Help us make quality education accessible to every child",
+    ctaSectionDescription:
+      "Whether you would like to donate computers or learning materials, partner with us as an educational institution, or support Caso Upendo Primary School through a volunteer placement, we would be glad to hear from you.",
+    ctaText: "Ask about supporting Caso Upendo Primary School",
+    primaryCtaHref: "/contact",
     secondaryCta: {
-      label: "Explore all programmes",
-      href: "/programs",
+      label: "Partner With Us",
+      href: "/partner-with-us",
     },
     relatedSlug: "youth-empowerment",
-    activityImages: [
+    relatedLinks: [
       {
-        src: "/images/programs/education_&_child_development/1abwa (4).jpeg",
-        alt: "School children gathered around classroom desks with stationery and uniforms",
-        caption: "Classroom learning materials and school supplies.",
+        label: "Youth Employment and Skills Development",
+        href: "/programs/youth-empowerment",
       },
       {
+        label: "Arts, Culture and Creative Development",
+        href: "/programs/arts-culture-creative-development",
+      },
+      {
+        label: "Read: Youth Empowerment Through Creativity and Action",
+        href: "/blog/youth-empowerment-creativity-skills-community-action",
+      },
+    ],
+    activityImages: [
+      {
         src: "/images/programs/education_&_child_development/2abwa (9).jpeg",
-        alt: "Students participating in creative and digital skills workshops",
-        caption: "Digital literacy and creative talent sessions.",
+        alt: "Primary school pupils learning foundational computer skills and digital literacy",
+        caption: "Setting up computers and digital learning spaces.",
+      },
+      {
+        src: "/images/programs/education_&_child_development/1abwa (4).jpeg",
+        alt: "School children gathered around desks with exercise books and learning materials",
+        caption: "Classroom books, learning materials and desks.",
+      },
+      {
+        src: "/images/programs/education_&_child_development/1abwa (11).jpeg",
+        alt: "School day feeding and nutrition support for primary pupils",
+        caption: "Nourishing school day meals and child wellbeing.",
+      },
+      {
+        src: "/images/programs/education_&_child_development/4abwa (3).jpeg",
+        alt: "Children participating in creative arts, drawing and educational mentorship",
+        caption: "Mentorship, creative arts and reading support.",
       },
     ],
     momentsGallery: [
       {
         src: "/images/programs/education_&_child_development/1abwa (2).jpeg",
-        alt: "Students learning and collaborating in a bright schoolroom",
-        caption: "Collaborative learning in community schoolrooms.",
+        alt: "Pupils learning together in a bright community classroom",
+        caption: "Collaborative reading and peer learning in Mathare.",
       },
       {
-        src: "/images/programs/education_&_child_development/1abwa (11).jpeg",
-        alt: "School nutrition, feeding, and student wellbeing support",
-        caption: "Nourishing school day nutrition support.",
+        src: "/images/programs/education_&_child_development/5abwa (28).jpeg",
+        alt: "Attentive primary school pupils raising hands during a lesson",
+        caption: "Classroom engagement and attentive learners.",
       },
       {
-        src: "/images/programs/education_&_child_development/4abwa (3).jpeg",
-        alt: "Mentorship, creative dialogue, and peer learning in Kenya",
-        caption: "Mentorship and creative growth for young learners.",
+        src: "/images/programs/education_&_child_development/1abwa (1).jpeg",
+        alt: "Children smiling with teachers outside classroom",
+        caption: "Joyful school community and caring teachers.",
       },
     ],
     ctaImage: {
       src: "/images/programs/education_&_child_development/1abwa (12).jpeg",
-      alt: "School children and community members smiling together on school grounds in Kenya",
+      alt: "School children, community volunteers and teachers celebrating education in Mathare, Nairobi",
     },
+    relatedPostSlug: "youth-empowerment-creativity-skills-community-action",
   },
 
   // 2. Youth Empowerment and Skills Development (Preserve existing slug: youth-empowerment)
