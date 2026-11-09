@@ -16,10 +16,40 @@ export interface ProgrammeAchievementsAndChallenges {
   eyebrow?: string;
   title?: string;
   subtitle?: string;
+  currentActivitiesEyebrow?: string;
+  currentActivitiesTitle?: string;
+  currentActivitiesItems?: string[];
+  achievedEyebrow?: string;
   achievedTitle: string;
   achievedItems: string[];
+  challengesEyebrow?: string;
   challengesTitle: string;
   challengesItems: string[];
+}
+
+export interface ProgrammeRoadmap {
+  eyebrow?: string;
+  title: string;
+  intro: string;
+  focusAreasTitle?: string;
+  focusAreas: {
+    title: string;
+    description: string;
+  }[];
+  timelineTitle?: string;
+  timeline: {
+    period: string;
+    title: string;
+    description: string;
+  }[];
+}
+
+export interface ProgrammeSupportSection {
+  eyebrow?: string;
+  title: string;
+  intro: string;
+  items: string[];
+  closingBelief?: string;
 }
 
 export interface Programme {
@@ -65,6 +95,8 @@ export interface Programme {
   achievementsAndChallenges?: ProgrammeAchievementsAndChallenges;
   ctaSectionTitle?: string;
   ctaSectionDescription?: string;
+  roadmap?: ProgrammeRoadmap;
+  supportSection?: ProgrammeSupportSection;
   vision?: {
     title: string;
     body: string;

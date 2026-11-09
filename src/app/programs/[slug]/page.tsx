@@ -21,6 +21,7 @@ import {
   Target,
   FolderCheck,
   Sparkles,
+  Calendar,
 } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getBreadcrumbSchema } from "@/lib/seo/schema";
@@ -295,8 +296,43 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
               </div>
             </FadeIn>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-              {/* Column 1: Verified Progress & Partner Support */}
+            <div
+              className={`grid grid-cols-1 ${
+                programme.achievementsAndChallenges.currentActivitiesItems
+                  ? "lg:grid-cols-3"
+                  : "lg:grid-cols-2"
+              } gap-8 items-stretch`}
+            >
+              {/* Optional Column 1: Current Activities in the Workshop */}
+              {programme.achievementsAndChallenges.currentActivitiesItems && (
+                <div className="p-7 sm:p-8 rounded-3xl bg-white border border-abwa-border shadow-sm flex flex-col space-y-5">
+                  <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+                    <div className="w-10 h-10 rounded-2xl bg-blue-100 text-abwa-blue flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="w-5 h-5 text-abwa-blue" />
+                    </div>
+                    <div>
+                      <span className="font-kaushan text-abwa-blue text-sm tracking-wide block">
+                        {programme.achievementsAndChallenges.currentActivitiesEyebrow || "What the group does today"}
+                      </span>
+                      <h3 className="text-lg sm:text-xl font-bold text-abwa-navy">
+                        {programme.achievementsAndChallenges.currentActivitiesTitle || "Current activities"}
+                      </h3>
+                    </div>
+                  </div>
+                  <ul className="space-y-3.5 flex-1">
+                    {programme.achievementsAndChallenges.currentActivitiesItems.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-abwa-ink">
+                        <div className="w-5 h-5 rounded-full bg-blue-50 text-abwa-blue border border-blue-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Column 2: Verified Progress & Partner Support */}
               <div className="p-7 sm:p-8 rounded-3xl bg-white border border-abwa-border shadow-sm flex flex-col space-y-5">
                 <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
                   <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center flex-shrink-0">
@@ -304,7 +340,7 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
                   </div>
                   <div>
                     <span className="font-kaushan text-emerald-700 text-sm tracking-wide block">
-                      Community action and partner support
+                      {programme.achievementsAndChallenges.achievedEyebrow || "Community action and partner support"}
                     </span>
                     <h3 className="text-lg sm:text-xl font-bold text-abwa-navy">
                       {programme.achievementsAndChallenges.achievedTitle}
@@ -323,7 +359,7 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
                 </ul>
               </div>
 
-              {/* Column 2: Current Challenges We Are Working to Solve */}
+              {/* Column 3: Current Challenges We Are Working to Solve */}
               <div className="p-7 sm:p-8 rounded-3xl bg-amber-50/60 border border-amber-200/90 shadow-sm flex flex-col space-y-5">
                 <div className="flex items-center gap-3 border-b border-amber-200/60 pb-4">
                   <div className="w-10 h-10 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center flex-shrink-0">
@@ -331,7 +367,7 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
                   </div>
                   <div>
                     <span className="font-kaushan text-amber-800 text-sm tracking-wide block">
-                      Challenges the group faces today
+                      {programme.achievementsAndChallenges.challengesEyebrow || "Challenges the group faces today"}
                     </span>
                     <h3 className="text-lg sm:text-xl font-bold text-abwa-navy">
                       {programme.achievementsAndChallenges.challengesTitle}
@@ -391,80 +427,153 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
         </Section>
       )}
 
-      {/* 4. Projects and Activities on the Ground */}
-      <Section surface="white">
-        <Container>
-          <FadeIn direction="up">
-            <div className="max-w-3xl space-y-2 mb-10">
-              <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
-                Grassroots Delivery
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
-                Projects and activities on the ground
-              </h2>
-              <p className="text-sm sm:text-base text-abwa-muted">
-                Practical, collaborative activities led alongside local residents, schools, youth and women&apos;s groups.
-              </p>
-            </div>
-          </FadeIn>
+      {/* 4. Projects and Activities on the Ground / Five Year Roadmap */}
+      {programme.roadmap ? (
+        <Section surface="white">
+          <Container>
+            <FadeIn direction="up">
+              <div className="max-w-3xl space-y-2 mb-10">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  {programme.roadmap.eyebrow || "Five Year Vision"}
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
+                  {programme.roadmap.title}
+                </h2>
+                <p className="text-sm sm:text-base text-abwa-muted leading-relaxed">
+                  {programme.roadmap.intro}
+                </p>
+              </div>
+            </FadeIn>
 
-          {/* If whatHappens exists, render structured groups; otherwise render activities grid */}
-          {programme.whatHappens && programme.whatHappens.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {programme.whatHappens.map((group, idx) => {
-                const activityImg = programme.activityImages?.[idx];
-                return (
+            {/* Five Future Focus Areas */}
+            <div className="space-y-6 mb-12">
+              <h3 className="text-lg sm:text-xl font-bold text-abwa-navy border-b border-slate-200/80 pb-3">
+                {programme.roadmap.focusAreasTitle || "Five Future Focus Areas"}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {programme.roadmap.focusAreas.map((area, idx) => (
                   <div
                     key={idx}
-                    className="rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-2xs overflow-hidden flex flex-col"
+                    className="p-6 rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-2xs space-y-2.5 flex flex-col"
                   >
-                    {activityImg && (
-                      <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
-                        <Image
-                          src={activityImg.src}
-                          alt={activityImg.alt}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-cover"
-                        />
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-full bg-blue-50 text-abwa-blue border border-blue-200 flex items-center justify-center flex-shrink-0 font-bold text-sm">
+                        {idx + 1}
                       </div>
-                    )}
-                    <div className="p-6 sm:p-8 space-y-4 flex-1">
-                      <h3 className="text-lg font-bold text-abwa-navy border-b border-slate-200/80 pb-3">
-                        {group.title}
-                      </h3>
-                      <ul className="space-y-3">
-                        {group.items.map((item, itemIdx) => (
-                          <li key={itemIdx} className="flex items-start gap-3 text-sm text-abwa-ink">
-                            <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <Check className="w-3.5 h-3.5" />
-                            </div>
-                            <span className="leading-relaxed">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <h4 className="font-bold text-abwa-navy text-base">
+                        {area.title}
+                      </h4>
                     </div>
+                    <p className="text-sm text-abwa-ink leading-relaxed flex-1">
+                      {area.description}
+                    </p>
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {programme.activities.map((act, idx) => (
-                <div
-                  key={idx}
-                  className="p-4 rounded-2xl bg-abwa-pale/50 border border-abwa-border flex items-start gap-3 text-sm text-abwa-ink"
-                >
-                  <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3.5 h-3.5" />
+
+            {/* Five Year Implementation Timeline */}
+            <div className="space-y-6">
+              <h3 className="text-lg sm:text-xl font-bold text-abwa-navy border-b border-slate-200/80 pb-3">
+                {programme.roadmap.timelineTitle || "Five Year Implementation Timeline"}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {programme.roadmap.timeline.map((step, idx) => (
+                  <div
+                    key={idx}
+                    className="p-7 rounded-3xl bg-white border-2 border-abwa-border shadow-sm space-y-3 relative overflow-hidden"
+                  >
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-abwa-pale text-abwa-blue text-xs font-bold uppercase tracking-wider">
+                      <Calendar className="w-3.5 h-3.5 text-abwa-gold" />
+                      <span>{step.period}</span>
+                    </div>
+                    <h4 className="text-lg font-bold text-abwa-navy">
+                      {step.title}
+                    </h4>
+                    <p className="text-sm text-abwa-ink leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
-                  <span className="leading-relaxed">{act}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          )}
-        </Container>
-      </Section>
+          </Container>
+        </Section>
+      ) : (
+        <Section surface="white">
+          <Container>
+            <FadeIn direction="up">
+              <div className="max-w-3xl space-y-2 mb-10">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  Grassroots Delivery
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
+                  Projects and activities on the ground
+                </h2>
+                <p className="text-sm sm:text-base text-abwa-muted">
+                  Practical, collaborative activities led alongside local residents, schools, youth and women&apos;s groups.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* If whatHappens exists, render structured groups; otherwise render activities grid */}
+            {programme.whatHappens && programme.whatHappens.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {programme.whatHappens.map((group, idx) => {
+                  const activityImg = programme.activityImages?.[idx];
+                  return (
+                    <div
+                      key={idx}
+                      className="rounded-3xl bg-abwa-pale/50 border border-abwa-border shadow-2xs overflow-hidden flex flex-col"
+                    >
+                      {activityImg && (
+                        <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                          <Image
+                            src={activityImg.src}
+                            alt={activityImg.alt}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover"
+                          />
+                        </div>
+                      )}
+                      <div className="p-6 sm:p-8 space-y-4 flex-1">
+                        <h3 className="text-lg font-bold text-abwa-navy border-b border-slate-200/80 pb-3">
+                          {group.title}
+                        </h3>
+                        <ul className="space-y-3">
+                          {group.items.map((item, itemIdx) => (
+                            <li key={itemIdx} className="flex items-start gap-3 text-sm text-abwa-ink">
+                              <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check className="w-3.5 h-3.5" />
+                              </div>
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {programme.activities.map((act, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 rounded-2xl bg-abwa-pale/50 border border-abwa-border flex items-start gap-3 text-sm text-abwa-ink"
+                  >
+                    <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="leading-relaxed">{act}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </Container>
+        </Section>
+      )}
 
       {/* Community Moments Strip (Curated Photo Mosaic) */}
       {programme.momentsGallery && programme.momentsGallery.length > 0 && (
@@ -707,6 +816,59 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
           </div>
         </Container>
       </Section>
+
+      {/* 5b. Support / Ways to Partner Section */}
+      {programme.supportSection && (
+        <Section surface="white" className="border-t border-abwa-border/50">
+          <Container>
+            <FadeIn direction="up">
+              <div className="max-w-3xl space-y-2 mb-10">
+                <span className="font-kaushan text-abwa-gold text-lg sm:text-xl tracking-wide block">
+                  {programme.supportSection.eyebrow || "Support & Partnership"}
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-abwa-navy">
+                  {programme.supportSection.title}
+                </h2>
+                <p className="text-sm sm:text-base text-abwa-muted leading-relaxed">
+                  {programme.supportSection.intro}
+                </p>
+              </div>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+              {programme.supportSection.items.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-3xl bg-abwa-pale/60 border border-abwa-border shadow-2xs flex items-start gap-3.5"
+                >
+                  <div className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <span className="text-sm sm:text-base font-medium text-abwa-navy leading-relaxed">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {programme.supportSection.closingBelief && (
+              <div className="p-7 sm:p-8 rounded-3xl bg-abwa-blue text-white shadow-sm flex items-start gap-4">
+                <div className="w-10 h-10 rounded-2xl bg-white/20 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                  <Sparkles className="w-5 h-5 text-abwa-gold" />
+                </div>
+                <div className="space-y-1">
+                  <span className="font-kaushan text-abwa-gold text-sm tracking-wide block">
+                    Our Shared Conviction
+                  </span>
+                  <p className="text-base sm:text-lg font-semibold leading-relaxed text-white">
+                    {programme.supportSection.closingBelief}
+                  </p>
+                </div>
+              </div>
+            )}
+          </Container>
+        </Section>
+      )}
 
       {/* 6. Final Call to Action */}
       <SectionCTA

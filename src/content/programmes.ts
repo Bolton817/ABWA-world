@@ -309,112 +309,247 @@ export const programmesData: Programme[] = [
   {
     slug: "womens-empowerment-sustainable-agriculture",
     category: "Women & Livelihoods",
-    title: "Women's Empowerment and Sustainable Agriculture",
-    subtitle: "Strengthening women's livelihoods, vocational skills, small businesses and sustainable farming.",
-    summary: "Strengthening women's economic independence and family wellbeing through tailoring, small business, village savings and sustainable farming in Kangundo.",
-    location: "Kangundo (Machakos County) and partner communities",
-    status: "Active",
+    title: "Young Mothers and Women's Empowerment Programme",
+    eyebrow: "Mathare, Nairobi & Kangundo · Women's Empowerment",
+    subtitle:
+      "Vocational tailoring, small enterprise, mentorship and sustainable agriculture with resilient women's groups in Mathare and Kangundo.",
+    summary:
+      "Partnering with the Young Mothers Women Group in Mathare on tailoring, vocational skills and a planned Women Empowerment Centre, alongside sustainable vegetable farming with women in Kangundo.",
+    location: "Mathare, Nairobi & Kangundo, Machakos County",
+    status: "Active Community Partnership",
     heroImage: "/images/programs/women_empowerment_&_agriculture/6abwa (64).jpeg",
-    heroImageAlt: "Women group members and volunteers preparing vegetable farming beds in Kangundo",
-    metaTitle: "Women's Empowerment, Enterprise and Agriculture | ABWA World",
+    heroImageAlt:
+      "Young Mothers Women Group members and community partners working together on vocational skills and community development",
+    heroPrimaryCta: {
+      label: "Support the women's centre",
+      href: "/contact",
+    },
+    heroSecondaryCta: {
+      label: "Partner With Us",
+      href: "/partner-with-us",
+    },
+    metaTitle: "Young Mothers Women Empowerment and Agriculture | ABWA World",
     metaDescription:
-      "Strengthening women's economic independence and family wellbeing through tailoring, small business, village savings and sustainable farming in Kangundo.",
+      "How ABWA works with the Young Mothers Women Group in Mathare, Nairobi on tailoring, vocational training and small enterprises, alongside women's farming in Kangundo.",
     description:
-      "We work alongside women's groups—including in Kangundo, Machakos County—to build income-generating enterprises, share climate-smart farming knowledge and support women's leadership and financial independence.",
-    goal: "To strengthen women's economic independence and improve the overall wellbeing of women, young mothers and their families.",
+      "Working alongside the Young Mothers Women Group in Mathare, Nairobi and rural women farmers in Kangundo to build practical trade skills, financial independence and a permanent Women Empowerment Centre.",
+    overviewEyebrow: "Unity and determination in Mathare",
+    overviewTitle: "About the Young Mothers Women Empowerment Programme",
+    goalTitle: "Programme Goal",
+    goal: "To empower vulnerable women, young mothers and rural women farmers through practical vocational skills, sustainable livelihoods, cooperative savings and community leadership.",
     context: [
-      "When women have access to practical skills, startup tools, savings groups and agricultural know-how, whole households become more resilient.",
-      "From vegetable farming and leadership conversations with our partner women's group in Kangundo to tailoring, poultry keeping and small-business mentorship, we start with women's own priorities and local knowledge.",
+      "The Young Mothers Women Group was founded in 2025 in Mathare, Nairobi by a circle of resilient women, mainly young mothers, women who experienced early marriage, and mothers raising their children on their own. Facing high unemployment and the daily struggle of providing food, clothing and school needs for their families, they came together in unity to learn practical vocational skills, starting with tailoring, as a pathway to financial independence.",
+      "Today, the group operates from a rented workshop in Mathare where members train one another in dressmaking and tailoring, sew school uniforms and reusable sanitary pads, run a group savings circle, and look out for vulnerable children in the neighbourhood. With support from Action for Better World Association, visiting volunteers and development partners, the group is working to grow into a permanent Women Empowerment Centre serving more women and families across Mathare.",
+      "Alongside our urban vocational work in Mathare, ABWA also partners with rural women's groups in Kangundo, Machakos County on climate smart vegetable farming, water care, leadership conversations and household nutrition.",
     ],
+    vision: {
+      title: "Programme vision",
+      body: "A self reliant community where women are empowered economically and socially to build better futures for themselves, their children and society.",
+    },
+    mission: {
+      title: "Programme mission",
+      body: "To empower vulnerable women and young mothers through vocational training, entrepreneurship, sustainable agriculture, mentorship and lasting livelihood opportunities.",
+    },
+    achievementsAndChallenges: {
+      eyebrow: "On the ground in Mathare",
+      title: "Current activities, achievements and challenges",
+      subtitle:
+        "What the women are doing today in the workshop, verified milestones achieved, and obstacles they are working to overcome.",
+      currentActivitiesEyebrow: "What the group does today",
+      currentActivitiesTitle: "Current activities in the Mathare workshop",
+      currentActivitiesItems: [
+        "Tailoring and sewing everyday clothes for vulnerable children in the neighbourhood",
+        "Producing school uniforms, dresses, shirts, tote bags and other garments for local families and schools",
+        "Training young mothers and young women who had to leave school early in practical tailoring skills",
+        "Making reusable sanitary pads and other useful products that support both community health and group income",
+        "Supporting one another through group savings, financial literacy and mutual assistance",
+        "Sharing vegetable farming, soil preparation and water conservation skills with our partner women's group in Kangundo",
+      ],
+      achievedEyebrow: "Verified achievements so far",
+      achievedTitle: "What the women have achieved so far",
+      achievedItems: [
+        "More than 30 women in Mathare have completed practical tailoring training through the group",
+        "Five sewing machines are currently in active use: three machines were generously donated by visiting volunteers from Hong Kong, and two additional machines were purchased by the women themselves through their own group savings",
+        "Graduates of the training can now cut, sew and finish garments independently",
+        "Locally sewn clothes and uniforms have been produced and shared with vulnerable children and schools in Mathare",
+        "Members have built strong teamwork, mutual encouragement and growing confidence as craftswomen and mothers",
+      ],
+      challengesEyebrow: "Current challenges",
+      challengesTitle: "Challenges the group is working to overcome",
+      challengesItems: [
+        "Too few sewing machines, overlockers and training tools for the number of women waiting to learn",
+        "A small, rented workshop space that limits how many trainees and orders the group can take on",
+        "Inconsistent electricity supply and security concerns in the rented room",
+        "Limited connections to wider garment and craft markets outside the immediate neighbourhood",
+        "Everyday financial pressures at home that make it hard for some young mothers to attend training every day",
+      ],
+    },
     objectives: [
-      "Support women to establish and grow reliable income-generating activities.",
-      "Improve access to vocational training, sewing equipment and small-business opportunities.",
-      "Strengthen women's groups, village savings circles and community enterprises.",
-      "Provide dedicated skills and psychosocial support for young mothers and women facing hardship.",
+      "Vocational and Entrepreneurial Skills: Equip young mothers and vulnerable women with practical tailoring, beauty, farming and business skills.",
+      "Economic Independence: Support women to earn steady income through garment production, small businesses and cooperative savings.",
+      "Permanent Women Empowerment Centre: Establish a dedicated, fully equipped vocational training and production centre in Mathare.",
+      "Children's Welfare and Nutrition: Support the children of participating mothers and vulnerable neighbourhood children with meals, clothing, school uniforms and learning materials.",
+      "Mentorship and Psychosocial Support: Offer a safe circle for mentorship, emotional support, leadership growth and practical life skills.",
+      "Lasting Partnerships: Connect grassroots women's groups with local and international partners who share their commitment to community led change.",
     ],
+    roadmap: {
+      eyebrow: "Five Year Vision",
+      title: "Future plans and our five year roadmap",
+      intro:
+        "The Young Mothers Women Empowerment Programme is more than a tailoring workshop. It is a long term initiative to restore hope, build dignity and establish a self sustaining Women Empowerment Centre in Mathare.",
+      focusAreasTitle: "Five Future Focus Areas",
+      focusAreas: [
+        {
+          title: "Expanded Vocational Training",
+          description:
+            "Grow tailoring and fashion design classes, and introduce hairdressing, beauty therapy and additional trade skills.",
+        },
+        {
+          title: "Enterprise and Garment Production Unit",
+          description:
+            "Set up a dedicated garment production unit alongside business mentorship, savings groups and financial literacy training so women can launch their own small enterprises.",
+        },
+        {
+          title: "Children's Feeding and Care",
+          description:
+            "Establish a regular children's feeding programme providing breakfast and lunch so young mothers can train knowing their children are fed, clothed and supported for school.",
+        },
+        {
+          title: "A Permanent Training Centre",
+          description:
+            "Move from a small rented room into a permanent, secure workshop with reliable space for classes, garment production and business activities.",
+        },
+        {
+          title: "Mentorship and Family Wellbeing",
+          description:
+            "Strengthen peer mentorship, psychosocial care and women's leadership across the neighbourhood.",
+        },
+      ],
+      timelineTitle: "Five Year Implementation Timeline",
+      timeline: [
+        {
+          period: "Year 1",
+          title: "Strengthening the Foundation",
+          description:
+            "Strengthen existing tailoring classes, acquire additional sewing machines and fabrics, and expand training for young mothers.",
+        },
+        {
+          period: "Years 2 to 3",
+          title: "Establishing the Permanent Centre",
+          description:
+            "Set up the permanent Women Empowerment Centre, introduce hairdressing and beauty therapy training, and expand garment production.",
+        },
+        {
+          period: "Years 4 to 5",
+          title: "Financial Self Reliance",
+          description:
+            "Grow the centre's tailoring, garment and beauty services into sustainable social enterprises that help fund ongoing community training.",
+        },
+      ],
+    },
+    supportSection: {
+      eyebrow: "Support & Partnership",
+      title: "Ways to support the Young Mothers group",
+      intro:
+        "ABWA invites organisations, businesses, volunteers and well wishers to walk alongside the Young Mothers Women Group through practical support:",
+      items: [
+        "Sewing machines, overlockers and tailoring tools",
+        "Fabrics, threads and training materials",
+        "Support towards establishing a permanent workshop and training centre",
+        "Hairdressing and beauty therapy training equipment",
+        "Volunteer vocational trainers and small business mentors",
+        "Support for children's feeding, school uniforms and learning materials",
+        "Financial partnerships and market connections for the group's garments and products",
+      ],
+      closingBelief:
+        "We believe that when women are supported to earn, lead and stand together, whole families grow stronger, children's futures brighten and communities thrive.",
+    },
     activities: [
-      "Sewing machine provision and practical tailoring training",
-      "Small-business development and entrepreneurship training",
-      "Poultry farming and small livestock projects",
-      "Kitchen gardening and sustainable vegetable cultivation (including our Kangundo women's group partnership)",
-      "Financial literacy and village savings and loan groups",
-      "Training in agricultural product processing, value addition and marketing",
-      "Leadership conversations, mentorship and business management",
-      "Psychosocial support, health awareness and life-skills sessions",
-    ],
-    whatHappens: [
-      {
-        title: "Vocational skills and enterprises",
-        items: [
-          "Sewing machine provision and practical tailoring training",
-          "Small-business development and entrepreneurship training",
-          "Financial literacy and village savings and loan groups",
-          "Training in agricultural product processing, value addition and marketing",
-        ],
-      },
-      {
-        title: "Sustainable farming and leadership",
-        items: [
-          "Kitchen gardening and sustainable vegetable cultivation (including our Kangundo women's group partnership)",
-          "Poultry farming and small livestock projects",
-          "Leadership conversations, mentorship and business management",
-          "Psychosocial support, health awareness and life-skills sessions",
-        ],
-      },
+      "Practical tailoring, dressmaking and garment cutting classes in Mathare",
+      "Sewing everyday clothes and school uniforms for vulnerable neighbourhood children",
+      "Reusable sanitary pad production supporting adolescent girls' health and dignity",
+      "Micro savings circle and cooperative table banking among young mothers",
+      "Climate smart vegetable farming and kitchen gardening with women in Kangundo",
+      "Soil preparation, organic composting and water conservation techniques",
+      "Child welfare support, nutrition assistance and community mentorship",
+      "Preparation for the permanent Women Empowerment Centre in Mathare",
     ],
     intendedOutcomes: [
-      "We aim to support higher, more predictable incomes among participating women.",
-      "We aim to improve household financial stability and family nutrition.",
-      "We aim to foster stronger, self-governing women-led community groups and enterprises.",
-      "We aim to create practical opportunities for young mothers to become self-reliant.",
+      "Economic self reliance: Young mothers and women acquire employable trade skills and start independent small enterprises.",
+      "Safe community space: Women and children in Mathare have access to a secure, permanent training and care centre.",
+      "Dignified living: Improved family nutrition, stable household income, and educational support for children.",
+      "Health and dignity: Local production of affordable school uniforms and reusable hygiene products for girls.",
+      "Grassroots solidarity: Stronger peer networks, women's leadership, and sustainable community enterprises in Mathare and Kangundo.",
     ],
     aims: [
-      "We aim to support higher, more predictable incomes among participating women.",
-      "We aim to improve household financial stability and family nutrition.",
-      "We aim to foster stronger, self-governing women-led community groups and enterprises.",
-      "We aim to create practical opportunities for young mothers to become self-reliant.",
+      "Economic self reliance: Young mothers and women acquire employable trade skills and start independent small enterprises.",
+      "Safe community space: Women and children in Mathare have access to a secure, permanent training and care centre.",
+      "Dignified living: Improved family nutrition, stable household income, and educational support for children.",
+      "Health and dignity: Local production of affordable school uniforms and reusable hygiene products for girls.",
+      "Grassroots solidarity: Stronger peer networks, women's leadership, and sustainable community enterprises in Mathare and Kangundo.",
     ],
+    safeguardingNote: {
+      title: "Keeping women and children safe",
+      body: "Women and children participating in this programme share their stories and images only with informed consent. We maintain strict safeguarding policies to protect the dignity and privacy of every family.",
+    },
     contactTopic: "women-agriculture",
-    ctaText: "Ask about women's empowerment",
+    ctaSectionTitle: "Support the women's empowerment centre in Mathare",
+    ctaSectionDescription:
+      "Whether you would like to contribute sewing equipment, partner with us on the permanent training centre, or volunteer as a skills trainer, we would love to talk with you.",
+    ctaText: "Offer equipment or partnership support",
+    primaryCtaHref: "/contact",
     secondaryCta: {
-      label: "Read: Sustainable Agriculture Article",
-      href: "/blog/sustainable-agriculture-resilient-communities-kenya",
+      label: "Volunteer With ABWA",
+      href: "/volunteer",
     },
     relatedSlug: "umisiiyu-women-group",
+    relatedLinks: [
+      {
+        label: "Umisiiyu Women Group in Kangundo",
+        href: "/programs/umisiiyu-women-group",
+      },
+      {
+        label: "Food Security and Sustainable Agriculture",
+        href: "/programs/food-security-sustainable-agriculture",
+      },
+      {
+        label: "Read: Sustainable Agriculture in Resilient Communities",
+        href: "/blog/sustainable-agriculture-resilient-communities-kenya",
+      },
+    ],
     activityImages: [
-    {
-        "src": "/images/programs/women_empowerment_&_agriculture/3abwa (5).jpeg",
-        "alt": "Women cooperative members producing traditional woven sisal crafts",
-        "caption": "Women's enterprise, craft production and table banking."
-    },
-    {
-        "src": "/images/programs/women_empowerment_&_agriculture/5abwa (17).jpeg",
-        "alt": "Women farmers cultivating vegetable beds with climate-smart techniques",
-        "caption": "Drought-tolerant farming and sustainable soil management."
-    }
-],
+      {
+        src: "/images/programs/women_empowerment_&_agriculture/3abwa (5).jpeg",
+        alt: "Women cooperative members producing traditional woven sisal crafts and artisan goods",
+        caption: "Women's enterprise, craft production and table banking.",
+      },
+      {
+        src: "/images/programs/women_empowerment_&_agriculture/5abwa (17).jpeg",
+        alt: "Women farmers cultivating vegetable beds with climate smart techniques",
+        caption: "Drought tolerant farming and sustainable soil management.",
+      },
+    ],
     momentsGallery: [
-    {
-        "src": "/images/programs/women_empowerment_&_agriculture/4abwa (1).jpeg",
-        "alt": "Women's group members meeting under tree canopy in Kangundo",
-        "caption": "Grassroots women's group meeting in Machakos County."
-    },
-    {
-        "src": "/images/programs/women_empowerment_&_agriculture/5abwa (21).jpeg",
-        "alt": "Women farmers weeding and caring for drought-resilient crops",
-        "caption": "Tending household kitchen gardens and vegetable plots."
-    },
-    {
-        "src": "/images/programs/women_empowerment_&_agriculture/6abwa (69).jpeg",
-        "alt": "Harvesting fresh community farm produce",
-        "caption": "Harvesting fresh vegetables for household nutrition."
-    }
-],
+      {
+        src: "/images/programs/women_empowerment_&_agriculture/4abwa (1).jpeg",
+        alt: "Women's group members meeting under tree canopy in Kangundo",
+        caption: "Grassroots women's group meeting in Machakos County.",
+      },
+      {
+        src: "/images/programs/women_empowerment_&_agriculture/5abwa (21).jpeg",
+        alt: "Women farmers weeding and caring for drought resilient crops",
+        caption: "Tending household kitchen gardens and vegetable plots.",
+      },
+      {
+        src: "/images/programs/women_empowerment_&_agriculture/6abwa (69).jpeg",
+        alt: "Harvesting fresh community farm produce",
+        caption: "Harvesting fresh vegetables for household nutrition.",
+      },
+    ],
     ctaImage: {
-    "src": "/images/programs/women_empowerment_&_agriculture/6abwa (75).jpeg",
-    "alt": "Rural women elders welcoming volunteers with traditional weaving fiber"
-},
-    
+      src: "/images/programs/women_empowerment_&_agriculture/6abwa (75).jpeg",
+      alt: "Rural women elders welcoming volunteers with traditional weaving fiber",
+    },
     relatedPostSlug: "sustainable-agriculture-resilient-communities-kenya",
   },
 
