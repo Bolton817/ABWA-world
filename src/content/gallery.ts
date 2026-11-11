@@ -1,7 +1,7 @@
 /**
  * ABWA World Photo Gallery Registry
  * 
- * Auto-generated collection of all 378 authentic community photographs
+ * Auto-generated collection of all 394 authentic community photographs
  * across ABWA's 12 programme pillars and place-based community projects in Kenya.
  */
 
@@ -579,7 +579,7 @@ export const galleryProgrammes: GalleryProgrammeSection[] = [
     "subtitle": "Equipping young people with practical vocations, leadership training, and enterprise opportunities.",
     "description": "Fostering self-reliance, fitness, and community leadership among youth in Mathare and urban informal settlements.",
     "folderName": "youth_empowerment_&_skills",
-    "imageCount": 27,
+    "imageCount": 31,
     "images": [
       {
         "id": "youth-empowerment-1",
@@ -850,6 +850,46 @@ export const galleryProgrammes: GalleryProgrammeSection[] = [
         "programmeSlug": "youth-empowerment",
         "programmeTitle": "Youth Empowerment & Skills Development",
         "programmeNumber": "02"
+      },
+      {
+        "id": "youth-empowerment-28",
+        "src": "/images/stories/Miami Youth Group tank donation with farming tools by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.43.43 AM.jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.43.43 AM.jpeg",
+        "alt": "Miami Florida Youth Group members positioning the new community water tank in Mathare",
+        "caption": "Offloading and positioning the new community water storage tank in Mathare.",
+        "programmeSlug": "youth-empowerment",
+        "programmeTitle": "Youth Empowerment & Skills Development",
+        "programmeNumber": "02"
+      },
+      {
+        "id": "youth-empowerment-29",
+        "src": "/images/stories/Miami Youth Group tank donation with farming tools by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.43.43 AM (1).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.43.43 AM (1).jpeg",
+        "alt": "Youth leaders unloading water storage equipment from the delivery vehicle",
+        "caption": "Coordinated community teamwork delivering equipment to Mathare.",
+        "programmeSlug": "youth-empowerment",
+        "programmeTitle": "Youth Empowerment & Skills Development",
+        "programmeNumber": "02"
+      },
+      {
+        "id": "youth-empowerment-30",
+        "src": "/images/stories/Miami Youth Group tank donation with farming tools by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.43.43 AM (2).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.43.43 AM (2).jpeg",
+        "alt": "Voltra international volunteer and Miami Florida Youth Group team standing together around the water tank",
+        "caption": "Voltra volunteer and Miami Florida Youth Group team celebrating the water tank donation.",
+        "programmeSlug": "youth-empowerment",
+        "programmeTitle": "Youth Empowerment & Skills Development",
+        "programmeNumber": "02"
+      },
+      {
+        "id": "youth-empowerment-31",
+        "src": "/images/stories/Miami Youth Group tank donation with farming tools by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.43.43 AM (3).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.43.43 AM (3).jpeg",
+        "alt": "Voltra volunteer and Miami Florida Youth Group leaders with irrigation hose and tools at the riverbank farm",
+        "caption": "Urban kitchen farming tools and irrigation equipment delivered with Voltra.",
+        "programmeSlug": "youth-empowerment",
+        "programmeTitle": "Youth Empowerment & Skills Development",
+        "programmeNumber": "02"
       }
     ]
   },
@@ -861,7 +901,7 @@ export const galleryProgrammes: GalleryProgrammeSection[] = [
     "subtitle": "Strengthening women-led smallholder cooperatives through climate-smart farming and financial literacy.",
     "description": "Collaborating with rural women farmers in Kangundo and surrounding semi-arid zones on drought-tolerant crops and collective savings.",
     "folderName": "women_empowerment_&_agriculture",
-    "imageCount": 62,
+    "imageCount": 74,
     "images": [
       {
         "id": "womens-empowerment-sustainable-agriculture-1",
@@ -1479,6 +1519,126 @@ export const galleryProgrammes: GalleryProgrammeSection[] = [
         "fileName": "7abwa (98).jpeg",
         "alt": "Women's Empowerment & Sustainable Agriculture community initiative in Kenya (62)",
         "caption": "Women's Empowerment & Sustainable Agriculture community partnership, activities, and local participants in Kenya.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-63",
+        "src": "/images/stories/Young mothers Sewing machine donation for tailoring project by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.32.28 AM.jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.32.28 AM.jpeg",
+        "alt": "Young mothers in Mathare participating in tailoring and livelihood training",
+        "caption": "Peer encouragement and vocational skills training in Mathare.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-64",
+        "src": "/images/stories/Young mothers Sewing machine donation for tailoring project by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.32.28 AM (1).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.32.28 AM (1).jpeg",
+        "alt": "Young mothers and Voltra volunteers in dialogue inside the tailoring workshop in Mathare",
+        "caption": "Mentorship and tailoring skills training in the Mathare workshop.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-65",
+        "src": "/images/stories/Young mothers Sewing machine donation for tailoring project by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.32.28 AM (2).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.32.28 AM (2).jpeg",
+        "alt": "Young mothers in Mathare receiving sewing machines and work tables for their tailoring workshop",
+        "caption": "Sewing machines and tailoring work tables delivered with Voltra.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-66",
+        "src": "/images/stories/Young mothers Sewing machine donation for tailoring project by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.32.28 AM (3).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.32.28 AM (3).jpeg",
+        "alt": "Voltra volunteers and young mothers gathered together in the tailoring space",
+        "caption": "Shared learning and cultural exchange in Mathare.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-67",
+        "src": "/images/stories/Young mothers Sewing machine donation for tailoring project by Voltra in partnership with ABWA/WhatsApp Image 2026-11-10 at 5.32.29 AM.jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.32.29 AM.jpeg",
+        "alt": "Young Mothers Women Group members and Voltra volunteer celebrating sewing machine donations outside their tailor shop in Mathare",
+        "caption": "Young mothers and Voltra volunteer celebrating sewing machine donations outside the tailor shop.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-68",
+        "src": "/images/stories/Women Empowerment program for youths and young mothers/WhatsApp Image 2026-11-10 at 5.46.41 AM.jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.46.41 AM.jpeg",
+        "alt": "Young mothers holding their babies during community empowerment and health discussion",
+        "caption": "Caring support and economic empowerment for young mothers.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-69",
+        "src": "/images/stories/Women Empowerment program for youths and young mothers/WhatsApp Image 2026-11-10 at 5.46.41 AM (1).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.46.41 AM (1).jpeg",
+        "alt": "Young mothers and volunteers listening attentively during women empowerment session",
+        "caption": "Attentive participants in women empowerment and health workshop.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-70",
+        "src": "/images/stories/Women Empowerment program for youths and young mothers/WhatsApp Image 2026-11-10 at 5.46.41 AM (2).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.46.41 AM (2).jpeg",
+        "alt": "Women group members sharing experiences during community discussion in Nairobi",
+        "caption": "Community dialogue and shared experiences among young mothers.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-71",
+        "src": "/images/stories/Women Empowerment program for youths and young mothers/WhatsApp Image 2026-11-10 at 5.46.43 AM.jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.46.43 AM.jpeg",
+        "alt": "Young mothers, youth leaders and Voltra volunteers gathered in a garden discussion circle in Mathare",
+        "caption": "Women empowerment, youth dialogue and peer mentorship in Mathare.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-72",
+        "src": "/images/stories/Women Empowerment program for youths and young mothers/WhatsApp Image 2026-11-10 at 5.46.43 AM (1).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.46.43 AM (1).jpeg",
+        "alt": "Community youth and young mothers in outdoor learning session in Nairobi",
+        "caption": "Outdoor community dialogue and women leadership.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-73",
+        "src": "/images/stories/Women Empowerment program for youths and young mothers/WhatsApp Image 2026-11-10 at 5.46.43 AM (2).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.46.43 AM (2).jpeg",
+        "alt": "Young women and community mentors discussing life skills in garden setting",
+        "caption": "Mentorship and life skills discussion in community garden.",
+        "programmeSlug": "womens-empowerment-sustainable-agriculture",
+        "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
+        "programmeNumber": "03"
+      },
+      {
+        "id": "womens-empowerment-sustainable-agriculture-74",
+        "src": "/images/stories/Women Empowerment program for youths and young mothers/WhatsApp Image 2026-11-10 at 5.46.43 AM (3).jpeg",
+        "fileName": "WhatsApp Image 2026-11-10 at 5.46.43 AM (3).jpeg",
+        "alt": "Young mothers smiling together during community empowerment meeting",
+        "caption": "Joy and solidarity among young mothers in Mathare.",
         "programmeSlug": "womens-empowerment-sustainable-agriculture",
         "programmeTitle": "Women's Empowerment & Sustainable Agriculture",
         "programmeNumber": "03"
