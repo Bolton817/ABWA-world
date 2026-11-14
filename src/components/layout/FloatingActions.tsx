@@ -178,10 +178,10 @@ export function FloatingActions() {
                       rel="noopener noreferrer"
                       aria-label={item.ariaLabel}
                       onClick={() => setHubOpen(false)}
-                      className={`h-9 rounded-xl border border-slate-200/80 hover:border-slate-300 ${item.accentBg} flex items-center justify-center transition-all duration-150 hover:scale-105 shadow-2xs group`}
+                      className={`h-8 rounded-lg border border-slate-200/80 hover:border-slate-300 ${item.accentBg} flex items-center justify-center transition-all duration-150 hover:scale-105 shadow-2xs group`}
                     >
                       <Icon
-                        className="w-4.5 h-4.5 group-hover:scale-110 transition-transform"
+                        className="w-3.5 h-3.5 group-hover:scale-110 transition-transform"
                         style={{ color: item.brandColor }}
                       />
                     </a>
