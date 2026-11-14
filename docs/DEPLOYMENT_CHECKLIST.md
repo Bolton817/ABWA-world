@@ -57,7 +57,7 @@ To connect the production domain `abwaworld.org`:
 
 Per Specification Module 152, the launch decision must be explicit:
 
-- [x] **Approved Identity & Contact**: Confirmed base in Nairobi, Kenya, confirmed phone `+254 720 021 001`. Unconfirmed email left unpublished.
+- [x] **Approved Identity & Contact**: Confirmed base in Nairobi, Kenya, confirmed phone `+254 733 595 906`. Unconfirmed email left unpublished.
 - [x] **Truth-First Numbers**: Zero synthetic statistics, zero fabricated beneficiary counts, zero unsupported claims.
 - [x] **Verified Programme Status**: Transparent status labels (Active, Planned, Completed) on all four active initiatives.
 - [x] **Photo & Story Consent**: All stories and gallery photos accompanied by dignity charter and unconditional takedown commitment.

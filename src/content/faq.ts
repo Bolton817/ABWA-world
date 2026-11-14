@@ -1,4 +1,4 @@
-﻿import { FAQItem } from "@/types";
+import { FAQItem } from "@/types";
 
 export interface ExtendedFAQItem extends FAQItem {
   showOnHome?: boolean;
@@ -85,7 +85,7 @@ export const faqData: ExtendedFAQItem[] = [
   {
     question: "How do I get in touch?",
     answer:
-      "You can call +254 720 021 001 or use the form on our Contact page. We're based in Nairobi, Kenya.",
+      "You can call +254 733 595 906 or use the form on our Contact page. We're based in Nairobi, Kenya.",
     category: "Contact",
     showOnHome: true,
   },

@@ -103,11 +103,11 @@ export default function LegalPageLayout({ document }: LegalPageLayoutProps) {
                   Questions about our terms or your data? Call our team:
                 </p>
                 <a
-                  href="tel:+254720021001"
+                  href="tel:+254733595906"
                   className="inline-flex items-center gap-1.5 font-semibold text-[#15345A] hover:text-[#1E63B8] transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#B79045]" />
-                  +254 720 021 001
+                  +254 733 595 906
                 </a>
               </div>
             </aside>
@@ -176,11 +176,11 @@ export default function LegalPageLayout({ document }: LegalPageLayoutProps) {
 
                 <div className="flex flex-wrap items-center gap-4 text-sm">
                   <a
-                    href="tel:+254720021001"
+                    href="tel:+254733595906"
                     className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#15345A] text-white hover:bg-[#1E63B8] transition-colors font-medium shadow-sm"
                   >
                     <Phone className="w-4 h-4 text-[#B79045]" />
-                    Call +254 720 021 001
+                    Call +254 733 595 906
                   </a>
                   <a
                     href="mailto:contact@abwaworld.org"

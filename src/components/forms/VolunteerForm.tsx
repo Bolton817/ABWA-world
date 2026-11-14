@@ -72,14 +72,14 @@ export function VolunteerForm() {
         setSubmitSuccess(true);
       } else {
         setSubmitError(
-          result.message || "Sorry, that didn't go through. Please try again, or call us on +254 720 021 001."
+          result.message || "Sorry, that didn't go through. Please try again, or call us on +254 733 595 906."
         );
         if (result.errors) {
           setErrors(result.errors);
         }
       }
     } catch {
-      setSubmitError("Sorry, that didn't go through. Please try again, or call us on +254 720 021 001.");
+      setSubmitError("Sorry, that didn't go through. Please try again, or call us on +254 733 595 906.");
     } finally {
       setIsSubmitting(false);
     }
@@ -162,8 +162,8 @@ export function VolunteerForm() {
             <p className="font-semibold">{submitError}</p>
             <p className="mt-1 text-red-700">
               You can also reach our team directly in Nairobi at{" "}
-              <a href="tel:+254720021001" className="font-medium underline hover:text-red-900">
-                +254 720 021 001
+              <a href="tel:+254733595906" className="font-medium underline hover:text-red-900">
+                +254 733 595 906
               </a>
               .
             </p>

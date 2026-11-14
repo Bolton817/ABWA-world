@@ -56,7 +56,7 @@ All website copy, programmes, articles, and stories reside in clean, typed files
 
 ### Updating Contact Information
 - File: `src/config/site.ts`
-- Centralized configuration for phone number (`+254 720 021 001`), postal box, and official email once verified.
+- Centralized configuration for phone number (`+254 733 595 906`), postal box, and official email once verified.
 
 ---
 
@@ -90,7 +90,7 @@ npm.cmd run start
 | **Legal Registration** | Left unstated | Do not claim NGO registration until officially gazetted constitution is confirmed. |
 | **Beneficiary Counts** | Omitted | No unverified numbers ("430 children fed") until verified records exist. |
 | **Donations** | Direct enquiry fallback | Do not activate live payment forms until ABWA provides verified merchant accounts. |
-| **Phone Number** | `+254 720 021 001` | Single verified contact phone for all public communications. |
+| **Phone Number** | `+254 733 595 906` | Single verified contact phone for all public communications. |
 | **Takedown Policy** | Active unconditional promise | Any community member requesting photo or story removal is handled immediately. |
 
 ---

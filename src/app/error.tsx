@@ -34,10 +34,10 @@ export default function ErrorBoundary({ error, reset }: ErrorProps) {
           <p className="text-[#263445]/80 text-base md:text-lg mb-8 leading-relaxed font-sans">
             We&apos;re sorry about that. Please try again. If the problem continues, you can still reach us on{" "}
             <a
-              href="tel:+254720021001"
+              href="tel:+254733595906"
               className="font-semibold text-[#15345A] hover:text-[#1E63B8] underline underline-offset-4"
             >
-              +254 720 021 001
+              +254 733 595 906
             </a>
             .
           </p>
@@ -62,11 +62,11 @@ export default function ErrorBoundary({ error, reset }: ErrorProps) {
             </Link>
 
             <a
-              href="tel:+254720021001"
+              href="tel:+254733595906"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#FAF7EE] text-[#15345A] hover:bg-[#EAF2FA] border border-[#B79045]/40 transition-colors font-medium text-sm"
             >
               <Phone className="w-4 h-4 text-[#B79045]" />
-              Call +254 720 021 001
+              Call +254 733 595 906
             </a>
           </div>
 

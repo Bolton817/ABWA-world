@@ -1,4 +1,4 @@
-﻿# ABWA World — Content Verification Matrix
+# ABWA World — Content Verification Matrix
 
 This document tracks the factual veracity and evidentiary status of all content published on the ABWA World website rebuild, enforcing the requirements of TDD Module 004, Module 021, and the Copy Deck Ground Rules.
 
@@ -13,7 +13,7 @@ These facts are confirmed by the TDD v1.0 and Copy Deck v1.0 and are approved fo
 | **Organization Name** | CONFIRMED | Action for Better World Association (formal), ABWA World (site branding) |
 | **Founding Year** | CONFIRMED | 2015 (supersedes "since 2014" found on legacy site) |
 | **Headquarters / Base** | CONFIRMED | Nairobi, Kenya |
-| **Primary Telephone** | CONFIRMED | `+254 720 021 001` (tel link: `tel:+254720021001`) |
+| **Primary Telephone** | CONFIRMED | `+254 733 595 906` (tel link: `tel:+254733595906`) |
 | **Focus Areas** | CONFIRMED | Youth skills and creative arts, women's sustainable agriculture and livelihoods, environmental conservation, learning support |
 | **Operational Philosophy** | CONFIRMED | Community-led, dignity-first, collaborative learning, no saviorism |
 

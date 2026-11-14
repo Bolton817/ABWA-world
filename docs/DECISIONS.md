@@ -1,4 +1,4 @@
-﻿# ABWA World — Decision Register
+# ABWA World — Decision Register
 
 This register documents all technical, architectural, brand, and content decisions for the ABWA World website rebuild, tracking their authority, rationale, and current status (CONFIRMED, PROPOSED, VERIFY, DEFERRED) in accordance with TDD Module 011.
 
@@ -42,7 +42,7 @@ This register documents all technical, architectural, brand, and content decisio
 
 | ID | Topic | Decision | Status | Rationale |
 | :--- | :--- | :--- | :--- | :--- |
-| **DEC-011** | Official Phone | `+254 720 021 001` (`tel:+254720021001`) | **CONFIRMED** | Verified phone number in TDD. Legacy number `+254 733 595 906` is retired. |
+| **DEC-011** | Official Phone | `+254 733 595 906` (`tel:+254733595906`) | **CONFIRMED** | Verified official phone number requested by client. Replaces `+254 720 021 001`. |
 | **DEC-012** | Official Email | Pending client confirmation | **VERIFY** | Old site shows `abworld80@gmail.com` and `info@abwaaworld.org`. No email published until client confirms. |
 | **DEC-013** | Postal Address | P.O. Box 1204-00515 Buruburu | **VERIFY** | Kept optional; published only upon client sign-off. Street address is not inferred. |
 | **DEC-014** | Donation Flow | Launch with **Version A** (direct giving enquiry) | **CONFIRMED** | No live payment integration or fake transactions until verified payment provider details are provided by ABWA. |

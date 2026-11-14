@@ -21,7 +21,7 @@ export const privacyPolicy: LegalDocument = {
       title: "Who we are",
       content: [
         "This website is run by Action for Better World Association (ABWA), a community-based organisation founded in 2015 and headquartered in Buruburu, Nairobi, Kenya. In this policy, 'we', 'our' and 'us' refer to ABWA.",
-        "You can reach our team at any time by calling our primary telephone line at +254 720 021 001, emailing contact@abwaworld.org, or writing to us through our online Contact page.",
+        "You can reach our team at any time by calling our primary telephone line at +254 733 595 906, emailing contact@abwaworld.org, or writing to us through our online Contact page.",
       ],
     },
     {
@@ -90,7 +90,7 @@ export const privacyPolicy: LegalDocument = {
       title: "Your choices and rights",
       content: [
         "You have complete autonomy over your personal information. You can ask us at any time what information we hold about you, ask us to correct inaccuracies, request that we delete your details, or ask us to stop contacting you.",
-        "To make any of these requests, please call us on +254 720 021 001 or send a note through our Contact page.",
+        "To make any of these requests, please call us on +254 733 595 906 or send a note through our Contact page.",
       ],
     },
     {
@@ -155,7 +155,7 @@ export const privacyPolicy: LegalDocument = {
         "If you have any questions about this Privacy Policy, your personal information, or wish to exercise your data rights, please contact us:",
       ],
       listItems: [
-        "Telephone: +254 720 021 001",
+        "Telephone: +254 733 595 906",
         "Email: contact@abwaworld.org",
         "Headquarters: Buruburu, Nairobi, Kenya",
         "Postal Address: P.O. Box 1204-00515 Buruburu, Nairobi, Kenya",
@@ -275,7 +275,7 @@ export const termsAndConditions: LegalDocument = {
         "If you have any questions or require clarification regarding these terms, please contact us:",
       ],
       listItems: [
-        "Telephone: +254 720 021 001",
+        "Telephone: +254 733 595 906",
         "Email: contact@abwaworld.org",
         "Headquarters: Buruburu, Nairobi, Kenya",
         "Online Contact: Use our Contact page at /contact",

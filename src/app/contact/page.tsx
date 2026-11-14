@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 const contactCards = [
   {
     title: "Telephone",
-    value: "+254 720 021 001",
-    href: "tel:+254720021001",
+    value: "+254 733 595 906",
+    href: "tel:+254733595906",
     description: "Available during business hours East Africa Time (EAT)",
     icon: Phone,
     isLink: true,

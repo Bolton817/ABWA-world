@@ -10,10 +10,10 @@ export const siteConfig = {
   foundingYear: 2015,
   contact: {
     location: "Buruburu, Nairobi, Kenya",
-    phone: "+254 720 021 001",
-    phoneHref: "tel:+254720021001",
-    whatsapp: "+254 720 021 001",
-    whatsappHref: "https://wa.me/254720021001?text=Hello%20ABWA%2C%20I%20would%20like%20to%20get%20in%20touch.",
+    phone: "+254 733 595 906",
+    phoneHref: "tel:+254733595906",
+    whatsapp: "+254 733 595 906",
+    whatsappHref: "https://wa.me/254733595906?text=Hello%20ABWA%2C%20I%20would%20like%20to%20get%20in%20touch.",
     postalBox: "P.O. Box 1204-00515 Buruburu, Nairobi, Kenya",
     email: undefined as string | undefined, // Verified: add only once ABWA confirms
   },

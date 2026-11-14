@@ -59,7 +59,7 @@ export const siteSearchIndex: SearchableItem[] = [
     title: "Contact Us",
     url: "/contact",
     category: "Page",
-    snippet: "Get in touch directly with our team in Nairobi via phone (+254 720 021 001) or online form.",
+    snippet: "Get in touch directly with our team in Nairobi via phone (+254 733 595 906) or online form.",
     keywords: ["phone", "telephone", "address", "buruburu", "location", "message", "enquiry"],
   },
   {

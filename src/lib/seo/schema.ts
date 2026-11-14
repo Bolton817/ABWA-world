@@ -20,7 +20,7 @@ export function getOrganizationSchema() {
     description:
       "A community organisation based in Buruburu, Nairobi, Kenya working with women, young people and children on skills, farming, creativity and the environment.",
     foundingDate: "2015",
-    telephone: "+254 720 021 001",
+    telephone: "+254 733 595 906",
     email: "contact@abwaworld.org",
     address: {
       "@type": "PostalAddress",

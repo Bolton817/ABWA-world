@@ -166,11 +166,11 @@ export default function DonatePage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="tel:+254720021001"
+                href="tel:+254733595906"
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-base font-semibold text-abwa-ink transition hover:bg-slate-50"
               >
                 <PhoneCall className="h-4 w-4 text-abwa-blue" />
-                <span>+254 720 021 001</span>
+                <span>+254 733 595 906</span>
               </a>
             </div>
           </div>
@@ -193,8 +193,8 @@ export default function DonatePage() {
                   Please only give using the details published on this website or sent to you directly by ABWA. If
                   anyone asks you to send money to a different account in ABWA&apos;s name, please check with us first
                   by calling{" "}
-                  <a href="tel:+254720021001" className="font-semibold underline hover:text-amber-950">
-                    +254 720 021 001
+                  <a href="tel:+254733595906" className="font-semibold underline hover:text-amber-950">
+                    +254 733 595 906
                   </a>
                   .
                 </p>

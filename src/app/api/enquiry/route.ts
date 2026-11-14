@@ -107,7 +107,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<EnquiryRe
     return NextResponse.json(
       {
         success: false,
-        message: "Sorry, that didn't go through. Please try again, or call us on +254 720 021 001.",
+        message: "Sorry, that didn't go through. Please try again, or call us on +254 733 595 906.",
       },
       { status: 500 }
     );
