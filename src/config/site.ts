@@ -17,6 +17,12 @@ export const siteConfig = {
     postalBox: "P.O. Box 1204-00515 Buruburu, Nairobi, Kenya",
     email: undefined as string | undefined, // Verified: add only once ABWA confirms
   },
+  social: {
+    facebook: "https://www.facebook.com/share/1FKHHtfuTz/",
+    instagram: "https://www.instagram.com/abwakenya?obrf=MW80Zmw0b3lrbTdoNg==",
+    tiktok: "https://www.tiktok.com/@abwaworld?_r=1&_t=ZS-9Amzl9y9W44",
+    youtube: "https://youtube.com/@abwaworld-e6f9q?si=A9B1TUQjCfAhXTvk",
+  },
   features: {
     showPostalBox: process.env.NEXT_PUBLIC_SHOW_POSTAL_BOX === "true",
     enableDonationPayment: process.env.NEXT_PUBLIC_ENABLE_DONATION_PAYMENT === "true",

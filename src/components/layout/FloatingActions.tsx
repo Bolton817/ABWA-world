@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { MessageSquare, X, Phone, Heart, Mail, ArrowUp } from "lucide-react";
+import { socialChannels } from "@/components/ui/SocialIcons";
 
 function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -160,6 +161,31 @@ export function FloatingActions() {
                 <div className="text-[11px] text-abwa-muted truncate">Explore ways to help</div>
               </div>
             </Link>
+
+            {/* Social Channels Quick Tray */}
+            <div className="pt-2 mt-1 border-t border-slate-100">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-abwa-muted block px-1 mb-2">
+                Follow ABWA
+              </span>
+              <div className="grid grid-cols-4 gap-1.5 px-1">
+                {socialChannels.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.ariaLabel}
+                      onClick={() => setHubOpen(false)}
+                      className="h-9 rounded-lg bg-slate-50 hover:bg-abwa-pale border border-slate-200/70 hover:border-abwa-blue/40 text-slate-700 hover:text-abwa-navy flex items-center justify-center transition-all duration-150 hover:scale-105 shadow-2xs group"
+                    >
+                      <Icon className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         )}
 
