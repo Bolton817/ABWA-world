@@ -791,6 +791,7 @@ export default function ImpactPage() {
                   aspectRatio="16:9"
                   badge={flagshipVideo.badge}
                   duration={flagshipVideo.duration}
+                  thumbnail={flagshipVideo.thumbnail}
                 />
               </div>
 

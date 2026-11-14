@@ -7,7 +7,6 @@ import {
   flagshipVideo,
   artVideo,
   educationVideo,
-  upcyclingShort,
 } from "@/content/videos";
 import { MapPin, ArrowRight, Sparkles, Heart } from "lucide-react";
 
@@ -39,6 +38,7 @@ export function HomeVideoSection() {
                 aspectRatio="16:9"
                 badge={flagshipVideo.badge}
                 duration={flagshipVideo.duration}
+                thumbnail={flagshipVideo.thumbnail}
                 priority
               />
             </div>
@@ -93,7 +93,7 @@ export function HomeVideoSection() {
           </div>
         </div>
 
-        {/* 2. Community Voices Grid (3-Card Showcase) */}
+        {/* 2. Community Voices Grid (2-Card Symmetrical 16:9 Showcase) */}
         <div>
           <div className="mb-6 flex items-center justify-between">
             <h3 className="text-xl sm:text-2xl font-bold text-abwa-navy tracking-tight">
@@ -103,12 +103,12 @@ export function HomeVideoSection() {
               href="/stories"
               className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-abwa-blue hover:text-abwa-navy transition-colors"
             >
-              <span>View all videos</span>
+              <span>View all video stories</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {/* Card 1: Arts & Culture */}
             <div className="flex flex-col justify-between rounded-3xl border border-abwa-border bg-white p-5 sm:p-6 shadow-xs hover:border-abwa-blue/30 transition-colors">
               <div className="space-y-4">
@@ -118,6 +118,7 @@ export function HomeVideoSection() {
                   aspectRatio="16:9"
                   badge={artVideo.badge}
                   duration={artVideo.duration}
+                  thumbnail={artVideo.thumbnail}
                 />
                 <div className="space-y-2">
                   <span className="text-xs font-bold text-abwa-gold uppercase tracking-wider block">
@@ -151,6 +152,7 @@ export function HomeVideoSection() {
                   aspectRatio="16:9"
                   badge={educationVideo.badge}
                   duration={educationVideo.duration}
+                  thumbnail={educationVideo.thumbnail}
                 />
                 <div className="space-y-2">
                   <span className="text-xs font-bold text-abwa-gold uppercase tracking-wider block">
@@ -175,41 +177,6 @@ export function HomeVideoSection() {
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-abwa-blue hover:text-abwa-navy transition-colors"
                 >
                   <span>Learn about education support</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 3: Youth Empowerment / Vertical Short */}
-            <div className="flex flex-col justify-between rounded-3xl border border-abwa-border bg-white p-5 sm:p-6 shadow-xs hover:border-abwa-blue/30 transition-colors">
-              <div className="space-y-4">
-                <div className="py-1">
-                  <YouTubeEmbed
-                    videoId={upcyclingShort.id}
-                    title={upcyclingShort.title}
-                    aspectRatio="9:16"
-                    badge={upcyclingShort.badge}
-                    duration={upcyclingShort.duration}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <span className="text-xs font-bold text-abwa-gold uppercase tracking-wider block">
-                    {upcyclingShort.badge}
-                  </span>
-                  <h4 className="text-lg font-bold text-abwa-navy leading-snug">
-                    {upcyclingShort.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-abwa-muted leading-relaxed">
-                    {upcyclingShort.description}
-                  </p>
-                </div>
-              </div>
-              <div className="pt-4 mt-4 border-t border-slate-100">
-                <Link
-                  href="/programs/youth-empowerment"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-abwa-blue hover:text-abwa-navy transition-colors"
-                >
-                  <span>Learn about youth enterprise</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

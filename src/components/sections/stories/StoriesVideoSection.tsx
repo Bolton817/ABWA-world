@@ -45,6 +45,7 @@ export function StoriesVideoSection() {
                   aspectRatio="16:9"
                   badge={flagshipVideo.badge}
                   duration={flagshipVideo.duration}
+                  thumbnail={flagshipVideo.thumbnail}
                 />
               </div>
 
@@ -112,6 +113,7 @@ export function StoriesVideoSection() {
                   aspectRatio="16:9"
                   badge={artVideo.badge}
                   duration={artVideo.duration}
+                  thumbnail={artVideo.thumbnail}
                 />
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
@@ -154,6 +156,7 @@ export function StoriesVideoSection() {
                   aspectRatio="16:9"
                   badge={educationVideo.badge}
                   duration={educationVideo.duration}
+                  thumbnail={educationVideo.thumbnail}
                 />
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
@@ -197,6 +200,7 @@ export function StoriesVideoSection() {
                     aspectRatio="9:16"
                     badge={upcyclingShort.badge}
                     duration={upcyclingShort.duration}
+                    thumbnail={upcyclingShort.thumbnail}
                   />
                 </div>
                 <div className="space-y-2">

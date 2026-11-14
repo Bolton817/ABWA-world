@@ -45,6 +45,7 @@ export function ProgrammeVideoSpotlight({ slug }: ProgrammeVideoSpotlightProps) 
                     aspectRatio="16:9"
                     badge={educationVideo.badge}
                     duration={educationVideo.duration}
+                    thumbnail={educationVideo.thumbnail}
                   />
 
                   <p className="text-xs text-abwa-muted italic">
@@ -145,6 +146,7 @@ export function ProgrammeVideoSpotlight({ slug }: ProgrammeVideoSpotlightProps) 
                     aspectRatio="9:16"
                     badge={upcyclingShort.badge}
                     duration={upcyclingShort.duration}
+                    thumbnail={upcyclingShort.thumbnail}
                   />
 
                   <p className="text-xs text-abwa-muted text-center italic">
@@ -262,6 +264,7 @@ export function ProgrammeVideoSpotlight({ slug }: ProgrammeVideoSpotlightProps) 
                     aspectRatio="16:9"
                     badge={artVideo.badge}
                     duration={artVideo.duration}
+                    thumbnail={artVideo.thumbnail}
                   />
 
                   <p className="text-xs text-abwa-muted italic">

@@ -1,6 +1,7 @@
 export interface ImpactVideo {
   id: string;
   url: string;
+  thumbnail: string;
   aspectRatio: "16:9" | "9:16";
   duration: string;
   badge: string;
@@ -15,6 +16,7 @@ export const impactVideos: readonly ImpactVideo[] = [
   {
     id: "De4EcH9gobc",
     url: "https://www.youtube.com/watch?v=De4EcH9gobc",
+    thumbnail: "/images/videos/flagship_documentary.jpg",
     aspectRatio: "16:9",
     duration: "9:44",
     badge: "Impact Documentary",
@@ -26,6 +28,7 @@ export const impactVideos: readonly ImpactVideo[] = [
   {
     id: "sZ_jfR9xc3Q",
     url: "https://www.youtube.com/watch?v=sZ_jfR9xc3Q",
+    thumbnail: "/images/videos/art_mathare.jpg",
     aspectRatio: "16:9",
     duration: "4:26",
     badge: "Arts & Culture",
@@ -37,6 +40,7 @@ export const impactVideos: readonly ImpactVideo[] = [
   {
     id: "K8kzORs4_Wk",
     url: "https://www.youtube.com/watch?v=K8kzORs4_Wk",
+    thumbnail: "/images/videos/angelina_education.jpg",
     aspectRatio: "16:9",
     duration: "0:40",
     badge: "Education Support",
@@ -51,6 +55,7 @@ export const impactVideos: readonly ImpactVideo[] = [
   {
     id: "Z29QeApJyow",
     url: "https://www.youtube.com/shorts/Z29QeApJyow",
+    thumbnail: "/images/videos/taka_rework_short.jpg",
     aspectRatio: "9:16",
     duration: "1:24",
     badge: "Youth Empowerment",

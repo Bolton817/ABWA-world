@@ -52,6 +52,7 @@ export function AboutGlobalSolidarity() {
                   aspectRatio="16:9"
                   badge={flagshipVideo.badge}
                   duration={flagshipVideo.duration}
+                  thumbnail={flagshipVideo.thumbnail}
                 />
 
                 <p className="text-xs text-abwa-muted italic">

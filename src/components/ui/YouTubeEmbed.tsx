@@ -10,9 +10,17 @@ export interface YouTubeEmbedProps {
   aspectRatio?: "16:9" | "9:16";
   badge?: string;
   duration?: string;
+  thumbnail?: string;
   className?: string;
   priority?: boolean;
 }
+
+const defaultThumbnailMap: Record<string, string> = {
+  De4EcH9gobc: "/images/videos/flagship_documentary.jpg",
+  sZ_jfR9xc3Q: "/images/videos/art_mathare.jpg",
+  K8kzORs4_Wk: "/images/videos/angelina_education.jpg",
+  Z29QeApJyow: "/images/videos/taka_rework_short.jpg",
+};
 
 export function YouTubeEmbed({
   videoId,
@@ -20,15 +28,19 @@ export function YouTubeEmbed({
   aspectRatio = "16:9",
   badge,
   duration,
+  thumbnail,
   className = "",
   priority = false,
 }: YouTubeEmbedProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [thumbError, setThumbError] = useState(false);
 
-  const thumbnailUrl = thumbError
-    ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
-    : `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+  const resolvedThumbnail =
+    thumbnail ||
+    defaultThumbnailMap[videoId] ||
+    (thumbError
+      ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+      : `https://i.ytimg.com/vi/${videoId}/sddefault.jpg`);
 
   const isVertical = aspectRatio === "9:16";
 
@@ -66,12 +78,12 @@ export function YouTubeEmbed({
     >
       {/* High-Resolution Thumbnail */}
       <Image
-        src={thumbnailUrl}
+        src={resolvedThumbnail}
         alt={title}
         fill
         sizes={isVertical ? "(max-width: 640px) 280px, 320px" : "(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 900px"}
         priority={priority}
-        unoptimized
+        unoptimized={resolvedThumbnail.startsWith("http")}
         onError={() => setThumbError(true)}
         className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
