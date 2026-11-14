@@ -36,30 +36,6 @@ export function Footer() {
                 {siteConfig.tagline}
               </span>
             </div>
-
-            {/* Social Media Channels */}
-            <div className="pt-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-300 block mb-2.5">
-                Follow ABWA
-              </span>
-              <div className="flex items-center gap-2.5">
-                {socialChannels.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <a
-                      key={item.id}
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={item.ariaLabel}
-                      className="w-9 h-9 rounded-full bg-white/10 hover:bg-white text-slate-200 hover:text-abwa-navy border border-white/10 hover:border-white flex items-center justify-center transition-all duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-gold shadow-xs"
-                    >
-                      <Icon className="w-4 h-4 fill-current" />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
           </div>
 
           {/* Column 2: Explore */}
@@ -179,6 +155,30 @@ export function Footer() {
                 <span>Send us a message</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
+            </div>
+
+            {/* Social Media Channels */}
+            <div className="pt-4 border-t border-white/10">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-300 block mb-2.5">
+                Follow ABWA
+              </span>
+              <div className="flex items-center gap-2.5">
+                {socialChannels.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.ariaLabel}
+                      className="w-9 h-9 rounded-full bg-white/10 hover:bg-white text-slate-200 hover:text-abwa-navy border border-white/10 hover:border-white flex items-center justify-center transition-all duration-200 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-abwa-gold shadow-xs"
+                    >
+                      <Icon className="w-4 h-4 fill-current" />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

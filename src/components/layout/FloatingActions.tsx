@@ -178,9 +178,12 @@ export function FloatingActions() {
                       rel="noopener noreferrer"
                       aria-label={item.ariaLabel}
                       onClick={() => setHubOpen(false)}
-                      className="h-9 rounded-lg bg-slate-50 hover:bg-abwa-pale border border-slate-200/70 hover:border-abwa-blue/40 text-slate-700 hover:text-abwa-navy flex items-center justify-center transition-all duration-150 hover:scale-105 shadow-2xs group"
+                      className={`h-9 rounded-xl border border-slate-200/80 hover:border-slate-300 ${item.accentBg} flex items-center justify-center transition-all duration-150 hover:scale-105 shadow-2xs group`}
                     >
-                      <Icon className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
+                      <Icon
+                        className="w-4.5 h-4.5 group-hover:scale-110 transition-transform"
+                        style={{ color: item.brandColor }}
+                      />
                     </a>
                   );
                 })}
