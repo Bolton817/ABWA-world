@@ -11,6 +11,7 @@ import { AboutFocusAreas } from "@/components/sections/about/AboutFocusAreas";
 import { AboutPrinciples } from "@/components/sections/about/AboutPrinciples";
 import { AboutAccountability } from "@/components/sections/about/AboutAccountability";
 import { AboutMoments } from "@/components/sections/about/AboutMoments";
+import { AboutGlobalSolidarity } from "@/components/sections/about/AboutGlobalSolidarity";
 import { AboutGeography } from "@/components/sections/about/AboutGeography";
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Empowering Communities"
         title="About ABWA"
-        subtitle="A Nairobi-based community organisation working alongside people towards a fairer, more sustainable world."
+        subtitle="A Nairobi based community organisation working alongside people towards a fairer, more sustainable world."
         description="Learn who we are, the values that guide us, and how we partner with women, young people, children and families in Kenya."
         imageSrc="/images/programs/women_empowerment_&_agriculture/6abwa (75).jpeg"
         imageAlt="ABWA community partners and volunteers collaborating warmly in Kenya"
@@ -47,10 +48,10 @@ export default function AboutPage() {
         }}
       />
 
-      {/* Section 2: Overview — Who We Are */}
+      {/* Section 2: Overview: Who We Are */}
       <AboutOverview />
 
-      {/* Section 3: Our Story — Working Together Since 2015 */}
+      {/* Section 3: Our Story: Working Together Since 2015 */}
       <AboutStory />
 
       {/* Section 4: Vision, Mission & Our Commitment */}
@@ -69,7 +70,10 @@ export default function AboutPage() {
       {/* Section 8: Community In Action Moments */}
       <AboutMoments />
 
-      {/* Section 9: Where We Work & Final Call to Action */}
+      {/* Section 9: Global Solidarity & Cross Cultural Partnership */}
+      <AboutGlobalSolidarity />
+
+      {/* Section 10: Where We Work & Final Call to Action */}
       <AboutGeography />
 
       <SectionCTA

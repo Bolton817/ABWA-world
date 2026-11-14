@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getBreadcrumbSchema } from "@/lib/seo/schema";
+import { ProgrammeVideoSpotlight } from "@/components/sections/programs/ProgrammeVideoSpotlight";
 
 interface ProgrammePageProps {
   params: {
@@ -685,6 +686,9 @@ export default function ProgrammeDetailPage({ params }: ProgrammePageProps) {
           </Container>
         </Section>
       )}
+
+      {/* Programme Video Spotlight (if available for this programme) */}
+      <ProgrammeVideoSpotlight slug={programme.slug} />
 
       {/* 5. Expected Outcomes (What we hope to achieve) & Safeguarding */}
       <Section surface="pale">

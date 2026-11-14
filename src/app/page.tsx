@@ -5,6 +5,7 @@ import { HomeProgrammes } from "@/components/sections/home/HomeProgrammes";
 import { HomeFeaturedProgramme } from "@/components/sections/home/HomeFeaturedProgramme";
 import { HomeApproach } from "@/components/sections/home/HomeApproach";
 import { HomeImpact } from "@/components/sections/home/HomeImpact";
+import { HomeVideoSection } from "@/components/sections/home/HomeVideoSection";
 import { HomeCommunityVoices } from "@/components/sections/home/HomeCommunityVoices";
 import { HomeGalleryPreview } from "@/components/sections/home/HomeGalleryPreview";
 import { HomeBlogPreview } from "@/components/sections/home/HomeBlogPreview";
@@ -35,7 +36,12 @@ export default function HomePage() {
         <HomeImpact />
       </ScrollReveal>
 
-      {/* 7. Community Voices */}
+      {/* 7. Video Stories & Documentary Spotlight */}
+      <ScrollReveal yOffset={24} duration={0.6}>
+        <HomeVideoSection />
+      </ScrollReveal>
+
+      {/* 8. Community Voices */}
       <ScrollReveal yOffset={24} duration={0.6}>
         <HomeCommunityVoices />
       </ScrollReveal>

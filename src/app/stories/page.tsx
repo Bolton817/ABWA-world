@@ -9,6 +9,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionCTA } from "@/components/ui/SectionCTA";
 import { communityStoriesData, consentChecklist } from "@/content/stories";
 import { ScrollReveal } from "@/components/animation/ScrollReveal";
+import { StoriesVideoSection } from "@/components/sections/stories/StoriesVideoSection";
 
 export const metadata: Metadata = {
   title: "Community Stories | ABWA World",
@@ -84,7 +85,10 @@ export default function StoriesPage() {
         </Container>
       </Section>
 
-      {/* 3. Community Stories Grid */}
+      {/* 3. Video Stories & Documentaries */}
+      <StoriesVideoSection />
+
+      {/* 4. Community Stories Grid */}
       <Section className="bg-slate-50/70 border-t border-slate-100">
         <Container>
           <div className="mx-auto max-w-4xl space-y-12">
